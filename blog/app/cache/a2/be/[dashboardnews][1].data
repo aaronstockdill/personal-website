@@ -1,4 +1,0 @@
-1440926837
-a:1:{s:11:"information";O:8:"stdClass":11:{s:2:"id";s:2:"36";s:4:"slug";s:17:"bolt-225-released";s:11:"datecreated";s:19:"2015-07-24 10:26:46";s:11:"datechanged";s:19:"2015-07-24 10:26:46";s:8:"username";s:0:"";s:6:"status";s:9:"published";s:5:"title";s:20:"Bolt 2.2.5 released.";s:6:"teaser";s:500:"<p>We've just released Bolt 2.2.5 as an ongoing maintenance release for Bolt. This release comes with a bunch of new features, bugfixes and one minor security fix. This release fixes a newly introduced bug in Chrome, a minor security issue as well as a few other bugs. We've also implemented some optimizations to make the backend more responsive. Read the <a href="https://bolt.cm/newsitem/bolt-2-2-5-released">announcement on the site</a> for details and instructions on how to upgrade.<br>
-
-</p>";s:4:"link";s:44:"https://bolt.cm/newsitem/bolt-2-2-5-released";s:4:"type";s:4:"news";s:14:"target_version";s:0:"";}}

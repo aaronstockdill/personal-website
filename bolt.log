@@ -1404,3 +1404,226 @@
 [Sun Aug 30 21:55:33 2015] ::1:57309 [200]: /css/cmunbx.woff
 [Sun Aug 30 21:55:33 2015] ::1:57310 [200]: /css/cmunbi.woff
 [Sun Aug 30 21:55:33 2015] ::1:57311 [200]: /css/cmunti.woff
+[Sun Aug 30 21:59:11 2015] Failed to listen on localhost:8000 (reason: Address already in use)
+[Sun Aug 30 21:59:18 2015] ::1:57338 [404]: / - No such file or directory
+[Sun Aug 30 21:59:19 2015] ::1:57340 [404]: / - No such file or directory
+[Sun Aug 30 21:59:20 2015] ::1:57342 [404]: /blog/ - No such file or directory
+[Sun Aug 30 21:59:21 2015] ::1:57343 [404]: /blog/bolt - No such file or directory
+[Sun Aug 30 21:59:24 2015] ::1:57345 [404]: /blog/bolt - No such file or directory
+[Sun Aug 30 21:59:27 2015] ::1:57352 [404]: /blog/bolt - No such file or directory
+[Sun Aug 30 21:59:27 2015] ::1:57353 [404]: /blog/ - No such file or directory
+[Sun Aug 30 21:59:28 2015] ::1:57355 [404]: / - No such file or directory
+[Sun Aug 30 21:59:29 2015] ::1:57356 [404]: / - No such file or directory
+[Sun Aug 30 21:59:39 2015] ::1:57359 [200]: /
+[Sun Aug 30 21:59:39 2015] ::1:57360 [200]: /css/master.css
+[Sun Aug 30 21:59:39 2015] ::1:57362 [200]: /scripts/min/main-min.js
+[Sun Aug 30 21:59:40 2015] ::1:57364 [200]: /resources/stars.png
+[Sun Aug 30 21:59:40 2015] ::1:57365 [200]: /css/cmunrm.woff
+[Sun Aug 30 21:59:40 2015] ::1:57366 [200]: /css/cmunbx.woff
+[Sun Aug 30 21:59:40 2015] ::1:57367 [200]: /css/cmunbi.woff
+[Sun Aug 30 21:59:40 2015] ::1:57368 [200]: /css/cmunti.woff
+[Sun Aug 30 21:59:43 2015] ::1:57378 [200]: /
+[Sun Aug 30 21:59:43 2015] ::1:57379 [200]: /css/master.css
+[Sun Aug 30 21:59:43 2015] ::1:57380 [200]: /scripts/min/main-min.js
+[Sun Aug 30 21:59:43 2015] ::1:57381 [200]: /resources/stars.png
+[Sun Aug 30 21:59:43 2015] ::1:57382 [200]: /css/cmunrm.woff
+[Sun Aug 30 21:59:43 2015] ::1:57383 [200]: /css/cmunbx.woff
+[Sun Aug 30 21:59:43 2015] ::1:57385 [200]: /css/cmunbi.woff
+[Sun Aug 30 21:59:43 2015] ::1:57384 [200]: /css/cmunti.woff
+[Sun Aug 30 21:59:44 2015] ::1:57387 [200]: /
+[Sun Aug 30 21:59:44 2015] ::1:57388 [200]: /css/master.css
+[Sun Aug 30 21:59:44 2015] ::1:57389 [200]: /scripts/min/main-min.js
+[Sun Aug 30 21:59:44 2015] ::1:57390 [200]: /resources/stars.png
+[Sun Aug 30 21:59:44 2015] ::1:57391 [200]: /css/cmunrm.woff
+[Sun Aug 30 21:59:44 2015] ::1:57392 [200]: /css/cmunbx.woff
+[Sun Aug 30 21:59:44 2015] ::1:57393 [200]: /css/cmunti.woff
+[Sun Aug 30 21:59:44 2015] ::1:57394 [200]: /css/cmunbi.woff
+[Sun Aug 30 21:59:46 2015] ::1:57395 [200]: /blog/ - Uncaught exception 'Bolt\Exception\LowLevelDatabaseException' in /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/src/Exception/LowLevelDatabaseException.php:59
+Stack trace:
+#0 /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/src/Exception/LowLevelDatabaseException.php(54): Bolt\Exception\LowLevelDatabaseException::invalidPath('folder', '/Users/aaronsto...', 'does not exist')
+#1 /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/src/Configuration/LowlevelChecks.php(233): Bolt\Exception\LowLevelDatabaseException::nonexistantFolder('/Users/aaronsto...')
+#2 /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/src/Configuration/LowlevelChecks.php(182): Bolt\Configuration\LowlevelChecks->doDatabaseSqliteCheck(Array)
+#3 /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/src/Configuration/ResourceManager.php(470): Bolt\Configuration\LowlevelChecks->doDatabaseCheck()
+#4 /Users/aaronstockdill/ in /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/src/Exception/LowLevelDatabaseException.php on line 59
+[Sun Aug 30 21:59:48 2015] ::1:57396 [200]: /blog/bolt - Uncaught exception 'Bolt\Exception\LowLevelDatabaseException' in /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/src/Exception/LowLevelDatabaseException.php:59
+Stack trace:
+#0 /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/src/Exception/LowLevelDatabaseException.php(54): Bolt\Exception\LowLevelDatabaseException::invalidPath('folder', '/Users/aaronsto...', 'does not exist')
+#1 /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/src/Configuration/LowlevelChecks.php(233): Bolt\Exception\LowLevelDatabaseException::nonexistantFolder('/Users/aaronsto...')
+#2 /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/src/Configuration/LowlevelChecks.php(182): Bolt\Configuration\LowlevelChecks->doDatabaseSqliteCheck(Array)
+#3 /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/src/Configuration/ResourceManager.php(470): Bolt\Configuration\LowlevelChecks->doDatabaseCheck()
+#4 /Users/aaronstockdill/ in /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/src/Exception/LowLevelDatabaseException.php on line 59
+[Sun Aug 30 22:00:15 2015] ::1:57401 [200]: /blog/bolt - Uncaught exception 'Bolt\Exception\LowlevelException' in /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/src/Configuration/LowlevelChecks.php:125
+Stack trace:
+#0 /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/src/Configuration/LowlevelChecks.php(143): Bolt\Configuration\LowlevelChecks->assertWritableDir('/Users/aaronsto...')
+#1 /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/src/Configuration/LowlevelChecks.php(85): Bolt\Configuration\LowlevelChecks->checkCache()
+#2 /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/src/Configuration/ResourceManager.php(462): Bolt\Configuration\LowlevelChecks->doChecks()
+#3 /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/app/bootstrap.php(57): Bolt\Configuration\ResourceManager->verify()
+#4 [internal function]: Bolt\{closure}()
+#5 /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/app/bootstrap.php(71): call_user_fu in /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/src/Configuration/LowlevelChecks.php on line 125
+[Sun Aug 30 22:00:24 2015] ::1:57402 [200]: /blog/bolt - Uncaught exception 'Bolt\Exception\LowlevelException' in /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/src/Configuration/LowlevelChecks.php:125
+Stack trace:
+#0 /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/src/Configuration/LowlevelChecks.php(143): Bolt\Configuration\LowlevelChecks->assertWritableDir('/Users/aaronsto...')
+#1 /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/src/Configuration/LowlevelChecks.php(85): Bolt\Configuration\LowlevelChecks->checkCache()
+#2 /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/src/Configuration/ResourceManager.php(462): Bolt\Configuration\LowlevelChecks->doChecks()
+#3 /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/app/bootstrap.php(57): Bolt\Configuration\ResourceManager->verify()
+#4 [internal function]: Bolt\{closure}()
+#5 /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/app/bootstrap.php(71): call_user_fu in /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/src/Configuration/LowlevelChecks.php on line 125
+[Sun Aug 30 22:00:25 2015] ::1:57403 [200]: /blog/bolt - Uncaught exception 'Bolt\Exception\LowlevelException' in /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/src/Configuration/LowlevelChecks.php:125
+Stack trace:
+#0 /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/src/Configuration/LowlevelChecks.php(143): Bolt\Configuration\LowlevelChecks->assertWritableDir('/Users/aaronsto...')
+#1 /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/src/Configuration/LowlevelChecks.php(85): Bolt\Configuration\LowlevelChecks->checkCache()
+#2 /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/src/Configuration/ResourceManager.php(462): Bolt\Configuration\LowlevelChecks->doChecks()
+#3 /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/app/bootstrap.php(57): Bolt\Configuration\ResourceManager->verify()
+#4 [internal function]: Bolt\{closure}()
+#5 /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/app/bootstrap.php(71): call_user_fu in /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/src/Configuration/LowlevelChecks.php on line 125
+[Sun Aug 30 22:00:26 2015] ::1:57404 [200]: /blog/bolt - Uncaught exception 'Bolt\Exception\LowlevelException' in /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/src/Configuration/LowlevelChecks.php:125
+Stack trace:
+#0 /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/src/Configuration/LowlevelChecks.php(143): Bolt\Configuration\LowlevelChecks->assertWritableDir('/Users/aaronsto...')
+#1 /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/src/Configuration/LowlevelChecks.php(85): Bolt\Configuration\LowlevelChecks->checkCache()
+#2 /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/src/Configuration/ResourceManager.php(462): Bolt\Configuration\LowlevelChecks->doChecks()
+#3 /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/app/bootstrap.php(57): Bolt\Configuration\ResourceManager->verify()
+#4 [internal function]: Bolt\{closure}()
+#5 /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/app/bootstrap.php(71): call_user_fu in /Users/aaronstockdill/Dropbox/Documents/Potato Softworks/Clients/aaron/blog/src/Configuration/LowlevelChecks.php on line 125
+[Sun Aug 30 22:00:45 2015] Failed to listen on localhost:8000 (reason: Address already in use)
+[Sun Aug 30 22:00:55 2015] ::1:57405 [200]: /blog/bolt
+[Sun Aug 30 22:00:55 2015] ::1:57408 [200]: /blog/app/view/css/lib.css
+[Sun Aug 30 22:00:55 2015] ::1:57409 [200]: /blog/app/view/css/bolt.css
+[Sun Aug 30 22:00:55 2015] ::1:57410 [200]: /blog/app/view/js/lib.min.js
+[Sun Aug 30 22:00:55 2015] ::1:57411 [200]: /blog/app/view/js/locale/datepicker/en_GB.min.js
+[Sun Aug 30 22:00:55 2015] ::1:57413 [200]: /blog/app/view/js/bolt.min.js
+[Sun Aug 30 22:00:55 2015] ::1:57412 [200]: /blog/app/view/js/locale/moment/en_GB.min.js
+[Sun Aug 30 22:00:55 2015] ::1:57414 [404]: /blog/thumbs/54x41c/configure-disc-jockey-disco-1504.jpg - No such file or directory
+[Sun Aug 30 22:00:55 2015] ::1:57415 [404]: /blog/thumbs/54x41c/alarm-clock-gold-hands-of-a-clock-1778.jpg - No such file or directory
+[Sun Aug 30 22:00:55 2015] ::1:57416 [404]: /blog/thumbs/54x41c/building-frame-garage-1599.jpg - No such file or directory
+[Sun Aug 30 22:00:56 2015] ::1:57417 [200]: /blog/_profiler/wdt/5f3271
+[Sun Aug 30 22:00:56 2015] ::1:57418 [200]: /blog/app/view/fonts/SourceSansPro-Regular.woff
+[Sun Aug 30 22:00:56 2015] ::1:57419 [200]: /blog/app/view/fonts/SourceSansPro-Semibold.woff
+[Sun Aug 30 22:00:56 2015] ::1:57420 [200]: /blog/app/view/fonts/fontawesome-webfont.woff?v=4.3.0
+[Sun Aug 30 22:01:04 2015] ::1:57422 [200]: /blog/bolt/overview/pages
+[Sun Aug 30 22:01:04 2015] ::1:57423 [200]: /blog/app/view/css/lib.css
+[Sun Aug 30 22:01:04 2015] ::1:57424 [200]: /blog/app/view/css/bolt.css
+[Sun Aug 30 22:01:04 2015] ::1:57425 [200]: /blog/app/view/js/locale/datepicker/en_GB.min.js
+[Sun Aug 30 22:01:04 2015] ::1:57427 [200]: /blog/app/view/js/locale/moment/en_GB.min.js
+[Sun Aug 30 22:01:04 2015] ::1:57426 [200]: /blog/app/view/js/lib.min.js
+[Sun Aug 30 22:01:04 2015] ::1:57428 [200]: /blog/app/view/js/bolt.min.js
+[Sun Aug 30 22:01:04 2015] ::1:57429 [200]: /blog/_profiler/wdt/fbc070
+[Sun Aug 30 22:01:04 2015] ::1:57430 [200]: /blog/app/view/fonts/SourceSansPro-Regular.woff
+[Sun Aug 30 22:01:04 2015] ::1:57431 [200]: /blog/app/view/fonts/SourceSansPro-Semibold.woff
+[Sun Aug 30 22:01:04 2015] ::1:57432 [200]: /blog/app/view/fonts/fontawesome-webfont.woff?v=4.3.0
+[Sun Aug 30 22:01:06 2015] ::1:57434 [200]: /blog/bolt/overview/entries
+[Sun Aug 30 22:01:06 2015] ::1:57436 [200]: /blog/app/view/css/lib.css
+[Sun Aug 30 22:01:06 2015] ::1:57435 [200]: /blog/app/view/css/bolt.css
+[Sun Aug 30 22:01:06 2015] ::1:57437 [200]: /blog/app/view/js/lib.min.js
+[Sun Aug 30 22:01:06 2015] ::1:57439 [200]: /blog/app/view/js/bolt.min.js
+[Sun Aug 30 22:01:06 2015] ::1:57438 [200]: /blog/app/view/js/locale/datepicker/en_GB.min.js
+[Sun Aug 30 22:01:06 2015] ::1:57440 [200]: /blog/app/view/js/locale/moment/en_GB.min.js
+[Sun Aug 30 22:01:06 2015] ::1:57441 [404]: /blog/thumbs/80x60c/configure-disc-jockey-disco-1504.jpg - No such file or directory
+[Sun Aug 30 22:01:06 2015] ::1:57442 [404]: /blog/thumbs/80x60c/building-frame-garage-1599.jpg - No such file or directory
+[Sun Aug 30 22:01:06 2015] ::1:57443 [404]: /blog/thumbs/80x60c/alarm-clock-gold-hands-of-a-clock-1778.jpg - No such file or directory
+[Sun Aug 30 22:01:06 2015] ::1:57444 [200]: /blog/_profiler/wdt/ef4a00
+[Sun Aug 30 22:01:06 2015] ::1:57445 [200]: /blog/app/view/fonts/SourceSansPro-Semibold.woff
+[Sun Aug 30 22:01:06 2015] ::1:57446 [200]: /blog/app/view/fonts/SourceSansPro-Regular.woff
+[Sun Aug 30 22:01:06 2015] ::1:57447 [200]: /blog/app/view/fonts/fontawesome-webfont.woff?v=4.3.0
+[Sun Aug 30 22:01:13 2015] ::1:57448 [200]: /blog/bolt/users
+[Sun Aug 30 22:01:13 2015] ::1:57449 [200]: /blog/app/view/css/lib.css
+[Sun Aug 30 22:01:13 2015] ::1:57450 [200]: /blog/app/view/css/bolt.css
+[Sun Aug 30 22:01:13 2015] ::1:57451 [200]: /blog/app/view/js/lib.min.js
+[Sun Aug 30 22:01:13 2015] ::1:57452 [200]: /blog/app/view/js/bolt.min.js
+[Sun Aug 30 22:01:13 2015] ::1:57453 [200]: /blog/app/view/js/locale/moment/en_GB.min.js
+[Sun Aug 30 22:01:13 2015] ::1:57454 [200]: /blog/app/view/js/locale/datepicker/en_GB.min.js
+[Sun Aug 30 22:01:13 2015] ::1:57455 [200]: /blog/_profiler/wdt/ce3475
+[Sun Aug 30 22:01:13 2015] ::1:57457 [200]: /blog/app/view/fonts/SourceSansPro-Semibold.woff
+[Sun Aug 30 22:01:13 2015] ::1:57458 [200]: /blog/app/view/fonts/SourceSansPro-Regular.woff
+[Sun Aug 30 22:01:13 2015] ::1:57459 [200]: /blog/app/view/fonts/fontawesome-webfont.woff?v=4.3.0
+[Sun Aug 30 22:01:16 2015] ::1:57460 [200]: /blog/bolt/clearcache
+[Sun Aug 30 22:01:16 2015] ::1:57461 [200]: /blog/app/view/css/lib.css
+[Sun Aug 30 22:01:16 2015] ::1:57462 [200]: /blog/app/view/css/bolt.css
+[Sun Aug 30 22:01:16 2015] ::1:57464 [200]: /blog/app/view/js/locale/datepicker/en_GB.min.js
+[Sun Aug 30 22:01:16 2015] ::1:57463 [200]: /blog/app/view/js/lib.min.js
+[Sun Aug 30 22:01:16 2015] ::1:57466 [200]: /blog/app/view/js/bolt.min.js
+[Sun Aug 30 22:01:16 2015] ::1:57465 [200]: /blog/app/view/js/locale/moment/en_GB.min.js
+[Sun Aug 30 22:01:16 2015] ::1:57467 [200]: /blog/_profiler/wdt/a6d94c
+[Sun Aug 30 22:01:16 2015] ::1:57469 [200]: /blog/app/view/fonts/SourceSansPro-Regular.woff
+[Sun Aug 30 22:01:16 2015] ::1:57468 [200]: /blog/app/view/fonts/SourceSansPro-Semibold.woff
+[Sun Aug 30 22:01:16 2015] ::1:57470 [200]: /blog/app/view/fonts/fontawesome-webfont.woff?v=4.3.0
+[Sun Aug 30 22:01:18 2015] ::1:57471 [200]: /blog/bolt/clearcache
+[Sun Aug 30 22:01:18 2015] ::1:57472 [200]: /blog/app/view/css/lib.css
+[Sun Aug 30 22:01:18 2015] ::1:57473 [200]: /blog/app/view/css/bolt.css
+[Sun Aug 30 22:01:18 2015] ::1:57475 [200]: /blog/app/view/js/locale/datepicker/en_GB.min.js
+[Sun Aug 30 22:01:18 2015] ::1:57476 [200]: /blog/app/view/js/locale/moment/en_GB.min.js
+[Sun Aug 30 22:01:18 2015] ::1:57477 [200]: /blog/app/view/js/bolt.min.js
+[Sun Aug 30 22:01:18 2015] ::1:57474 [200]: /blog/app/view/js/lib.min.js
+[Sun Aug 30 22:01:18 2015] ::1:57478 [200]: /blog/_profiler/wdt/e30b62
+[Sun Aug 30 22:01:18 2015] ::1:57479 [200]: /blog/app/view/fonts/SourceSansPro-Regular.woff
+[Sun Aug 30 22:01:18 2015] ::1:57480 [200]: /blog/app/view/fonts/SourceSansPro-Semibold.woff
+[Sun Aug 30 22:01:18 2015] ::1:57481 [200]: /blog/app/view/fonts/fontawesome-webfont.woff?v=4.3.0
+[Sun Aug 30 22:01:20 2015] ::1:57482 [200]: /blog/bolt/dbcheck
+[Sun Aug 30 22:01:20 2015] ::1:57483 [200]: /blog/app/view/css/lib.css
+[Sun Aug 30 22:01:20 2015] ::1:57484 [200]: /blog/app/view/css/bolt.css
+[Sun Aug 30 22:01:20 2015] ::1:57488 [200]: /blog/app/view/js/locale/datepicker/en_GB.min.js
+[Sun Aug 30 22:01:20 2015] ::1:57486 [200]: /blog/app/view/js/lib.min.js
+[Sun Aug 30 22:01:20 2015] ::1:57487 [200]: /blog/app/view/js/bolt.min.js
+[Sun Aug 30 22:01:20 2015] ::1:57485 [200]: /blog/app/view/js/locale/moment/en_GB.min.js
+[Sun Aug 30 22:01:20 2015] ::1:57489 [200]: /blog/_profiler/wdt/38e443
+[Sun Aug 30 22:01:20 2015] ::1:57490 [200]: /blog/app/view/fonts/SourceSansPro-Semibold.woff
+[Sun Aug 30 22:01:20 2015] ::1:57491 [200]: /blog/app/view/fonts/fontawesome-webfont.woff?v=4.3.0
+[Sun Aug 30 22:01:20 2015] ::1:57492 [200]: /blog/app/view/fonts/SourceSansPro-Regular.woff
+[Sun Aug 30 22:01:26 2015] ::1:57493 [200]: /blog/bolt/overview/entries
+[Sun Aug 30 22:01:26 2015] ::1:57494 [200]: /blog/app/view/css/lib.css
+[Sun Aug 30 22:01:26 2015] ::1:57495 [200]: /blog/app/view/css/bolt.css
+[Sun Aug 30 22:01:26 2015] ::1:57498 [200]: /blog/app/view/js/locale/datepicker/en_GB.min.js
+[Sun Aug 30 22:01:26 2015] ::1:57499 [200]: /blog/app/view/js/bolt.min.js
+[Sun Aug 30 22:01:26 2015] ::1:57497 [200]: /blog/app/view/js/lib.min.js
+[Sun Aug 30 22:01:26 2015] ::1:57496 [200]: /blog/app/view/js/locale/moment/en_GB.min.js
+[Sun Aug 30 22:01:26 2015] ::1:57500 [404]: /blog/thumbs/80x60c/configure-disc-jockey-disco-1504.jpg - No such file or directory
+[Sun Aug 30 22:01:26 2015] ::1:57501 [404]: /blog/thumbs/80x60c/building-frame-garage-1599.jpg - No such file or directory
+[Sun Aug 30 22:01:26 2015] ::1:57502 [404]: /blog/thumbs/80x60c/alarm-clock-gold-hands-of-a-clock-1778.jpg - No such file or directory
+[Sun Aug 30 22:01:26 2015] ::1:57503 [200]: /blog/_profiler/wdt/a8b4d6
+[Sun Aug 30 22:01:26 2015] ::1:57504 [200]: /blog/app/view/fonts/SourceSansPro-Semibold.woff
+[Sun Aug 30 22:01:26 2015] ::1:57505 [200]: /blog/app/view/fonts/SourceSansPro-Regular.woff
+[Sun Aug 30 22:01:26 2015] ::1:57506 [200]: /blog/app/view/fonts/fontawesome-webfont.woff?v=4.3.0
+[Sun Aug 30 22:01:33 2015] ::1:57507 [302]: /blog/bolt/content/deletecontent/entries/3,1,5,4,2?bolt_csrf_token=909fe05e
+[Sun Aug 30 22:01:33 2015] ::1:57508 [200]: /blog/bolt/overview/entries
+[Sun Aug 30 22:01:44 2015] ::1:57514 [302]: /blog/bolt/logout
+[Sun Aug 30 22:01:45 2015] ::1:57515 [200]: /blog/bolt/login
+[Sun Aug 30 22:01:45 2015] ::1:57516 [200]: /blog/app/view/css/lib.css
+[Sun Aug 30 22:01:45 2015] ::1:57517 [200]: /blog/app/view/css/bolt.css
+[Sun Aug 30 22:01:45 2015] ::1:57518 [200]: /blog/app/view/js/locale/datepicker/en_GB.min.js
+[Sun Aug 30 22:01:45 2015] ::1:57519 [200]: /blog/app/view/js/locale/moment/en_GB.min.js
+[Sun Aug 30 22:01:45 2015] ::1:57520 [200]: /blog/app/view/js/lib.min.js
+[Sun Aug 30 22:01:45 2015] ::1:57521 [200]: /blog/app/view/js/bolt.min.js
+[Sun Aug 30 22:01:45 2015] ::1:57522 [200]: /blog/app/view/img/bolt-logo.png
+[Sun Aug 30 22:01:45 2015] ::1:57523 [200]: /blog/app/view/fonts/fontawesome-webfont.woff?v=4.3.0
+[Sun Aug 30 22:01:51 2015] ::1:57530 [200]: /blog/bolt/login
+[Sun Aug 30 22:01:51 2015] ::1:57531 [200]: /blog/app/view/css/lib.css
+[Sun Aug 30 22:01:51 2015] ::1:57532 [200]: /blog/app/view/css/bolt.css
+[Sun Aug 30 22:01:51 2015] ::1:57533 [200]: /blog/app/view/js/locale/datepicker/en_GB.min.js
+[Sun Aug 30 22:01:51 2015] ::1:57534 [200]: /blog/app/view/js/locale/moment/en_GB.min.js
+[Sun Aug 30 22:01:51 2015] ::1:57535 [200]: /blog/app/view/js/bolt.min.js
+[Sun Aug 30 22:01:51 2015] ::1:57536 [200]: /blog/app/view/js/lib.min.js
+[Sun Aug 30 22:01:51 2015] ::1:57537 [200]: /blog/app/view/img/bolt-logo.png
+[Sun Aug 30 22:01:51 2015] ::1:57538 [200]: /blog/app/view/fonts/fontawesome-webfont.woff?v=4.3.0
+[Sun Aug 30 22:01:52 2015] ::1:57539 [302]: /blog/bolt
+[Sun Aug 30 22:01:52 2015] ::1:57540 [200]: /blog/bolt/login
+[Sun Aug 30 22:01:52 2015] ::1:57541 [200]: /blog/app/view/css/lib.css
+[Sun Aug 30 22:01:52 2015] ::1:57542 [200]: /blog/app/view/css/bolt.css
+[Sun Aug 30 22:01:52 2015] ::1:57543 [200]: /blog/app/view/js/locale/datepicker/en_GB.min.js
+[Sun Aug 30 22:01:52 2015] ::1:57546 [200]: /blog/app/view/js/bolt.min.js
+[Sun Aug 30 22:01:52 2015] ::1:57545 [200]: /blog/app/view/js/locale/moment/en_GB.min.js
+[Sun Aug 30 22:01:52 2015] ::1:57544 [200]: /blog/app/view/js/lib.min.js
+[Sun Aug 30 22:01:52 2015] ::1:57547 [200]: /blog/app/view/img/bolt-logo.png
+[Sun Aug 30 22:01:52 2015] ::1:57548 [200]: /blog/app/view/fonts/fontawesome-webfont.woff?v=4.3.0
+[Sun Aug 30 22:01:53 2015] ::1:57549 [200]: /blog/
+[Sun Aug 30 22:01:53 2015] ::1:57551 [200]: /blog/
+[Sun Aug 30 22:01:53 2015] ::1:57552 [200]: /css/master.css
+[Sun Aug 30 22:01:53 2015] ::1:57553 [200]: /scripts/min/main-min.js
+[Sun Aug 30 22:01:53 2015] ::1:57555 [200]: /css/cmunrm.woff
+[Sun Aug 30 22:01:53 2015] ::1:57554 [200]: /css/cmunbx.woff
+[Sun Aug 30 22:01:59 2015] ::1:57557 [200]: /
+[Sun Aug 30 22:01:59 2015] ::1:57558 [200]: /css/master.css
+[Sun Aug 30 22:01:59 2015] ::1:57559 [200]: /scripts/min/main-min.js
+[Sun Aug 30 22:01:59 2015] ::1:57560 [200]: /resources/stars.png
+[Sun Aug 30 22:01:59 2015] ::1:57561 [200]: /css/cmunrm.woff
+[Sun Aug 30 22:01:59 2015] ::1:57562 [200]: /css/cmunbx.woff
+[Sun Aug 30 22:01:59 2015] ::1:57563 [200]: /css/cmunbi.woff
+[Sun Aug 30 22:01:59 2015] ::1:57564 [200]: /css/cmunti.woff
