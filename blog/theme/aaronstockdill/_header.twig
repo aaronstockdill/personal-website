@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {# make sure we always display a proper title: The record's title if there is one, appended with the
+       sitename. If there is no title, we append the sitename with the payoff, if there is one. #}
+    <title>
+        {% if record.title is defined %}{{ record.title|striptags }} | {% endif %}
+            {{ app.config.get('general/sitename') }}
+        {% if record.title is not defined and app.config.get('general/payoff') %} | {{ app.config.get('general/payoff') }}{% endif %}
+    </title>
+    
+    <link rel="stylesheet" href="/css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+
+    {#<!-- A variable from the theme's config: {{ theme.foo }} -->#}
+
+</head>
+<body id="blog">
+    <input type="checkbox" id="menu-check">
+    <label for='menu-check' class='menubutton'><span>Menu</span></label>
+    <div class='menu'>
+        <a href='/#Home' id='link-for-Home'>Home</a>
+        <a href='/#Bio' id='link-for-Bio'>About</a>
+        <a href='/#Education' id='link-for-Education'>Education</a>
+        <a href='/#Experience' id='link-for-Experience'>Experience</a>
+        <a href='/#Skills' id='link-for-Skills'>Skills</a>
+        <a href='/#Contact' id='link-for-Contact'>Contact</a>
+        <a href='/blog/' id='link-for-Blog'>Blog</a>
+        <a href='/resources/aaronstockdill.pdf'>CV</a>
+    </div>

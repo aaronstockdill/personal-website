@@ -1,0 +1,44 @@
+{% include '_header.twig' %}
+
+<!-- Main Page Content and Sidebar -->
+
+    <!-- Main Blog Content -->
+    <div class="body">
+
+        {# Here we use 'setcontent' to set the variable 'records' to "entries/latest/6",
+           which is shorthand for "the 6 latest records in Entries. Note that we are
+           requesting multiple entries, so 'records' will be an array containing each
+           of the entries. That's why we use the 'for' loop to iterate over them all. #}
+        {% setcontent records = "posts/latest/5" allowpaging %}
+        {% for record in records %}
+            <article>
+                
+                <h2><a href="{{ record.link }}">{{ record.title }}</a></h2>
+                <span class='byline'>{{ record.datepublish|localdate("%A %B %e, %Y") }}</span>
+                {% if record.image!="" %}
+                    <div class="large-4 imageholder">
+                        <a href="{{ image(record.image) }}">
+                            <img src="{{ image(record.image) }}">
+                        </a>
+                    </div>
+                {% endif %}
+
+                <p> {{ record.excerpt(220) }} </p>
+                <p> <a href="{{ record.link }}">Read more...</a> </p>
+
+            </article>
+
+        {% endfor %}
+
+        {{ pager() }}
+
+
+    </div>
+
+    <!-- End Main Content -->
+
+<!-- End Main Content and Sidebar -->
+
+
+
+{% include '_footer.twig' %}
