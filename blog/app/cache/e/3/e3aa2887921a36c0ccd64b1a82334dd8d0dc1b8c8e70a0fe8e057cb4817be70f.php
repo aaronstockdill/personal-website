@@ -31,47 +31,62 @@ class __TwigTemplate_e3aa2887921a36c0ccd64b1a82334dd8d0dc1b8c8e70a0fe8e057cb4817
         $context['records'] =         $template_storage->getContent("posts/latest/5", array("paging" => true) );
         // line 13
         echo "        ";
+        if (twig_test_empty((isset($context["records"]) ? $context["records"] : null))) {
+            // line 14
+            echo "            <article>
+                <h2>Blogging in progress...</h2>
+                <p>
+                    Welcome, early visitor. This website is still very young, and I've not yet written anything. Please check back regularly.
+                </p>
+                <p>
+                    <a href='/#Home'>Home</a>
+                </p>
+            </article>
+        ";
+        }
+        // line 24
+        echo "        ";
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["records"]) ? $context["records"] : null));
         foreach ($context['_seq'] as $context["_key"] => $context["record"]) {
-            // line 14
+            // line 25
             echo "            <article>
                 
                 <h2><a href=\"";
-            // line 16
+            // line 27
             echo twig_escape_filter($this->env, $this->getAttribute($context["record"], "link", array()), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["record"], "title", array()), "html", null, true);
             echo "</a></h2>
                 <span class='byline'>";
-            // line 17
+            // line 28
             echo $this->env->getExtension('Bolt')->localeDateTime($this->getAttribute($context["record"], "datepublish", array()), "%A %B %e, %Y");
             echo "</span>
                 ";
-            // line 18
+            // line 29
             if (($this->getAttribute($context["record"], "image", array()) != "")) {
-                // line 19
+                // line 30
                 echo "                    <div class=\"large-4 imageholder\">
                         <a href=\"";
-                // line 20
+                // line 31
                 echo twig_escape_filter($this->env, $this->env->getExtension('Bolt')->image($this->getAttribute($context["record"], "image", array())), "html", null, true);
                 echo "\">
                             <img src=\"";
-                // line 21
+                // line 32
                 echo twig_escape_filter($this->env, $this->env->getExtension('Bolt')->image($this->getAttribute($context["record"], "image", array())), "html", null, true);
                 echo "\">
                         </a>
                     </div>
                 ";
             }
-            // line 25
+            // line 36
             echo "
                 <p> ";
-            // line 26
+            // line 37
             echo twig_escape_filter($this->env, $this->getAttribute($context["record"], "excerpt", array(0 => 220), "method"), "html", null, true);
             echo " </p>
                 <p> <a href=\"";
-            // line 27
+            // line 38
             echo twig_escape_filter($this->env, $this->getAttribute($context["record"], "link", array()), "html", null, true);
             echo "\">Read more...</a> </p>
 
@@ -82,10 +97,10 @@ class __TwigTemplate_e3aa2887921a36c0ccd64b1a82334dd8d0dc1b8c8e70a0fe8e057cb4817
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['record'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 32
+        // line 43
         echo "
         ";
-        // line 33
+        // line 44
         echo twig_escape_filter($this->env, $this->env->getExtension('Bolt')->pager($this->env), "html", null, true);
         echo "
 
@@ -99,8 +114,8 @@ class __TwigTemplate_e3aa2887921a36c0ccd64b1a82334dd8d0dc1b8c8e70a0fe8e057cb4817
 
 
 ";
-        // line 44
-        $this->loadTemplate("_footer.twig", "index.twig", 44)->display($context);
+        // line 55
+        $this->loadTemplate("_footer.twig", "index.twig", 55)->display($context);
     }
 
     public function getTemplateName()
@@ -115,6 +130,6 @@ class __TwigTemplate_e3aa2887921a36c0ccd64b1a82334dd8d0dc1b8c8e70a0fe8e057cb4817
 
     public function getDebugInfo()
     {
-        return array (  103 => 44,  89 => 33,  86 => 32,  75 => 27,  71 => 26,  68 => 25,  61 => 21,  57 => 20,  54 => 19,  52 => 18,  48 => 17,  42 => 16,  38 => 14,  33 => 13,  29 => 12,  21 => 2,  19 => 1,);
+        return array (  118 => 55,  104 => 44,  101 => 43,  90 => 38,  86 => 37,  83 => 36,  76 => 32,  72 => 31,  69 => 30,  67 => 29,  63 => 28,  57 => 27,  53 => 25,  48 => 24,  36 => 14,  33 => 13,  29 => 12,  21 => 2,  19 => 1,);
     }
 }

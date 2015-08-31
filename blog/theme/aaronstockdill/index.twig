@@ -10,6 +10,17 @@
            requesting multiple entries, so 'records' will be an array containing each
            of the entries. That's why we use the 'for' loop to iterate over them all. #}
         {% setcontent records = "posts/latest/5" allowpaging %}
+        {% if records is empty %}
+            <article>
+                <h2>Blogging in progress...</h2>
+                <p>
+                    Welcome, early visitor. This website is still very young, and I've not yet written anything. Please check back regularly.
+                </p>
+                <p>
+                    <a href='/#Home'>Home</a>
+                </p>
+            </article>
+        {% endif %}
         {% for record in records %}
             <article>
                 
