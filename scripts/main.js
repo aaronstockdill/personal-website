@@ -1,4 +1,22 @@
 $(function() {
+    
+    var indices = [
+        'Home',
+        'About',
+        'Education',
+        'Experience',
+        'Awards',
+        'Contact',
+    ];
+    
+    var set_active = function () {
+        // Set the active class on the current menu item
+        var target = window.location.hash.slice(1);
+        for (var id_name in indices) {
+            $("#link-for-" + id_name).removeClass('active');
+        }
+        $("#link-for-" + target).addClass('active');
+    };
 
     $.fn.visible = function () {
         // Extend objects with a 'visible' method to determine how on-screen they are
@@ -19,7 +37,6 @@ $(function() {
         return 0;
     };
     
-    
     $('a[href*=#]:not([href=#])').click(function() {
         // Smooth scrolling to anchors
         if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
@@ -36,12 +53,7 @@ $(function() {
     });
 
     $(window).on('hashchange', function() {
-        // Set the menu to be highlighted correctly
-        $(".menu").children().each(function(index, element) {
-            $(element).removeClass('active');
-        });
-        var target = window.location.hash.slice(1);
-        $("#link-for-" + target).addClass('active');
+        set_active();
         return false;
     });
 
@@ -61,16 +73,16 @@ $(function() {
             window.location.hash = (the_hash === '') ? null : the_hash;
             el.attr('id', the_hash);
         }
+        
         return false;
     });
     
     setTimeout(function(){
         // When the page loads, set the menu correctly
         if ($('body').attr('id') === 'index' && 
-            window.location.hash && 
-            $(window.location.hash).visible() > 0) {
-            var target = window.location.hash.slice(1);
-            $("#link-for-" + target).addClass('active');
+        window.location.hash && 
+        $(window.location.hash).visible() > 0) {
+            set_active();
         } else if ($('body').attr('id') === 'index') {
             window.location.hash = 'Home';
             return false;

@@ -59,7 +59,7 @@ class __TwigTemplate_abb7d78fbaff8c08105761dc994d912a728b0bbc79a6c40605264dcbbcf
         <a href='/#Bio' id='link-for-Bio'>About</a>
         <a href='/#Education' id='link-for-Education'>Education</a>
         <a href='/#Experience' id='link-for-Experience'>Experience</a>
-        <a href='/#Skills' id='link-for-Skills'>Skills</a>
+        <a href='/#Awards' id='link-for-Awards'>Awards</a>
         <a href='/#Contact' id='link-for-Contact'>Contact</a>
         <a href='/blog/' id='link-for-Blog'>Blog</a>
         <a href='/resources/aaronstockdill.pdf'>CV</a>

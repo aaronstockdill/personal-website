@@ -225,22 +225,16 @@ div.menu {
         padding-left: ~"calc(1rem + 4px)";
         border-left: 0px solid @muted-gray;
         transition: all 0.2s ease;
+        color: @muted-gray;
         
-        &.active {
-            border-left: 4px solid @muted-gray;
-            padding-left: 1rem;
-        }
-        
-        &:hover {
-            border-left: 4px solid black;
-            padding-left: 1rem;
+        &:hover, &.active {
+            color: black;
         }
     }
 }
 
 #blog div.menu a#link-for-Blog {
-    border-left: 4px solid @muted-gray;
-    padding-left: 1rem;
+    color: black;
 }
 
 @media screen and (max-width: 600px) {
@@ -259,6 +253,11 @@ div.menu {
             font-size: 1.2rem;
             padding-top: 0.5rem;
             padding-bottom: 0.5rem;
+            color:black;
+            
+            &.active {
+                font-weight: bold;
+            }
             
             &:last-of-type {
                 margin-bottom: 2rem;
@@ -363,11 +362,6 @@ div.section, article {
     h2 {
         font-size: 3rem;
         counter-increment: section;
-        
-        &::before {
-            content: counter(section) ' ';
-            color: @muted-gray;
-        }
         
         a {
             text-decoration: none;
@@ -489,7 +483,7 @@ article {
         font-size: 1.15rem;
         line-height: auto;
         border: 1px solid @muted-gray;
-        border-width: 1px 1px 0 1px;
+        border-width: 1px 1px 0px 1px;
         border-radius: 0;
         margin: 0;
         padding: 0.5rem 0.5rem 0.25rem 0.5rem;
@@ -500,7 +494,6 @@ article {
         
         &:focus {
             outline: none;
-            box-shadow: inset 0px 0px 4px @muted-gray;
         }
     }
     
@@ -520,7 +513,7 @@ article {
         height: auto;
         
         &:hover {
-            background: lighten(@muted-gray, 20%);
+            border-color: black;
         }
         
         &:active {

@@ -46403,7 +46403,7 @@
 		},
 	"\/footer.kit": {
 		"fileType": 2048,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/footer.kit",
 		"outputAbbreviatedPath": "\/footer.html",
@@ -46412,7 +46412,7 @@
 		},
 	"\/header.kit": {
 		"fileType": 2048,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/header.kit",
 		"outputAbbreviatedPath": "\/header.html",
@@ -46457,9 +46457,18 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
-	"\/pages\/bio.kit": {
+	"\/pages\/awards.kit": {
 		"fileType": 2048,
 		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/pages\/awards.kit",
+		"outputAbbreviatedPath": "\/pages\/awards.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/pages\/bio.kit": {
+		"fileType": 2048,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/pages\/bio.kit",
 		"outputAbbreviatedPath": "\/pages\/bio.html",
@@ -46468,7 +46477,7 @@
 		},
 	"\/pages\/contact.kit": {
 		"fileType": 2048,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/pages\/contact.kit",
 		"outputAbbreviatedPath": "\/pages\/contact.html",
@@ -46477,7 +46486,7 @@
 		},
 	"\/pages\/education.kit": {
 		"fileType": 2048,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/pages\/education.kit",
 		"outputAbbreviatedPath": "\/pages\/education.html",
@@ -46486,7 +46495,7 @@
 		},
 	"\/pages\/experience.kit": {
 		"fileType": 2048,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/pages\/experience.kit",
 		"outputAbbreviatedPath": "\/pages\/experience.html",
@@ -46495,7 +46504,7 @@
 		},
 	"\/pages\/skills.kit": {
 		"fileType": 2048,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/pages\/skills.kit",
 		"outputAbbreviatedPath": "\/pages\/skills.html",
