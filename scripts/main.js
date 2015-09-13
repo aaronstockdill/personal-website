@@ -12,8 +12,8 @@ $(function() {
     var set_active = function () {
         // Set the active class on the current menu item
         var target = window.location.hash.slice(1);
-        for (var id_name in indices) {
-            $("#link-for-" + id_name).removeClass('active');
+        for (var i in indices) {
+            $("#link-for-" + indices[i]).removeClass('active');
         }
         $("#link-for-" + target).addClass('active');
     };
