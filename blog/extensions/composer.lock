@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f0389077fb6f5a2e64fdbe3d0937d8e0",
+    "hash": "0f58b65b1d9c69b4d5018ebac1c44167",
     "packages": [
         {
             "name": "bolt/disqus",

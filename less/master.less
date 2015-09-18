@@ -218,6 +218,7 @@ div.menu {
     transition: all 0.2s ease;
     
     a {
+        font-size: 1.05rem;
         position: relative;
         display: block;
         color: black;
@@ -329,7 +330,7 @@ div.section, article {
         margin: 0 auto;
         padding: 1rem 2rem;
         color: @muted-gray;
-        margin-top: -3rem;
+        margin-top: -2rem;
         margin-bottom: -1rem;
     }
     
@@ -365,9 +366,10 @@ div.section, article {
         
         a {
             text-decoration: none;
+            color: lighten(black, 30%);
             
             &:hover {
-                text-decoration: underline;
+                color: black;
             }
         }
     }

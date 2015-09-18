@@ -43,6 +43,7 @@ $(function() {
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
             if (target.length) {
+                history.pushState(undefined, "Aaron Stockdill", this.hash);
                 $('html,body').animate({
                     scrollTop: target.offset().top
                 }, 300);
@@ -51,10 +52,9 @@ $(function() {
             }
         }
     });
-
-    $(window).on('hashchange', function() {
+    
+    $(window).bind('popstate', function () {
         set_active();
-        return false;
     });
 
     $(window).on('scroll', function() {
@@ -70,8 +70,12 @@ $(function() {
         if (the_hash !== '') {
             var el = $("#" + the_hash);
             el.attr('id', '');
-            window.location.hash = (the_hash === '') ? null : the_hash;
+            var old_hash = window.location.hash;
+            location.replace("#" + the_hash);
             el.attr('id', the_hash);
+            if (old_hash !== "#" + the_hash) {
+                set_active();
+            }
         }
         
         return false;
@@ -84,7 +88,7 @@ $(function() {
         $(window.location.hash).visible() > 0) {
             set_active();
         } else if ($('body').attr('id') === 'index') {
-            window.location.hash = 'Home';
+            location.replace("#Home");
             return false;
         }
     }, 50);
