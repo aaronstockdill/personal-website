@@ -46468,8 +46468,8 @@
 		},
 	"\/pages\/bio.kit": {
 		"fileType": 2048,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/pages\/bio.kit",
 		"outputAbbreviatedPath": "\/pages\/bio.html",
 		"outputPathIsOutsideProject": 0,
@@ -46477,8 +46477,8 @@
 		},
 	"\/pages\/contact.kit": {
 		"fileType": 2048,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/pages\/contact.kit",
 		"outputAbbreviatedPath": "\/pages\/contact.html",
 		"outputPathIsOutsideProject": 0,
@@ -46486,8 +46486,8 @@
 		},
 	"\/pages\/education.kit": {
 		"fileType": 2048,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/pages\/education.kit",
 		"outputAbbreviatedPath": "\/pages\/education.html",
 		"outputPathIsOutsideProject": 0,
@@ -46495,8 +46495,8 @@
 		},
 	"\/pages\/experience.kit": {
 		"fileType": 2048,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/pages\/experience.kit",
 		"outputAbbreviatedPath": "\/pages\/experience.html",
 		"outputPathIsOutsideProject": 0,
@@ -46504,8 +46504,8 @@
 		},
 	"\/pages\/skills.kit": {
 		"fileType": 2048,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/pages\/skills.kit",
 		"outputAbbreviatedPath": "\/pages\/skills.html",
 		"outputPathIsOutsideProject": 0,
@@ -46520,7 +46520,7 @@
 		"outputAbbreviatedPath": "\/resources\/android-chrome-144x144.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/resources\/android-chrome-192x192.png": {
 		"fileType": 32768,
@@ -46531,7 +46531,7 @@
 		"outputAbbreviatedPath": "\/resources\/android-chrome-192x192.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/resources\/android-chrome-36x36.png": {
 		"fileType": 32768,
@@ -46542,7 +46542,7 @@
 		"outputAbbreviatedPath": "\/resources\/android-chrome-36x36.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/resources\/android-chrome-48x48.png": {
 		"fileType": 32768,
@@ -46553,7 +46553,7 @@
 		"outputAbbreviatedPath": "\/resources\/android-chrome-48x48.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/resources\/android-chrome-72x72.png": {
 		"fileType": 32768,
@@ -46564,7 +46564,7 @@
 		"outputAbbreviatedPath": "\/resources\/android-chrome-72x72.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/resources\/android-chrome-96x96.png": {
 		"fileType": 32768,
@@ -46575,7 +46575,7 @@
 		"outputAbbreviatedPath": "\/resources\/android-chrome-96x96.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/resources\/apple-touch-icon-114x114.png": {
 		"fileType": 32768,
@@ -46586,7 +46586,7 @@
 		"outputAbbreviatedPath": "\/resources\/apple-touch-icon-114x114.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/resources\/apple-touch-icon-120x120.png": {
 		"fileType": 32768,
@@ -46597,7 +46597,7 @@
 		"outputAbbreviatedPath": "\/resources\/apple-touch-icon-120x120.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/resources\/apple-touch-icon-144x144.png": {
 		"fileType": 32768,
@@ -46608,7 +46608,7 @@
 		"outputAbbreviatedPath": "\/resources\/apple-touch-icon-144x144.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/resources\/apple-touch-icon-152x152.png": {
 		"fileType": 32768,
@@ -46619,7 +46619,7 @@
 		"outputAbbreviatedPath": "\/resources\/apple-touch-icon-152x152.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/resources\/apple-touch-icon-180x180.png": {
 		"fileType": 32768,
@@ -46630,7 +46630,7 @@
 		"outputAbbreviatedPath": "\/resources\/apple-touch-icon-180x180.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/resources\/apple-touch-icon-57x57.png": {
 		"fileType": 32768,
@@ -46641,7 +46641,7 @@
 		"outputAbbreviatedPath": "\/resources\/apple-touch-icon-57x57.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/resources\/apple-touch-icon-60x60.png": {
 		"fileType": 32768,
@@ -46652,7 +46652,7 @@
 		"outputAbbreviatedPath": "\/resources\/apple-touch-icon-60x60.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/resources\/apple-touch-icon-72x72.png": {
 		"fileType": 32768,
@@ -46663,7 +46663,7 @@
 		"outputAbbreviatedPath": "\/resources\/apple-touch-icon-72x72.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/resources\/apple-touch-icon-76x76.png": {
 		"fileType": 32768,
@@ -46674,7 +46674,7 @@
 		"outputAbbreviatedPath": "\/resources\/apple-touch-icon-76x76.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/resources\/apple-touch-icon-precomposed.png": {
 		"fileType": 32768,
@@ -46685,7 +46685,7 @@
 		"outputAbbreviatedPath": "\/resources\/apple-touch-icon-precomposed.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/resources\/apple-touch-icon.png": {
 		"fileType": 32768,
@@ -46696,7 +46696,7 @@
 		"outputAbbreviatedPath": "\/resources\/apple-touch-icon.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/resources\/favicon-16x16.png": {
 		"fileType": 32768,
@@ -46707,7 +46707,7 @@
 		"outputAbbreviatedPath": "\/resources\/favicon-16x16.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/resources\/favicon-194x194.png": {
 		"fileType": 32768,
@@ -46718,7 +46718,7 @@
 		"outputAbbreviatedPath": "\/resources\/favicon-194x194.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/resources\/favicon-32x32.png": {
 		"fileType": 32768,
@@ -46729,7 +46729,7 @@
 		"outputAbbreviatedPath": "\/resources\/favicon-32x32.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/resources\/favicon-96x96.png": {
 		"fileType": 32768,
@@ -46740,7 +46740,7 @@
 		"outputAbbreviatedPath": "\/resources\/favicon-96x96.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/resources\/latex.png": {
 		"fileType": 32768,
@@ -46751,7 +46751,7 @@
 		"outputAbbreviatedPath": "\/resources\/latex.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/resources\/manifest.json": {
 		"fileType": 524288,
@@ -46773,7 +46773,7 @@
 		"outputAbbreviatedPath": "\/resources\/mstile-144x144.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/resources\/mstile-150x150.png": {
 		"fileType": 32768,
@@ -46784,7 +46784,7 @@
 		"outputAbbreviatedPath": "\/resources\/mstile-150x150.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/resources\/mstile-310x150.png": {
 		"fileType": 32768,
@@ -46795,7 +46795,7 @@
 		"outputAbbreviatedPath": "\/resources\/mstile-310x150.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/resources\/mstile-310x310.png": {
 		"fileType": 32768,
@@ -46806,7 +46806,7 @@
 		"outputAbbreviatedPath": "\/resources\/mstile-310x310.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/resources\/mstile-70x70.png": {
 		"fileType": 32768,
@@ -46817,7 +46817,7 @@
 		"outputAbbreviatedPath": "\/resources\/mstile-70x70.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/resources\/stars.png": {
 		"fileType": 32768,
