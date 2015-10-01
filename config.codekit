@@ -7042,6 +7042,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/blog\/vendor\/bin\/uaparser.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/blog\/vendor\/bin\/uaparser.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/blog\/vendor\/bolt\/dumper\/assets\/dumper.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -46698,6 +46707,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
+	"\/resources\/email.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 24318,
+		"inputAbbreviatedPath": "\/resources\/email.png",
+		"outputAbbreviatedPath": "\/resources\/email.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/resources\/favicon-16x16.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -46763,6 +46783,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0
+		},
+	"\/resources\/mobile.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 17145,
+		"inputAbbreviatedPath": "\/resources\/mobile.png",
+		"outputAbbreviatedPath": "\/resources\/mobile.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		},
 	"\/resources\/mstile-144x144.png": {
 		"fileType": 32768,
