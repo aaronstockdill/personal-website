@@ -59,29 +59,32 @@ h4, h5, h6 {
 
 header {
     height: auto;
-    min-height: 100%;
     position: relative;
     width: ~"calc(100% - " @menu-width ~")";
-    margin-left: 7rem;
+    margin-left: @menu-width;
+    display: block;
     
     .title {
-        padding-top: ~"calc(50vh - 13rem)";
-        position: relative;
         width: 100%;
+        max-width: @content-width;
+        margin: 0 auto;
+        padding: 1rem 2rem;
+        text-align: center;
+        position: relative;
         z-index: 1;
         color: black;
-        min-height: 33rem;
+        padding-top: 3rem;
         
         h1 {
-            text-align: center;
-            font-size: 3.5rem;
+            font-size: 4rem;
             margin-bottom: 1.5rem;
+            padding-left: 1rem;
         }
     
         p {
-            text-align: center;
+            font-size: 0.7rem;
             line-height: 1.7em;
-            padding: 0 2rem;
+            padding: 0 1rem;
             
             .text {
                 height: 0.9em;
@@ -89,9 +92,8 @@ header {
         }
         
         .buttons {
-            text-align: center;
-            max-width: @content-width;
             margin: 0 auto;
+            display: none;
             
             a {
                 display: inline-block;
@@ -275,49 +277,40 @@ div.menu {
     }
 }
 
-.continue {
-    z-index: 3;
-    position: absolute;
-    border-radius: 300px;
-    width: 0px;
-    height: 0px;
-    left: ~"calc(50%)";
-    margin: 0 0 -30px -30px;
-    
-    &::after {
-        display: block;
-        content: "";
-        width: 20px;
-        height: 20px;
-        transform: rotate(45deg);
-        border-width: 0 5px 5px 0;
-        border-style: solid;
-        border-color: @muted-gray;
-        position: absolute;
-        top: -32px;
-        left: 15.8px;
-        transition: all 0.2s ease;
-    }
-    
-    &:hover::after {
-        border-color: black;
-    }
-}
-
 @media screen and (max-width: 600px) {
     .continue {
         display: none;
     }
 }
 
+a.continue {
+    display: block;
+    width: 3rem;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    
+    &:after {
+        content: '• • •';
+        color: @muted-gray;
+        transition: color 0.3s ease;
+    }        
+    
+    &:hover:after {
+        color: black;
+    }
+}
+
 div.section, article {
     position: relative;
-    padding-bottom: 3rem;
-    padding-top: 2rem;
     display: block;
     width: ~"calc(100% - " @menu-width ~")";
     margin-left: @menu-width;
-    min-height: 100vh;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
     
     &:last-of-type {
         border-bottom: 0px;
@@ -391,10 +384,6 @@ div.section, article {
     
     p, dl {
         line-height: 1.4em;
-        
-        &:last-of-type {
-            margin-bottom: 5rem;
-        }
     }
     
     dt {
