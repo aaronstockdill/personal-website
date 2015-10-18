@@ -46412,7 +46412,7 @@
 		},
 	"\/footer.kit": {
 		"fileType": 2048,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/footer.kit",
 		"outputAbbreviatedPath": "\/footer.html",
@@ -46421,7 +46421,7 @@
 		},
 	"\/header.kit": {
 		"fileType": 2048,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/header.kit",
 		"outputAbbreviatedPath": "\/header.html",
@@ -46458,7 +46458,7 @@
 		"outputAbbreviatedPath": "\/css\/master.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"relativeURLS": 0,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
