@@ -30,30 +30,29 @@
             {{ record.body }}
 
             {% include '_recordfooter.twig' with {'record': record} %}
+            
+            <p class="meta">
+                {% set previous = record.previous('-datepublish') %}
+                {% set next = record.next('id') %}
+                
+                {% if previous %}
+                    <a href="{{ previous.link }}">&laquo; {{ previous.title }}</a>
+                {% endif %}
+                {% if next and previous %}-{% endif %}
+                {% if next %}
+                    <a href="{{ next.link }}">{{ next.title }} &raquo;</a>
+                {% endif %}
+            </p>
 
             {% if Disqus is defined %}
                 {# Show the Disqus comment box, if the Disqus extension is installed .. #}
                 <h4>Leave a comment</h4>
                 {{ Disqus.disqus() }}
-                <hr>
             {% elseif FacebookComments is defined %}
                 {# Show the Facebook comment box, if Facebookcomments extension is installed .. #}
                 <h4>Leave a comment</h4>
                 {{ FacebookComments.facebookComments() }}
-                <hr>
             {% endif %}
-
-            <p class="meta">
-                {% set previous = record.previous('-datepublish') %}
-                {% if previous %}
-                    <a href="{{ previous.link }}">&laquo; {{ previous.title }}</a>
-                {% endif %}
-                -
-                {% set next = record.next('id') %}
-                {% if next %}
-                    <a href="{{ next.link }}">{{ next.title }} &raquo;</a>
-                {% endif %}
-            </p>
 
         </article>
 
