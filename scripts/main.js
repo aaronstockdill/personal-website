@@ -8,10 +8,14 @@ $(function() {
         'Awards',
         'Contact',
     ];
+	
+	var HOME_SIZE = 100;
     
-    var set_active = function () {
+    var set_active = function (target) {
         // Set the active class on the current menu item
-        var target = window.location.hash.slice(1);
+		if (target[0] === "#") {
+			target = target.slice(1);
+		}
         for (var i in indices) {
             $("#link-for-" + indices[i]).removeClass('active');
         }
@@ -54,7 +58,7 @@ $(function() {
     });
     
     $(window).bind('popstate', function () {
-        set_active();
+        set_active(window.location.hash);
     });
 
     $(window).on('scroll', function() {
@@ -67,6 +71,10 @@ $(function() {
                 the_best = $(element).visible();
             }
         });
+		if ($(window).scrollTop() < HOME_SIZE) {
+			// Pretty near the top, call it home.
+			the_hash = "Home";
+		}
         if (the_hash !== '') {
             var el = $("#" + the_hash);
             el.attr('id', '');
@@ -74,7 +82,7 @@ $(function() {
             location.replace("#" + the_hash);
             el.attr('id', the_hash);
             if (old_hash !== "#" + the_hash) {
-                set_active();
+                set_active(the_hash);
             }
         }
         
@@ -86,7 +94,7 @@ $(function() {
         if ($('body').attr('id') === 'index' && 
         window.location.hash && 
         $(window.location.hash).visible() > 0) {
-            set_active();
+            set_active(window.location.hash);
         } else if ($('body').attr('id') === 'index') {
             location.replace("#Home");
             return false;
