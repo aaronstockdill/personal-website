@@ -71,7 +71,7 @@ $(function() {
                 the_best = $(element).visible();
             }
         });
-		if ($(window).scrollTop() < HOME_SIZE && ('body').attr('id') === 'index') {
+		if ($(window).scrollTop() < HOME_SIZE && $('body').attr('id') === 'index') {
 			// Pretty near the top, call it home.
 			the_hash = "Home";
 		}
