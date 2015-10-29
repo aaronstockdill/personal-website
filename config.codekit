@@ -46707,17 +46707,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/resources\/email.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 85679,
-		"inputAbbreviatedPath": "\/resources\/email.png",
-		"outputAbbreviatedPath": "\/resources\/email.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/resources\/favicon-16x16.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -46783,17 +46772,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0
-		},
-	"\/resources\/mobile.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 58674,
-		"inputAbbreviatedPath": "\/resources\/mobile.png",
-		"outputAbbreviatedPath": "\/resources\/mobile.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
 		},
 	"\/resources\/mstile-144x144.png": {
 		"fileType": 32768,
@@ -47150,7 +47128,7 @@
 			"flagValue": -1
 			},
 		"freeze": {
-			"active": 1,
+			"active": 0,
 			"flagValue": -1
 			},
 		"funcscope": {

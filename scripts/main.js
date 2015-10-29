@@ -1,3 +1,7 @@
+var switch_email = function(link) {
+	return 'mailto:' + link.replace('mailto:', '').reverse();
+};
+
 $(function() {
     
     var indices = [
@@ -88,6 +92,47 @@ $(function() {
         
         return false;
     });
+	
+	String.prototype.rotate = function(number) {
+		// Return a 'rotated' version of the string
+		// E.g. using number=2, a->c, b->d, etc...
+		var output = "";
+		this.toLowerCase();
+		for (var i=0; i < this.length; i++) {
+			var code = this.charCodeAt(i);
+			code -= 97;
+			code += number;
+			code %= 26;
+			code += 97;
+			output += String.fromCharCode(code);
+		}
+		return output;
+	};
+	
+	String.prototype.reverse = function() {
+		// Return the reverse of the string this is called on.
+	    return this.split("").reverse().join("");
+	};
+	
+	var setup_email = function() {
+		// Try and hide the email as well as I possibly can.
+		var the_at_sign = "@";
+		var the_dot_sign = ".";
+		var hidden_name = "nnebafgbpxqvyy";
+		var email = hidden_name.rotate(13) + the_at_sign + "me" + the_dot_sign + "com";
+		email = email.reverse();
+		
+		var new_email_code = "<a href=\"mailto:" + email + " \" class=\"borked-email\">" + email + "</a>";
+		
+		$("#email-holder").html(new_email_code);
+		
+		$(".borked-email").on('mouseover', function(event) {
+			event.target.href = switch_email(event.target.href);
+		});
+		$(".borked-email").on('mouseout', function(event) {
+			event.target.href = switch_email(event.target.href);
+		});
+	};
     
     setTimeout(function(){
         // When the page loads, set the menu correctly
@@ -99,5 +144,6 @@ $(function() {
             location.replace("#Home");
             return false;
         }
+		setup_email();
     }, 50);
 });
