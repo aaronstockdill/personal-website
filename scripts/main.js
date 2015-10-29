@@ -60,6 +60,10 @@ $(function() {
             }
         }
     });
+	
+	$(".menubutton").on('click', function() {
+		$(".menu").toggleClass('showing');
+	});
     
     $(window).bind('popstate', function () {
         set_active(window.location.hash);
@@ -146,4 +150,10 @@ $(function() {
         }
 		setup_email();
     }, 50);
+	
+	if (document.body.style.webkitBackdropFilter === undefined &&
+		document.body.style.mozBackdropFilter === undefined && 
+		document.body.style.backdropFilter === undefined) {
+			$(".menu").addClass("nofilter");
+		}
 });
