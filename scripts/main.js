@@ -62,7 +62,7 @@ $(function() {
     });
 	
 	$(".menubutton").on('click', function() {
-		$(".menu").toggleClass('showing');
+		$("nav").toggleClass('showing');
 	});
     
     $(window).bind('popstate', function () {
@@ -73,7 +73,7 @@ $(function() {
         // Work out where the user is when scrolling
         var the_hash = '';
         var the_best = 0;
-        $(".section").each(function(index, element) {
+        $("section").each(function(index, element) {
             if ($(element).visible() > the_best) {
                 the_hash = $(element).attr('id');
                 the_best = $(element).visible();
@@ -154,6 +154,6 @@ $(function() {
 	if (document.body.style.webkitBackdropFilter === undefined &&
 		document.body.style.mozBackdropFilter === undefined && 
 		document.body.style.backdropFilter === undefined) {
-			$(".menu").addClass("nofilter");
+			$("nav").addClass("nofilter");
 		}
 });
