@@ -349,6 +349,19 @@ header, section, article {
     p, dl {
         line-height: 1.4em;
     }
+	
+	hr {
+		width: ~"calc(100% - 4rem)";
+		max-width:  ~"calc(" @content-width ~" - 4rem)";
+		border: none;
+		height: 1px;
+		background: @muted-gray;
+		border-radius: 1px;
+	}
+	
+	emph {
+		font-style: italic;
+	}
     
     dt {
         margin-top: 0.8rem;

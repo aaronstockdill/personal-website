@@ -19,7 +19,7 @@
             {% endif %}
 
             {# display something introduction-like.. #}
-            {{ record.teaser }}
+            {# {{ record.teaser }} #}
 
             {# if the entry has a video, display it. #}
             {% if record.video is not empty %}
@@ -32,13 +32,13 @@
             {% include '_recordfooter.twig' with {'record': record} %}
             
             <p class="meta">
-                {% set previous = record.previous('-datepublish') %}
-                {% set next = record.next('id') %}
+                {% set previous = record.previous('datepublish') %}
+                {% set next = record.next('datepublish') %}
                 
                 {% if previous %}
                     <a href="{{ previous.link }}">&laquo; {{ previous.title }}</a>
                 {% endif %}
-                {% if next and previous %}-{% endif %}
+                {% if next and previous %} - {% endif %}
                 {% if next %}
                     <a href="{{ next.link }}">{{ next.title }} &raquo;</a>
                 {% endif %}
