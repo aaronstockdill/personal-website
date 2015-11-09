@@ -1,6 +1,6 @@
 @menu-width: 7rem;
 @menu-width-mobile: 10rem;
-@content-width: 700px;
+@content-width: 600px;
 @muted-gray: #aaa;
 @header-fonts: "Century Gothic", "Questrial", Helvetica, Arial, sans-serif;
 @body-fonts: "Roboto", Helvetica, Arial, sans-serif;
@@ -25,17 +25,25 @@ html, body {
 }
 
 body { /* Font size on <html> causes iOS bug. */
-    font-size: 15pt;
+    font-size: 14pt;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
     font-family: @header-fonts;
 }
 
-h4, h5, h6 {
-    font-weight: 400;
-    font-family: @header-fonts;
+h1 {
+	font-size: 4rem;
+}
+h2 {
+	font-size: 3rem;
+}
+h3 {
+	font-size: 2rem;
+}
+h4 {
+	font-size: 1.5rem;
 }
 
 header {
@@ -50,7 +58,6 @@ header {
         max-width: @content-width;
         margin: 0 auto;
         padding: 1rem 2rem;
-        text-align: center;
         position: relative;
         z-index: 1;
         color: black;
@@ -59,11 +66,13 @@ header {
         h1 {
             font-size: 4rem;
             margin-bottom: 1.5rem;
+	        text-align: center;
         }
     
         p {
             font-size: 0.9rem;
             line-height: 1.7em;
+        	text-align: center;
             padding: 0.5rem inherit;
             
             a {
@@ -179,7 +188,7 @@ nav {
     position: fixed;
     margin-top: 1rem;
     text-align: right;
-    padding-left: ~"calc(50% - 450px)";
+    padding-left: ~"calc(50% - " (1.4 * @content-width / 2) ~")";
     z-index: 2;
     transition: all 0.2s ease;
     
@@ -337,17 +346,17 @@ header, section, article {
     
     h3{
         text-align: left;
-        padding-bottom: 0;
+        padding-bottom: 0.5em;
     }
     
     h4 {
         text-align: left;
-        padding-bottom: 0;
+        padding-bottom: 0.5em;
         margin: -0.5rem auto;
     }
     
     p, dl {
-        line-height: 1.4em;
+        line-height: 1.5em;
     }
 	
 	hr {
