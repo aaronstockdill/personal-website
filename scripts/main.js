@@ -141,19 +141,18 @@ $(function() {
     setTimeout(function(){
         // When the page loads, set the menu correctly
         if ($('body').attr('id') === 'index' && 
-        window.location.hash && 
-        $(window.location.hash).visible() > 0) {
+        window.location.hash) {
             set_active(window.location.hash);
         } else if ($('body').attr('id') === 'index') {
             location.replace("#Home");
             return false;
         }
-		setup_email();
     }, 50);
 	
 	if (document.body.style.webkitBackdropFilter === undefined &&
 		document.body.style.mozBackdropFilter === undefined && 
 		document.body.style.backdropFilter === undefined) {
 			$("nav").addClass("nofilter");
-		}
+	}
+	setup_email();
 });
