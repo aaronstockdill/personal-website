@@ -3,7 +3,7 @@
 @content-width: 600px;
 @muted-gray: #aaa;
 @header-fonts: "Century Gothic", "Questrial", Helvetica, Arial, sans-serif;
-@body-fonts: "Roboto", Helvetica, Arial, sans-serif;
+@body-fonts: -apple-system, "Roboto", Helvetica, Arial, sans-serif;
 
 @import url(http://fonts.googleapis.com/css?family=Roboto:300);
 @import url(http://fonts.googleapis.com/css?family=Questrial:400);
@@ -200,7 +200,6 @@ nav {
         color: @muted-gray;
         text-decoration: none;
         padding: 0 ~"calc(1rem + 4px)";
-        border-left: 0px solid @muted-gray;
         transition: all 0.2s ease;
         
         &:hover, &.active {
