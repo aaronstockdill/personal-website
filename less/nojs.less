@@ -1,0 +1,63 @@
+@menu-width: 7rem;
+@menu-width-mobile: 10rem;
+@content-width: 600px;
+@muted-gray: #aaa;
+@header-fonts: "Century Gothic", "Questrial", Helvetica, Arial, sans-serif;
+@body-fonts: -apple-system, "Roboto", Helvetica, Arial, sans-serif;
+
+@media screen and (max-width: 600px) {
+	
+    nav {
+		position: fixed;
+        top: 0;
+        left: 0;
+        border: none;
+        margin-top: 0;
+        background: rgba(255, 255, 255, 0.8);
+		backdrop-filter: blur(10px);
+        height: 3rem;
+        overflow-x: auto;
+		overflow-y: hidden;
+        width: 100%;
+		text-align: left;
+		white-space: nowrap;
+        
+        a {
+			text-align: center;
+			display: inline-block;
+			padding: 0.5rem 0;
+			margin: 0 -0.2rem;
+            color: black;
+			width: 32%;
+			border-left: 1px solid @muted-gray;
+            
+            &.active {
+                font-weight: bold;
+            }
+            
+            &:last-of-type {
+                margin-bottom: 2rem;
+            }
+        }
+		
+		&.nofilter {
+			background: rgba(255, 255, 255, 0.98)
+		}
+    }
+	
+    .menubutton {
+		display: none;
+    }
+	
+	section {
+		margin-top: -3rem;
+		
+		h2 {
+			padding-top: 4rem;
+		}
+	}
+	
+	#blog main {
+		margin-top: 3rem;
+	}
+}

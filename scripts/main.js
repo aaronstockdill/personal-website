@@ -55,7 +55,7 @@ $(function() {
                 $('html,body').animate({
                     scrollTop: target.offset().top
                 }, 300);
-                $('#menu-check').attr('checked', false);
+                $('nav').removeClass('showing');
                 return false;
             }
         }
