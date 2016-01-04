@@ -5,8 +5,12 @@
 @header-fonts: "Century Gothic", "Questrial", Helvetica, Arial, sans-serif;
 @body-fonts: -apple-system, "Roboto", Helvetica, Arial, sans-serif;
 
+body {
+    opacity: 1;
+}
+
 @media screen and (max-width: 600px) {
-	
+
     nav {
 		position: fixed;
         top: 0;
@@ -21,7 +25,7 @@
         width: 100%;
 		text-align: left;
 		white-space: nowrap;
-        
+
         a {
 			text-align: center;
 			display: inline-block;
@@ -30,33 +34,33 @@
             color: black;
 			width: 32%;
 			border-left: 1px solid @muted-gray;
-            
+
             &.active {
                 font-weight: bold;
             }
-            
+
             &:last-of-type {
                 margin-bottom: 2rem;
             }
         }
-		
+
 		&.nofilter {
 			background: rgba(255, 255, 255, 0.98)
 		}
     }
-	
+
     .menubutton {
 		display: none;
     }
-	
+
 	section {
 		margin-top: -3rem;
-		
+
 		h2 {
 			padding-top: 4rem;
 		}
 	}
-	
+
 	#blog main {
 		margin-top: 3rem;
 	}

@@ -3,7 +3,7 @@ var switch_email = function(link) {
 };
 
 $(function() {
-    
+
     var indices = [
         'Home',
         'About',
@@ -12,9 +12,9 @@ $(function() {
         'Awards',
         'Contact',
     ];
-	
+
 	var HOME_SIZE = 100;
-    
+
     var set_active = function (target) {
         // Set the active class on the current menu item
 		if (target[0] === "#") {
@@ -35,16 +35,16 @@ $(function() {
 
         var elemTop = this.offset().top;
         var elemBottom = elemTop + this.height();
-        
+
         if ((elemBottom >= docViewTop) && (elemBottom <= docViewBottom)) {
             return (elemBottom - docViewTop) / ($window.height());
         } else if ((elemTop >= docViewTop) && (elemTop <= docViewBottom)) {
             return (docViewBottom - elemTop) / ($window.height());
         }
-        
+
         return 0;
     };
-    
+
     $('a[href*=#]:not([href=#])').click(function() {
         // Smooth scrolling to anchors
         if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
@@ -60,11 +60,11 @@ $(function() {
             }
         }
     });
-	
+
 	$(".menubutton").on('click', function() {
 		$("nav").toggleClass('showing');
 	});
-    
+
     $(window).bind('popstate', function () {
         set_active(window.location.hash);
     });
@@ -93,10 +93,10 @@ $(function() {
                 set_active(the_hash);
             }
         }
-        
+
         return false;
     });
-	
+
 	String.prototype.rotate = function(number) {
 		// Return a 'rotated' version of the string
 		// E.g. using number=2, a->c, b->d, etc...
@@ -112,12 +112,12 @@ $(function() {
 		}
 		return output;
 	};
-	
+
 	String.prototype.reverse = function() {
 		// Return the reverse of the string this is called on.
 	    return this.split("").reverse().join("");
 	};
-	
+
 	var setup_email = function() {
 		// Try and hide the email as well as I possibly can.
 		var the_at_sign = "@";
@@ -125,11 +125,11 @@ $(function() {
 		var hidden_name = "nnebafgbpxqvyy";
 		var email = hidden_name.rotate(13) + the_at_sign + "me" + the_dot_sign + "com";
 		email = email.reverse();
-		
+
 		var new_email_code = "<a href=\"mailto:" + email + " \" class=\"borked-email\">" + email + "</a>";
-		
+
 		$("#email-holder").html(new_email_code);
-		
+
 		$(".borked-email").on('mouseover', function(event) {
 			event.target.href = switch_email(event.target.href);
 		});
@@ -137,22 +137,34 @@ $(function() {
 			event.target.href = switch_email(event.target.href);
 		});
 	};
-    
-    setTimeout(function(){
-        // When the page loads, set the menu correctly
-        if ($('body').attr('id') === 'index' && 
-        window.location.hash) {
-            set_active(window.location.hash);
-        } else if ($('body').attr('id') === 'index') {
-            location.replace("#Home");
-            return false;
+
+    $(document).ready(function() {
+        setTimeout(function(){
+            // When the page loads, set the menu correctly
+            if ($('body').attr('id') === 'index' &&
+            window.location.hash) {
+                set_active(window.location.hash);
+            } else if ($('body').attr('id') === 'index') {
+                location.replace("#Home");
+                return false;
+            }
+        }, 50);
+
+        if (document.body.style.webkitBackdropFilter === undefined &&
+            document.body.style.mozBackdropFilter === undefined &&
+            document.body.style.backdropFilter === undefined) {
+                $("nav").addClass("nofilter");
         }
-    }, 50);
-	
-	if (document.body.style.webkitBackdropFilter === undefined &&
-		document.body.style.mozBackdropFilter === undefined && 
-		document.body.style.backdropFilter === undefined) {
-			$("nav").addClass("nofilter");
-	}
-	setup_email();
+
+        setup_email();
+
+        if (!sessionStorage.getItem("is_reloaded")){
+            setTimeout(function(){
+                $('body').css('opacity', '1');
+            }, 500);
+            sessionStorage.setItem("is_reloaded", "true");
+        } else {
+            $('body').css('opacity', '1');
+        }
+    });
 });

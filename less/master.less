@@ -26,6 +26,8 @@ html, body {
 
 body { /* Font size on <html> causes iOS bug. */
     font-size: 14pt;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -52,7 +54,7 @@ header {
     width: ~"calc(100% - " @menu-width ~")";
     margin-left: @menu-width;
     display: block;
-    
+
     .title {
         width: 100%;
         max-width: @content-width;
@@ -60,29 +62,28 @@ header {
         padding: 1rem 2rem;
         position: relative;
         z-index: 1;
-        color: black;
         padding-top: 3rem;
-        
+
         h1 {
             font-size: 4rem;
             margin-bottom: 1.5rem;
 	        text-align: center;
         }
-    
+
         p {
             font-size: 0.9rem;
             line-height: 1.7em;
         	text-align: center;
             padding: 0.5rem 0;
-            
+
             a {
             	text-decoration: none;
 				color: black;
-				
+
 				&:hover {
 					text-decoration: underline;
 				}
-				
+
 				&.borked-email {
 				  unicode-bidi: bidi-override;
 				  direction: rtl;
@@ -90,7 +91,7 @@ header {
             }
         }
     }
-    
+
     .continue {
         left: 50%;
         bottom: 60px;
@@ -103,7 +104,7 @@ header {
         margin-left: 0;
         height: auto;
         min-height: 0;
-        
+
         .title {
             position: relative;
             top: 0;
@@ -126,7 +127,7 @@ header {
         width: 36px;
         height: 40px;
         transition: left 0.2s ease;
-        
+
         span {
             position: relative;
             display: block;
@@ -138,7 +139,7 @@ header {
             background: @muted-gray;
             text-indent: -99999px;
             transition: all 0.5s ease;
-            
+
             &:before, &:after {
                 content: "";
                 display: block;
@@ -149,32 +150,32 @@ header {
                 border-radius: 0px;
                 transition: all 0.5s ease;
             }
-            
+
             &:before {
                 top: -12px;
             }
-            
+
             &:after {
                 top: 12px;
             }
         }
     }
-    
+
     nav.showing + .menubutton {
         left: ~"calc(" @menu-width-mobile ~" + 5px)";
-        
+
         span {
             transform: rotate(45deg);
             background: white;
-            
+
             &:before, &:after {
                 top: 0;
             }
-            
+
             &:before {
                 transform: rotate(180deg);
             }
-            
+
             &:after {
                 transform: rotate(90deg);
             }
@@ -191,7 +192,7 @@ nav {
     padding-left: ~"calc(50% - " (1.4 * @content-width / 2) ~")";
     z-index: 2;
     transition: all 0.2s ease;
-    
+
     a {
         font-size: 1.2rem;
 		line-height: 2rem;
@@ -201,7 +202,7 @@ nav {
         text-decoration: none;
         padding: 0 ~"calc(1rem + 4px)";
         transition: all 0.2s ease;
-        
+
         &:hover, &.active {
             color: black;
         }
@@ -224,25 +225,25 @@ nav {
         height: 100%;
         overflow-y: auto;
         width: @menu-width-mobile;
-        
+
         a {
             padding-top: 0.5rem;
             padding-bottom: 0.5rem;
             color:black;
-            
+
             &.active {
                 font-weight: bold;
             }
-            
+
             &:last-of-type {
                 margin-bottom: 2rem;
             }
         }
-		
+
 		&.nofilter {
 			background: rgba(255, 255, 255, 0.98);
 		}
-		
+
 		&.showing {
 			left: 0;
 		}
@@ -264,13 +265,13 @@ a.continue {
     font-size: 1.1rem;
     text-decoration: none;
     transition: color 0.3s ease;
-    
+
     &:after {
         content: '• • •';
         color: @muted-gray;
         transition: color 0.3s ease;
-    }        
-    
+    }
+
     &:hover:after {
         color: black;
     }
@@ -283,15 +284,15 @@ header, section, article {
     margin-left: @menu-width;
     padding-top: 1rem;
     padding-bottom: 2rem;
-    
+
     &:last-of-type {
         border-bottom: 0px;
     }
-    
+
     a {
         color: black;
     }
-    
+
     .byline {
         display: block;
         width: 100%;
@@ -302,62 +303,65 @@ header, section, article {
         margin-top: -2rem;
         margin-bottom: -1rem;
     }
-    
+
     .backlink a {
         text-decoration: none;
-        
+
         &:hover {
             text-decoration: underline;
         }
     }
-    
-    
+
+
     quote, h2, h3, h4, h5, h6, p, dl, div, article, ul, ol {
         width: 100%;
         max-width: @content-width;
         margin: 0 auto;
         padding: 1rem 2rem;
     }
-    
+
     ul li, ol li {
         margin-left: 2rem;
     }
-    
+
     img, span {
         width: 100%;
         max-width: @content-width;
         margin: 0 auto;
     }
-    
+
     h2 {
         font-size: 3rem;
         counter-increment: section;
-        
+
         a {
             text-decoration: none;
             color: lighten(black, 30%);
-            
+
             &:hover {
                 color: black;
             }
         }
     }
-    
+
     h3{
         text-align: left;
-        padding-bottom: 0.5em;
+        padding-top: 0.6em;
+        padding-bottom: 0.1em;
     }
-    
+
     h4 {
         text-align: left;
-        padding-bottom: 0.5em;
-        margin: -0.5rem auto;
+        padding-top: 0.6em;
+        padding-bottom: 0.1em;
     }
-    
+
     p, dl {
         line-height: 1.5em;
+        padding-top: 0.2em;
+        padding-bottom: 0.3em;
     }
-	
+
 	hr {
 		width: ~"calc(100% - 4rem)";
 		max-width:  ~"calc(" @content-width ~" - 4rem)";
@@ -366,42 +370,42 @@ header, section, article {
 		background: @muted-gray;
 		border-radius: 1px;
 	}
-	
+
 	emph {
 		font-style: italic;
 	}
-    
+
     dt {
         margin-top: 0.8rem;
         font-weight: bold;
-        
+
         .stars {
             display: inline-block;
             height: 0.6rem;
             background: url('../resources/stars.png') no-repeat left center;
             background-size: 3rem 0.6rem;
-    
+
             &.one {
                 width: 0.6rem;
             }
-    
+
             &.two {
                 width: 1.2rem;
             }
-    
+
             &.three {
                 width: 1.8rem;
             }
-    
+
             &.four {
                 width: 2.4rem;
             }
-    
+
             &.five {
                 width: 3rem;
             }
         }
-        
+
         .LaTeX {
             background-image: url('../resources/latex.png');
             background-repeat: no-repeat;
@@ -423,7 +427,7 @@ header, section, article {
         min-height: 0;
         padding-bottom: 0;
         padding-top: 0;
-        
+
         h2 {
             &::before {
                 display: block;
@@ -438,7 +442,7 @@ header, section, article {
     max-width: (0.75 * @content-width);
     width: 90%;
     line-height: 0;
-    
+
     input, textarea {
         width: 100%;
         font-size: 1.15rem;
@@ -450,18 +454,18 @@ header, section, article {
         font-family: @body-fonts;
         transition: all 0.2s ease;
 		appearance: none; // Needed for iOS
-        
+
         &:focus {
             outline: none;
         }
     }
-    
+
     textarea {
         height: 10em;
         border-bottom: 1px solid @muted-gray;
         max-width: (0.75 * @content-width);
     }
-    
+
     input[type='submit'] {
         background: white;
         border: 1px solid @muted-gray;
@@ -469,11 +473,11 @@ header, section, article {
         margin: 0 25%;
         margin-top: 0.5rem;
         height: auto;
-        
+
         &:hover {
             border-color: black;
         }
-        
+
         &:active {
             box-shadow: inset 0px 0px 4px @muted-gray;
         }
@@ -484,23 +488,23 @@ header, section, article {
     margin: 0 auto;
     width: ~"calc(100% - " @menu-width ~")";
     margin-left: @menu-width;
-    
+
     ul {
         text-align: center;
         list-style: none;
         text-indent: 0;
         padding: 0;
     }
-    
+
     a {
         color: black;
         text-decoration: none;
-        
+
         &:hover {
             text-decoration: underline;
         }
     }
-    
+
     li {
         display: inline-block;
         padding: 0.2rem;
@@ -515,11 +519,11 @@ footer {
     color: @muted-gray;
     margin-left: @menu-width;
     width: ~"calc(100% - " @menu-width ~")";
-    
+
     a {
         color: @muted-gray;
         text-decoration: none;
-        
+
         &:hover {
             text-decoration: underline;
         }
