@@ -2,11 +2,22 @@
 @menu-width-mobile: 10rem;
 @content-width: 600px;
 @muted-gray: #aaa;
-@header-fonts: "Century Gothic", "Questrial", Helvetica, Arial, sans-serif;
+@header-fonts: "Helvetica Neue", Helvetica, Arial, sans-serif;
 @body-fonts: -apple-system, "Roboto", Helvetica, Arial, sans-serif;
 
-@import url(http://fonts.googleapis.com/css?family=Roboto:300);
-@import url(http://fonts.googleapis.com/css?family=Questrial:400);
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url('/resources/Roboto.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Martel';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Martel UltraLight'), local('Martel-UltraLight'), url(/resources/Martel.woff) format('woff');
+}
 
 * {
     box-sizing: border-box;
@@ -25,18 +36,17 @@ html, body {
 }
 
 body { /* Font size on <html> causes iOS bug. */
-    font-size: 14pt;
+    font-size: 12pt;
     opacity: 0;
-    transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.5s ease-out;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 400;
     font-family: @header-fonts;
 }
 
 h1 {
-	font-size: 4rem;
+	font-size: 7rem;
 }
 h2 {
 	font-size: 3rem;
@@ -46,6 +56,10 @@ h3 {
 }
 h4 {
 	font-size: 1.5rem;
+}
+
+.breakable {
+    hyphens: auto;
 }
 
 header {
@@ -60,20 +74,18 @@ header {
         max-width: @content-width;
         margin: 0 auto;
         padding: 1rem 2rem;
+        padding-top: 0;
         position: relative;
         z-index: 1;
-        padding-top: 3rem;
 
         h1 {
-            font-size: 4rem;
-            margin-bottom: 1.5rem;
-	        text-align: center;
+            margin: 1rem auto;
+            line-height: 0.8em;
         }
 
         p {
             font-size: 0.9rem;
             line-height: 1.7em;
-        	text-align: center;
             padding: 0.5rem 0;
 
             a {
@@ -109,6 +121,10 @@ header {
             position: relative;
             top: 0;
             bottom: auto;
+
+            h1 {
+                font-size: 20vw;
+            }
         }
     }
 }
@@ -209,15 +225,12 @@ nav {
     }
 }
 
-#blog nav a#link-for-Blog {
-    color: black;
-}
-
 @media screen and (max-width: 600px) {
     nav {
         z-index: 2;
         top: 0;
         left: -100%;
+        background: white;
         background: rgba(255, 255, 255, 0.8);
 		backdrop-filter: blur(10px);
         border-right: 1px solid @muted-gray;
@@ -256,13 +269,12 @@ nav {
     }
 }
 
-a.continue {
+.continue {
     display: block;
     width: 3rem;
     text-align: center;
     text-decoration: none;
     margin: 0 auto;
-    font-size: 1.1rem;
     text-decoration: none;
     transition: color 0.3s ease;
 
@@ -331,17 +343,7 @@ header, section, article {
     }
 
     h2 {
-        font-size: 3rem;
-        counter-increment: section;
-
-        a {
-            text-decoration: none;
-            color: lighten(black, 30%);
-
-            &:hover {
-                color: black;
-            }
-        }
+        padding-bottom: 0;
     }
 
     h3{
@@ -433,81 +435,6 @@ header, section, article {
                 display: block;
             }
         }
-    }
-}
-
-.contact-form {
-    display: block;
-    margin: 0 auto;
-    max-width: (0.75 * @content-width);
-    width: 90%;
-    line-height: 0;
-
-    input, textarea {
-        width: 100%;
-        font-size: 1.15rem;
-        border: 1px solid @muted-gray;
-        border-width: 1px 1px 0px 1px;
-        border-radius: 0;
-        margin: 0;
-        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-        font-family: @body-fonts;
-        transition: all 0.2s ease;
-		appearance: none; // Needed for iOS
-
-        &:focus {
-            outline: none;
-        }
-    }
-
-    textarea {
-        height: 10em;
-        border-bottom: 1px solid @muted-gray;
-        max-width: (0.75 * @content-width);
-    }
-
-    input[type='submit'] {
-        background: white;
-        border: 1px solid @muted-gray;
-        width: 50%;
-        margin: 0 25%;
-        margin-top: 0.5rem;
-        height: auto;
-
-        &:hover {
-            border-color: black;
-        }
-
-        &:active {
-            box-shadow: inset 0px 0px 4px @muted-gray;
-        }
-    }
-}
-
-.pagination-centered {
-    margin: 0 auto;
-    width: ~"calc(100% - " @menu-width ~")";
-    margin-left: @menu-width;
-
-    ul {
-        text-align: center;
-        list-style: none;
-        text-indent: 0;
-        padding: 0;
-    }
-
-    a {
-        color: black;
-        text-decoration: none;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-
-    li {
-        display: inline-block;
-        padding: 0.2rem;
     }
 }
 
