@@ -1,23 +1,8 @@
 @menu-width: 7rem;
-@menu-width-mobile: 10rem;
 @content-width: 600px;
 @muted-gray: #aaa;
 @header-fonts: "Helvetica Neue", Helvetica, Arial, sans-serif;
 @body-fonts: -apple-system, "Roboto", Helvetica, Arial, sans-serif;
-
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Roboto Light'), local('Roboto-Light'), url('/resources/Roboto.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Martel';
-  font-style: normal;
-  font-weight: 200;
-  src: local('Martel UltraLight'), local('Martel-UltraLight'), url(/resources/Martel.woff) format('woff');
-}
 
 * {
     box-sizing: border-box;
@@ -37,8 +22,6 @@ html, body {
 
 body { /* Font size on <html> causes iOS bug. */
     font-size: 12pt;
-    opacity: 0;
-    transition: opacity 0.5s ease-out;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -46,7 +29,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 7rem;
+	font-size: 6rem;
 }
 h2 {
 	font-size: 3rem;
@@ -73,8 +56,7 @@ header {
         width: 100%;
         max-width: @content-width;
         margin: 0 auto;
-        padding: 1rem 2rem;
-        padding-top: 0;
+        padding: 0 2rem;
         position: relative;
         z-index: 1;
 
@@ -139,7 +121,7 @@ header {
         position: fixed;
         display: block;
         top: 0;
-        left: 0;
+        right: 0;
         width: 36px;
         height: 40px;
         transition: left 0.2s ease;
@@ -147,9 +129,8 @@ header {
         span {
             position: relative;
             display: block;
-            width: 30px;
-            height: 6px;
-            left: -3px;
+            width: 25px;
+            height: 4px;
             top: 19px;
             border-radius: 0px;
             background: @muted-gray;
@@ -160,25 +141,24 @@ header {
                 content: "";
                 display: block;
                 position: absolute;
-                width: 30px;
-                height: 6px;
+                width: 25px;
+                height: 4px;
                 background: @muted-gray;
                 border-radius: 0px;
                 transition: all 0.5s ease;
             }
 
             &:before {
-                top: -12px;
+                top: -8px;
             }
 
             &:after {
-                top: 12px;
+                top: 8px;
             }
         }
     }
 
     nav.showing + .menubutton {
-        left: ~"calc(" @menu-width-mobile ~" + 5px)";
 
         span {
             transform: rotate(45deg);
@@ -207,7 +187,7 @@ nav {
     text-align: right;
     padding-left: ~"calc(50% - " (1.4 * @content-width / 2) ~")";
     z-index: 2;
-    transition: all 0.2s ease;
+    transition: all 0.5s ease;
 
     a {
         font-size: 1.2rem;
@@ -229,20 +209,22 @@ nav {
     nav {
         z-index: 2;
         top: 0;
-        left: -100%;
+        right: -100%;
         background: white;
-        background: rgba(255, 255, 255, 0.8);
-		backdrop-filter: blur(10px);
         border-right: 1px solid @muted-gray;
         margin-top: 0;
         height: 100%;
         overflow-y: auto;
-        width: @menu-width-mobile;
+        width: 100%;
+        opacity: 0;
 
         a {
-            padding-top: 0.5rem;
-            padding-bottom: 0.5rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            margin-right: 2rem;
             color:black;
+            font-size: 1.5rem;
+            transition: none;
 
             &.active {
                 font-weight: bold;
@@ -258,7 +240,8 @@ nav {
 		}
 
 		&.showing {
-			left: 0;
+			right: 0;
+            opacity: 1;
 		}
     }
 }
@@ -274,7 +257,7 @@ nav {
     width: 3rem;
     text-align: center;
     text-decoration: none;
-    margin: 0 auto;
+    margin: 2rem auto 0 auto;
     text-decoration: none;
     transition: color 0.3s ease;
 
@@ -348,20 +331,20 @@ header, section, article {
 
     h3{
         text-align: left;
-        padding-top: 0.6em;
-        padding-bottom: 0.1em;
+        padding-top: 1.5rem;
+        padding-bottom: 0;
     }
 
     h4 {
         text-align: left;
-        padding-top: 0.6em;
-        padding-bottom: 0.1em;
+        padding-top: 1rem;
+        padding-bottom: 0;
     }
 
     p, dl {
         line-height: 1.5em;
-        padding-top: 0.2em;
-        padding-bottom: 0.3em;
+        padding-top: 1rem;
+        padding-bottom: 0em;
     }
 
 	hr {
@@ -420,6 +403,10 @@ header, section, article {
             margin-bottom: -0.8rem;
         }
     }
+}
+
+h2 + p, h3 + p, h4 + p {
+    padding-top: 0.2rem;
 }
 
 @media screen and (max-width: 600px) {

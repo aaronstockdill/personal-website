@@ -157,14 +157,5 @@ $(function() {
         }
 
         setup_email();
-
-        if (!sessionStorage.getItem("is_reloaded")){
-            setTimeout(function(){
-                $('body').css('opacity', '1');
-            }, 500);
-            sessionStorage.setItem("is_reloaded", "true");
-        } else {
-            $('body').css('opacity', '1');
-        }
     });
 });
