@@ -4,15 +4,6 @@ var switch_email = function(link) {
 
 $(function() {
 
-    var indices = [
-        'Home',
-        'About',
-        'Education',
-        'Experience',
-        'Awards',
-        'Contact',
-    ];
-
 	var HOME_SIZE = 100;
 
     var set_active = function (target) {
@@ -20,10 +11,20 @@ $(function() {
 		if (target[0] === "#") {
 			target = target.slice(1);
 		}
-        for (var i in indices) {
-            $("#link-for-" + indices[i]).removeClass('active');
+        var l = $("#link-for-" + target);
+        if (!l.hasClass('active')) {
+            l.addClass('active');
         }
-        $("#link-for-" + target).addClass('active');
+    };
+
+    var set_inactive = function (target) {
+        if (target[0] === "#") {
+            target = target.slice(1);
+        }
+        var l = $("#link-for-" + target);
+        if (l.hasClass('active')) {
+            l.removeClass('active');
+        }
     };
 
     $.fn.visible = function () {
@@ -40,6 +41,8 @@ $(function() {
             return (elemBottom - docViewTop) / ($window.height());
         } else if ((elemTop >= docViewTop) && (elemTop <= docViewBottom)) {
             return (docViewBottom - elemTop) / ($window.height());
+        } else if ((elemTop <= docViewTop) && (elemBottom >= docViewBottom)) {
+            return 1;
         }
 
         return 0;
@@ -71,26 +74,39 @@ $(function() {
 
     $(window).on('scroll', function() {
         // Work out where the user is when scrolling
-        var the_hash = '';
-        var the_best = 0;
-        $("section").each(function(index, element) {
-            if ($(element).visible() > the_best) {
-                the_hash = $(element).attr('id');
-                the_best = $(element).visible();
-            }
+        var sections = $("section").toArray();
+        sections.push($("#Home")[0]);
+        sections.sort(function(a, b) {
+            return $(a).visible() - $(b).visible();
         });
+        var len = sections.length;
+        var i = 0;
+
 		if ($(window).scrollTop() < HOME_SIZE && $('body').attr('id') === 'index') {
 			// Pretty near the top, call it home.
-			the_hash = "Home";
-		}
-        if (the_hash !== '') {
-            var el = $("#" + the_hash);
-            el.attr('id', '');
-            var old_hash = window.location.hash;
-            location.replace("#" + the_hash);
-            el.attr('id', the_hash);
-            if (old_hash !== "#" + the_hash) {
-                set_active(the_hash);
+            for(i=0; i < len; i++) {
+                set_inactive(sections[i].id);
+            }
+            set_active("Home");
+            return false;
+		} else {
+            // set_inactive("Home");
+            var active_count = Math.floor($('main')[0].offsetWidth / $('section').outerWidth(true));
+            if (active_count < 1) {active_count = 1;}
+
+            for(i=0; i < len; i++) {
+                var el = $(sections.pop());
+                var the_hash = el.attr('id');
+                el.attr('id', '');
+                if (i < active_count) {
+                    set_active(the_hash);
+                } else {
+                    set_inactive(the_hash);
+                }
+                if (i === 0) {
+                    location.replace("#" + the_hash);
+                }
+                el.attr('id', the_hash);
             }
         }
 
