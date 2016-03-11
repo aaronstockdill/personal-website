@@ -82,6 +82,7 @@ header {
 				&.borked-email {
 				  unicode-bidi: bidi-override;
 				  direction: rtl;
+                  font-family: "Courier New", monospace;
 				}
             }
         }
@@ -123,23 +124,7 @@ nav {
 
 .continue {
     display: block;
-    width: 3rem;
-    text-align: center;
-    text-decoration: none;
-    margin: 2rem auto 0 auto;
-    text-decoration: none;
-    transition: color 0.3s ease;
-
-    &:after {
-        font-size: 2rem;
-        content: '❧';
-        color: @muted-gray;
-        transition: color 0.3s ease;
-    }
-
-    &:hover:after {
-        color: black;
-    }
+    margin: 5rem auto;
 }
 
 main {
@@ -150,7 +135,7 @@ main {
 section, article {
     position: relative;
     display: inline-block;
-    width: ~"calc(50% - 5rem)";
+    width: ~"calc(100% - " @menu-width ~")";
     padding-top: 1rem;
     padding-bottom: 2rem;
     margin-left: 2rem;
@@ -211,7 +196,6 @@ section, article {
             content: "";
             display: block;
             width: ~"calc(100% + 1rem)";
-            border-top: 2px solid black;
             position: relative;
             top: -0.5rem;
             left: -0.5rem;
@@ -234,10 +218,18 @@ section, article {
         padding-bottom: 0;
     }
 
-    p, dl {
+    dl {
         line-height: 1.5em;
         padding-top: 1rem;
         padding-bottom: 0em;
+    }
+
+    p {
+        text-align: justify;
+        text-indent: 2rem;
+        line-height: 1.5em;
+        padding-top: 0.5rem;
+        padding-bottom: 0;
     }
 
 	hr {
@@ -298,8 +290,9 @@ section, article {
     }
 }
 
-h2 + p, h3 + p, h4 + p {
+h1 + p, h2 + p, h3 + p, h4 + p {
     padding-top: 0.2rem;
+    text-indent: 0;
 }
 
 footer {
