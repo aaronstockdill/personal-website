@@ -2,15 +2,6 @@
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
 "creatorBuild": "19115",
 "files": {
-	"\/css\/cmun-serif.css": {
-		"fileType": 16,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/css\/cmun-serif.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/css\/master.css": {
 		"fileType": 16,
 		"ignore": 1,
@@ -20,41 +11,54 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/css\/mobile.css": {
-		"fileType": 16,
-		"ignore": 1,
+	"\/docs\/about.html": {
+		"fileType": 8192,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/css\/mobile.css",
+		"inputAbbreviatedPath": "\/docs\/about.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/css\/nojs.css": {
-		"fileType": 16,
-		"ignore": 1,
+	"\/docs\/awards.html": {
+		"fileType": 8192,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/css\/nojs.css",
+		"inputAbbreviatedPath": "\/docs\/awards.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/footer.kit": {
-		"fileType": 2048,
-		"ignore": 1,
+	"\/docs\/education.html": {
+		"fileType": 8192,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/footer.kit",
-		"outputAbbreviatedPath": "\/footer.html",
+		"inputAbbreviatedPath": "\/docs\/education.html",
+		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/header.kit": {
-		"fileType": 2048,
-		"ignore": 1,
+	"\/imgs\/emacs.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/header.kit",
-		"outputAbbreviatedPath": "\/header.html",
+		"initialSize": 58871,
+		"inputAbbreviatedPath": "\/imgs\/emacs.jpg",
+		"outputAbbreviatedPath": "\/imgs\/emacs.jpg",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/imgs\/vim.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 57749,
+		"inputAbbreviatedPath": "\/imgs\/vim.jpg",
+		"outputAbbreviatedPath": "\/imgs\/vim.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		},
 	"\/index.html": {
 		"fileType": 8192,
@@ -65,16 +69,79 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/index.kit": {
-		"fileType": 2048,
+	"\/old\/css\/cmun-serif.css": {
+		"fileType": 16,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/index.kit",
-		"outputAbbreviatedPath": "\/index.html",
+		"inputAbbreviatedPath": "\/old\/css\/cmun-serif.css",
+		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/less\/master.less": {
+	"\/old\/css\/master.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/old\/css\/master.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/old\/css\/mobile.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/old\/css\/mobile.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/old\/css\/nojs.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/old\/css\/nojs.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/old\/footer.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/old\/footer.kit",
+		"outputAbbreviatedPath": "\/old\/footer.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/old\/header.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/old\/header.kit",
+		"outputAbbreviatedPath": "\/old\/header.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/old\/index.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/old\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/old\/index.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/old\/index.kit",
+		"outputAbbreviatedPath": "\/old\/index.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/old\/less\/master.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
 		"disableJavascript": 0,
@@ -82,8 +149,8 @@
 		"ieCompatibility": 1,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/less\/master.less",
-		"outputAbbreviatedPath": "\/css\/master.css",
+		"inputAbbreviatedPath": "\/old\/less\/master.less",
+		"outputAbbreviatedPath": "\/old\/css\/master.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -94,7 +161,7 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
-	"\/less\/mobile.less": {
+	"\/old\/less\/mobile.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
 		"disableJavascript": 0,
@@ -102,8 +169,8 @@
 		"ieCompatibility": 1,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/less\/mobile.less",
-		"outputAbbreviatedPath": "\/css\/mobile.css",
+		"inputAbbreviatedPath": "\/old\/less\/mobile.less",
+		"outputAbbreviatedPath": "\/old\/css\/mobile.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -114,7 +181,7 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
-	"\/less\/nojs.less": {
+	"\/old\/less\/nojs.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
 		"disableJavascript": 0,
@@ -122,8 +189,8 @@
 		"ieCompatibility": 1,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/less\/nojs.less",
-		"outputAbbreviatedPath": "\/css\/nojs.css",
+		"inputAbbreviatedPath": "\/old\/less\/nojs.less",
+		"outputAbbreviatedPath": "\/old\/css\/nojs.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -134,396 +201,438 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
-	"\/pages\/awards.kit": {
+	"\/old\/pages\/awards.kit": {
 		"fileType": 2048,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/pages\/awards.kit",
-		"outputAbbreviatedPath": "\/pages\/awards.html",
+		"inputAbbreviatedPath": "\/old\/pages\/awards.kit",
+		"outputAbbreviatedPath": "\/old\/pages\/awards.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/pages\/bio.kit": {
+	"\/old\/pages\/bio.kit": {
 		"fileType": 2048,
 		"ignore": 1,
-		"ignoreWasSetByUser": 1,
-		"inputAbbreviatedPath": "\/pages\/bio.kit",
-		"outputAbbreviatedPath": "\/pages\/bio.html",
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/old\/pages\/bio.kit",
+		"outputAbbreviatedPath": "\/old\/pages\/bio.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/pages\/contact.kit": {
+	"\/old\/pages\/contact.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/old\/pages\/contact.kit",
+		"outputAbbreviatedPath": "\/old\/pages\/contact.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/old\/pages\/education.kit": {
 		"fileType": 2048,
 		"ignore": 1,
-		"ignoreWasSetByUser": 1,
-		"inputAbbreviatedPath": "\/pages\/contact.kit",
-		"outputAbbreviatedPath": "\/pages\/contact.html",
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/old\/pages\/education.kit",
+		"outputAbbreviatedPath": "\/old\/pages\/education.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/pages\/education.kit": {
+	"\/old\/pages\/experience.kit": {
 		"fileType": 2048,
 		"ignore": 1,
-		"ignoreWasSetByUser": 1,
-		"inputAbbreviatedPath": "\/pages\/education.kit",
-		"outputAbbreviatedPath": "\/pages\/education.html",
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/old\/pages\/experience.kit",
+		"outputAbbreviatedPath": "\/old\/pages\/experience.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/pages\/experience.kit": {
+	"\/old\/pages\/skills.kit": {
 		"fileType": 2048,
-		"ignore": 1,
-		"ignoreWasSetByUser": 1,
-		"inputAbbreviatedPath": "\/pages\/experience.kit",
-		"outputAbbreviatedPath": "\/pages\/experience.html",
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/old\/pages\/skills.kit",
+		"outputAbbreviatedPath": "\/old\/pages\/skills.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/pages\/skills.kit": {
-		"fileType": 2048,
-		"ignore": 1,
-		"ignoreWasSetByUser": 1,
-		"inputAbbreviatedPath": "\/pages\/skills.kit",
-		"outputAbbreviatedPath": "\/pages\/skills.html",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/resources\/android-chrome-144x144.png": {
+	"\/old\/resources\/android-chrome-144x144.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 1112,
-		"inputAbbreviatedPath": "\/resources\/android-chrome-144x144.png",
-		"outputAbbreviatedPath": "\/resources\/android-chrome-144x144.png",
+		"inputAbbreviatedPath": "\/old\/resources\/android-chrome-144x144.png",
+		"outputAbbreviatedPath": "\/old\/resources\/android-chrome-144x144.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/resources\/android-chrome-192x192.png": {
+	"\/old\/resources\/android-chrome-192x192.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 1232,
-		"inputAbbreviatedPath": "\/resources\/android-chrome-192x192.png",
-		"outputAbbreviatedPath": "\/resources\/android-chrome-192x192.png",
+		"inputAbbreviatedPath": "\/old\/resources\/android-chrome-192x192.png",
+		"outputAbbreviatedPath": "\/old\/resources\/android-chrome-192x192.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/resources\/android-chrome-36x36.png": {
+	"\/old\/resources\/android-chrome-36x36.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 421,
-		"inputAbbreviatedPath": "\/resources\/android-chrome-36x36.png",
-		"outputAbbreviatedPath": "\/resources\/android-chrome-36x36.png",
+		"inputAbbreviatedPath": "\/old\/resources\/android-chrome-36x36.png",
+		"outputAbbreviatedPath": "\/old\/resources\/android-chrome-36x36.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/resources\/android-chrome-48x48.png": {
+	"\/old\/resources\/android-chrome-48x48.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 479,
-		"inputAbbreviatedPath": "\/resources\/android-chrome-48x48.png",
-		"outputAbbreviatedPath": "\/resources\/android-chrome-48x48.png",
+		"inputAbbreviatedPath": "\/old\/resources\/android-chrome-48x48.png",
+		"outputAbbreviatedPath": "\/old\/resources\/android-chrome-48x48.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/resources\/android-chrome-72x72.png": {
+	"\/old\/resources\/android-chrome-72x72.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 648,
-		"inputAbbreviatedPath": "\/resources\/android-chrome-72x72.png",
-		"outputAbbreviatedPath": "\/resources\/android-chrome-72x72.png",
+		"inputAbbreviatedPath": "\/old\/resources\/android-chrome-72x72.png",
+		"outputAbbreviatedPath": "\/old\/resources\/android-chrome-72x72.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/resources\/android-chrome-96x96.png": {
+	"\/old\/resources\/android-chrome-96x96.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 775,
-		"inputAbbreviatedPath": "\/resources\/android-chrome-96x96.png",
-		"outputAbbreviatedPath": "\/resources\/android-chrome-96x96.png",
+		"inputAbbreviatedPath": "\/old\/resources\/android-chrome-96x96.png",
+		"outputAbbreviatedPath": "\/old\/resources\/android-chrome-96x96.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/resources\/apple-touch-icon-114x114.png": {
+	"\/old\/resources\/apple-touch-icon-114x114.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 928,
-		"inputAbbreviatedPath": "\/resources\/apple-touch-icon-114x114.png",
-		"outputAbbreviatedPath": "\/resources\/apple-touch-icon-114x114.png",
+		"inputAbbreviatedPath": "\/old\/resources\/apple-touch-icon-114x114.png",
+		"outputAbbreviatedPath": "\/old\/resources\/apple-touch-icon-114x114.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/resources\/apple-touch-icon-120x120.png": {
+	"\/old\/resources\/apple-touch-icon-120x120.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 922,
-		"inputAbbreviatedPath": "\/resources\/apple-touch-icon-120x120.png",
-		"outputAbbreviatedPath": "\/resources\/apple-touch-icon-120x120.png",
+		"inputAbbreviatedPath": "\/old\/resources\/apple-touch-icon-120x120.png",
+		"outputAbbreviatedPath": "\/old\/resources\/apple-touch-icon-120x120.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/resources\/apple-touch-icon-144x144.png": {
+	"\/old\/resources\/apple-touch-icon-144x144.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 981,
-		"inputAbbreviatedPath": "\/resources\/apple-touch-icon-144x144.png",
-		"outputAbbreviatedPath": "\/resources\/apple-touch-icon-144x144.png",
+		"inputAbbreviatedPath": "\/old\/resources\/apple-touch-icon-144x144.png",
+		"outputAbbreviatedPath": "\/old\/resources\/apple-touch-icon-144x144.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/resources\/apple-touch-icon-152x152.png": {
+	"\/old\/resources\/apple-touch-icon-152x152.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 1233,
-		"inputAbbreviatedPath": "\/resources\/apple-touch-icon-152x152.png",
-		"outputAbbreviatedPath": "\/resources\/apple-touch-icon-152x152.png",
+		"inputAbbreviatedPath": "\/old\/resources\/apple-touch-icon-152x152.png",
+		"outputAbbreviatedPath": "\/old\/resources\/apple-touch-icon-152x152.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/resources\/apple-touch-icon-180x180.png": {
+	"\/old\/resources\/apple-touch-icon-180x180.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 1192,
-		"inputAbbreviatedPath": "\/resources\/apple-touch-icon-180x180.png",
-		"outputAbbreviatedPath": "\/resources\/apple-touch-icon-180x180.png",
+		"inputAbbreviatedPath": "\/old\/resources\/apple-touch-icon-180x180.png",
+		"outputAbbreviatedPath": "\/old\/resources\/apple-touch-icon-180x180.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/resources\/apple-touch-icon-57x57.png": {
+	"\/old\/resources\/apple-touch-icon-57x57.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 563,
-		"inputAbbreviatedPath": "\/resources\/apple-touch-icon-57x57.png",
-		"outputAbbreviatedPath": "\/resources\/apple-touch-icon-57x57.png",
+		"inputAbbreviatedPath": "\/old\/resources\/apple-touch-icon-57x57.png",
+		"outputAbbreviatedPath": "\/old\/resources\/apple-touch-icon-57x57.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/resources\/apple-touch-icon-60x60.png": {
+	"\/old\/resources\/apple-touch-icon-60x60.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 606,
-		"inputAbbreviatedPath": "\/resources\/apple-touch-icon-60x60.png",
-		"outputAbbreviatedPath": "\/resources\/apple-touch-icon-60x60.png",
+		"inputAbbreviatedPath": "\/old\/resources\/apple-touch-icon-60x60.png",
+		"outputAbbreviatedPath": "\/old\/resources\/apple-touch-icon-60x60.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/resources\/apple-touch-icon-72x72.png": {
+	"\/old\/resources\/apple-touch-icon-72x72.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 691,
-		"inputAbbreviatedPath": "\/resources\/apple-touch-icon-72x72.png",
-		"outputAbbreviatedPath": "\/resources\/apple-touch-icon-72x72.png",
+		"inputAbbreviatedPath": "\/old\/resources\/apple-touch-icon-72x72.png",
+		"outputAbbreviatedPath": "\/old\/resources\/apple-touch-icon-72x72.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/resources\/apple-touch-icon-76x76.png": {
+	"\/old\/resources\/apple-touch-icon-76x76.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 697,
-		"inputAbbreviatedPath": "\/resources\/apple-touch-icon-76x76.png",
-		"outputAbbreviatedPath": "\/resources\/apple-touch-icon-76x76.png",
+		"inputAbbreviatedPath": "\/old\/resources\/apple-touch-icon-76x76.png",
+		"outputAbbreviatedPath": "\/old\/resources\/apple-touch-icon-76x76.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/resources\/apple-touch-icon-precomposed.png": {
+	"\/old\/resources\/apple-touch-icon-precomposed.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 1755,
-		"inputAbbreviatedPath": "\/resources\/apple-touch-icon-precomposed.png",
-		"outputAbbreviatedPath": "\/resources\/apple-touch-icon-precomposed.png",
+		"inputAbbreviatedPath": "\/old\/resources\/apple-touch-icon-precomposed.png",
+		"outputAbbreviatedPath": "\/old\/resources\/apple-touch-icon-precomposed.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/resources\/apple-touch-icon.png": {
+	"\/old\/resources\/apple-touch-icon.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 1192,
-		"inputAbbreviatedPath": "\/resources\/apple-touch-icon.png",
-		"outputAbbreviatedPath": "\/resources\/apple-touch-icon.png",
+		"inputAbbreviatedPath": "\/old\/resources\/apple-touch-icon.png",
+		"outputAbbreviatedPath": "\/old\/resources\/apple-touch-icon.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/resources\/favicon-16x16.png": {
+	"\/old\/resources\/favicon-16x16.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 266,
-		"inputAbbreviatedPath": "\/resources\/favicon-16x16.png",
-		"outputAbbreviatedPath": "\/resources\/favicon-16x16.png",
+		"inputAbbreviatedPath": "\/old\/resources\/favicon-16x16.png",
+		"outputAbbreviatedPath": "\/old\/resources\/favicon-16x16.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/resources\/favicon-194x194.png": {
+	"\/old\/resources\/favicon-194x194.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 1508,
-		"inputAbbreviatedPath": "\/resources\/favicon-194x194.png",
-		"outputAbbreviatedPath": "\/resources\/favicon-194x194.png",
+		"inputAbbreviatedPath": "\/old\/resources\/favicon-194x194.png",
+		"outputAbbreviatedPath": "\/old\/resources\/favicon-194x194.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/resources\/favicon-32x32.png": {
+	"\/old\/resources\/favicon-32x32.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 385,
-		"inputAbbreviatedPath": "\/resources\/favicon-32x32.png",
-		"outputAbbreviatedPath": "\/resources\/favicon-32x32.png",
+		"inputAbbreviatedPath": "\/old\/resources\/favicon-32x32.png",
+		"outputAbbreviatedPath": "\/old\/resources\/favicon-32x32.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/resources\/favicon-96x96.png": {
+	"\/old\/resources\/favicon-96x96.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 801,
-		"inputAbbreviatedPath": "\/resources\/favicon-96x96.png",
-		"outputAbbreviatedPath": "\/resources\/favicon-96x96.png",
+		"inputAbbreviatedPath": "\/old\/resources\/favicon-96x96.png",
+		"outputAbbreviatedPath": "\/old\/resources\/favicon-96x96.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/resources\/latex.png": {
+	"\/old\/resources\/latex.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 5437,
-		"inputAbbreviatedPath": "\/resources\/latex.png",
-		"outputAbbreviatedPath": "\/resources\/latex.png",
+		"inputAbbreviatedPath": "\/old\/resources\/latex.png",
+		"outputAbbreviatedPath": "\/old\/resources\/latex.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/resources\/manifest.json": {
+	"\/old\/resources\/manifest.json": {
 		"fileType": 524288,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/resources\/manifest.json",
+		"inputAbbreviatedPath": "\/old\/resources\/manifest.json",
 		"orderOutput": 0,
-		"outputAbbreviatedPath": "\/resources\/manifest-min.json",
+		"outputAbbreviatedPath": "\/old\/resources\/manifest-min.json",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0
 		},
-	"\/resources\/mstile-144x144.png": {
+	"\/old\/resources\/mstile-144x144.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 975,
-		"inputAbbreviatedPath": "\/resources\/mstile-144x144.png",
-		"outputAbbreviatedPath": "\/resources\/mstile-144x144.png",
+		"inputAbbreviatedPath": "\/old\/resources\/mstile-144x144.png",
+		"outputAbbreviatedPath": "\/old\/resources\/mstile-144x144.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/resources\/mstile-150x150.png": {
+	"\/old\/resources\/mstile-150x150.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 927,
-		"inputAbbreviatedPath": "\/resources\/mstile-150x150.png",
-		"outputAbbreviatedPath": "\/resources\/mstile-150x150.png",
+		"inputAbbreviatedPath": "\/old\/resources\/mstile-150x150.png",
+		"outputAbbreviatedPath": "\/old\/resources\/mstile-150x150.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/resources\/mstile-310x150.png": {
+	"\/old\/resources\/mstile-310x150.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 965,
-		"inputAbbreviatedPath": "\/resources\/mstile-310x150.png",
-		"outputAbbreviatedPath": "\/resources\/mstile-310x150.png",
+		"inputAbbreviatedPath": "\/old\/resources\/mstile-310x150.png",
+		"outputAbbreviatedPath": "\/old\/resources\/mstile-310x150.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/resources\/mstile-310x310.png": {
+	"\/old\/resources\/mstile-310x310.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 1905,
-		"inputAbbreviatedPath": "\/resources\/mstile-310x310.png",
-		"outputAbbreviatedPath": "\/resources\/mstile-310x310.png",
+		"inputAbbreviatedPath": "\/old\/resources\/mstile-310x310.png",
+		"outputAbbreviatedPath": "\/old\/resources\/mstile-310x310.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/resources\/mstile-70x70.png": {
+	"\/old\/resources\/mstile-70x70.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 757,
-		"inputAbbreviatedPath": "\/resources\/mstile-70x70.png",
-		"outputAbbreviatedPath": "\/resources\/mstile-70x70.png",
+		"inputAbbreviatedPath": "\/old\/resources\/mstile-70x70.png",
+		"outputAbbreviatedPath": "\/old\/resources\/mstile-70x70.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/resources\/stars.png": {
+	"\/old\/resources\/stars.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 68521,
-		"inputAbbreviatedPath": "\/resources\/stars.png",
-		"outputAbbreviatedPath": "\/resources\/stars.png",
+		"inputAbbreviatedPath": "\/old\/resources\/stars.png",
+		"outputAbbreviatedPath": "\/old\/resources\/stars.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/scripts\/main.js": {
+	"\/old\/scripts\/main.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/scripts\/main.js",
-		"outputAbbreviatedPath": "\/scripts\/min\/main-min.js",
+		"inputAbbreviatedPath": "\/old\/scripts\/main.js",
+		"outputAbbreviatedPath": "\/old\/scripts\/min\/main-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/scripts\/min\/main-min.js": {
+	"\/old\/scripts\/min\/main-min.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/scripts\/min\/main-min.js",
-		"outputAbbreviatedPath": "\/scripts\/min\/min\/main-min-min.js",
+		"inputAbbreviatedPath": "\/old\/scripts\/min\/main-min.js",
+		"outputAbbreviatedPath": "\/old\/scripts\/min\/min\/main-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/scripts\/download.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/scripts\/download.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/scripts\/repl.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/scripts\/repl.js",
+		"outputAbbreviatedPath": "\/scripts\/min\/repl-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/scripts\/sh.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/scripts\/sh.js",
+		"outputAbbreviatedPath": "\/scripts\/min\/sh-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/scripts\/welcome.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/scripts\/welcome.js",
+		"outputAbbreviatedPath": "\/scripts\/min\/welcome-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
