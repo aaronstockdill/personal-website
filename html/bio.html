@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
         <title>Aaron Stockdill</title>
+        <link rel="stylesheet" href="/css/white.css" media="screen" charset="utf-8" id="theme">
         <link rel="stylesheet" href="/css/master.css" media="screen" charset="utf-8">
         <link rel="stylesheet" href="/css/600.css" media="screen and (max-width: 600px)" charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        *:lang("FR") {
+            display: none;
+        }
+        </style>
     </head>
     <body>
 <div class='container'>
     <nav>
-        <a href='/'>Home</a>
+        <a href='/'>
+            <span lang="EN">Home</span>
+            <span lang="FR">Accueil</span>
+        </a>
         <!-- <a href="/publications.html">Publications</a> -->
-        <a href="/contact.html">Contact Details</a>
+        <a href="/contact.html">
+            <span lang="EN">Contact Details</span>
+            <span lang="FR">Détails du Contact</span>
+        </a>
         <a href="/AaronStockdill.pdf" target="_blank">Curriculum Vit&aelig;</a>
     </nav>
 
-    <h1>About Me</h1>
+    <h1 lang="EN">About Me</h1>
+    <h1 lang="FR">Biographie</h1>
 
     <p>I'm currently studying towards a Bachelor of Science with Honours in Computer Science at the University of Canterbury in Christchurch, New Zealand. The title of my dissertation is "Neuromorphic Computing with Reservoir Neural Networks on Memristive Hardware." In 2015 I completed my final year of a BSc in Computer Science and Mathematics, and one day hope to study towards a PhD in Computer Science.</p>
 
@@ -23,7 +37,8 @@
 
     <hr />
 
-    <h1>Education</h1>
+    <h1 lang="EN">Education</h1>
+    <h1 lang="FR">Éducation</h1>
 
     <h2>Bachelor of Science with Honours, 2016</h2>
     <p>Currently studying in the 'Honours year' of a BSc(Hons), working on my research project with Dr Kourosh Neshatian. My report is called &ldquo;Neuromorphic Computing with Reservoir Neural Networks on Memristive Hardware&rdquo;. </p>
@@ -34,7 +49,8 @@
 
     <hr />
 
-    <h1>Awards &amp; Honours</h1>
+    <h1 lang="EN">Awards &amp; Honours</h1>
+    <h1 lang="FR">Prix et Distinctions</h1>
 
     <h2 class='award-year'>2016</h2>
 
@@ -102,5 +118,24 @@
 
 </div>
 
+        <footer>
+            <a id="white-button" class='theme-button' onclick='switch_theme("white")' class='active'>
+                <span lang='EN'>white</span>
+                <span lang='FR'>blanc</span>
+            </a> |
+            <a id="black-button" class='theme-button' onclick='switch_theme("black")'>
+                <span lang='EN'>black</span>
+                <span lang='FR'>noir</span>
+            </a>
+            <!-- <span class='separator'></span>
+            <a id="EN-button" class='lang-button' onclick='switch_language("EN")' class='active'>
+                EN
+            </a> |
+            <a id="FR-button" class='lang-button' onclick='switch_language("FR")'>
+                FR
+            </a> -->
+        </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+        <script src="/js/preferences.js" charset="utf-8"></script>
     </body>
 </html>

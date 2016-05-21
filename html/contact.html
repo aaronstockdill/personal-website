@@ -1,37 +1,78 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
         <title>Aaron Stockdill</title>
+        <link rel="stylesheet" href="/css/white.css" media="screen" charset="utf-8" id="theme">
         <link rel="stylesheet" href="/css/master.css" media="screen" charset="utf-8">
         <link rel="stylesheet" href="/css/600.css" media="screen and (max-width: 600px)" charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        *:lang("FR") {
+            display: none;
+        }
+        </style>
     </head>
     <body>
 <div class='container'>
     <nav>
-        <a href='/'>Home</a>
-        <a href='/bio.html'>About</a>
+        <a href='/'>
+            <span lang="EN">Home</span>
+            <span lang="FR">Accueil</span>
+        </a>
+        <a href='/bio.html'>
+            <span lang="EN">About</span>
+            <span lang="FR">Biographie</span>
+        </a>
         <!-- <a href="/publications.html">Publications</a> -->
         <a href="/AaronStockdill.pdf" target="_blank">Curriculum Vit&aelig;</a>
     </nav>
 
-    <h1>Contact</h1>
+    <h1 lang="EN">Contact</h1>
+    <h1 lang="FR">Détails du Contact</h1>
 
     <div class="contact-table">
-        <span class='label'>Email</span><a href='mailto:aaronstockdill@me.com' class='value'> aaronstockdill@me.com</a><br />
-        <span class='label'>Mobile</span><span class=='value'>+64 27 819 7662</span><br />
-        <span class="label">Office</span><span class="value">Erskine 341</span><br />
-        <span class="label">LinkedIn</span><a href='http://nz.linkedin.com/in/aaronstockdill' class='value' target='_blank'> aaronstockdill</a>
+        <span class='label'>Email</span>
+            <a href='mailto:aaronstockdill@me.com' class='value'> aaronstockdill@me.com</a><br />
+        <span class='label'>
+            <span lang="EN">Mobile</span>
+            <span lang="FR">Numéro</span>
+        </span>
+            <span class=='value'>+64 27 819 7662</span><br />
+        <span class="label">Office</span>
+            <span class="value">Erskine 341</span><br />
+        <span class="label">LinkedIn</span>
+            <a href='http://nz.linkedin.com/in/aaronstockdill' class='value' target='_blank'> aaronstockdill</a>
     </div>
 
-    <p>
-        Further details (such as address) are available upon request.
-    </p>
-    <p>
+    <p lang="EN">
         It can take some time for me to reply via email. All messages are triaged according to importance. Please make the message short and clear, and your chances are better.
+    </p>
+
+    <p lang="FR">
+        Je pourrais être assez lent à répondre par email. Tout les emails sont triés selon leur importance. Si vous le faites court, je suis plus susceptible de répondre.
     </p>
 
 </div>
 
+        <footer>
+            <a id="white-button" class='theme-button' onclick='switch_theme("white")' class='active'>
+                <span lang='EN'>white</span>
+                <span lang='FR'>blanc</span>
+            </a> |
+            <a id="black-button" class='theme-button' onclick='switch_theme("black")'>
+                <span lang='EN'>black</span>
+                <span lang='FR'>noir</span>
+            </a>
+            <!-- <span class='separator'></span>
+            <a id="EN-button" class='lang-button' onclick='switch_language("EN")' class='active'>
+                EN
+            </a> |
+            <a id="FR-button" class='lang-button' onclick='switch_language("FR")'>
+                FR
+            </a> -->
+        </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+        <script src="/js/preferences.js" charset="utf-8"></script>
     </body>
 </html>
