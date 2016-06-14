@@ -20,6 +20,7 @@ html, body {
     font-weight: 300;
     margin: 0;
     padding: 0;
+    transition: background 0.2s ease, color 0.2s ease;
 }
 
 .welcome {
@@ -73,6 +74,7 @@ html, body {
         display: block;
         width: 12rem;
         text-decoration: none;
+        transition: color 0.2s ease;
     }
 
     nav {
@@ -84,6 +86,7 @@ html, body {
             display: block;
             text-decoration: none;
             padding: 0.25rem;
+            transition: color 0.2s ease;
         }
     }
 }
@@ -116,12 +119,13 @@ html, body {
 
         &:hover {
             width: 100%;
-            transition: all 0s ease 0.5s;
+            transition: all 0s ease 0.75s;
         }
 
         a {
             text-decoration: none;
             padding-right: 1rem;
+            transition: color 0.2s ease;
         }
     }
 
@@ -181,18 +185,44 @@ footer {
     right: 0;
     padding: 5px;
     text-align: right;
+    transition: background 0.2s ease, color 0.2s ease;
 
-    a {
-        text-decoration: none;
-        cursor: pointer;
-
-        &.active {
-            font-weight: 600;
-        }
+    .details {
+        float: left;
     }
 
     .separator {
         display: inline-block;
         width: 1rem;
+    }
+
+    .selector {
+        display: inline-block;
+        height: 1.2rem;
+        overflow-y: hidden;
+        width: 2.5rem;
+        position: relative;
+        text-align: center;
+        transition: height 0.2s ease;
+
+        a {
+            display: block;
+            position: absolute;
+            top: 1.2rem;
+            text-align: center;
+            opacity: 0.5;
+            text-decoration: none;
+            cursor: pointer;
+            transition: top 0.2s ease;
+
+            &.active {
+                top: 0rem;
+                opacity: 1;
+            }
+        }
+
+        &:hover {
+            height: 2.4rem;
+        }
     }
 }

@@ -45,5 +45,14 @@ switch_language = (target="EN") ->
     setCookie "language", target, 365
     false
 
+no_animations = () ->
+    window.animations = $('html, body, footer').css('transition')
+    $('html, body, footer').css('transition', 'none 0s')
+
+allow_animations = () ->
+    $('html, body, footer').css('transition', window.animations)
+
+no_animations()
 switch_theme getCookie "style"
 switch_language getCookie "language"
+setTimeout allow_animations, 200
