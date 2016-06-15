@@ -3,7 +3,15 @@
     <head>
         <meta charset="utf-8">
         <title>Aaron Stockdill</title>
-        <link rel="stylesheet" href="/css/white.css" media="screen" charset="utf-8" id="theme">
+        <?php
+            if(isset($_COOKIE["style"])) {
+                $theme = $_COOKIE["style"];
+            } else {
+                $theme = "white";
+                setcookie("style", "white", time() + 365);
+            }
+            echo '<link rel="stylesheet" href="/css/'.$theme.'.css" media="screen" charset="utf-8" id="theme">';
+        ?>
         <link rel="stylesheet" href="/css/master.css" media="screen" charset="utf-8">
         <link rel="stylesheet" href="/css/600.css" media="screen and (max-width: 600px)" charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,8 +23,8 @@
             <span lang="EN">Home</span>
             <span lang="FR">Accueil</span>
         </a>
-        <!-- <a href="/publications.html">Publications</a> -->
-        <a href="/contact.html">
+        <!-- <a href="/publications/">Publications</a> -->
+        <a href="/contact/">
             <span lang="EN">Contact Details</span>
             <span lang="FR">Détails du Contact</span>
         </a>
