@@ -1,8 +1,14 @@
 @offblack: #888;
+@font: #222;
+@background: #fbfbfb;
+
+::selection {
+    background: #ccc;
+}
 
 html, body {
-    background: white;
-    color: black;
+    background: @background;
+    color: @font;
 }
 
 .welcome {
@@ -14,7 +20,7 @@ html, body {
         color: @offblack;
 
         &:hover {
-            color: black;
+            color: @font;
         }
     }
 
@@ -28,17 +34,17 @@ html, body {
         color: @offblack;
 
         &:hover {
-            color: black;
+            color: @font;
         }
     }
 
     .contact-table a {
-        color: black;
+        color: @font;
     }
 }
 
 footer {
-    background: white;
+    background: fade(@background, 80%);
 
     a {
         color: @offblack;
