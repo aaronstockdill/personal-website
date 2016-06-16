@@ -43,10 +43,10 @@
             <span lang="EN">Mobile</span>
             <span lang="FR">Numéro</span>
         </span>
-            <span class=='value'>+64 27 819 7662</span><br />
-        <span class="label">Office</span>
-            <span class="value">Erskine 341</span><br />
-        <span class="label">LinkedIn</span>
+            <span class='value'>+64 27 819 7662</span><br />
+        <span class='label'>Office</span>
+            <span class='value'>Erskine 341</span><br />
+        <span class='label'>LinkedIn</span>
             <a href='http://nz.linkedin.com/in/aaronstockdill' class='value' target='_blank'> aaronstockdill</a>
     </div>
 
