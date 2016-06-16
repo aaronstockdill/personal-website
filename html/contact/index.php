@@ -29,7 +29,12 @@
             <span lang="EN">About</span>
             <span lang="FR">Biographie</span>
         </a>
-        <!-- <a href="/publications/">Publications</a> -->
+        <!--
+        <a href="/work/">
+            <span lang="EN">Works</span>
+            <span lang="FR">Ouvrages</span>
+        </a>
+        -->
         <a href="/AaronStockdill.pdf" target="_blank">Curriculum Vit&aelig;</a>
     </nav>
 

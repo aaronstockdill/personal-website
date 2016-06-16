@@ -28,7 +28,12 @@
                 <span lang="EN">About</span>
                 <span lang="FR">Biographie</span>
             </a>
-            <!-- <a href="/publications/">Publications</a> -->
+            <!--
+            <a href="/work/">
+                <span lang="EN">Works</span>
+                <span lang="FR">Ouvrages</span>
+            </a>
+            -->
             <a href="/contact/">
                 <span lang="EN">Contact Details</span>
                 <span lang="FR">Détails du Contact</span>
