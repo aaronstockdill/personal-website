@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Aaron Stockdill</title>
+        <title>Contact Aaron Stockdill</title>
         <?php
             if(isset($_COOKIE["style"])) {
                 $theme = $_COOKIE["style"];
@@ -10,11 +10,13 @@
                 $theme = "white";
                 setcookie("style", "white", time() + 365);
             }
-            echo '<link rel="stylesheet" href="/css/'.$theme.'.css" media="screen" charset="utf-8" id="theme">';
+            echo '<link rel="stylesheet" href="/css/'.$theme.'.css" media="screen" id="theme">';
         ?>
-        <link rel="stylesheet" href="/css/master.css" media="screen" charset="utf-8">
-        <link rel="stylesheet" href="/css/600.css" media="screen and (max-width: 600px)" charset="utf-8">
+        <link rel="stylesheet" href="/css/master.css" media="screen">
+        <link rel="stylesheet" href="/css/600.css" media="screen and (max-width: 600px)">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Email aaronstockdill@me.com. The best ways to get in touch with me, a Computer Science BSc(Hons) student at the University of Canterbury.
+"/>
     </head>
     <body>
 <div class='container'>
@@ -60,7 +62,7 @@
 
         <footer>
             <span class='selector'>
-                <a id="white-button" class='theme-button' onclick='switch_theme("white")' class='active'>
+                <a id="white-button" class='theme-button active' onclick='switch_theme("white")'>
                     <span lang='EN'>light</span>
                     <span lang='FR'>blanc</span>
                 </a>
@@ -71,7 +73,7 @@
             </span>
             <!--<span class='separator'></span>
             <span class='selector'>
-                <a id="EN-button" class='lang-button' onclick='switch_language("EN")' class='active'>
+                <a id="EN-button" class='lang-button active' onclick='switch_language("EN")'>
                     EN
                 </a>
                 <a id="FR-button" class='lang-button' onclick='switch_language("FR")'>
