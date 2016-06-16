@@ -43,6 +43,17 @@
         <a href='mailto:aaronstockdill@me.com' class='email'>aaronstockdill@me.com</a>
     </div>
 </div>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "http://schema.org/Person",
+  "givenName": "Aaron",
+  "familyName": "Stockdill",
+  "description": "Computer Science BSc(Hons) student at the University of Canterbury.",
+  "email": "aaronstockdill@me.com",
+  "gender": "http://schema.org/Male"
+}
+</script>
         <footer>
             <span class='selector'>
                 <a id="white-button" class='theme-button active' onclick='switch_theme("white")'>
