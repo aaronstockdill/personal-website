@@ -58,7 +58,7 @@
 		},
 	"\/html\/index.php": {
 		"fileType": 8192,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/html\/index.php",
 		"outputAbbreviatedPath": "No Output Path",
@@ -130,9 +130,9 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/source\/index.kit",
-		"outputAbbreviatedPath": "\/html\/index\/index.php",
+		"outputAbbreviatedPath": "\/html\/index.php",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 1
 		},
 	"\/source\/less\/600.less": {
 		"allowInsecureImports": 0,
