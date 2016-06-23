@@ -88,6 +88,10 @@
         </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
         <script src="/js/preferences.js" charset="utf-8"></script>
+        <?php
+            if (strpos($_SERVER['SERVER_NAME'],
+                       'aaron.stockdill.nz') !== false) {
+        ?>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -97,5 +101,8 @@
             ga('create', 'UA-79422930-1', 'auto');
             ga('send', 'pageview');
         </script>
+        <?php
+        }
+        ?>
     </body>
 </html>
