@@ -1,19 +1,22 @@
+<?php
+if(isset($_COOKIE["style"])) {
+    $theme = $_COOKIE["style"];
+} else {
+    $theme = "white";
+    setcookie("style", "white", time() + 365);
+}
+?>
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <title>Aaron Stockdill</title>
         <?php
-            if(isset($_COOKIE["style"])) {
-                $theme = $_COOKIE["style"];
-            } else {
-                $theme = "white";
-                setcookie("style", "white", time() + 365);
-            }
             echo '<link rel="stylesheet" href="/css/'.$theme.'.css" media="screen" id="theme">';
         ?>
         <link rel="stylesheet" href="/css/master.css" media="screen">
         <link rel="stylesheet" href="/css/600.css" media="screen and (max-width: 600px)">
+        <link rel="stylesheet" href="/css/print.css" media="print">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Passionate Computer Science BSc(Hons) student at the University of Canterbury. Particularly interested in Artificial Intelligence and Machine Learning.
 "/>
