@@ -44,9 +44,11 @@ if(isset($_COOKIE["style"])) {
     <h1 lang="EN">About Me</h1>
     <h1 lang="FR">Biographie</h1>
 
-    <p>I'm currently studying towards a Bachelor of Science with Honours in Computer Science at the University of Canterbury in Christchurch, New Zealand. The title of my dissertation is &ldquo;Neuromorphic Computing with Reservoir Neural Networks on Memristive Hardware.&rdquo; In 2015 I completed my final year of a BSc in Computer Science and Mathematics, and one day hope to study towards a PhD in Computer Science.</p>
+    <p lang="EN">I'm currently studying towards a Bachelor of Science with Honours in Computer Science at the University of Canterbury in Christchurch, New Zealand. The title of my dissertation is &ldquo;Neuromorphic Computing with Reservoir Neural Networks on Memristive Hardware.&rdquo; In 2015 I completed my final year of a BSc in Computer Science and Mathematics, and one day hope to study towards a PhD in Computer Science.</p>
+    <p lang="FR">Je suis actuellement étudiant vers un Baccalauréat en Sciences avec distinction en les Sciences Informatiques à l'University of Canterbury en Christchurch, Nouvelle Zélande. Le titre de ma thèse est &laquo;&nbsp;Neuromorphic Computing with Reservoir Neural Networks on Memristive Hardware&nbsp;&raquo; (&laquo;&nbsp;Informatique Neuromorphiques avec les Réseaux de Neurones Réservoir sur le Matériel Memristive&nbsp;&raquo;). En 2015, j'ai fini l'année dernière de BSc en les Sciences Informatiques et les Mathematiques, et un jour je l'espère pour étudier vers un doctorat en les Sciences Informatiques.</p>
 
-    <p>My interests lie with anything that can make the world better. This primarily manifests as education: I teach mathematics to high school students, and computer science to university students. I also work with Potato Softworks to help businesses and organisations get an online prescence with affordable websites. Personally, I am passionate about Artifical Intelligence, as is reflected in my Honours research.</p>
+    <p lang="EN">My interests lie with anything that can make the world better. This primarily manifests as education: I teach mathematics to high school students, and computer science to university students. I also work with Potato Softworks to help businesses and organisations get an online prescence with affordable websites. Personally, I am passionate about Artifical Intelligence, as is reflected in my Honours research.</p>
+    <p lang="FR">Mes intérêts se trouvent avec tout ce qui peut rendre le monde meilleur. Cette principalement manifeste comme éducation: j'enseigne les mathematiques aux étudiantes de l'école secondaire, et les sciences informatiques aux étudiantes universitaires. Je travaille aussi avec Potato Softworks pour aider les entreprises et les organisations obtenir des sites Webs abordables. Personnellement, je suis passionné au sujet de l'Intelligence Artificielle, comme cela est reflété dans mes recherches.</p>
 
     <hr />
 
@@ -70,6 +72,13 @@ if(isset($_COOKIE["style"])) {
     <h1 lang="FR">Prix et Distinctions</h1>
 
     <h2 class='award-year'>2016</h2>
+
+    <div class="award">
+        <h3 lang="EN">Finalist for the Sir Paul Callaghan Award</h3>
+        <h3 lang="FR">Finaliste pour le prix de Sir Paul Callaghan</h3>
+        <p lang="EN">Awarded for innovation and STEM communication.</p>
+        <p lang="FR">Décerné pour l'innovation et la communication de les sciences.</p>
+    </div>
 
     <div class="award">
         <h3>Freemasons University Scholarship</h3>
