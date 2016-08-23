@@ -83,6 +83,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/html\/js\/email.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/html\/js\/email.js",
+		"outputAbbreviatedPath": "\/html\/js\/min\/email-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/html\/js\/preferences.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -129,6 +140,19 @@
 		"outputAbbreviatedPath": "\/html\/bio\/index.php",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/source\/coffeescript\/email.coffee": {
+		"createSourceMap": 0,
+		"fileType": 32,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/source\/coffeescript\/email.coffee",
+		"minifyOutput": 1,
+		"outputAbbreviatedPath": "\/html\/js\/email.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
 		},
 	"\/source\/coffeescript\/preferences.coffee": {
 		"createSourceMap": 0,

@@ -48,7 +48,7 @@ if(isset($_COOKIE["style"])) {
         <p lang="EN">Honours Student at the University of Canterbury</p>
         <p lang="FR">Étudiant du Baccalauréat en Sciences (avec distinction)<br />à University of Canterbury</p>
     </div><div class="right">
-        <a href='mailto:aaronstockdill@me.com' class='email'>aaronstockdill@me.com</a>
+        <span id='email-holder'><noscript>Email obfuscated. Please enable JavaScript.</noscript></span>
     </div>
 </div>
 <script type="application/ld+json">
@@ -85,6 +85,7 @@ if(isset($_COOKIE["style"])) {
         </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
         <script src="/js/preferences.js" charset="utf-8"></script>
+        <script src="/js/email.js" charset="utf-8"></script>
         <?php
             if (strpos($_SERVER['SERVER_NAME'],
                        'aaron.stockdill.nz') !== false) {

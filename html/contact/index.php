@@ -46,7 +46,7 @@ if(isset($_COOKIE["style"])) {
 
     <div class="contact-table">
         <span class='label'>Email</span>
-            <a href='mailto:aaronstockdill@me.com' class='value'> aaronstockdill@me.com</a><br />
+            <span id='email-holder' class='value'><noscript>Email obfuscated. Please enable JavaScript.</noscript></span><br />
         <span class='label'>
             <span lang="EN">Mobile</span>
             <span lang="FR">Numéro</span>
@@ -91,6 +91,7 @@ if(isset($_COOKIE["style"])) {
         </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
         <script src="/js/preferences.js" charset="utf-8"></script>
+        <script src="/js/email.js" charset="utf-8"></script>
         <?php
             if (strpos($_SERVER['SERVER_NAME'],
                        'aaron.stockdill.nz') !== false) {

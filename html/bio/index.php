@@ -180,6 +180,7 @@ if(isset($_COOKIE["style"])) {
         </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
         <script src="/js/preferences.js" charset="utf-8"></script>
+        <script src="/js/email.js" charset="utf-8"></script>
         <?php
             if (strpos($_SERVER['SERVER_NAME'],
                        'aaron.stockdill.nz') !== false) {
