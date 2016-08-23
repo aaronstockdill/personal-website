@@ -63,7 +63,7 @@ if(isset($_COOKIE["style"])) {
     </p>
 
     <p lang="FR">
-        Je pourrais être assez lent à répondre par email. Tout les emails sont triés selon leur importance. Si vous le faites court, je suis plus susceptible de répondre.
+        Je pourrais être assez lent à répondre par email. Tout les emails sont triés selon leur importance. Si vous écrivez une email bref, je suis plus susceptible de répondre.
     </p>
 
 </div>

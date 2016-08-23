@@ -1,5 +1,7 @@
 @media print {
 
+    @import url("Serif/cnum-serif.css");
+
     @page {
         margin: 3cm 4cm;
     }
@@ -119,9 +121,11 @@
         }
 
         .back-to-works {
-            display: inline-block;
-            padding-top: 1rem;
-            text-decoration: none;
+            display: none;
+        }
+
+        .submenu {
+            display: none;
         }
 
         .dynamic-link {
@@ -146,6 +150,39 @@
             .date {
                 font-size: 0.8rem;
                 font-style: italic;
+            }
+        }
+
+        .writing {
+            margin: 1in;
+            font-family: "Computer Modern", serif;
+            font-size: 11pt;
+            font-weight: 300;
+
+            h1 {
+                font-size: 24pt;
+                margin-top: 10rem;
+                text-align: center;
+                margin-bottom: 2rem;
+                font-weight: 400;
+
+                &:after{
+                    display: block;
+                    margin-top: 1rem;
+                    font-weight: 400;
+                    font-size: 1rem;
+                    content: "Aaron Stockdill";
+                }
+            }
+
+            p {
+                font-size: 11pt;
+                margin: 0;
+                text-indent: 1.5rem;
+
+                &:first-of-type {
+                    text-indent: 0;
+                }
             }
         }
     }
