@@ -1,0 +1,50 @@
+<!-- $subtitle: nil -->
+<!-- $description: nil -->
+<!-- @import "header.kit" -->
+<div class='container'>
+    <nav>
+        <a href='/'>
+            <span lang="EN">Home</span>
+            <span lang="FR">Accueil</span>
+        </a>
+        <a href='/bio/'>
+            <span lang="EN">About</span>
+            <span lang="FR">Biographie</span>
+        </a>
+        <a href="/work/">
+            <span lang="EN">Works</span>
+            <span lang="FR">Ouvrages</span>
+        </a>
+        <a href='/contact/'>
+            <span lang="EN">Contact Details</span>
+            <span lang="FR">Détails du Contact</span>
+        </a>
+        <a href="/AaronStockdill.pdf" target="_blank">Curriculum Vit&aelig;</a>
+    </nav>
+    <a href='/work/#Writing' class='back-to-works'>
+        <span lang='EN'>Back to Works</span>
+        <span lang='FR'>Retour à Ouvrages</span>
+    </a>
+<div class='writing'>
+<?php
+include_once 'Parsedown.php';
+
+$Parsedown = new Parsedown();
+$rootdir = realpath(dirname(__FILE__));
+$filedir = $rootdir."/../../dynamic/";
+
+if(isset($_GET['id'])) {
+    $filename = $filedir.$_GET['id'].".md";
+    $mdfile = fopen($filename, "r") or die("Unable to open file!");
+    $markdown = fread($mdfile, filesize($filename));
+    fclose($mdfile);
+    echo $Parsedown->text($markdown);
+} else {
+    echo "<h1>404</h1>";
+    echo "File not found.";
+}
+?>
+</div>
+</div>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG'></script>
+<!-- @import "footer.kit" -->
