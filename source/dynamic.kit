@@ -1,3 +1,23 @@
+<?php
+include_once 'Parsedown.php';
+
+$Parsedown = new Parsedown();
+$rootdir = realpath(dirname(__FILE__));
+$filedir = $rootdir."/../../dynamic/";
+
+if(!isset($_GET['id']) || !isset($_GET['type'])) {
+    header($_SERVER["SERVER_PROTOCOL"]." 404 Not Found", true, 404);
+    include($rootdir."/../404.php");
+}
+
+$id = $_GET['id'];
+$type = $_GET['type'];
+
+$filename = $filedir.$id.".".$type;
+if ($type == 'md' || $type == 'talk') {
+    $backtarget = ($type == 'md') ? "Writing" : "Talks";
+?>
+
 <!-- $subtitle: nil -->
 <!-- $description: nil -->
 <!-- @import "header.kit" -->
@@ -21,30 +41,31 @@
         </a>
         <a href="/AaronStockdill.pdf" target="_blank">Curriculum Vit&aelig;</a>
     </nav>
-    <a href='/work/#Writing' class='back-to-works'>
+    <a href='/work/#<?php echo $backtarget; ?>' class='back-to-works'>
         <span lang='EN'>Back to Works</span>
         <span lang='FR'>Retour à Ouvrages</span>
     </a>
 <div class='writing'>
 <?php
-include_once 'Parsedown.php';
-
-$Parsedown = new Parsedown();
-$rootdir = realpath(dirname(__FILE__));
-$filedir = $rootdir."/../../dynamic/";
-
-if(isset($_GET['id'])) {
-    $filename = $filedir.$_GET['id'].".md";
-    $mdfile = fopen($filename, "r") or die("Unable to open file!");
-    $markdown = fread($mdfile, filesize($filename));
-    fclose($mdfile);
-    echo $Parsedown->text($markdown);
-} else {
-    echo "<h1>404</h1>";
-    echo "File not found.";
-}
+$mdfile = fopen($filename, "r") or die("Unable to open file!");
+$markdown = fread($mdfile, filesize($filename));
+fclose($mdfile);
+echo $Parsedown->text($markdown);
 ?>
 </div>
 </div>
 <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG'></script>
 <!-- @import "footer.kit" -->
+<?php
+} else if ($type == 'pdf') {
+    header("Content-type:application/pdf");
+    readfile($filename);
+} else if ($type == 'jpg' || $type == 'png') {
+    header("Content-type:image/".$type);
+    readfile($filename);
+} else if ($type == 'bib') {
+    header('Content-disposition: attachment; filename='.basename($filename));
+    header('Content-type: application/x-bibtex');
+    readfile($filename);
+}
+?>

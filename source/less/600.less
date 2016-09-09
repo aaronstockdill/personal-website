@@ -3,7 +3,7 @@ html, body {
 }
 
 .welcome {
-    top: 3rem;
+    top: 0;
     transform: none;
     padding-bottom: 2rem;
 
@@ -26,14 +26,19 @@ html, body {
     }
 }
 
+.container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+    h1 {
+        font-size: 3rem;
+    }
+}
+
 // For the REALLY small screens...
 @media screen and (max-width: 350px) {
     .welcome h1 {
         font-size: 4.5rem;
-    }
-
-    .container h1 {
-        font-size: 3.4rem;
     }
 
     .container h2.award-year {

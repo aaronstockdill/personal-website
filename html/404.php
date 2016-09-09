@@ -1,24 +1,4 @@
 <?php
-include_once 'Parsedown.php';
-
-$Parsedown = new Parsedown();
-$rootdir = realpath(dirname(__FILE__));
-$filedir = $rootdir."/../../dynamic/";
-
-if(!isset($_GET['id']) || !isset($_GET['type'])) {
-    header($_SERVER["SERVER_PROTOCOL"]." 404 Not Found", true, 404);
-    include($rootdir."/../404.php");
-}
-
-$id = $_GET['id'];
-$type = $_GET['type'];
-
-$filename = $filedir.$id.".".$type;
-if ($type == 'md' || $type == 'talk') {
-    $backtarget = ($type == 'md') ? "Writing" : "Talks";
-?>
-
-<?php
 if(isset($_COOKIE["style"])) {
     $theme = $_COOKIE["style"];
 } else {
@@ -30,7 +10,7 @@ if(isset($_COOKIE["style"])) {
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Aaron Stockdill</title>
+        <title>404 | Aaron Stockdill</title>
         <?php
             echo '<link rel="stylesheet" href="/css/'.$theme.'.css" media="screen" id="theme">';
         ?>
@@ -38,43 +18,17 @@ if(isset($_COOKIE["style"])) {
         <link rel="stylesheet" href="/css/600.css" media="screen and (max-width: 600px)">
         <link rel="stylesheet" href="/css/print.css" media="print">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content=""/>
+        <meta name="description" content="Something has gone horribly wrong!
+"/>
     </head>
     <body>
-<div class='container'>
-    <nav>
-        <a href='/'>
-            <span lang="EN">Home</span>
-            <span lang="FR">Accueil</span>
-        </a>
-        <a href='/bio/'>
-            <span lang="EN">About</span>
-            <span lang="FR">Biographie</span>
-        </a>
-        <a href="/work/">
-            <span lang="EN">Works</span>
-            <span lang="FR">Ouvrages</span>
-        </a>
-        <a href='/contact/'>
-            <span lang="EN">Contact Details</span>
-            <span lang="FR">Détails du Contact</span>
-        </a>
-        <a href="/AaronStockdill.pdf" target="_blank">Curriculum Vit&aelig;</a>
-    </nav>
-    <a href='/work/#<?php echo $backtarget; ?>' class='back-to-works'>
-        <span lang='EN'>Back to Works</span>
-        <span lang='FR'>Retour à Ouvrages</span>
-    </a>
-<div class='writing'>
-<?php
-$mdfile = fopen($filename, "r") or die("Unable to open file!");
-$markdown = fread($mdfile, filesize($filename));
-fclose($mdfile);
-echo $Parsedown->text($markdown);
-?>
+<div class="error container">
+    <h1>404</h1>
+    <h2 lang="EN">Oops.</h2>
+    <h2 lang="FR">Oups.</h2>
+    <a href="/" lang="EN">Take me home.</a>
+    <a href="/" lang="FR">Emmène moi à accueil.</a>
 </div>
-</div>
-<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG'></script>
         <footer>
             <span class='selector'>
                 <a id="white-button" class='theme-button active' onclick='switch_theme("white")'>
@@ -117,16 +71,3 @@ echo $Parsedown->text($markdown);
         ?>
     </body>
 </html>
-<?php
-} else if ($type == 'pdf') {
-    header("Content-type:application/pdf");
-    readfile($filename);
-} else if ($type == 'jpg' || $type == 'png') {
-    header("Content-type:image/".$type);
-    readfile($filename);
-} else if ($type == 'bib') {
-    header('Content-disposition: attachment; filename='.basename($filename));
-    header('Content-type: application/x-bibtex');
-    readfile($filename);
-}
-?>

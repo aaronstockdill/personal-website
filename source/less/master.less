@@ -3,7 +3,7 @@
 }
 
 .hide {
-    display: none;
+    display: none !important;
 }
 
 html, body {
@@ -144,6 +144,12 @@ html, body {
         margin-top: 0.5rem;
     }
 
+    img {
+        display: block;
+        margin: auto;
+        max-width: 100%;
+    }
+
     .award {
         padding-left: 5rem;
         h3 {
@@ -210,20 +216,23 @@ html, body {
             &:hover {
                 text-decoration: underline;
             }
-
-            h2 {
-                font-size: 1.3rem;
-                margin: 0 0 0 0.5rem;
-                padding: 0;
-                font-weight: 400;
-            }
         }
 
-        .date {
+        .date, .bibtex {
             font-size: 0.8rem;
             font-style: italic;
         }
+
+        .journal {
+            font-style: italic;
+        }
     }
+}
+
+img + em {
+    text-align: right;
+    width: 100%;
+    display: inline-block;
 }
 
 footer {
@@ -272,5 +281,23 @@ footer {
         &:hover {
             height: 2.4rem;
         }
+    }
+}
+
+.error {
+    max-width: 800px;
+    width: 100%;
+
+    h1 {
+        margin-bottom: 0;
+    }
+
+    h2 {
+        margin-top: 0.5rem;
+    }
+
+    a {
+        display: block;
+        margin-top: 2rem;
     }
 }

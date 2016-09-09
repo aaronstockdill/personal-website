@@ -29,7 +29,7 @@ $rootdir = realpath(dirname(__FILE__));
 $filedir = $rootdir."/../../dynamic/";
 define('FILE_DIR', $filedir);
 
-function list_files($type) {
+function list_files($type, $display) {
     $files = scandir(FILE_DIR);
     $count = 0;
     foreach ($files as $f) {
@@ -39,19 +39,26 @@ function list_files($type) {
             $parts = explode(".", $f);
             $title = $parts[0];
             $date = $parts[1];
-            $extension = $parts[2];
+            $extension = pathinfo($f, PATHINFO_EXTENSION);
             if ($extension == $type) {
                 $count += 1;
-                echo "<div class='dynamic-link'>";
-                echo "<a href='/work/dynamic.php?id=$title.$date'><h2>".$title."</h2></a>";
-                echo "<span class='date'>".$date."</span>";
-                echo "</div>";
+                echo $display($f);
             }
         }
     }
     if ($count == 0) {
         echo "<p>There is no content yet.</p>";
     }
+}
+
+function parsebib($filename) {
+    $bibtex = file_get_contents(FILE_DIR."/".$filename);
+    $bibjson = preg_replace("/(\w+)\s*=\s*\{/", "\"$1\": \"", $bibtex);
+    $bibjson = preg_replace("/\}(?=\s*[,\}])/", "\"", $bibjson);
+    $bibjson = preg_replace("/@(\w+)\s*\{([^,]*)/", "{\"$1\": \"$2\"", $bibjson, 1);
+    $bibjson = preg_replace("/,\}/", "}", $bibjson, 1);
+    $bibobj = json_decode($bibjson);
+    return $bibobj;
 }
 ?>
 
@@ -76,9 +83,9 @@ function list_files($type) {
     <!-- <h1 lang="FR">Ouvrage</h1> -->
     <ul class='submenu'>
         <li><a href="#Publications">Publications</a></li>
-        <li><a href="#GitHub">GitHub</a></li>
         <li><a href="#Writing">Writing</a></li>
         <li><a href="#Talks">Talks</a></li>
+        <li><a href="#GitHub">GitHub</a></li>
     </ul>
 
     <p lang="FR">
@@ -87,19 +94,45 @@ function list_files($type) {
 
     <h1 id="Publications">Publications</h1>
 <?php
-list_files("pdf");
+list_files("bib", function ($f) {
+    $fname = basename($f, ".bib");
+    $details = parsebib($fname.".bib");
+    $result = "<div class='dynamic-link'>";
+    $result .= "<a href='/work/dynamic.php?id=$fname&amp;type=pdf'>";
+    $result .= "<span class='authors'>".$details->{"Author"}."</span>. ";
+    $result .= "<span class='title'>\"".$details->{"Title"}.".\"</span> ";
+    $result .= "<span class='journal'>".$details->{"Journal"}.".</span> ";
+    $result .= "<span class='date'>".$details->{"Month"}." ".$details->{"Year"}.".</span>";
+    $result .= "</a>";
+    $result .= "<a class='bibtex' href='/work/dynamic.php?id=$fname&amp;type=bib'>BibTeX</a></div>";
+    return $result;
+});
 ?>
-
-    <h1 id="GitHub">GitHub</h1>
-    <p>I infrequently put projects on GitHub, but you are welcome to view what is available there: <a href='https://github.com/aaronstockdill'> Aaron Stockdill on GitHub</a>.</p>
 
     <h1 id="Writing">Writing</h1>
 <?php
-list_files("md");
+list_files("md", function ($f) {
+    $parts = explode(".", $f);
+    $result = "<div class='dynamic-link'>";
+    $result .= "<a href='/work/dynamic.php?id=$parts[0].$parts[1]&amp;type=md'>".$parts[0]."</a>";
+    $result .= "<span class='date'>".$parts[1]."</span></div>";
+    return $result;
+});
 ?>
 
     <h1 id="Talks">Talks</h1>
-    <p>There is no content yet.</p>
+<?php
+list_files("talk", function ($f) {
+    $parts = explode(".", $f);
+    $result = "<div class='dynamic-link'>";
+    $result .= "<a href='/work/dynamic.php?id=$parts[0].$parts[1]&amp;type=talk'>".$parts[0]."</a>";
+    $result .= "<span class='date'>".$parts[1]."</span></div>";
+    return $result;
+});
+?>
+
+<h1 id="GitHub">GitHub</h1>
+<p>I infrequently put projects on GitHub, but you are welcome to view what is available there: <a href='https://github.com/aaronstockdill'> Aaron Stockdill on GitHub</a>.</p>
 
 </div>
 
