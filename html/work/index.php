@@ -92,7 +92,7 @@ function parsebib($filename) {
         Ce contenu ne sont pas disponibles en français.
     </p>
 
-    <h1 id="Publications">Publications</h1>
+    <!-- <h1 id="Publications">Publications</h1>
 <?php
 list_files("bib", function ($f) {
     $fname = basename($f, ".bib");
@@ -107,9 +107,9 @@ list_files("bib", function ($f) {
     $result .= "<a class='bibtex' href='/work/dynamic.php?id=$fname&amp;type=bib'>BibTeX</a></div>";
     return $result;
 });
-?>
+?> -->
 
-    <h1 id="Writing">Writing</h1>
+    <!-- <h1 id="Writing">Writing</h1>
 <?php
 list_files("md", function ($f) {
     $parts = explode(".", $f);
@@ -118,7 +118,7 @@ list_files("md", function ($f) {
     $result .= "<span class='date'>".$parts[1]."</span></div>";
     return $result;
 });
-?>
+?> -->
 
     <h1 id="Talks">Talks</h1>
 <?php
