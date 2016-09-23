@@ -13,8 +13,10 @@ if(!isset($_GET['id']) || !isset($_GET['type'])) {
 $id = $_GET['id'];
 $type = $_GET['type'];
 
+if ($type == 'md') $type = 'writing';
+
 $filename = $filedir.$id.".".$type;
-if ($type == 'md' || $type == 'talk') {
+if ($type == 'md' || $type == 'writing'|| $type == 'talk') {
     $backtarget = ($type == 'md') ? "Writing" : "Talks";
 ?>
 
