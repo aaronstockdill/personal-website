@@ -28,12 +28,12 @@ if(isset($_COOKIE["style"])) {
             <span lang="EN">Home</span>
             <span lang="FR">Accueil</span>
         </a>
-        <!--
+
         <a href="/work/">
             <span lang="EN">Works</span>
             <span lang="FR">Ouvrages</span>
         </a>
-        -->
+
         <a href="/contact/">
             <span lang="EN">Contact Details</span>
             <span lang="FR">Détails du Contact</span>

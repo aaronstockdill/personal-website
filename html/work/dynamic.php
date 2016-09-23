@@ -128,5 +128,12 @@ echo $Parsedown->text($markdown);
     header('Content-disposition: attachment; filename='.basename($filename));
     header('Content-type: application/x-bibtex');
     readfile($filename);
+} else {
+    $finfo = finfo_open(FILEINFO_MIME_TYPE);
+    $mime = finfo_file($finfo, $filename);
+    finfo_close($finfo);
+    header('Content-disposition: attachment; filename='.basename($filename));
+    header('Content-type: '.$mime);
+    readfile($filename);
 }
 ?>

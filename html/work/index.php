@@ -79,8 +79,6 @@ function parsebib($filename) {
         <a href="/AaronStockdill.pdf" target="_blank">Curriculum Vit&aelig;</a>
     </nav>
 
-    <!-- <h1 lang="EN">Work</h1> -->
-    <!-- <h1 lang="FR">Ouvrage</h1> -->
     <ul class='submenu'>
         <li><a href="#Publications">Publications</a></li>
         <li><a href="#Writing">Writing</a></li>
@@ -109,7 +107,7 @@ list_files("bib", function ($f) {
 });
 ?> -->
 
-    <!-- <h1 id="Writing">Writing</h1>
+    <h1 id="Writing">Writing</h1>
 <?php
 list_files("md", function ($f) {
     $parts = explode(".", $f);
@@ -118,7 +116,7 @@ list_files("md", function ($f) {
     $result .= "<span class='date'>".$parts[1]."</span></div>";
     return $result;
 });
-?> -->
+?>
 
     <h1 id="Talks">Talks</h1>
 <?php
