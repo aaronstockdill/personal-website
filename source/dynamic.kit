@@ -13,7 +13,7 @@ if(!isset($_GET['id']) || !isset($_GET['type'])) {
 $id = $_GET['id'];
 $type = $_GET['type'];
 
-if ($type == 'md') $type = 'writing';
+if ($type == 'writing') $type = 'md';
 
 $filename = $filedir.$id.".".$type;
 if ($type == 'md' || $type == 'writing'|| $type == 'talk') {
