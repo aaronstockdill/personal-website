@@ -112,7 +112,7 @@ list_files("bib", function ($f) {
 list_files("md", function ($f) {
     $parts = explode(".", $f);
     $result = "<div class='dynamic-link'>";
-        $result .= "<a href='/work/writing/".str_replace('-', '/', $parts[1])."/$parts[0]/'>".$parts[0]."</a>";
+    $result .= "<a href='/work/writing/".str_replace('-', '/', $parts[1])."/$parts[0]/'>".$parts[0]."</a>";
     $result .= "<span class='date'>".$parts[1]."</span></div>";
     return $result;
 });
@@ -123,7 +123,7 @@ list_files("md", function ($f) {
 list_files("talk", function ($f) {
     $parts = explode(".", $f);
     $result = "<div class='dynamic-link'>";
-    $result .= "<a href='/work/dynamic.php?id=$parts[0].$parts[1]&amp;type=talk'>".$parts[0]."</a>";
+    $result .= "<a href='/work/talk/".str_replace('-', '/', $parts[1])."/$parts[0]/'>".$parts[0]."</a>";
     $result .= "<span class='date'>".$parts[1]."</span></div>";
     return $result;
 });
