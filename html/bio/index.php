@@ -74,6 +74,12 @@ if(isset($_COOKIE["style"])) {
     <h2 class='award-year'>2016</h2>
 
     <div class="award">
+        <h3>G B Battersby-Trimble Scholarship in Computer Science</h3>
+        <p lang="EN">Awarded for academic merit, broad knowledge outside of computer science, and research of benefit to New Zealand.</p>
+        <p lang="FR">Décerné pour la mérite academique, vaste connaissance en dehors de les sciences informatiques, et recherche qu'il aura de grand avantage à Nouvelle Zélande.</p>
+    </div>
+
+    <div class="award">
         <h3 lang="EN">Finalist for the Sir Paul Callaghan Award</h3>
         <h3 lang="FR">Finaliste pour le prix de Sir Paul Callaghan</h3>
         <p lang="EN">Awarded for innovation and STEM communication.</p>

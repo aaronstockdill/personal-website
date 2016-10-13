@@ -83,7 +83,7 @@ function parsebib($filename) {
         <li><a href="#Publications">Publications</a></li>
         <li><a href="#Writing">Writing</a></li>
         <li><a href="#Talks">Talks</a></li>
-        <li><a href="#GitHub">GitHub</a></li>
+        <li><a href="https://github.com/aaronstockdill">GitHub</a></li>
     </ul>
 
     <p lang="FR">
