@@ -301,3 +301,51 @@ footer {
         margin-top: 2rem;
     }
 }
+
+.help {
+    overflow-y: auto;
+    display: block;
+    z-index: 1000;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+
+    .help-box {
+        padding: 3rem;
+        padding-bottom: 4rem;
+        margin: 10%;
+        position: relative;
+
+        h1 {
+            text-align: center;
+        }
+
+        dl {
+            display: inline-block;
+            width: 33%;
+            vertical-align: top;
+            text-align: center;
+
+            dt {
+                font-weight: normal;
+                padding-bottom: 0.2rem;
+            }
+
+            dd {
+                margin-left: 0;
+            }
+        }
+
+        .close-help {
+            cursor: pointer;
+            position: absolute;
+            bottom: 3rem;
+            right: 3rem;
+            border-bottom: 1px solid rgba(0,0,0,0);
+
+            &:hover {
+                border-bottom-width: 1px;
+                border-bottom-style: solid;
+            }
+        }
+    }
+}

@@ -103,6 +103,28 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/html\/js\/keybindings.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/html\/js\/keybindings.js",
+		"outputAbbreviatedPath": "\/html\/js\/min\/keybindings-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/html\/js\/mousetrap.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/html\/js\/mousetrap.js",
+		"outputAbbreviatedPath": "\/html\/js\/min\/mousetrap-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/html\/js\/preferences.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -167,6 +189,19 @@
 		"inputAbbreviatedPath": "\/source\/coffeescript\/email.coffee",
 		"minifyOutput": 1,
 		"outputAbbreviatedPath": "\/html\/js\/email.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/source\/coffeescript\/keybindings.coffee": {
+		"createSourceMap": 0,
+		"fileType": 32,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/source\/coffeescript\/keybindings.coffee",
+		"minifyOutput": 1,
+		"outputAbbreviatedPath": "\/html\/js\/keybindings.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1,
 		"outputStyle": 1,
@@ -396,7 +431,7 @@
 			},
 		"indentation": {
 			"active": 1,
-			"flagValue": 2
+			"flagValue": 4
 			},
 		"line_endings": {
 			"active": 0,
@@ -917,7 +952,7 @@
 	"lessStrictImports": 0,
 	"lessStrictMath": 0,
 	"lessStrictUnits": 0,
-	"markdownAutoOutputPathEnabled": 1,
+	"markdownAutoOutputPathEnabled": 0,
 	"markdownAutoOutputPathFilenamePattern": "*.html",
 	"markdownAutoOutputPathRelativePath": "",
 	"markdownAutoOutputPathReplace1": "",

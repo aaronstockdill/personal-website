@@ -78,6 +78,15 @@ echo $Parsedown->text($markdown);
 </div>
 <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG'></script>
         <footer>
+            <span class='selector help-button'>
+                <a onclick="show_help()" class='active'>
+                    <span>&nbsp;&nbsp;&nbsp;?</span>
+                </a>
+                <a onclick="show_help()">
+                    <span>Help</span>
+                </a>
+            </span>
+            <span class='separator'></span>
             <span class='selector'>
                 <a id="white-button" class='theme-button active' onclick='switch_theme("white")'>
                     <span lang='EN'>light</span>
@@ -88,7 +97,7 @@ echo $Parsedown->text($markdown);
                     <span lang='FR'>noir</span>
                 </a>
             </span>
-            <!--<span class='separator'></span>
+            <span class='separator'></span>
             <span class='selector'>
                 <a id="EN-button" class='lang-button active' onclick='switch_language("EN")'>
                     EN
@@ -96,11 +105,13 @@ echo $Parsedown->text($markdown);
                 <a id="FR-button" class='lang-button' onclick='switch_language("FR")'>
                     FR
                 </a>
-            </span>-->
+            </span>
         </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
         <script src="/js/preferences.js" charset="utf-8"></script>
         <script src="/js/email.js" charset="utf-8"></script>
+        <script src="/js/mousetrap.js" charset="utf-8"></script>
+        <script src="/js/keybindings.js" charset="utf-8"></script>
         <?php
             if (strpos($_SERVER['SERVER_NAME'],
                        'aaron.stockdill.nz') !== false) {
