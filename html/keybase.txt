@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/aaronstockdill
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://aaron.stockdill.nz
+  * I am aaronstockdill (https://keybase.io/aaronstockdill) on keybase.
+  * I have a public key ASDHwg0vI-2pSQ-jd0UPHyhT0at6sf72KnIsymkm1qHtIgo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0120c7c20d2f23eda9490fa377450f1f2853d1ab7ab1fef62a722cca6926d6a1ed220a",
+            "host": "keybase.io",
+            "kid": "0120c7c20d2f23eda9490fa377450f1f2853d1ab7ab1fef62a722cca6926d6a1ed220a",
+            "uid": "3527b84ef3430a890af5c6025cf07519",
+            "username": "aaronstockdill"
+        },
+        "service": {
+            "hostname": "aaron.stockdill.nz",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.17"
+    },
+    "ctime": 1476773697,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1476773655,
+        "hash": "042de46d1f1ed44564de2c9c70f15617c7bb27f04f85dd38ba90b6963129e5369ba14d7a47fade68438aafa78dca5b00df9a33889858fcab8899d5a8c12ed013",
+        "seqno": 679261
+    },
+    "prev": "cb67c1c0e407bc1dc801eccea11c4c23443ad57ca437f13105fe6ad057f758ca",
+    "seqno": 8,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgx8INLyPtqUkPo3dFDx8oU9GrerH+9ipyLMppJtah7SIKp3BheWxvYWTFAv97ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwYzdjMjBkMmYyM2VkYTk0OTBmYTM3NzQ1MGYxZjI4NTNkMWFiN2FiMWZlZjYyYTcyMmNjYTY5MjZkNmExZWQyMjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwYzdjMjBkMmYyM2VkYTk0OTBmYTM3NzQ1MGYxZjI4NTNkMWFiN2FiMWZlZjYyYTcyMmNjYTY5MjZkNmExZWQyMjBhIiwidWlkIjoiMzUyN2I4NGVmMzQzMGE4OTBhZjVjNjAyNWNmMDc1MTkiLCJ1c2VybmFtZSI6ImFhcm9uc3RvY2tkaWxsIn0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJhYXJvbi5zdG9ja2RpbGwubnoiLCJwcm90b2NvbCI6Imh0dHA6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjE3In0sImN0aW1lIjoxNDc2NzczNjk3LCJleHBpcmVfaW4iOjUwNDU3NjAwMCwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE0NzY3NzM2NTUsImhhc2giOiIwNDJkZTQ2ZDFmMWVkNDQ1NjRkZTJjOWM3MGYxNTYxN2M3YmIyN2YwNGY4NWRkMzhiYTkwYjY5NjMxMjllNTM2OWJhMTRkN2E0N2ZhZGU2ODQzOGFhZmE3OGRjYTViMDBkZjlhMzM4ODk4NThmY2FiODg5OWQ1YThjMTJlZDAxMyIsInNlcW5vIjo2NzkyNjF9LCJwcmV2IjoiY2I2N2MxYzBlNDA3YmMxZGM4MDFlY2NlYTExYzRjMjM0NDNhZDU3Y2E0MzdmMTMxMDVmZTZhZDA1N2Y3NThjYSIsInNlcW5vIjo4LCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQHJvVpdV1c7VH8qhSKn/Iif3ggKb/UXtZZwu97QV9HFBu5zieb4+XNy4M0Kxoz6GyeAHlPCFwoGkoaeVx3dDHwGoc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCAW7JBCi3aoeBH8sESokYDFSuHk6K+vPAEcKzuFhEaD4aN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/aaronstockdill
+
+==================================================================
