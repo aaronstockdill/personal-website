@@ -43,6 +43,7 @@ if(isset($_COOKIE["style"])) {
         <meta name="description" content=""/>
     </head>
     <body>
+
 <div class='container'>
     <nav>
         <a href='/'>
@@ -130,6 +131,7 @@ echo $Parsedown->text($markdown);
         ?>
     </body>
 </html>
+
 <?php
 } else if ($type == 'pdf') {
     header("Content-type:application/pdf");

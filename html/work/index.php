@@ -23,6 +23,7 @@ if(isset($_COOKIE["style"])) {
     </head>
     <body>
 
+
 <?php
 date_default_timezone_set('Pacific/Auckland');
 $rootdir = realpath(dirname(__FILE__));
@@ -187,3 +188,4 @@ list_files("talk", function ($f) {
         ?>
     </body>
 </html>
+

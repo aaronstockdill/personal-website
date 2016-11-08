@@ -22,6 +22,7 @@ if(isset($_COOKIE["style"])) {
 "/>
     </head>
     <body>
+
 <div class="error container">
     <h1>404</h1>
     <h2 lang="EN">Oops.</h2>
@@ -82,3 +83,4 @@ if(isset($_COOKIE["style"])) {
         ?>
     </body>
 </html>
+

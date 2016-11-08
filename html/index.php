@@ -22,6 +22,7 @@ if(isset($_COOKIE["style"])) {
 "/>
     </head>
     <body>
+
 <div class="welcome">
     <div class='left'>
         <h1>Aaron<br />Stockdill</h1>
@@ -115,3 +116,4 @@ if(isset($_COOKIE["style"])) {
         ?>
     </body>
 </html>
+
