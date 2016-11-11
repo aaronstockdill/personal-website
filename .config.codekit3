@@ -399,7 +399,7 @@
 	"displayValue": "Personal ",
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-owl",
-	"lastBuiltDate": 500293310
+	"lastBuiltDate": 500520988
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -1711,7 +1711,7 @@
 	"esLintSourceType": 0,
 	"externalServerAddress": "http:\/\/192.168.1.15:8000",
 	"gitIgnoreBuildFolder": 1,
-	"hideConfigFile": 0,
+	"hideConfigFile": 1,
 	"jsCheckerReservedNamesString": "console",
 	"jsHintFlags2": {
 		"asi": {
