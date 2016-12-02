@@ -142,7 +142,10 @@ echo $Parsedown->text($markdown);
 } else if ($type == 'bib') {
     header('Content-disposition: attachment; filename='.basename($filename));
     header('Content-type: application/x-bibtex');
-    readfile($filename);
+    // Remove comments on the way through!
+    $content = file_get_contents($filename);
+    $content = preg_replace("/%.*$/m", "", $content);
+    echo $content;
 } else {
     $mime = mime_content_type($filename);
     header('Content-disposition: attachment; filename='.basename($filename));

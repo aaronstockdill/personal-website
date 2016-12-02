@@ -54,11 +54,16 @@ function list_files($type, $display) {
 
 function parsebib($filename) {
     $bibtex = file_get_contents(FILE_DIR."/".$filename);
-    $bibjson = preg_replace("/(\w+)\s*=\s*\{/", "\"$1\": \"", $bibtex);
+    $bibjson = preg_replace("/^%(.*)$/m", "", $bibtex);
+    $bibjson = preg_replace("/((\w|-)+)\s*=\s*\{/", "\"$1\": \"", $bibjson);
     $bibjson = preg_replace("/\}(?=\s*[,\}])/", "\"", $bibjson);
     $bibjson = preg_replace("/@(\w+)\s*\{([^,]*)/", "{\"$1\": \"$2\"", $bibjson, 1);
     $bibjson = preg_replace("/,\}/", "}", $bibjson, 1);
     $bibobj = json_decode($bibjson);
+    $found = preg_match("/^%copyright (.*)$/m", $bibtex, $matches);
+    if ($found === 1) {
+        $bibobj->{"Copyright"} = $matches[1];
+    }
     return $bibobj;
 }
 ?>
@@ -91,7 +96,7 @@ function parsebib($filename) {
         Ce contenu ne sont pas disponibles en français.
     </p>
 
-    <!-- <h1 id="Publications">Publications</h1>
+    <h1 id="Publications">Publications</h1>
 <?php
 list_files("bib", function ($f) {
     $fname = basename($f, ".bib");
@@ -99,14 +104,21 @@ list_files("bib", function ($f) {
     $result = "<div class='dynamic-link'>";
     $result .= "<a href='/work/dynamic.php?id=$fname&amp;type=pdf'>";
     $result .= "<span class='authors'>".$details->{"Author"}."</span>. ";
-    $result .= "<span class='title'>\"".$details->{"Title"}.".\"</span> ";
-    $result .= "<span class='journal'>".$details->{"Journal"}.".</span> ";
-    $result .= "<span class='date'>".$details->{"Month"}." ".$details->{"Year"}.".</span>";
-    $result .= "</a>";
-    $result .= "<a class='bibtex' href='/work/dynamic.php?id=$fname&amp;type=bib'>BibTeX</a></div>";
+    $result .= "<span class='title'>\"".$details->{"Title"}.".\"</span></a><br />";
+    if ($details->{"Journal"}) {
+        $result .= "<span class='journal'>".$details->{"Journal"}.".</span> ";
+    } else if ($details->{"Booktitle"}) {
+        $result .= "<span class='journal'>".$details->{"Booktitle"}.".</span> ";
+    }
+    $result .= "<span class='date'>".$details->{"Month"}." ".$details->{"Year"}.".</span><br />";
+    if ($details->{"Copyright"}) {
+        $result .= "<span class='orig'>".$details->{"Copyright"}."</span><br />";
+    }
+    $result .= "<a class='bibtex' href='/work/dynamic.php?id=$fname&amp;type=bib'>Download BibTeX</a>";
+    $result .="</div>";
     return $result;
 });
-?> -->
+?>
 
     <h1 id="Writing">Writing</h1>
 <?php

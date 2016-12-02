@@ -55,17 +55,17 @@
 		"oAP": "\/html\/dynamic\/Neuromorphic Computing with Reservoir Neural Networks on Memristive Hardware.2016-09-01.talk",
 		"oF": 1
 		},
-	"\/dynamic\/Physical Restrictions on Neuromorphic Reservoir Computing.bib": {
+	"\/dynamic\/Restricted Echo State Networks.bib": {
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/html\/dynamic\/Physical Restrictions on Neuromorphic Reservoir Computing.bib",
+		"oAP": "\/html\/dynamic\/Restricted Echo State Networks.bib",
 		"oF": 1
 		},
-	"\/dynamic\/Physical Restrictions on Neuromorphic Reservoir Computing.pdf": {
+	"\/dynamic\/Restricted Echo State Networks.pdf": {
 		"ft": 8192,
-		"oA": 1,
-		"oAP": "\/html\/dynamic\/Physical Restrictions on Neuromorphic Reservoir Computing.pdf",
-		"oF": 1
+		"oA": 2,
+		"oAP": "\/html\/dynamic\/Restricted Echo State Networks.pdf",
+		"oF": 0
 		},
 	"\/dynamic\/Scholarship Calculus.2016-09-24.md": {
 		"cS": 0,
