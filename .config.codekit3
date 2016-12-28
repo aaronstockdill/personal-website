@@ -7,7 +7,7 @@
 		"uuidString": "CF21AFA0-D9E9-4C5A-8F82-0C07239DE6B6"
 		}
 	],
-"creatorBuild": "25444",
+"creatorBuild": "25479",
 "files": {
 	"\/.gitignore": {
 		"ft": 8192,
@@ -55,6 +55,18 @@
 		"oAP": "\/html\/dynamic\/Neuromorphic Computing with Reservoir Neural Networks on Memristive Hardware.2016-09-01.talk",
 		"oF": 1
 		},
+	"\/dynamic\/Neuromorphic Computing.bib": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/html\/dynamic\/Neuromorphic Computing.bib",
+		"oF": 1
+		},
+	"\/dynamic\/Neuromorphic Computing.pdf": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/html\/dynamic\/Neuromorphic Computing.pdf",
+		"oF": 1
+		},
 	"\/dynamic\/Restricted Echo State Networks.bib": {
 		"ft": 8192,
 		"oA": 1,
@@ -63,9 +75,9 @@
 		},
 	"\/dynamic\/Restricted Echo State Networks.pdf": {
 		"ft": 8192,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "\/html\/dynamic\/Restricted Echo State Networks.pdf",
-		"oF": 0
+		"oF": 1
 		},
 	"\/dynamic\/Scholarship Calculus.2016-09-24.md": {
 		"cS": 0,
@@ -198,6 +210,12 @@
 		"oA": 0,
 		"oAP": "\/html\/404.php",
 		"oF": 2
+		},
+	"\/source\/AaronStockdill.pdf": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/html\/AaronStockdill.pdf",
+		"oF": 0
 		},
 	"\/source\/bio.kit": {
 		"ft": 2048,
@@ -837,6 +855,10 @@
 			"active": 0,
 			"optionString": "{'properties': 'always'}"
 			},
+		"capitalized-comments": {
+			"active": 0,
+			"optionString": "'always', {'ignoreInlineComments': false, 'ignoreConsecutiveComments': false}"
+			},
 		"class-methods-use-this": {
 			"active": 0,
 			"optionString": "{'exceptMethods': []}"
@@ -1000,6 +1022,10 @@
 		"max-statements": {
 			"active": 0,
 			"optionString": "{'max': 10}, {'ignoreTopLevelFunctions': true}"
+			},
+		"max-statements-per-line": {
+			"active": 0,
+			"optionString": "{'max': 1}"
 			},
 		"multiline-ternary": {
 			"active": 0,
@@ -1365,6 +1391,10 @@
 			"active": 0,
 			"optionString": "'except-parens'"
 			},
+		"no-return-await": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-script-url": {
 			"active": 0,
 			"optionString": ""
@@ -1596,6 +1626,10 @@
 		"radix": {
 			"active": 0,
 			"optionString": "'always'"
+			},
+		"require-await": {
+			"active": 0,
+			"optionString": ""
 			},
 		"require-jsdoc": {
 			"active": 0,
@@ -2429,6 +2463,10 @@
 			},
 		"space-colon": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"support-ie8": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"toplevel": {
