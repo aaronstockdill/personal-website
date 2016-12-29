@@ -30,9 +30,10 @@ $rootdir = realpath(dirname(__FILE__));
 $filedir = $rootdir."/../../dynamic/";
 define('FILE_DIR', $filedir);
 
-function list_files($type, $display) {
+function list_files($type, $display, $sort) {
     $files = scandir(FILE_DIR);
     $count = 0;
+    $filtered_files = array();
     foreach ($files as $f) {
         if ($f[0] == ".") {
             // pass
@@ -43,9 +44,13 @@ function list_files($type, $display) {
             $extension = pathinfo($f, PATHINFO_EXTENSION);
             if ($extension == $type) {
                 $count += 1;
-                echo $display($f);
+                array_push($filtered_files, $f);
             }
         }
+    }
+    uasort($filtered_files, $sort);
+    foreach ($filtered_files as $f) {
+        echo $display($f);
     }
     if ($count == 0) {
         echo "<p>There is no content yet.</p>";
@@ -117,6 +122,31 @@ list_files("bib", function ($f) {
     $result .= "<a class='bibtex' href='/work/dynamic.php?id=$fname&amp;type=bib'>Download BibTeX</a>";
     $result .="</div>";
     return $result;
+}, function ($f, $g) {
+    $fname = basename($f, ".bib");
+    $gname = basename($g, ".bib");
+    $details1 = parsebib($fname.".bib");
+    $details2 = parsebib($gname.".bib");
+    $month_num = array(
+        "January" => "01",
+        "February" => "02",
+        "March" => "03",
+        "April" => "04",
+        "May" => "05",
+        "June" => "06",
+        "July" => "07",
+        "August" => "08",
+        "September" => "09",
+        "October" => "10",
+        "November" => "11",
+        "December" => "12",
+    );
+    $d1 = $details1->{"Year"}."-".$month_num[$details1->{"Month"}];
+    $d2 = $details2->{"Year"}."-".$month_num[$details2->{"Month"}];
+    if ($d1 == $d2) {
+        return 0;
+    }
+    return ($d1 < $d2) ? 1 : -1;
 });
 ?>
 
@@ -128,6 +158,13 @@ list_files("md", function ($f) {
     $result .= "<a href='/work/writing/".str_replace('-', '/', $parts[1])."/$parts[0]/'>".$parts[0]."</a>";
     $result .= "<span class='date'>".$parts[1]."</span></div>";
     return $result;
+}, function ($f, $g) {
+    $parts1 = explode(".", $f);
+    $parts2 = explode(".", $g);
+    if ($parts1[1] == $parts2[1]) {
+        return 0;
+    }
+    return ($parts1[1] < $parts2[1]) ? 1 : -1;
 });
 ?>
 
@@ -139,6 +176,13 @@ list_files("talk", function ($f) {
     $result .= "<a href='/work/talk/".str_replace('-', '/', $parts[1])."/$parts[0]/'>".$parts[0]."</a>";
     $result .= "<span class='date'>".$parts[1]."</span></div>";
     return $result;
+}, function ($f, $g) {
+    $parts1 = explode(".", $f);
+    $parts2 = explode(".", $g);
+    if ($parts1[1] == $parts2[1]) {
+        return 0;
+    }
+    return ($parts1[1] < $parts2[1]) ? 1 : -1;
 });
 ?>
 
