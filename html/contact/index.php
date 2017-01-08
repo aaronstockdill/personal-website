@@ -48,11 +48,6 @@ if(isset($_COOKIE["style"])) {
     <div class="contact-table">
         <span class='label'>Email</span>
             <span id='email-holder' class='value'><noscript>Email obfuscated. Please enable JavaScript.</noscript></span><br />
-        <span class='label'>
-            <span lang="EN">Mobile</span>
-            <span lang="FR">Numéro</span>
-        </span>
-            <span class='value'>+64 27 819 7662</span><br />
         <span class='label'>Office</span>
             <span class='value'>Rutherford 605</span><br />
         <span class='label'>LinkedIn</span>
