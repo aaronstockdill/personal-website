@@ -49,7 +49,7 @@ if(isset($_COOKIE["style"])) {
         <span class='label'>Email</span>
             <span id='email-holder' class='value'><noscript>Email obfuscated. Please enable JavaScript.</noscript></span><br />
         <span class='label'>Office</span>
-            <span class='value'>Rutherford 605</span><br />
+            <span class='value'>Erskine 344</span><br />
         <span class='label'>LinkedIn</span>
             <a href='http://nz.linkedin.com/in/aaronstockdill' class='value' target='_blank'> aaronstockdill</a>
     </div>
