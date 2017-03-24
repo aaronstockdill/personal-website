@@ -52,7 +52,7 @@ bind_nav "ctrl+x ctrl+a", "/bio/"
 bind_nav "ctrl+x ctrl+w", "/work/"
 bind_nav "ctrl+x ctrl+c", "/contact/"
 bind_nav "ctrl+x ctrl+v", "/AaronStockdill.pdf"
-bind_nav "ctrl+x ctrl+e", "mailto:aaronstockdill@me.com"
+bind_nav "ctrl+x ctrl+e", "mailto:" + getEmail()
 
 Mousetrap.bind ["ctrl+t ctrl+d", "ctrl+t ctrl+b"], () ->
     switch_theme "black"

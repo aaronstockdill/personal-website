@@ -14,9 +14,14 @@ if(isset($_COOKIE["style"])) {
         <?php
             echo '<link rel="stylesheet" href="/css/'.$theme.'.css" media="screen" id="theme">';
         ?>
-        <link rel="stylesheet" href="/css/master.css" media="screen">
-        <link rel="stylesheet" href="/css/600.css" media="screen and (max-width: 600px)">
-        <link rel="stylesheet" href="/css/print.css" media="print">
+        <!--<link rel="stylesheet" href="/css/master.css" media="screen">-->
+        <style>
+            <!-- @import "../html/css/master.css" -->
+        </style>
+        <!-- <link rel="stylesheet" href="/css/600.css" media="screen and (max-width: 600px)"> -->
+        <style media="screen and (max-width: 600px)">
+            <!-- @import "../html/css/600.css" -->
+        </style>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="<!-- $description -->"/>
     </head>

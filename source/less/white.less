@@ -33,21 +33,18 @@ html, body {
     a {
         color: @offblack;
 
-        &:hover {
+        &:hover, &.active {
             color: @font;
         }
     }
 
-    .contact-table a {
-        color: @font;
-    }
-
-    .dynamic-link a {
+    .contact-table a, .dynamic-link a {
         color: @font;
     }
 }
 
 footer {
+    background: @background;
 
     a {
         color: @offblack;
