@@ -24,7 +24,7 @@ deleteCookie = (name) ->
 
 # Allow the ability to switch themes.
 switch_theme = (target="white") ->
-    $('#theme').attr href: "/css/#{target}.css"
+    $('#theme').attr {href: "/css/#{target}.css"}
     $(".theme-button").removeClass 'active'
     $("##{target}-button").toggleClass 'active'
     deleteCookie "style"
@@ -35,24 +35,15 @@ switch_theme = (target="white") ->
 switch_language = (target="EN") ->
     languages = ["EN", "FR"]
     for lang in languages
+        nodes = $(":lang('#{lang}')")
         if lang != target
-            $(":lang('#{lang}')").addClass 'hide'
+            nodes.addClass 'hide'
+            nodes.removeClass 'show'
         else
-            $(":lang('#{lang}')").removeClass 'hide'
+            nodes.removeClass 'hide'
+            nodes.addClass 'show'
     $(".lang-button").removeClass 'active'
     $("##{target}-button").toggleClass 'active'
     deleteCookie "language"
     setCookie "language", target, 365
     false
-
-no_animations = () ->
-    window.animations = $('html, body, footer').css('transition')
-    $('html, body, footer').css('transition', 'none 0s')
-
-allow_animations = () ->
-    $('html, body, footer').css('transition', window.animations)
-
-no_animations()
-switch_theme getCookie "style"
-switch_language getCookie "language"
-setTimeout allow_animations, 200
