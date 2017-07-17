@@ -254,27 +254,26 @@ list_files("md", function ($f) {
             </span>
             <span class='separator'></span>
             <span class='selector'>
-                <a id="white-button" class='theme-button<? if ($theme == "white") { echo " active";} ?>' onclick='switch_theme("white")'>
+                <a id="white-button" class='theme-button<?php if ($theme == "white") { echo " active";} ?>' onclick='switch_theme("white")'>
                     <span lang='EN'>light</span>
                     <span lang='FR'>blanc</span>
                 </a>
-                <a id="black-button" class='theme-button<? if ($theme == "black") { echo " active";} ?>' onclick='switch_theme("black")'>
+                <a id="black-button" class='theme-button<?php if ($theme == "black") { echo " active";} ?>' onclick='switch_theme("black")'>
                     <span lang='EN'>dark</span>
                     <span lang='FR'>noir</span>
                 </a>
             </span>
             <span class='separator'></span>
             <span class='selector'>
-                <a id="EN-button" class='lang-button<? if ($lang == "EN") { echo " active";} ?>' onclick='switch_language("EN")'>
+                <a id="EN-button" class='lang-button<?php if ($lang == "EN") { echo " active";} ?>' onclick='switch_language("EN")'>
                     EN
                 </a>
-                <a id="FR-button" class='lang-button<? if ($lang == "FR") { echo " active";} ?>' onclick='switch_language("FR")'>
+                <a id="FR-button" class='lang-button<?php if ($lang == "FR") { echo " active";} ?>' onclick='switch_language("FR")'>
                     FR
                 </a>
             </span>
         </footer>
         <link rel="stylesheet" href="/css/print.css" media="print">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
         <script src="/js/combined.js" charset="utf-8" defer></script>
         <?php
             if (strpos($_SERVER['SERVER_NAME'],

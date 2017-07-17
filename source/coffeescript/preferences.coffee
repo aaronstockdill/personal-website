@@ -24,9 +24,9 @@ deleteCookie = (name) ->
 
 # Allow the ability to switch themes.
 switch_theme = (target="white") ->
-    $('#theme').attr {href: "/css/#{target}.css"}
-    $(".theme-button").removeClass 'active'
-    $("##{target}-button").toggleClass 'active'
+    document.querySelector("#theme").setAttribute "href", "/css/#{target}.css"
+    document.querySelectorAll(".theme-button").forEach (button) => button.classList.remove 'active'
+    document.querySelector("##{target}-button").classList.add 'active'
     deleteCookie "style"
     setCookie "style", target, 365
     false
@@ -35,15 +35,15 @@ switch_theme = (target="white") ->
 switch_language = (target="EN") ->
     languages = ["EN", "FR"]
     for lang in languages
-        nodes = $(":lang('#{lang}')")
+        nodes = document.querySelectorAll(":lang('#{lang}')")
         if lang != target
-            nodes.addClass 'hide'
-            nodes.removeClass 'show'
+            nodes.forEach (node) => node.classList.add 'hide'
+            nodes.forEach (node) => node.classList.remove 'show'
         else
-            nodes.removeClass 'hide'
-            nodes.addClass 'show'
-    $(".lang-button").removeClass 'active'
-    $("##{target}-button").toggleClass 'active'
+            nodes.forEach (node) => node.classList.remove 'hide'
+            nodes.forEach (node) => node.classList.add 'show'
+    document.querySelectorAll(".lang-button").forEach (button) => button.classList.remove 'active'
+    document.querySelector("##{target}-button").classList.add 'active'
     deleteCookie "language"
     setCookie "language", target, 365
     false

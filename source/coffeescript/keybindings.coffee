@@ -1,8 +1,9 @@
 show_help = () ->
-    if $('.help').length > 0
-        $('.help').remove()
+    if document.querySelector('.help')
+        help = document.querySelector('.help')
+        help.parentNode.removeChild(help)
     else
-        $('body').append """
+        document.body.innerHTML += """
         <div class='help'><div class='help-box'>
             <h1>Keyboard Shortcuts</h1>
             <dl>

@@ -24,10 +24,14 @@ getEmail = (hidden_name, after_at) ->
 setupEmail = (hidden_name, after_at) ->
     email = getEmail(hidden_name, after_at).reverse()
     new_email_code = "<a href=\"mailto:" + email + " \" class=\"borked-email email\">" + email + "</a>"
-    $(".email-holder").html new_email_code
-    $(".borked-email").on('mouseover', (event) ->
-        event.target.href = switchEmail event.target.href)
-    $(".borked-email").on('mouseout', (event) ->
-        event.target.href = switchEmail event.target.href)
+    email_holder = document.querySelector(".email-holder")
+    if email_holder
+        email_holder.innerHTML = new_email_code
+    borked = document.querySelector(".borked-email")
+    if borked
+        borked.addEventListener('mouseover', (event) ->
+            event.target.href = switchEmail event.target.href)
+        borked.addEventListener('mouseout', (event) ->
+            event.target.href = switchEmail event.target.href)
 
 setupEmail("nnebafgbpxqvyy", ["me", "com"])
