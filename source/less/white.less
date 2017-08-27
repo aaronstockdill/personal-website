@@ -29,6 +29,17 @@ nav a.active {
     color: @font;
 }
 
+.nav-holder {
+    &:before {
+        background-image: linear-gradient(to right, @background 0%, fade(@background, 0%) 100%);
+    }
+
+    &:after {
+        background-image: linear-gradient(to left, @background 0%, fade(@background, 0%) 100%);
+    }
+}
+
+
 .container {
     a {
         color: @offblack;
