@@ -16,13 +16,10 @@ $type = $_GET['type'];
 if ($type == 'writing') $type = 'md';
 
 $filename = $filedir.$id.".".$type;
+$subtitle = explode(".", $id)[0] . " -";
 if ($type == 'md' || $type == 'writing'|| $type == 'talk') {
     $backtarget = ($type == 'md') ? "Writing" : "Talks";
-?>
-
-<!-- $subtitle: nil -->
-<!-- $description: nil -->
-<!-- @import "header.kit" -->
+?><!-- $subtitle: <?php echo $subtitle ?> --><!-- $description: nil --><!-- @import "header.kit" -->
 <div class='container'>
     <div class="nav-holder">
     <nav>
@@ -59,7 +56,7 @@ echo $Parsedown->text($markdown);
 ?>
 </div>
 </div>
-<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_SVG'></script>
 <!-- @import "footer.kit" -->
 <?php
 } else if ($type == 'pdf') {
