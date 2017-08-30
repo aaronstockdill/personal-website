@@ -1,7 +1,6 @@
 <IfModule mod_rewrite.c>
         RewriteEngine On
-        RewriteRule ^work/(.+)/(.+)/(.+)/(.+)/(.+)/$ work/dynamic.php?id=$5.$2-$3-$4&type=$1 [L]
-        RewriteRule ^boom$ /
+        RewriteRule ^work/(.+)/(.+)/(.+)/(.+)/(.+)/$ work/dynamic.php?id=$5.$2-$3-$4&type=$1 [L,R=301,B]
 </IfModule>
 
 ErrorDocument 404 /404.php
