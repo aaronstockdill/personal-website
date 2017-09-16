@@ -1,0 +1,65 @@
+<!-- $subtitle: Blog by -->
+<!-- $description:
+    A infrequently-updated blog of my life, or lack thereof.
+-->
+<!-- $blog_active = active -->
+<!-- @import "header.kit" -->
+
+<?php
+date_default_timezone_set('Pacific/Auckland');
+$rootdir = realpath(dirname(__FILE__));
+$filedir = $rootdir."/../../dynamic/";
+define('FILE_DIR', $filedir);
+
+function list_files($type, $display, $sort) {
+    $files = scandir(FILE_DIR);
+    $count = 0;
+    $filtered_files = array();
+    foreach ($files as $f) {
+        if ($f[0] == ".") {
+            // pass
+        } else {
+            $parts = explode(".", $f);
+            $title = $parts[0];
+            $date = $parts[1];
+            $extension = pathinfo($f, PATHINFO_EXTENSION);
+            if ($extension == $type) {
+                $count += 1;
+                array_push($filtered_files, $f);
+            }
+        }
+    }
+    uasort($filtered_files, $sort);
+    foreach ($filtered_files as $f) {
+        echo $display($f);
+    }
+    if ($count == 0) {
+        echo "<p>There is no content yet.</p>";
+    }
+}
+?>
+</div>
+
+<p lang="FR" style="text-align: center;">
+Ce contenu ne sont pas disponibles en français.
+</p>
+
+<h1>Blog</h1>
+<?php
+list_files("md", function ($f) {
+    $parts = explode(".", $f);
+    $result = "<div class='dynamic-link'>";
+    $result .= "<a href='/blog/".str_replace('-', '/', $parts[1])."/$parts[0]/'>".$parts[0]."</a>";
+    $result .= "<span class='date'>".$parts[1]."</span></div>";
+    return $result;
+}, function ($f, $g) {
+    $parts1 = explode(".", $f);
+    $parts2 = explode(".", $g);
+    if ($parts1[1] == $parts2[1]) {
+        return 0;
+    }
+    return ($parts1[1] < $parts2[1]) ? 1 : -1;
+});
+?>
+
+<!-- @import "footer.kit" -->

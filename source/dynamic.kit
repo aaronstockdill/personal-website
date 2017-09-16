@@ -20,33 +20,7 @@ $subtitle = explode(".", $id)[0] . " -";
 if ($type == 'md' || $type == 'writing'|| $type == 'talk') {
     $backtarget = ($type == 'md') ? "Writing" : "Talks";
 ?><!-- $subtitle: <?php echo $subtitle ?> --><!-- $description: nil --><!-- @import "header.kit" -->
-<div class='container'>
-    <div class="nav-holder">
-    <nav>
-        <a href='/'>
-            <span lang="EN">Home</span>
-            <span lang="FR">Accueil</span>
-        </a>
-        <a href='/bio/'>
-            <span lang="EN">About</span>
-            <span lang="FR">Biographie</span>
-        </a>
-        <a href="/work/">
-            <span lang="EN">Works</span>
-            <span lang="FR">Ouvrages</span>
-        </a>
-        <a href='/contact/'>
-            <span lang="EN">Contact Details</span>
-            <span lang="FR">Détails du Contact</span>
-        </a>
-        <a href="/AaronStockdill.pdf" target="_blank">Curriculum Vit&aelig;</a>
-    </nav>
     </div>
-
-    <a href='/work/#<?php echo $backtarget; ?>' class='back-to-works'>
-        <span lang='EN'>Back to Works</span>
-        <span lang='FR'>Retour à Ouvrages</span>
-    </a>
 <div class='writing'>
 <?php
 $mdfile = fopen($filename, "r") or die("Unable to open file!");
@@ -54,7 +28,6 @@ $markdown = fread($mdfile, filesize($filename));
 fclose($mdfile);
 echo $Parsedown->text($markdown);
 ?>
-</div>
 </div>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_SVG'></script>
 <!-- @import "footer.kit" -->

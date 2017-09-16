@@ -18,7 +18,7 @@ if(isset($_COOKIE["language"])) {
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Contact Aaron Stockdill</title>
+        <title>Blog by Aaron Stockdill</title>
         <style>
             @font-face{font-family:Amiri;font-style:normal;font-weight:400;src:local('Amiri Regular'),local('Amiri-Regular'),url(/fonts/Amiri-Regular.woff2) format('woff2');unicode-range:U+0000-00FF,U+0100-024F,U+1E00-1EFF,U+20A0-20AB,U+20AD-20CF,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Amiri;font-style:italic;font-weight:400;src:local('Amiri Italic'),local('Amiri-Italic'),url(/fonts/Amiri-Italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+0100-024F,U+1E00-1EFF,U+20A0-20AB,U+20AD-20CF,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Roboto;font-style:normal;font-weight:300;src:local('Roboto Light'),local('Roboto-Light'),url(/fonts/Roboto_Light.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215}@font-face{font-family:Roboto;font-style:normal;font-weight:500;src:local('Roboto Medium'),local('Roboto-Medium'),url(/fonts/Roboto_Medium.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215}@font-face{font-family:Roboto;font-style:normal;font-weight:700;src:local('Roboto Bold'),local('Roboto-Bold'),url(/fonts/Roboto_Bold.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215}
         </style>
@@ -36,7 +36,7 @@ if(isset($_COOKIE["language"])) {
             nav,ul.submenu{display:none}footer{display:none}a{text-decoration:none;color:#000}a[href^="http://"]:after,a[href^="https://"]:after{content:" [" attr(href) "]";color:#333}.container hr{margin:1rem auto}
         </style>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Email aaronstockdill@me.com. The best ways to get in touch with me, a Computer Science tutor at the University of Canterbury."/>
+        <meta name="description" content="A infrequently-updated blog of my life, or lack thereof."/>
 
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
@@ -75,30 +75,74 @@ if(isset($_COOKIE["language"])) {
             <span lang="FR">Ouvrages</span>
         </a>
 
-        <a href="/contact/" class="active">
+        <a href="/contact/" class="">
             <span lang="EN">Contact Details</span>
             <span lang="FR">Contact</span>
         </a>
 
-        <a href="/blog/" class="">
+        <a href="/blog/" class="active">
             <span lang="EN">Blog</span>
             <span lang="FR">Blog</span>
         </a>
     </nav>
 
+
+<?php
+date_default_timezone_set('Pacific/Auckland');
+$rootdir = realpath(dirname(__FILE__));
+$filedir = $rootdir."/../../dynamic/";
+define('FILE_DIR', $filedir);
+
+function list_files($type, $display, $sort) {
+    $files = scandir(FILE_DIR);
+    $count = 0;
+    $filtered_files = array();
+    foreach ($files as $f) {
+        if ($f[0] == ".") {
+            // pass
+        } else {
+            $parts = explode(".", $f);
+            $title = $parts[0];
+            $date = $parts[1];
+            $extension = pathinfo($f, PATHINFO_EXTENSION);
+            if ($extension == $type) {
+                $count += 1;
+                array_push($filtered_files, $f);
+            }
+        }
+    }
+    uasort($filtered_files, $sort);
+    foreach ($filtered_files as $f) {
+        echo $display($f);
+    }
+    if ($count == 0) {
+        echo "<p>There is no content yet.</p>";
+    }
+}
+?>
 </div>
 
-    <h1 lang="EN">Contact</h1>
-    <h1 lang="FR">Contact</h1>
+<p lang="FR" style="text-align: center;">
+Ce contenu ne sont pas disponibles en français.
+</p>
 
-    <div class="contact-table">
-        <span class="label">Email</span>
-            <span class="value email-holder"><noscript>Email obfuscated. Please enable JavaScript.</noscript></span><br />
-        <span class="label">Office</span>
-            <span class="value">Erskine 344</span><br />
-        <span class="label">LinkedIn</span>
-            <a href="http://nz.linkedin.com/in/aaronstockdill" class="value" target="_blank"> aaronstockdill</a>
-    </div>
+<h1>Blog</h1>
+<?php
+list_files("md", function ($f) {
+    $parts = explode(".", $f);
+    $result = "<div class='dynamic-link'>";
+    $result .= "<a href='/blog/".str_replace('-', '/', $parts[1])."/$parts[0]/'>".$parts[0]."</a>";
+    $result .= "<span class='date'>".$parts[1]."</span></div>";
+    return $result;
+}, function ($f, $g) {
+    $parts1 = explode(".", $f);
+    $parts2 = explode(".", $g);
+    if ($parts1[1] == $parts2[1]) {
+        return 0;
+    }
+    return ($parts1[1] < $parts2[1]) ? 1 : -1;
+});
+?>
 
         </div>
         <footer>
@@ -150,4 +194,3 @@ if(isset($_COOKIE["language"])) {
         ?>
     </body>
 </html>
-

@@ -1,6 +1,7 @@
 <IfModule mod_rewrite.c>
         RewriteEngine On
         RewriteRule ^work/(.+)/(.+)/(.+)/(.+)/(.+)/$ work/dynamic.php?id=$5.$2-$3-$4&type=$1 [L,B]
+        RewriteRule ^blog/(.+)/(.+)/(.+)/(.+)/$ work/dynamic.php?id=$5.$2-$3-$4&type=md [L,B
 </IfModule>
 
 ErrorDocument 404 /404.php

@@ -1,0 +1,26 @@
+Aaron Stockdill
+PhD Student at the University of Cambridge
+
+
+Education
+
+Bachelor of Science (Honours), University of Canterbury.
+
+
+Employment
+
+Lecturer, "Introduction to Computer Science", University of Canterbury, 2017.
+
+Tutor, "Introduction to Computer Programming", "Introduction to Computer Science", "Algorithms", "Introduction to Computer Networks and the Internet", "Artificial Intelligence", University of Canterbury, 2015-2017.
+
+Software developer intern, ARANZ Geo Leapfrog, 2014/15 Summer.
+
+Founder/Web Designer/Programmer, Potato Softworks, 2014-2017.
+
+Tutor, NumberWorks'nWords, 2014-2016.
+
+
+Publications
+
+Restricted Echo State Networks
+Aaron Stockdill and Kourosh Neshatian, AI 2016: Advances in Artificial Intelligence. Volume 9992 of Lecture Notes in Artificial Intelligence. Springer International Publishing.
