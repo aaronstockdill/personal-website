@@ -34,4 +34,4 @@ setupEmail = (hidden_name, after_at) ->
         borked.addEventListener('mouseout', (event) ->
             event.target.href = switchEmail event.target.href)
 
-setupEmail("nnebafgbpxqvyy", ["me", "com"])
+setupEmail("nneba.fgbpxqvyy", ["cl", "cam", "ac", "uk"])
