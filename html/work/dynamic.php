@@ -97,7 +97,7 @@ if(isset($_COOKIE["language"])) {
         </a>
 
         <a href="/contact/" class="">
-            <span lang="EN">Contact Details</span>
+            <span lang="EN">Contact</span>
             <span lang="FR">Contact</span>
         </a>
 

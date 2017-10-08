@@ -9,14 +9,14 @@ show_help = () ->
             <dl>
                 <dt>Go to the Home page</dt>
                     <dd>ctrl-x ctrl-x <br /> ctrl-x ctrl-h</dd>
-                <dt>Go to the About page</dt>
+                <dt>Go to the CV page</dt>
                     <dd>ctrl-x ctrl-a</dd>
+                    <dd>ctrl-x ctrl-b</dd>
+                    <dd>ctrl-x ctrl-v</dd>
                 <dt>Go to the Work page</dt>
                     <dd>ctrl-x ctrl-w</dd>
                 <dt>Go to the Contact page</dt>
                     <dd>ctrl-x ctrl-c</dd>
-                <dt>Open Curriculum Vit&aelig;</dt>
-                    <dd>ctrl-x ctrl-v</dd>
                 <dt>Send me an email</dt>
                     <dd>ctrl-x ctrl-e</dd>
             </dl><dl>
@@ -49,11 +49,10 @@ bind_nav = (chord, url) ->
         window.location.href = url
 
 bind_nav ["ctrl+x ctrl+h", "ctrl+x ctrl+x"], "/"
-bind_nav "ctrl+x ctrl+a", "/bio/"
+bind_nav ["ctrl+x ctrl+a", "ctrl+x ctrl+b", "ctrl+x ctrl+v"], "/cv/"
 bind_nav "ctrl+x ctrl+w", "/work/"
 bind_nav "ctrl+x ctrl+c", "/contact/"
-bind_nav "ctrl+x ctrl+v", "/AaronStockdill.pdf"
-bind_nav "ctrl+x ctrl+e", "mailto:" + getEmail("nnebafgbpxqvyy", ["me", "com"])
+bind_nav "ctrl+x ctrl+e", "mailto:" + getEmail("nneba.fgbpxqvyy", ["cl", "cam", "ac", "uk"])
 
 Mousetrap.bind ["ctrl+t ctrl+d", "ctrl+t ctrl+b"], () ->
     switch_theme "black"
