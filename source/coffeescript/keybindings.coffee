@@ -50,7 +50,7 @@ bind_nav = (chord, url) ->
         window.location.href = url
 
 bind_nav ["ctrl+x ctrl+h", "ctrl+x ctrl+x"], "/"
-bind_nav ["ctrl+x ctrl+a","ctrl+x ctrl+v"], "/cv/"
+bind_nav ["ctrl+x ctrl+a", "ctrl+x ctrl+v"], "/cv/"
 bind_nav "ctrl+x ctrl+w", "/work/"
 bind_nav "ctrl+x ctrl+c", "/contact/"
 bind_nav  "ctrl+x ctrl+b", "/blog/"

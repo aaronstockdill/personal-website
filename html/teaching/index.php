@@ -1,25 +1,4 @@
 <?php
-include_once 'Parsedown.php';
-
-$Parsedown = new Parsedown();
-$rootdir = realpath(dirname(__FILE__));
-$filedir = $rootdir."/../../dynamic/";
-
-if(!isset($_GET['id']) || !isset($_GET['type'])) {
-    header($_SERVER["SERVER_PROTOCOL"]." 404 Not Found", true, 404);
-    include($rootdir."/../404.php");
-}
-
-$id = $_GET['id'];
-$type = $_GET['type'];
-
-if ($type == 'writing') $type = 'md';
-
-$filename = $filedir.$id.".".$type;
-$subtitle = explode(".", $id)[0] . " -";
-if ($type == 'md' || $type == 'writing'|| $type == 'talk') {
-    $backtarget = ($type == 'md') ? "Writing" : "Talks";
-?><?php
 if(isset($_COOKIE["style"])) {
     $theme = $_COOKIE["style"];
 } else {
@@ -39,7 +18,7 @@ if(isset($_COOKIE["language"])) {
 <html>
     <head>
         <meta charset="utf-8">
-        <title><?php echo $subtitle ?> Aaron Stockdill</title>
+        <title>Teaching by Aaron Stockdill</title>
         <style>
             @font-face{font-family:Amiri;font-style:normal;font-weight:400;src:local('Amiri Regular'),local('Amiri-Regular'),url(/fonts/Amiri-Regular.woff2) format('woff2');unicode-range:U+0000-00FF,U+0100-024F,U+1E00-1EFF,U+20A0-20AB,U+20AD-20CF,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Amiri;font-style:italic;font-weight:400;src:local('Amiri Italic'),local('Amiri-Italic'),url(/fonts/Amiri-Italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+0100-024F,U+1E00-1EFF,U+20A0-20AB,U+20AD-20CF,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Roboto;font-style:normal;font-weight:300;src:local('Roboto Light'),local('Roboto-Light'),url(/fonts/Roboto_Light.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215}@font-face{font-family:Roboto;font-style:normal;font-weight:500;src:local('Roboto Medium'),local('Roboto-Medium'),url(/fonts/Roboto_Medium.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215}@font-face{font-family:Roboto;font-style:normal;font-weight:700;src:local('Roboto Bold'),local('Roboto-Bold'),url(/fonts/Roboto_Bold.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215}
         </style>
@@ -57,7 +36,7 @@ if(isset($_COOKIE["language"])) {
             nav,ul.submenu{display:none}footer{display:none}a{text-decoration:none;color:#000}a[href^="http://"]:after,a[href^="https://"]:after{content:" [" attr(href) "]";color:#333}.container hr{margin:1rem auto}
         </style>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content=""/>
+        <meta name="description" content="Information about teaching, primarily for students who need information."/>
 
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
@@ -96,7 +75,7 @@ if(isset($_COOKIE["language"])) {
             <span lang="FR">Ouvrages</span>
         </a>
 
-        <a href="/teaching/" class="">
+        <a href="/teaching/" class="active">
             <span lang="EN">Teaching</span>
             <span lang="FR">Enseignement</span>
         </a>
@@ -112,16 +91,55 @@ if(isset($_COOKIE["language"])) {
         </a>
     </nav>
 
-    </div>
-<div class='writing'>
-<?php
-$mdfile = fopen($filename, "r") or die("Unable to open file!");
-$markdown = fread($mdfile, filesize($filename));
-fclose($mdfile);
-echo $Parsedown->text($markdown);
-?>
+
+<ul class="submenu">
+<li><a href="#y201718"><span>2017-18</span></a></li>
+<li><a href="#y2017"><span>2017</span></a></li>
+<li><a href="#y2016"><span>2016</span></a></li>
+<li><a href="#y2015"><span>2015</span></a></li>
+</ul>
 </div>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_SVG'></script>
+
+<h1>Teaching</h1>
+<h2>University of Cambridge</h2>
+<p>Please submit all supervision work by at latest 4pm on the day before your supervision (which will be advised via email). This gives me time to review it and prepare feedback for you. It is not graded.</p>
+
+<p>You can submit your supervision work either by email (<span class="email-holder">Email obfuscated. Please enable Javascript.</span>) or via the supervision submission box in the Computer Lab.</p>
+
+<h3 id="y201718">2017/18</h3>
+<h4>Foundations of Computer Science</h4>
+<p class="tight"><strong class="pad-after">Supervision 1</strong> Exercises 1 through 4 in the teaching notes.</p>
+<p class="tight""><strong class="pad-after">Supervision 2</strong> Exercises 5 through 7 in the teaching notes.</p>
+<p class="tight""><strong class="pad-after">Supervision 3</strong> Exercises 8 through 10 in the teaching notes.</p>
+<p><strong class="pad-after">Supervision 4</strong> Exercises 11 and 12 in the teaching notes, plus two past exam questions (TBA).</p>
+
+<h2>University of Canterbury</h2>
+<h3 id="y2017">2017</h3>
+
+<p class="tight">In semester one, I was a tutor for:</p>
+<ul class="tutoring-list">
+<li>COSC121: Introduction to Computer Programming</li>
+<li>COSC262: Algorithms</li>
+<li>COSC367: Artificial Intelligence</li>
+<li>COSC480: Computer Programming</li>
+</ul>
+
+<p>In semester two, term one (i.e., term three) I was the lecturer, assignment writer, and a tutor for &ldquo;COSC122: Introduction to Computer Science&rdquo;.</p>
+
+<h3 id="y2016">2016</h3>
+<p class="tight">Tutor.</p>
+<ul class="tutoring-list">
+<li>COSC262S1: Algorithms</li>
+<li>COSC264S2: Introduction to Computer Networks and the Internet</li>
+</ul>
+
+<h3 id="y2015">2015</h3>
+<p class="tight">Tutor.</p>
+<ul class="tutoring-list">
+<li>COSC121S1: Introduction to Computer Programming</li>
+<li>COSC122S2: Introduction to Computer Science</li>
+</ul>
+
         </div>
         <footer>
             <span class='selector help-button'>
@@ -172,25 +190,3 @@ echo $Parsedown->text($markdown);
         ?>
     </body>
 </html>
-
-<?php
-} else if ($type == 'pdf') {
-    header("Content-type:application/pdf");
-    readfile($filename);
-} else if ($type == 'jpg' || $type == 'png') {
-    header("Content-type:image/".$type);
-    readfile($filename);
-} else if ($type == 'bib') {
-    header('Content-disposition: attachment; filename='.basename($filename));
-    header('Content-type: application/x-bibtex');
-    // Remove comments on the way through!
-    $content = file_get_contents($filename);
-    $content = preg_replace("/%.*$/m", "", $content);
-    echo $content;
-} else {
-    $mime = mime_content_type($filename);
-    header('Content-disposition: attachment; filename='.basename($filename));
-    header('Content-type: '.$mime);
-    readfile($filename);
-}
-?>
