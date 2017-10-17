@@ -153,7 +153,7 @@ echo $Parsedown->text($markdown);
                 </a>
             </span>
         </footer>
-        <script src="/js/combined.js" charset="utf-8" defer></script>
+        <script src="/js/script.js" charset="utf-8" defer></script>
         <?php
             if (strpos($_SERVER['SERVER_NAME'],
                        'aaron.stockdill.nz') !== false) {

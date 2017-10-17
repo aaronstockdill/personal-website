@@ -16,22 +16,22 @@ switchEmail = (link) ->
     return "mailto:" + link.replace('mailto:', '').reverse()
 
 getEmail = (hidden_name, after_at) ->
-    the_at_sign = "@"
-    the_dot_sign = "."
-    email = hidden_name.rotate(13) + the_at_sign + after_at.join(the_dot_sign)
-    return email
+    return hidden_name.rotate(13) + "@" + after_at
 
-setupEmail = (hidden_name, after_at) ->
-    email = getEmail(hidden_name, after_at).reverse()
-    new_email_code = "<a href=\"mailto:" + email + " \" class=\"borked-email email\">" + email + "</a>"
-    email_holder = document.querySelector(".email-holder")
-    if email_holder
-        email_holder.innerHTML = new_email_code
-    borked = document.querySelector(".borked-email")
-    if borked
+formatEmailLink = (email) ->
+    return "<a href=\"mailto:" + email + " \" class=\"borked-email email\">" + email + "</a>"
+
+setupEmail = () ->
+    email_holder_list = document.querySelectorAll(".email-holder")
+    for email_holder in email_holder_list
+        hidden_name = email_holder.dataset.beforeAt
+        after_at = email_holder.dataset.afterAt
+        email_holder.innerHTML = formatEmailLink getEmail(hidden_name, after_at).reverse()
+    borked_list = document.querySelectorAll(".borked-email")
+    for borked in borked_list
         borked.addEventListener('mouseover', (event) ->
             event.target.href = switchEmail event.target.href)
         borked.addEventListener('mouseout', (event) ->
             event.target.href = switchEmail event.target.href)
 
-setupEmail("nneba.fgbpxqvyy", ["cl", "cam", "ac", "uk"])
+setupEmail()

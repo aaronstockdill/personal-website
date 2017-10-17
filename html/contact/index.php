@@ -98,7 +98,7 @@ if(isset($_COOKIE["language"])) {
 
     <div class="contact-table">
         <span class="label">Email</span>
-            <span class="value email-holder"><noscript>Email obfuscated. Please enable JavaScript.</noscript></span><br />
+            <span class="value email-holder" data-before-at="nneba.fgbpxqvyy" data-after-at="cl.cam.ac.uk"><noscript>Email obfuscated. Please enable JavaScript.</noscript></span><br />
         <span class="label">Office</span>
             <span class="value">William Gates Building, FC12</span><br />
         <span class="label">LinkedIn</span>
@@ -136,7 +136,7 @@ if(isset($_COOKIE["language"])) {
                 </a>
             </span>
         </footer>
-        <script src="/js/combined.js" charset="utf-8" defer></script>
+        <script src="/js/script.js" charset="utf-8" defer></script>
         <?php
             if (strpos($_SERVER['SERVER_NAME'],
                        'aaron.stockdill.nz') !== false) {

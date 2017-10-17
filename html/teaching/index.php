@@ -104,7 +104,7 @@ if(isset($_COOKIE["language"])) {
 <h2>University of Cambridge</h2>
 <p>Please submit all supervision work by at latest 4pm on the day before your supervision (which will be advised via email). This gives me time to review it and prepare feedback for you. It is not graded.</p>
 
-<p>You can submit your supervision work either by email (<span class="email-holder">Email obfuscated. Please enable Javascript.</span>) or via the supervision submission box in the Computer Lab.</p>
+<p>You can submit your supervision work either by email (<span class="email-holder" data-before-at="nneba.fgbpxqvyy" data-after-at="cl.cam.ac.uk">Email obfuscated. Please enable Javascript.</span>) or via the supervision submission box in the Computer Lab.</p>
 
 <h3 id="y201718">2017/18</h3>
 <h4>Foundations of Computer Science</h4>
@@ -171,7 +171,7 @@ if(isset($_COOKIE["language"])) {
                 </a>
             </span>
         </footer>
-        <script src="/js/combined.js" charset="utf-8" defer></script>
+        <script src="/js/script.js" charset="utf-8" defer></script>
         <?php
             if (strpos($_SERVER['SERVER_NAME'],
                        'aaron.stockdill.nz') !== false) {

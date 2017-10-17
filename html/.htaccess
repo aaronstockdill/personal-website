@@ -37,7 +37,7 @@ ErrorDocument 404 /404.php
 </IfModule>
 
 <IfModule headers_module>
-    # 480 weeks
+    # 1 WEEK
     <FilesMatch "\.(ico|pdf|jpg|jpeg|png|gif|js|css|woff2)$">
     Header set Cache-Control "max-age=604800, public"
     </FilesMatch>

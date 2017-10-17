@@ -99,7 +99,7 @@ if(isset($_COOKIE["language"])) {
             <p lang="EN"><span>Ph.D. Student at the</span> <span>University of Cambridge</span></p>
             <p lang="FR">Étudant de Ph.D. à l&rsquo;University of Cambridge</p>
         </div><div class="contact-welcome">
-            <span class="email-holder"><noscript>Email obfuscated. Please enable JavaScript.</noscript></span>
+            <span class="email-holder" data-before-at="nneba.fgbpxqvyy" data-after-at="cl.cam.ac.uk"><noscript>Email obfuscated. Please enable JavaScript.</noscript></span>
         </div>
     </div>
 </div>
@@ -144,7 +144,7 @@ if(isset($_COOKIE["language"])) {
                 </a>
             </span>
         </footer>
-        <script src="/js/combined.js" charset="utf-8" defer></script>
+        <script src="/js/script.js" charset="utf-8" defer></script>
         <?php
             if (strpos($_SERVER['SERVER_NAME'],
                        'aaron.stockdill.nz') !== false) {
