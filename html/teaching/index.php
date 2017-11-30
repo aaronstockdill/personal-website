@@ -102,16 +102,19 @@ if(isset($_COOKIE["language"])) {
 
 <h1>Teaching</h1>
 <h2>University of Cambridge</h2>
-<p>Please submit all supervision work by at latest 4pm on the day before your supervision (which will be advised via email). This gives me time to review it and prepare feedback for you. It is not graded.</p>
+<p>Supervision work will be advised via email shortly after organising the date and time of supervisions.</o>
+
+<p>Please submit all supervision work by at latest 4pm on the day before your supervision. This gives me time to review it and prepare feedback for you. It is not graded.</p>
 
 <p>You can submit your supervision work either by email (<span class="email-holder" data-before-at="nneba.fgbpxqvyy" data-after-at="cl.cam.ac.uk">Email obfuscated. Please enable Javascript.</span>) or via the supervision submission box in the Computer Lab.</p>
 
 <h3 id="y201718">2017/18</h3>
-<h4>Foundations of Computer Science</h4>
-<p class="tight"><strong class="pad-after">Supervision 1</strong> Exercises 1 through 4 in the teaching notes.</p>
-<p class="tight""><strong class="pad-after">Supervision 2</strong> Exercises 5 through 7 in the teaching notes.</p>
-<p class="tight""><strong class="pad-after">Supervision 3</strong> Exercises 8 through 10 in the teaching notes.</p>
-<p><strong class="pad-after">Supervision 4</strong> Exercises 11 and 12 in the teaching notes, plus two past exam questions (TBA).</p>
+<p class="tight">Michaelmas term:</p>
+<ul class="tutoring-list">
+<li>Foundations of Computer Science</li>
+<li>Prolog</li>
+</ul>
+
 
 <h2>University of Canterbury</h2>
 <h3 id="y2017">2017</h3>
