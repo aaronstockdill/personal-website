@@ -47,3 +47,15 @@ switch_language = (target="EN") ->
     deleteCookie "language"
     setCookie "language", target, 365
     false
+
+# Cookie warning stuff...
+clear_cookie_message = () ->
+    setCookie "cookiesOK", "yes", 365
+    document.querySelector("#cookies").style.display = "none"
+    document.querySelector("footer").style.paddingBottom = "0px"
+
+if getCookie("cookiesOK") != "yes"
+    document.querySelector("#cookies").style.display = "block"
+    document.querySelector("footer").style.paddingBottom = "120px"
+else
+    document.querySelector("#cookies").style.display = "none"

@@ -13,6 +13,9 @@ if(isset($_COOKIE["language"])) {
     $notlang = "FR";
     setcookie("language", "EN", time() + 365);
 }
+if(!isset($_COOKIE["cookiesOK"])) {
+    setcookie("cookiesOK", "no", time() + 365);
+}
 ?>
 <!DOCTYPE html>
 <html>
