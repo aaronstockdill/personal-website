@@ -12,8 +12,8 @@ show_help = () ->
                 <dt>Go to the CV page</dt>
                     <dd>ctrl-x ctrl-a</dd>
                     <dd>ctrl-x ctrl-v</dd>
-                <dt>Go to the Work page</dt>
-                    <dd>ctrl-x ctrl-w</dd>
+                <dt>Go to the Research page</dt>
+                    <dd>ctrl-x ctrl-r</dd>
                 <dt>Go to the Contact page</dt>
                     <dd>ctrl-x ctrl-c</dd>
                 <dt>Go to my Blog</dt>

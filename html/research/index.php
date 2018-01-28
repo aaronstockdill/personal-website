@@ -21,7 +21,7 @@ if(!isset($_COOKIE["cookiesOK"])) {
 <html>
     <head>
         <meta charset="utf-8">
-        <title>404 | Aaron Stockdill</title>
+        <title>Research by Aaron Stockdill</title>
         <style>
             @font-face{font-family:Amiri;font-style:normal;font-weight:400;src:local('Amiri Regular'),local('Amiri-Regular'),url(/fonts/Amiri-Regular.woff2) format('woff2');unicode-range:U+0000-00FF,U+0100-024F,U+1E00-1EFF,U+20A0-20AB,U+20AD-20CF,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Amiri;font-style:italic;font-weight:400;src:local('Amiri Italic'),local('Amiri-Italic'),url(/fonts/Amiri-Italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+0100-024F,U+1E00-1EFF,U+20A0-20AB,U+20AD-20CF,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Roboto;font-style:normal;font-weight:300;src:local('Roboto Light'),local('Roboto-Light'),url(/fonts/Roboto_Light.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215}@font-face{font-family:Roboto;font-style:normal;font-weight:500;src:local('Roboto Medium'),local('Roboto-Medium'),url(/fonts/Roboto_Medium.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215}@font-face{font-family:Roboto;font-style:normal;font-weight:700;src:local('Roboto Bold'),local('Roboto-Bold'),url(/fonts/Roboto_Bold.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215}
         </style>
@@ -39,7 +39,7 @@ if(!isset($_COOKIE["cookiesOK"])) {
             nav,ul.submenu{display:none}footer{display:none}a{text-decoration:none;color:#000}a[href^="http://"]:after,a[href^="https://"]:after{content:" [" attr(href) "]";color:#333}.container hr{margin:1rem auto}
         </style>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Something has gone horribly wrong!"/>
+        <meta name="description" content="A summary of my research."/>
 
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
@@ -73,7 +73,7 @@ if(!isset($_COOKIE["cookiesOK"])) {
             <span lang="FR">CV</span>
         </a>
 
-        <a href="/research/" class="">
+        <a href="/research/" class="active">
             <span lang="EN">Research</span>
             <span lang="FR">Recherche</span>
         </a>
@@ -94,13 +94,146 @@ if(!isset($_COOKIE["cookiesOK"])) {
         </a>
     </nav>
 
-<div class="error container">
-    <h1>404</h1>
-    <h2 lang="EN">Oops.</h2>
-    <h2 lang="FR">Oups.</h2>
-    <a href="/" lang="EN">Take me home.</a>
-    <a href="/" lang="FR">Emmène moi à accueil.</a>
+
+<?php
+date_default_timezone_set('Pacific/Auckland');
+$rootdir = realpath(dirname(__FILE__));
+$filedir = $rootdir."/../../dynamic/";
+define('FILE_DIR', $filedir);
+
+function list_files($type, $display, $sort) {
+    $files = scandir(FILE_DIR);
+    $count = 0;
+    $filtered_files = array();
+    foreach ($files as $f) {
+        if ($f[0] == ".") {
+            // pass
+        } else {
+            $parts = explode(".", $f);
+            $title = $parts[0];
+            $date = $parts[1];
+            $extension = pathinfo($f, PATHINFO_EXTENSION);
+            if ($extension == $type) {
+                $count += 1;
+                array_push($filtered_files, $f);
+            }
+        }
+    }
+    uasort($filtered_files, $sort);
+    foreach ($filtered_files as $f) {
+        echo $display($f);
+    }
+    if ($count == 0) {
+        echo "<p>There is no content yet.</p>";
+    }
+}
+
+function parsebib($filename) {
+    $bibtex = file_get_contents(FILE_DIR."/".$filename);
+    $bibjson = preg_replace("/^%(.*)$/m", "", $bibtex);
+    $bibjson = preg_replace("/((\w|-)+)\s*=\s*\{/", "\"$1\": \"", $bibjson);
+    $bibjson = preg_replace("/\}(?=\s*[,\}])/", "\"", $bibjson);
+    $bibjson = preg_replace("/@(\w+)\s*\{([^,]*)/", "{\"$1\": \"$2\"", $bibjson, 1);
+    $bibjson = preg_replace("/,\}/", "}", $bibjson, 1);
+    $bibobj = json_decode($bibjson);
+    $found = preg_match("/^%copyright (.*)$/m", $bibtex, $matches);
+    if ($found === 1) {
+        $bibobj->{"Copyright"} = $matches[1];
+    }
+    return $bibobj;
+}
+?>
+<ul class="submenu">
+   <li><a href="#Publications">Publications</a></li>
+   <li><a href="#Talks">Talks</a></li>
+   <li><a href="https://github.com/aaronstockdill">GitHub</a></li>
+</ul>
 </div>
+
+<p lang="FR" style="text-align: center;">
+Ce contenu ne sont pas disponibles en français.
+</p>
+
+<span class="anchor" id="Publications"></span>
+<h1>Publications</h1>
+<?php
+list_files("bib", function ($f) {
+    $fname = basename($f, ".bib");
+    $details = parsebib($fname.".bib");
+    $result = "<div class='dynamic-link'>";
+    $result .= "<a href='/work/dynamic.php?id=$fname&amp;type=pdf'>";
+    $result .= "<h2 class='title'>".$details->{"Title"}.".</h2>";
+    $result .= "<span class='authors'>".$details->{"Author"}."</span>";
+    $result .= "</a><br />";
+    if ($details->{"Journal"}) {
+        $result .= "<span class='journal'>".$details->{"Journal"}.".</span> ";
+    } else if ($details->{"Booktitle"}) {
+        $result .= "<span class='journal'>".$details->{"Booktitle"}.".</span> ";
+    }
+    $result .= "<span class='date'>".$details->{"Month"}." ".$details->{"Year"}.".</span><br />";
+    if ($details->{"Copyright"}) {
+        $result .= "<span class='orig'>".$details->{"Copyright"}."</span><br />";
+    }
+    $result .= "<a class='bibtex' href='/work/dynamic.php?id=$fname&amp;type=bib'>Download BibTeX</a>";
+    $result .="</div>";
+    return $result;
+}, function ($f, $g) {
+    $fname = basename($f, ".bib");
+    $gname = basename($g, ".bib");
+    $details1 = parsebib($fname.".bib");
+    $details2 = parsebib($gname.".bib");
+    $month_num = array(
+        "January" => "01",
+        "February" => "02",
+        "March" => "03",
+        "April" => "04",
+        "May" => "05",
+        "June" => "06",
+        "July" => "07",
+        "August" => "08",
+        "September" => "09",
+        "October" => "10",
+        "November" => "11",
+        "December" => "12",
+    );
+    $d1 = $details1->{"Year"}."-".$month_num[$details1->{"Month"}];
+    $d2 = $details2->{"Year"}."-".$month_num[$details2->{"Month"}];
+    if ($d1 == $d2) {
+        return 0;
+    }
+    return ($d1 < $d2) ? 1 : -1;
+});
+?>
+
+
+    <hr />
+
+
+    <h1 id="Talks">Talks</h1>
+<?php
+list_files("talk", function ($f) {
+    $parts = explode(".", $f);
+    $result = "<div class='dynamic-link'>";
+    $result .= "<a href='/work/talk/".str_replace('-', '/', $parts[1])."/$parts[0]/'>".$parts[0]."</a>";
+    $result .= "<span class='date'>".$parts[1]."</span></div>";
+    return $result;
+}, function ($f, $g) {
+    $parts1 = explode(".", $f);
+    $parts2 = explode(".", $g);
+    if ($parts1[1] == $parts2[1]) {
+        return 0;
+    }
+    return ($parts1[1] < $parts2[1]) ? 1 : -1;
+});
+?>
+
+
+    <hr />
+
+
+    <h1 id="GitHub">GitHub</h1>
+    <p>I infrequently put projects on GitHub, but you are welcome to view what is available there: <a href="https://github.com/aaronstockdill"> Aaron Stockdill on GitHub</a>.</p>
+
         </div>
         <footer>
             <span class='selector help-button'>
