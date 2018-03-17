@@ -62,66 +62,48 @@ if(!isset($_COOKIE["cookiesOK"])) {
 
         <a href="/" class="">
             <span lang="EN">Home</span>
-            <span lang="FR">Accueil</span>
         </a>
 
         <a href="/cv/" class="active">
             <span lang="EN">CV</span>
-            <span lang="FR">CV</span>
         </a>
 
         <a href="/research/" class="">
             <span lang="EN">Research</span>
-            <span lang="FR">Recherche</span>
         </a>
 
         <a href="/teaching/" class="">
             <span lang="EN">Teaching</span>
-            <span lang="FR">Enseignement</span>
         </a>
 
         <a href="/contact/" class="">
             <span lang="EN">Contact</span>
-            <span lang="FR">Contact</span>
         </a>
 
         <a href="/blog/" class="">
             <span lang="EN">Blog</span>
-            <span lang="FR">Blog</span>
         </a>
     </nav>
 
 
 <ul class="submenu">
-<li><a href="#About"><span lang="EN">About Me</span>
-                     <span lang="FR">Biographie</span></a></li>
-<li><a href="#Education"><span lang="EN">Education</span>
-                         <span lang="FR">Éducation</span></a></li>
-<li><a href="#Employment"><span lang="EN">Employment</span>
-                          <span lang="FR">Histoire de l&rsquo;Emploi</span></a></li>
-<li><a href="#Awards"><span lang="EN">Awards &amp; Honours</span>
-                      <span lang="FR">Prix et Distinctions</span></a></li>
+<li><a href="#About"><span lang="EN">About Me</span></a></li>
+<li><a href="#Education"><span lang="EN">Education</span></a></li>
+<li><a href="#Employment"><span lang="EN">Employment</span></a></li>
+<li><a href="#Awards"><span lang="EN">Awards &amp; Honours</span></a></li>
 </ul>
 </div>
 
 <span class="precontent first" lang="EN">Download my <a href="/cv/AaronStockdill.pdf">Curriculum Vit&aelig; in PDF form</a>.</span>
-<span class="precontent first" lang="FR">Télécharger mon <a href="/cv/AaronStockdill.pdf">Curriculum Vit&aelig; en format PDF</a> (en Anglais).</span>
-
 <span class="precontent" lang="EN">Download a <a href="/cv/AaronStockdill.txt">brief summary</a>.</span>
-<span class="precontent" lang="FR">Télécharger un <a href="/cv/AaronStockdill.txt">bref résumé</a> (en Anglais).</span>
-
 <span class="precontent" lang="EN">For a list of publications, see <a href="/research/#Publications">Research</a>.</span>
-<span class="precontent" lang="FR">Pour une liste de publications, voir <a href="/research/#Publications">Recherche</a> (en Anglais).</span>
 
 <span class="anchor" id="About"></span>
 <h1 lang="EN">About Me</h1>
-<h1 lang="FR">Biographie</h1>
 
 <p lang="EN">In 2016, I finished studying towards a Bachelor of Science with Honours in Computer Science at the University of Canterbury in Christchurch, New Zealand. The title of my dissertation was &ldquo;Neuromorphic Computing with Reservoir Neural Networks on Memristive Hardware.&rdquo; In 2015 I completed my final year of a BSc in Computer Science and Mathematics, and in 2017 commenced study towards a PhD in Computer Science at the University of Cambridge.</p>
-<p lang="FR">En 2016, j&rsquo;ai fini étudier vers un Baccalauréat en Sciences avec distinction en les Sciences Informatiques à l&rsquo;University of Canterbury en Christchurch, Nouvelle Zélande. Le titre de ma thèse etait &laquo;&nbsp;Neuromorphic Computing with Reservoir Neural Networks on Memristive Hardware&nbsp;&raquo; (&laquo;&nbsp;Informatique Neuromorphiques avec les Réseaux de Neurones Réservoir sur le Matériel Memristive&nbsp;&raquo;). En 2015, j&rsquo;ai fini l&rsquo;année dernière de BSc en les Sciences Informatiques et les Mathematiques, et en 2017 j'ai commencé l&rsquo;étudier vers un doctorat en les Sciences Informatiques à l&rsquo;University of Cambridge.</p>
 
 <p lang="EN">My interests lie with anything that can make the world better. This primarily manifests as education: I have taught mathematics to high school students, and computer science to university students. I also work with Potato Softworks to help businesses and organisations get an online prescence with affordable websites. Personally, I am passionate about Artifical Intelligence, as is reflected in my research.</p>
-<p lang="FR">Mes intérêts se trouvent avec tout ce qui peut rendre le monde meilleur. Cette principalement manifeste comme éducation: j&rsquo;ai enseigné les mathematiques aux étudiantes de l&rsquo;école secondaire, et les sciences informatiques aux étudiantes universitaires. Je travaille aussi avec Potato Softworks pour aider les entreprises petites et les organisations obtenir des sites Webs abordables. Personnellement, je suis passionné au sujet de l&rsquo;Intelligence Artificielle, comme cela est reflété dans mes recherches.</p>
 
 
 
@@ -131,22 +113,15 @@ if(!isset($_COOKIE["cookiesOK"])) {
 
 <span class="anchor" id="Education"></span>
 <h1 lang="EN">Education</h1>
-<h1 lang="FR">Éducation</h1>
 
 <h2 lang="EN">Doctor of Philosophy, 2017&ndash;2020</h2>
-<h2 lang="FR">Philosophi&aelig; Doctor, 2017&ndash;2020</h2>
 <p lang="EN">I am currently studying towards my PhD at the University of Cambridge. I am under the supervision of <a href="http://www.cl.cam.ac.uk/~mj201/">Dr Mateja Jamnik</a>, with the tentative thesis title &ldquo;Automating representation change across domains for reasoning.&rdquo;</p>
-<p lang="FR">J&rsquo;étudie vers mon doctorat à l&rsquo;University of Cambridge. Je suis sous la supervision de <a href="http://www.cl.cam.ac.uk/~mj201/">Dr Mateja Jamnik</a>, avec la titre de thèse provisoire &laquo;&nbsp;Automating representation change across domains for reasoning.&nbsp;&raquo;</p>
 
 <h2 lang="EN">Bachelor of Science with First Class Honours, 2016</h2>
-<h2 lang="FR">Baccalauréat en Sciences avec Félicitations, 2016</h2>
 <p lang="EN">Studied in the &lsquo;Honours year&rsquo; of a BSc(Hons), working on my research project with <a href="http://www.canterbury.ac.nz/engineering/contact-us/people/kourosh-neshatian.html">Dr Kourosh Neshatian</a>. My report was called &ldquo;Neuromorphic Computing with Reservoir Neural Networks on Memristive Hardware&rdquo;. My final GPA was 8.9 out of 9.</p>
-<p lang="FR">J&rsquo;ai étudier vers un Baccalauréat en Sciences avec Distinction, travaille sur mon project de recherche avec <a href="http://www.canterbury.ac.nz/engineering/contact-us/people/kourosh-neshatian.html">Dr Kourosh Neshatian</a>. Le titre de ma thèse etait &laquo;&nbsp;Neuromorphic Computing with Reservoir Neural Networks on Memristive Hardware&nbsp;&raquo; (&laquo;&nbsp;Informatique Neuromorphiques avec les Réseaux de Neurones Réservoir sur le Matériel Memristive&nbsp;&raquo;). Ma GPA dernière etait 8.9 sur 9.</p>
 
 <h2 lang="EN">Bachelor of Science, 2013-2015</h2>
-<h2 lang="FR">Baccalauréat en Sciences, 2013-2015</h2>
 <p lang="EN">Double major in Computer Science and Mathematics. I finished with an average GPA of 8.83 out of 9. </p>
-<p lang="FR">Baccalauréat en Sciences avec spécialisation en les informatiques et les mathematiques. J&rsquo;ai fini avec une moyenne GPA de 8.83 sur 9. </p>
 
 
 <hr />
@@ -154,25 +129,18 @@ if(!isset($_COOKIE["cookiesOK"])) {
 
 <span class="anchor" id="Employment"></span>
 <h1 lang="EN">Employ&shy;ment</h1>
-<h1 lang="FR">Histoire de l&rsquo;Emploi</h1>
 
 <h2>University of Cambridge</h2>
 <h3 lang="EN">Supervisor, 2017</h3>
-<h3 lang="FR">Superviseur, 2017</h3>
 <p lang="EN">In Michaelmas term, I supervised &ldquo;Foundations of Computer Science&rdquo; and &ldquo;Prolog.&rdquo;</p>
-<p lang="FR">Durant la Periode Michaelmas, j'ai supervisé les cours &laquo;&nbsp;Foundations of Computer Science&nbsp;&raquo; et &laquo;&nbsp;Prolog.&nbsp;&raquo;</p>
 
 <h2>University of Canterbury</h2>
 
 <h3 lang="EN">Lecturer, 2017 Semester 2</h3>
-<h3 lang="FR">Le Chargé de Cours, 2017 Semestre 2</h3>
 <p lang="EN">During Term 3 2017, I lectured the paper &ldquo;COSC122: Introduction to Computer Science.&rdquo; This was an amazing experience, helping teach one of the core computer science papers that builds the ground-work for many other courses.</p>
-<p lang="FR">Durant la Periode 3 2017, je suis donné des leçons pour &laquo;&nbsp;COSC122: Introduction to Computer Science.&nbsp;&raquo; Ceci était une experience fantastique, aid enseigner un de les cours essentials à l&rsquo;informatique que consolider le connaissance pour beaucoup d&rsquo;autres cours.</p>
 
 <h3 lang="EN">Tutor, 2015&ndash;2017</h3>
-<h3 lang="FR">Tuteur, 2015&ndash;2017</h3>
 <p lang="EN">I used to work as a tutor at the University of Canterbury in the Department of Computer Science and Software Engineering.</p>
-<p lang="FR">J'ai travaillé comme un tuteur à l&rsquo;University of Canterbury en le Department of Computer Science and Software Engineering.</p>
 <ul class="tutoring-list">
 <li>COSC480S1: Computer Programming (2017)</li>
 <li>COSC367S1: Artificial Intelligence (2017)</li>
@@ -183,9 +151,7 @@ if(!isset($_COOKIE["cookiesOK"])) {
 </ul>
 
 <h2 lang="EN">ARANZ Geo Leapfrog, Summer 2014/15</h2>
-<h2 lang="FR">ARANZ Geo Leapfrog, l&rsquo;Été 2014/15</h2>
 <h3 lang="EN">Software Developer Intern</h3>
-<h3 lang="FR">Stagiaire développeur de logiciels</h3>
 <p lang="EN">In the Summer 2014/15 break, I worked as a software developer intern working on Geological Modelling Software  for the mining industry. This provided valuable experience working at an established software company.</p>
 
 <h2>Potato Softworks, 2014&ndash;2017</h2>
@@ -204,14 +170,12 @@ if(!isset($_COOKIE["cookiesOK"])) {
 
 <span class="anchor" id="Awards"></span>
 <h1 lang="EN">Awards &amp; Honours</h1>
-<h1 lang="FR">Prix et Distinctions</h1>
 
 <h2 class="award-year">2017</h2>
 
 <div class="award">
   <h3>Hamilton Cambridge International Scholarship</h3>
   <p lang="EN">Awarded to non-EU international students studying for a PhD at the University of Cambridge, residing at Selwyn College.</p>
-  <p lang="FR">Décerné à un étudiant international non membre de l&rsquo;UE qui étudie un doctorat à l&rsquo;University of Cambridge, résidant au Selwyn College.</p>
 </div>
 
 <h2 class="award-year">2016</h2>
@@ -219,32 +183,26 @@ if(!isset($_COOKIE["cookiesOK"])) {
 <div class="award">
   <h3>Graduating BSc(Hons) Computer Science Student of the Year</h3>
   <p lang="EN">Awarded for academic achievement throughout my undergraduate and honours study at the University of Canterbury.</p>
-  <p lang="FR">Décerné pour la réussite académique tout au long de ma étudie au l&rsquo;University of Canterbury.</p>
 </div>
 
 <div class="award">
   <h3>G B Battersby-Trimble Scholarship in Computer Science</h3>
   <p lang="EN">Awarded for academic merit, broad knowledge outside of computer science, and research of benefit to New Zealand.</p>
-  <p lang="FR">Décerné pour la mérite academique, vaste connaissance en dehors de les sciences informatiques, et recherche qu&rsquo;il aura de grand avantage à Nouvelle Zélande.</p>
 </div>
 
 <div class="award">
   <h3 lang="EN">Finalist for the Sir Paul Callaghan Award</h3>
-  <h3 lang="FR">Finaliste pour le prix de Sir Paul Callaghan</h3>
   <p lang="EN">Awarded for innovation and STEM communication.</p>
-  <p lang="FR">Décerné pour l&rsquo;innovation et la communication de les sciences.</p>
 </div>
 
 <div class="award">
   <h3>Freemasons University Scholarship</h3>
   <p lang="EN">Awarded for academic merit, community involvement, and leadership potential.</p>
-  <p lang="FR">Décerné pour la mérite académique, implication de la communauté, et potentiel de leadership.</p>
 </div>
 
 <div class="award">
   <h3>University of Canterbury Senior Scholarship</h3>
   <p lang="EN">Awarded on the basis of academic merit from 200 and 300 level courses.</p>
-  <p lang="FR">Décerné pour la mérite académique dans cours à niveau 200 et 300.</p>
 </div>
 
 <h2 class="award-year">2015</h2>
@@ -252,26 +210,21 @@ if(!isset($_COOKIE["cookiesOK"])) {
 <div class="award">
   <h3>Graduating BSc Computer Science Student of the Year</h3>
   <p lang="EN">Awarded for academic achievement throughout my undergraduate study at the University of Canterbury.</p>
-  <p lang="FR">Décerné pour la réussite académique tout au long de ma étudie au l&rsquo;University of Canterbury.</p>
 </div>
 
 <div class="award">
   <h3>Page Memorial Prize</h3>
   <p lang="EN">Awarded for academic achievement in Level 300 Mathematics at the University of Canterbury.</p>
-  <p lang="FR">Décerné pour la réussite académique dans cours en mathematiques à niveau 300 au l&rsquo;University of Canterbury.</p>
 </div>
 
 <div class="award">
   <h3>Allied Telesis Labs Scholarship in Computer Science</h3>
   <p lang="EN">Awarded through the University of Canterbury.</p>
-  <p lang="FR">Décerné par l&rsquo;University of Canterbury.</p>
 </div>
 
 <div class="award">
   <h3 lang="EN">Mathematics and Statistics Scholarship, First Tier</h3>
-  <h3 lang="FR">Mathematics and Statistics Scholarship, Premiere Niveau</h3>
   <p lang="EN">Awarded by the University of Canterbury. </p>
-  <p lang="FR">Décerné par l&rsquo;University of Canterbury.</p>
 </div>
 
 <h2 class="award-year">2014</h2>
@@ -279,14 +232,11 @@ if(!isset($_COOKIE["cookiesOK"])) {
 <div class="award">
   <h3>Member of the Golden Key International Honour Society</h3>
   <p lang="EN">A member of the University of Canterbury chapter. </p>
-  <p lang="FR">Je suis un membre du chaptre au l&rsquo;University of Canterbury.</p>
 </div>
 
 <div class="award">
   <h3 lang="EN">Mathematics and Statistics Scholarship, Second Tier</h3>
-  <h3 lang="FR">Mathematics and Statistics Scholarship, Deuxieme Niveau</h3>
   <p lang="EN">Awarded by the University of Canterbury. </p>
-  <p lang="FR">Décerné par l&rsquo;University of Canterbury.</p>
 </div>
 
 <h2 class="award-year">2013</h2>
@@ -294,19 +244,16 @@ if(!isset($_COOKIE["cookiesOK"])) {
 <div class="award">
   <h3>Dean&rsquo;s Congratulations</h3>
   <p lang="EN">Received in recognition of Academic Achievement from Associate Professor Catherine Moran, Dean of Science at the University of Canterbury.</p>
-  <p lang="FR">Reçu en reconnaisssance de la réussite scolaire de Professeur Agrégé Catherine Moran, Doyen des Sciences à l&rsquo;University of Canterbury.</p>
 </div>
 
 <div class="award">
   <h3>Peter Bryant Memorial Prize</h3>
   <p lang="EN">Awarded for First Place in 100-Level Mathematics at the University of Canterbury.</p>
-  <p lang="FR">Décerné à l&rsquo;étudiant qui la plus élevée atteinte en mathematiques à niveau 300 au l&rsquo;University of Canterbury.</p>
 </div>
 
 <div class="award">
   <h3>Computer Science High Achievers Scholarship</h3>
   <p lang="EN">Awarded to high achieving students commencing a degree in Computer Science at the University of Canterbury.</p>
-  <p lang="FR">Décerné aux étudiants obtenant élevés commençant un diplôme en sciences informatiques à l&rsquo;Université de Canterbury.</p>
 </div>
 
         </div>
@@ -323,11 +270,9 @@ if(!isset($_COOKIE["cookiesOK"])) {
             <span class='selector'>
                 <a id="white-button" class='theme-button<?php if ($theme == "white") { echo " active";} ?>' onclick='switch_theme("white")'>
                     <span lang='EN'>light</span>
-                    <span lang='FR'>blanc</span>
                 </a>
                 <a id="black-button" class='theme-button<?php if ($theme == "black") { echo " active";} ?>' onclick='switch_theme("black")'>
                     <span lang='EN'>dark</span>
-                    <span lang='FR'>noir</span>
                 </a>
             </span>
           </footer>

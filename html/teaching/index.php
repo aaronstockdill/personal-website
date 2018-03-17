@@ -62,32 +62,26 @@ if(!isset($_COOKIE["cookiesOK"])) {
 
         <a href="/" class="">
             <span lang="EN">Home</span>
-            <span lang="FR">Accueil</span>
         </a>
 
         <a href="/cv/" class="">
             <span lang="EN">CV</span>
-            <span lang="FR">CV</span>
         </a>
 
         <a href="/research/" class="">
             <span lang="EN">Research</span>
-            <span lang="FR">Recherche</span>
         </a>
 
         <a href="/teaching/" class="active">
             <span lang="EN">Teaching</span>
-            <span lang="FR">Enseignement</span>
         </a>
 
         <a href="/contact/" class="">
             <span lang="EN">Contact</span>
-            <span lang="FR">Contact</span>
         </a>
 
         <a href="/blog/" class="">
             <span lang="EN">Blog</span>
-            <span lang="FR">Blog</span>
         </a>
     </nav>
 
@@ -160,11 +154,9 @@ if(!isset($_COOKIE["cookiesOK"])) {
             <span class='selector'>
                 <a id="white-button" class='theme-button<?php if ($theme == "white") { echo " active";} ?>' onclick='switch_theme("white")'>
                     <span lang='EN'>light</span>
-                    <span lang='FR'>blanc</span>
                 </a>
                 <a id="black-button" class='theme-button<?php if ($theme == "black") { echo " active";} ?>' onclick='switch_theme("black")'>
                     <span lang='EN'>dark</span>
-                    <span lang='FR'>noir</span>
                 </a>
             </span>
           </footer>
