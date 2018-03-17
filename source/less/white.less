@@ -1,4 +1,4 @@
-@offblack: #888;
+@offblack: #555;
 @font: #222;
 @background: #fefefe;
 
@@ -30,6 +30,8 @@ nav a.active {
 }
 
 .nav-holder {
+    background: @background;
+
     &:before {
         background-image: linear-gradient(to right, @background 20%, fade(@background, 0%) 100%);
     }
@@ -39,6 +41,13 @@ nav a.active {
     }
 }
 
+.menu-hamburger .bar {
+    fill: @offblack;
+}
+
+.menu-header {
+    color: @font;
+}
 
 .container {
     a {

@@ -30,14 +30,6 @@ show_help = () ->
                 <br />
                 <dt>Show/hide this help</dt>
                     <dd>?</dd>
-            </dl><dl>
-                <dt>Toggle the language</dt>
-                    <dd>ctrl-l ctrl-l</dd>
-                <dt>Switch to English</dt>
-                    <dd>ctrl-l ctrl-e</dd>
-                <dt>Switch to French</dt>
-                    <dd>ctrl-l ctrl-f</dd>
-                <br />
             </dl>
             <a class='close-help' onClick='show_help();'>
                 Close
@@ -65,15 +57,5 @@ Mousetrap.bind "ctrl+t ctrl+t", () ->
         switch_theme "white"
     else
         switch_theme "black"
-
-Mousetrap.bind "ctrl+l ctrl+f", () ->
-    switch_language "FR"
-Mousetrap.bind "ctrl+l ctrl+e", () ->
-    switch_language "EN"
-Mousetrap.bind "ctrl+l ctrl+l", () ->
-    if "EN" == getCookie "language"
-        switch_language "FR"
-    else
-        switch_language "EN"
 
 Mousetrap.bind "?", show_help

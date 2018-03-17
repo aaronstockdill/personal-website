@@ -29,7 +29,12 @@ fclose($mdfile);
 echo $Parsedown->text($markdown);
 ?>
 </div>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_SVG'></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['\\(','\\)'], ['\\(','\\)']]}
+});
+</script>
+<script async src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_SVG'></script>
 <!-- @import "footer.kit" -->
 <?php
 } else if ($type == 'pdf') {
