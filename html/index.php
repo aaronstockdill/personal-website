@@ -61,27 +61,27 @@ if(!isset($_COOKIE["cookiesOK"])) {
     <nav>
 
         <a href="/" class="active">
-            <span lang="EN">Home</span>
+            <span>Home</span>
         </a>
 
         <a href="/cv/" class="">
-            <span lang="EN">CV</span>
+            <span>CV</span>
         </a>
 
         <a href="/research/" class="">
-            <span lang="EN">Research</span>
+            <span>Research</span>
         </a>
 
         <a href="/teaching/" class="">
-            <span lang="EN">Teaching</span>
+            <span>Teaching</span>
         </a>
 
         <a href="/contact/" class="">
-            <span lang="EN">Contact</span>
+            <span>Contact</span>
         </a>
 
         <a href="/blog/" class="">
-            <span lang="EN">Blog</span>
+            <span>Blog</span>
         </a>
     </nav>
 
@@ -89,7 +89,7 @@ if(!isset($_COOKIE["cookiesOK"])) {
     <h1>Aaron<br />Stockdill</h1>
     <div class="trailing">
         <div class="general-welcome">
-            <p lang="EN">PhD Student at the <span class="conditional-break"></span>University of Cambridge<br>Artificial Intelligence Research Group</p>
+            <p>PhD Student at the <span class="conditional-break"></span>University of Cambridge<br>Artificial Intelligence Research Group</p>
         </div><div class="contact-welcome">
             <span class="email-holder" data-before-at="nneba.fgbpxqvyy" data-after-at="cl.cam.ac.uk"><noscript>Email obfuscated. Please enable JavaScript.</noscript></span>
         </div>
@@ -117,10 +117,10 @@ if(!isset($_COOKIE["cookiesOK"])) {
             <span class='separator'></span>
             <span class='selector'>
                 <a id="white-button" class='theme-button<?php if ($theme == "white") { echo " active";} ?>' onclick='switch_theme("white")'>
-                    <span lang='EN'>light</span>
+                    <span>light</span>
                 </a>
                 <a id="black-button" class='theme-button<?php if ($theme == "black") { echo " active";} ?>' onclick='switch_theme("black")'>
-                    <span lang='EN'>dark</span>
+                    <span>dark</span>
                 </a>
             </span>
           </footer>

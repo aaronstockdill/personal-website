@@ -61,49 +61,49 @@ if(!isset($_COOKIE["cookiesOK"])) {
     <nav>
 
         <a href="/" class="">
-            <span lang="EN">Home</span>
+            <span>Home</span>
         </a>
 
         <a href="/cv/" class="active">
-            <span lang="EN">CV</span>
+            <span>CV</span>
         </a>
 
         <a href="/research/" class="">
-            <span lang="EN">Research</span>
+            <span>Research</span>
         </a>
 
         <a href="/teaching/" class="">
-            <span lang="EN">Teaching</span>
+            <span>Teaching</span>
         </a>
 
         <a href="/contact/" class="">
-            <span lang="EN">Contact</span>
+            <span>Contact</span>
         </a>
 
         <a href="/blog/" class="">
-            <span lang="EN">Blog</span>
+            <span>Blog</span>
         </a>
     </nav>
 
 
 <ul class="submenu">
-<li><a href="#About"><span lang="EN">About Me</span></a></li>
-<li><a href="#Education"><span lang="EN">Education</span></a></li>
-<li><a href="#Employment"><span lang="EN">Employment</span></a></li>
-<li><a href="#Awards"><span lang="EN">Awards &amp; Honours</span></a></li>
+<li><a href="#About"><span>About Me</span></a></li>
+<li><a href="#Education"><span>Education</span></a></li>
+<li><a href="#Employment"><span>Employment</span></a></li>
+<li><a href="#Awards"><span>Awards &amp; Honours</span></a></li>
 </ul>
 </div>
 
-<span class="precontent first" lang="EN">Download my <a href="/cv/AaronStockdill.pdf">Curriculum Vit&aelig; in PDF form</a>.</span>
-<span class="precontent" lang="EN">Download a <a href="/cv/AaronStockdill.txt">brief summary</a>.</span>
-<span class="precontent" lang="EN">For a list of publications, see <a href="/research/#Publications">Research</a>.</span>
+<span class="precontent first">Download my <a href="/cv/AaronStockdill.pdf">Curriculum Vit&aelig; in PDF form</a>.</span>
+<span class="precontent">Download a <a href="/cv/AaronStockdill.txt">brief summary</a>.</span>
+<span class="precontent">For a list of publications, see <a href="/research/#Publications">Research</a>.</span>
 
 <span class="anchor" id="About"></span>
-<h1 lang="EN">About Me</h1>
+<h1>About Me</h1>
 
-<p lang="EN">In 2016, I finished studying towards a Bachelor of Science with Honours in Computer Science at the University of Canterbury in Christchurch, New Zealand. The title of my dissertation was &ldquo;Neuromorphic Computing with Reservoir Neural Networks on Memristive Hardware.&rdquo; In 2015 I completed my final year of a BSc in Computer Science and Mathematics, and in 2017 commenced study towards a PhD in Computer Science at the University of Cambridge.</p>
+<p>In 2016, I finished studying towards a Bachelor of Science with Honours in Computer Science at the University of Canterbury in Christchurch, New Zealand. The title of my dissertation was &ldquo;Neuromorphic Computing with Reservoir Neural Networks on Memristive Hardware.&rdquo; In 2015 I completed my final year of a BSc in Computer Science and Mathematics, and in 2017 commenced study towards a PhD in Computer Science at the University of Cambridge.</p>
 
-<p lang="EN">My interests lie with anything that can make the world better. This primarily manifests as education: I have taught mathematics to high school students, and computer science to university students. I also work with Potato Softworks to help businesses and organisations get an online prescence with affordable websites. Personally, I am passionate about Artifical Intelligence, as is reflected in my research.</p>
+<p>My interests lie with anything that can make the world better. This primarily manifests as education: I have taught mathematics to high school students, and computer science to university students. I also work with Potato Softworks to help businesses and organisations get an online prescence with affordable websites. Personally, I am passionate about Artifical Intelligence, as is reflected in my research.</p>
 
 
 
@@ -112,35 +112,35 @@ if(!isset($_COOKIE["cookiesOK"])) {
 
 
 <span class="anchor" id="Education"></span>
-<h1 lang="EN">Education</h1>
+<h1>Education</h1>
 
-<h2 lang="EN">Doctor of Philosophy, 2017&ndash;2020</h2>
-<p lang="EN">I am currently studying towards my PhD at the University of Cambridge. I am under the supervision of <a href="http://www.cl.cam.ac.uk/~mj201/">Dr Mateja Jamnik</a>, with the tentative thesis title &ldquo;Automating representation change across domains for reasoning.&rdquo;</p>
+<h2>Doctor of Philosophy, 2017&ndash;2020</h2>
+<p>I am currently studying towards my PhD at the University of Cambridge. I am under the supervision of <a href="http://www.cl.cam.ac.uk/~mj201/">Dr Mateja Jamnik</a>, with the tentative thesis title &ldquo;Automating representation change across domains for reasoning.&rdquo;</p>
 
-<h2 lang="EN">Bachelor of Science with First Class Honours, 2016</h2>
-<p lang="EN">Studied in the &lsquo;Honours year&rsquo; of a BSc(Hons), working on my research project with <a href="http://www.canterbury.ac.nz/engineering/contact-us/people/kourosh-neshatian.html">Dr Kourosh Neshatian</a>. My report was called &ldquo;Neuromorphic Computing with Reservoir Neural Networks on Memristive Hardware&rdquo;. My final GPA was 8.9 out of 9.</p>
+<h2>Bachelor of Science with First Class Honours, 2016</h2>
+<p>Studied in the &lsquo;Honours year&rsquo; of a BSc(Hons), working on my research project with <a href="http://www.canterbury.ac.nz/engineering/contact-us/people/kourosh-neshatian.html">Dr Kourosh Neshatian</a>. My report was called &ldquo;Neuromorphic Computing with Reservoir Neural Networks on Memristive Hardware&rdquo;. My final GPA was 8.9 out of 9.</p>
 
-<h2 lang="EN">Bachelor of Science, 2013-2015</h2>
-<p lang="EN">Double major in Computer Science and Mathematics. I finished with an average GPA of 8.83 out of 9. </p>
+<h2>Bachelor of Science, 2013-2015</h2>
+<p>Double major in Computer Science and Mathematics. I finished with an average GPA of 8.83 out of 9. </p>
 
 
 <hr />
 
 
 <span class="anchor" id="Employment"></span>
-<h1 lang="EN">Employ&shy;ment</h1>
+<h1>Employ&shy;ment</h1>
 
 <h2>University of Cambridge</h2>
-<h3 lang="EN">Supervisor, 2017</h3>
-<p lang="EN">In Michaelmas term, I supervised &ldquo;Foundations of Computer Science&rdquo; and &ldquo;Prolog.&rdquo;</p>
+<h3>Supervisor, 2017</h3>
+<p>In Michaelmas term, I supervised &ldquo;Foundations of Computer Science&rdquo; and &ldquo;Prolog.&rdquo;</p>
 
 <h2>University of Canterbury</h2>
 
-<h3 lang="EN">Lecturer, 2017 Semester 2</h3>
-<p lang="EN">During Term 3 2017, I lectured the paper &ldquo;COSC122: Introduction to Computer Science.&rdquo; This was an amazing experience, helping teach one of the core computer science papers that builds the ground-work for many other courses.</p>
+<h3>Lecturer, 2017 Semester 2</h3>
+<p>During Term 3 2017, I lectured the paper &ldquo;COSC122: Introduction to Computer Science.&rdquo; This was an amazing experience, helping teach one of the core computer science papers that builds the ground-work for many other courses.</p>
 
-<h3 lang="EN">Tutor, 2015&ndash;2017</h3>
-<p lang="EN">I used to work as a tutor at the University of Canterbury in the Department of Computer Science and Software Engineering.</p>
+<h3>Tutor, 2015&ndash;2017</h3>
+<p>I used to work as a tutor at the University of Canterbury in the Department of Computer Science and Software Engineering.</p>
 <ul class="tutoring-list">
 <li>COSC480S1: Computer Programming (2017)</li>
 <li>COSC367S1: Artificial Intelligence (2017)</li>
@@ -150,17 +150,17 @@ if(!isset($_COOKIE["cookiesOK"])) {
 <li>COSC122S2: Introduction to Computer Science (2015, 2017)</li>
 </ul>
 
-<h2 lang="EN">ARANZ Geo Leapfrog, Summer 2014/15</h2>
-<h3 lang="EN">Software Developer Intern</h3>
-<p lang="EN">In the Summer 2014/15 break, I worked as a software developer intern working on Geological Modelling Software  for the mining industry. This provided valuable experience working at an established software company.</p>
+<h2>ARANZ Geo Leapfrog, Summer 2014/15</h2>
+<h3>Software Developer Intern</h3>
+<p>In the Summer 2014/15 break, I worked as a software developer intern working on Geological Modelling Software  for the mining industry. This provided valuable experience working at an established software company.</p>
 
 <h2>Potato Softworks, 2014&ndash;2017</h2>
 <h3>Founder, Web Designer, Programmer</h3>
-<p lang="EN">I am co-founder of this web design company, serving as lead web designer. I also work as a software developer when required.</p>
+<p>I am co-founder of this web design company, serving as lead web designer. I also work as a software developer when required.</p>
 
 <h2>NumberWorks&rsquo;nWords, 2014&ndash;2016</h2>
 <h3>Mathematics Tutor</h3>
-<p lang="EN">I was a Mathematics tutor for students of all ages, specialising in High School material with a strong focus on Algebra and Calculus.</p>
+<p>I was a Mathematics tutor for students of all ages, specialising in High School material with a strong focus on Algebra and Calculus.</p>
 
 
 
@@ -169,91 +169,91 @@ if(!isset($_COOKIE["cookiesOK"])) {
 
 
 <span class="anchor" id="Awards"></span>
-<h1 lang="EN">Awards &amp; Honours</h1>
+<h1>Awards &amp; Honours</h1>
 
 <h2 class="award-year">2017</h2>
 
 <div class="award">
   <h3>Hamilton Cambridge International Scholarship</h3>
-  <p lang="EN">Awarded to non-EU international students studying for a PhD at the University of Cambridge, residing at Selwyn College.</p>
+  <p>Awarded to non-EU international students studying for a PhD at the University of Cambridge, residing at Selwyn College.</p>
 </div>
 
 <h2 class="award-year">2016</h2>
 
 <div class="award">
   <h3>Graduating BSc(Hons) Computer Science Student of the Year</h3>
-  <p lang="EN">Awarded for academic achievement throughout my undergraduate and honours study at the University of Canterbury.</p>
+  <p>Awarded for academic achievement throughout my undergraduate and honours study at the University of Canterbury.</p>
 </div>
 
 <div class="award">
   <h3>G B Battersby-Trimble Scholarship in Computer Science</h3>
-  <p lang="EN">Awarded for academic merit, broad knowledge outside of computer science, and research of benefit to New Zealand.</p>
+  <p>Awarded for academic merit, broad knowledge outside of computer science, and research of benefit to New Zealand.</p>
 </div>
 
 <div class="award">
-  <h3 lang="EN">Finalist for the Sir Paul Callaghan Award</h3>
-  <p lang="EN">Awarded for innovation and STEM communication.</p>
+  <h3>Finalist for the Sir Paul Callaghan Award</h3>
+  <p>Awarded for innovation and STEM communication.</p>
 </div>
 
 <div class="award">
   <h3>Freemasons University Scholarship</h3>
-  <p lang="EN">Awarded for academic merit, community involvement, and leadership potential.</p>
+  <p>Awarded for academic merit, community involvement, and leadership potential.</p>
 </div>
 
 <div class="award">
   <h3>University of Canterbury Senior Scholarship</h3>
-  <p lang="EN">Awarded on the basis of academic merit from 200 and 300 level courses.</p>
+  <p>Awarded on the basis of academic merit from 200 and 300 level courses.</p>
 </div>
 
 <h2 class="award-year">2015</h2>
 
 <div class="award">
   <h3>Graduating BSc Computer Science Student of the Year</h3>
-  <p lang="EN">Awarded for academic achievement throughout my undergraduate study at the University of Canterbury.</p>
+  <p>Awarded for academic achievement throughout my undergraduate study at the University of Canterbury.</p>
 </div>
 
 <div class="award">
   <h3>Page Memorial Prize</h3>
-  <p lang="EN">Awarded for academic achievement in Level 300 Mathematics at the University of Canterbury.</p>
+  <p>Awarded for academic achievement in Level 300 Mathematics at the University of Canterbury.</p>
 </div>
 
 <div class="award">
   <h3>Allied Telesis Labs Scholarship in Computer Science</h3>
-  <p lang="EN">Awarded through the University of Canterbury.</p>
+  <p>Awarded through the University of Canterbury.</p>
 </div>
 
 <div class="award">
-  <h3 lang="EN">Mathematics and Statistics Scholarship, First Tier</h3>
-  <p lang="EN">Awarded by the University of Canterbury. </p>
+  <h3>Mathematics and Statistics Scholarship, First Tier</h3>
+  <p>Awarded by the University of Canterbury. </p>
 </div>
 
 <h2 class="award-year">2014</h2>
 
 <div class="award">
   <h3>Member of the Golden Key International Honour Society</h3>
-  <p lang="EN">A member of the University of Canterbury chapter. </p>
+  <p>A member of the University of Canterbury chapter. </p>
 </div>
 
 <div class="award">
-  <h3 lang="EN">Mathematics and Statistics Scholarship, Second Tier</h3>
-  <p lang="EN">Awarded by the University of Canterbury. </p>
+  <h3>Mathematics and Statistics Scholarship, Second Tier</h3>
+  <p>Awarded by the University of Canterbury. </p>
 </div>
 
 <h2 class="award-year">2013</h2>
 
 <div class="award">
   <h3>Dean&rsquo;s Congratulations</h3>
-  <p lang="EN">Received in recognition of Academic Achievement from Associate Professor Catherine Moran, Dean of Science at the University of Canterbury.</p>
+  <p>Received in recognition of Academic Achievement from Associate Professor Catherine Moran, Dean of Science at the University of Canterbury.</p>
 </div>
 
 <div class="award">
   <h3>Peter Bryant Memorial Prize</h3>
-  <p lang="EN">Awarded for First Place in 100-Level Mathematics at the University of Canterbury.</p>
+  <p>Awarded for First Place in 100-Level Mathematics at the University of Canterbury.</p>
 </div>
 
 <div class="award">
   <h3>Computer Science High Achievers Scholarship</h3>
-  <p lang="EN">Awarded to high achieving students commencing a degree in Computer Science at the University of Canterbury.</p>
+  <p>Awarded to high achieving students commencing a degree in Computer Science at the University of Canterbury.</p>
 </div>
 
         </div>
@@ -269,10 +269,10 @@ if(!isset($_COOKIE["cookiesOK"])) {
             <span class='separator'></span>
             <span class='selector'>
                 <a id="white-button" class='theme-button<?php if ($theme == "white") { echo " active";} ?>' onclick='switch_theme("white")'>
-                    <span lang='EN'>light</span>
+                    <span>light</span>
                 </a>
                 <a id="black-button" class='theme-button<?php if ($theme == "black") { echo " active";} ?>' onclick='switch_theme("black")'>
-                    <span lang='EN'>dark</span>
+                    <span>dark</span>
                 </a>
             </span>
           </footer>

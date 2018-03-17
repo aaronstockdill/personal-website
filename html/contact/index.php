@@ -61,33 +61,33 @@ if(!isset($_COOKIE["cookiesOK"])) {
     <nav>
 
         <a href="/" class="">
-            <span lang="EN">Home</span>
+            <span>Home</span>
         </a>
 
         <a href="/cv/" class="">
-            <span lang="EN">CV</span>
+            <span>CV</span>
         </a>
 
         <a href="/research/" class="">
-            <span lang="EN">Research</span>
+            <span>Research</span>
         </a>
 
         <a href="/teaching/" class="">
-            <span lang="EN">Teaching</span>
+            <span>Teaching</span>
         </a>
 
         <a href="/contact/" class="active">
-            <span lang="EN">Contact</span>
+            <span>Contact</span>
         </a>
 
         <a href="/blog/" class="">
-            <span lang="EN">Blog</span>
+            <span>Blog</span>
         </a>
     </nav>
 
 </div>
 
-    <h1 lang="EN">Contact</h1>
+    <h1>Contact</h1>
 
     <div class="contact-table">
         <span class="label">Email</span>
@@ -117,10 +117,10 @@ if(!isset($_COOKIE["cookiesOK"])) {
             <span class='separator'></span>
             <span class='selector'>
                 <a id="white-button" class='theme-button<?php if ($theme == "white") { echo " active";} ?>' onclick='switch_theme("white")'>
-                    <span lang='EN'>light</span>
+                    <span>light</span>
                 </a>
                 <a id="black-button" class='theme-button<?php if ($theme == "black") { echo " active";} ?>' onclick='switch_theme("black")'>
-                    <span lang='EN'>dark</span>
+                    <span>dark</span>
                 </a>
             </span>
           </footer>
