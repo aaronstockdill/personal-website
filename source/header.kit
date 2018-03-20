@@ -1,14 +1,3 @@
-<?php
-if(isset($_COOKIE["style"])) {
-    $theme = $_COOKIE["style"];
-} else {
-    $theme = "white";
-    setcookie("style", "white", time() + 365);
-}
-if(!isset($_COOKIE["cookiesOK"])) {
-    setcookie("cookiesOK", "no", time() + 365);
-}
-?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -17,9 +6,7 @@ if(!isset($_COOKIE["cookiesOK"])) {
         <style>
             <!-- @import "../html/css/fonts.css" -->
         </style>
-        <?php
-            echo '<link rel="stylesheet" href="/css/'.$theme.'.css" media="screen" id="theme">';
-        ?>
+        <link rel="stylesheet" href="/css/white.css" media="screen" id="theme">
         <style>
             <!-- @import "../html/css/master.css" -->
         </style>
@@ -53,8 +40,8 @@ if(!isset($_COOKIE["cookiesOK"])) {
     <body>
     <div class="container <!-- $welcome? -->">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-20 -20 420 420" class="menu-hamburger" id="menu-hamburger">
-        <rect x="0" y="80" rx="40" ry="40" width="400" height="80" transform-origin="200 200" class="bar-top bar"></rect>
-        <rect x="0" y="260" rx="40" ry="40" width="400" height="80" transform-origin="200 200" class="bar-bottom bar"></rect>
+        <rect x="0" y="80" rx="0" ry="0" width="400" height="80" transform-origin="200 120" class="bar-top bar"></rect>
+        <rect x="0" y="260" rx="0" ry="0" width="400" height="80" transform-origin="200 300" class="bar-bottom bar"></rect>
     </svg>
     <div class="nav-holder">
     <a class="menu-header" href="/">Aaron Stockdill</a>

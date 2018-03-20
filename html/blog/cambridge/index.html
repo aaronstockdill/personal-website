@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Cambridge - Blog for Aaron Stockdill</title>
+        <style>
+            @font-face{font-family:'Nunito Sans';font-style:normal;font-weight:400;src:local('Nunito Sans Regular'),local('NunitoSans-Regular'),url(https://fonts.gstatic.com/s/nunitosans/v3/pe0qMImSLYBIv1o4X1M8ccezI9tAcVwob5A.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Nunito Sans';font-style:normal;font-weight:400;src:local('Nunito Sans Regular'),local('NunitoSans-Regular'),url(https://fonts.gstatic.com/s/nunitosans/v3/pe0qMImSLYBIv1o4X1M8cce9I9tAcVwo.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Nunito Sans';font-style:normal;font-weight:600;src:local('Nunito Sans SemiBold'),local('NunitoSans-SemiBold'),url(https://fonts.gstatic.com/s/nunitosans/v3/pe03MImSLYBIv1o4X1M8cc9iB85jU1ECVZl_86Y.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Nunito Sans';font-style:normal;font-weight:600;src:local('Nunito Sans SemiBold'),local('NunitoSans-SemiBold'),url(https://fonts.gstatic.com/s/nunitosans/v3/pe03MImSLYBIv1o4X1M8cc9iB85tU1ECVZl_.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Nunito Sans';font-style:normal;font-weight:700;src:local('Nunito Sans Bold'),local('NunitoSans-Bold'),url(https://fonts.gstatic.com/s/nunitosans/v3/pe03MImSLYBIv1o4X1M8cc8GBs5jU1ECVZl_86Y.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Nunito Sans';font-style:normal;font-weight:700;src:local('Nunito Sans Bold'),local('NunitoSans-Bold'),url(https://fonts.gstatic.com/s/nunitosans/v3/pe03MImSLYBIv1o4X1M8cc8GBs5tU1ECVZl_.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Nunito Sans';font-style:normal;font-weight:800;src:local('Nunito Sans ExtraBold'),local('NunitoSans-ExtraBold'),url(https://fonts.gstatic.com/s/nunitosans/v3/pe03MImSLYBIv1o4X1M8cc8aBc5jU1ECVZl_86Y.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Nunito Sans';font-style:normal;font-weight:800;src:local('Nunito Sans ExtraBold'),local('NunitoSans-ExtraBold'),url(https://fonts.gstatic.com/s/nunitosans/v3/pe03MImSLYBIv1o4X1M8cc8aBc5tU1ECVZl_.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Nunito Sans';font-style:normal;font-weight:900;src:local('Nunito Sans Black'),local('NunitoSans-Black'),url(https://fonts.gstatic.com/s/nunitosans/v3/pe03MImSLYBIv1o4X1M8cc8-BM5jU1ECVZl_86Y.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Nunito Sans';font-style:normal;font-weight:900;src:local('Nunito Sans Black'),local('NunitoSans-Black'),url(https://fonts.gstatic.com/s/nunitosans/v3/pe03MImSLYBIv1o4X1M8cc8-BM5tU1ECVZl_.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Open Sans';font-style:italic;font-weight:300;src:local('Open Sans Light Italic'),local('OpenSans-LightItalic'),url(https://fonts.gstatic.com/s/opensans/v15/memnYaGs126MiZpBA-UFUKWyV9hlIqOxjaPXZSk.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Open Sans';font-style:italic;font-weight:300;src:local('Open Sans Light Italic'),local('OpenSans-LightItalic'),url(https://fonts.gstatic.com/s/opensans/v15/memnYaGs126MiZpBA-UFUKWyV9hrIqOxjaPX.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Open Sans';font-style:italic;font-weight:400;src:local('Open Sans Italic'),local('OpenSans-Italic'),url(https://fonts.gstatic.com/s/opensans/v15/mem6YaGs126MiZpBA-UFUK0Xdc1GAK6bt6o.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Open Sans';font-style:italic;font-weight:400;src:local('Open Sans Italic'),local('OpenSans-Italic'),url(https://fonts.gstatic.com/s/opensans/v15/mem6YaGs126MiZpBA-UFUK0Zdc1GAK6b.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Open Sans';font-style:italic;font-weight:600;src:local('Open Sans SemiBold Italic'),local('OpenSans-SemiBoldItalic'),url(https://fonts.gstatic.com/s/opensans/v15/memnYaGs126MiZpBA-UFUKXGUdhlIqOxjaPXZSk.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Open Sans';font-style:italic;font-weight:600;src:local('Open Sans SemiBold Italic'),local('OpenSans-SemiBoldItalic'),url(https://fonts.gstatic.com/s/opensans/v15/memnYaGs126MiZpBA-UFUKXGUdhrIqOxjaPX.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:local('Open Sans Light'),local('OpenSans-Light'),url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN_r8OXOhpKKSTj5PW.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:local('Open Sans Light'),local('OpenSans-Light'),url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN_r8OUuhpKKSTjw.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans Regular'),local('OpenSans-Regular'),url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFW50bf8pkAp6a.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans Regular'),local('OpenSans-Regular'),url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;src:local('Open Sans SemiBold'),local('OpenSans-SemiBold'),url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOXOhpKKSTj5PW.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;src:local('Open Sans SemiBold'),local('OpenSans-SemiBold'),url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOUuhpKKSTjw.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+        </style>
+        <link rel="stylesheet" href="/css/white.css" media="screen" id="theme">
+        <style>
+            *{-webkit-box-sizing:border-box;box-sizing:border-box}.hide{display:none!important}:root,body,html{font-family:"Open Sans",Helvetica,Arial,sans-serif;min-height:100%;height:100%;font-weight:300;font-size:20px;margin:0;padding:0;-webkit-transition:background .2s ease,color .2s ease;transition:background .2s ease,color .2s ease;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}@media (min-width:1920px){:root,body,html{font-size:25px}}h1,h2,h3,h4,h5,h6{font-family:"Nunito Sans",Futura,Arial,sans-serif;font-weight:700}.borked-email{direction:rtl;unicode-bidi:bidi-override;text-align:left}.menu-hamburger,.menu-header{display:none;font-family:"Nunito Sans",Futura,Arial,sans-serif}nav{height:1.3rem;overflow:hidden;font-size:.85rem;font-family:"Open Sans",Helvetica,Arial,sans-serif;font-weight:300;line-height:1.5rem;text-align:center}nav a{text-decoration:none;padding:0 .5rem;-webkit-transition:color .2s ease;transition:color .2s ease}.container{max-width:35rem;width:100%;margin:0 auto;padding:2rem;line-height:1.5;-webkit-box-flex:1;-ms-flex:1 0 auto;flex:1 0 auto}.container .anchor{width:0;height:0;display:block;position:relative;top:-1.25rem}.container .anchor:first-of-type{top:3rem}.container h1{font-size:2rem;line-height:1em;margin-top:3rem;margin-bottom:1rem;font-weight:800;-webkit-hyphens:manual;-ms-hyphens:manual;hyphens:manual}.container hr{border:none;height:1px;margin:1rem auto 2rem auto;width:20%}.container h2{margin-top:1.5rem;margin-bottom:.75rem;line-height:1em;font-size:1.4rem}.container h2.award-year{margin-bottom:-1.1em}.container h3,.container h4{margin-top:1rem;margin-bottom:.5rem}.container p{margin-top:.5rem;margin-bottom:.5rem}.container li{padding-top:.25rem;padding-bottom:.25rem;list-style-type:circle}.container img{display:block;margin:auto;max-width:100%}.container blockquote{border-left:5px solid silver;padding:.5rem 1rem;background:#eee}.container .pad-after{padding-right:1rem}.container p.tight{margin-bottom:.25rem}.container .precontent{display:block;text-align:center;padding:.1rem 0;font-size:.8rem}.container .precontent.first{margin-top:2rem}.container .tutoring-list{margin:0;font-size:.9rem;line-height:1.4rem}.container .award{padding-left:5rem}.container .award h3{margin-top:0;margin-bottom:.3rem;font-weight:300}.container .award p{margin-top:0;margin-bottom:1.5rem}.container .contact-table{margin-bottom:2rem}.container .contact-table .label,.container .contact-table .value{display:inline-block;padding:.2rem;max-width:50%;vertical-align:top}.container .contact-table .label{width:8rem;text-align:right;padding-right:1rem;font-weight:300}.container pre{width:100%;overflow-x:auto}.container .back-to-works{display:block;padding-top:1rem;text-decoration:none;text-align:center;font-size:.85rem;font-family:"Open Sans",Helvetica,Arial,sans-serif;font-weight:300}.container .submenu{height:1.6rem;list-style:none;margin:.1rem 0;padding:0;font-family:"Open Sans",Helvetica,Arial,sans-serif;font-weight:300;text-align:center}.container .submenu li{display:inline-block}.container .submenu a{text-decoration:none;padding:0 .5rem;-webkit-transition:color .2s ease;transition:color .2s ease;font-size:.75rem}.container .dynamic-link{margin:.3rem auto 1rem auto;line-height:1.2em}.container .dynamic-link:first-of-type{margin-top:1rem}.container .dynamic-link h2{margin-top:.5rem}.container .dynamic-link a{text-decoration:none;display:inline-block;margin-right:1rem}.container .dynamic-link a:hover{text-decoration:underline}.container .dynamic-link .bibtex,.container .dynamic-link .date{font-size:.7rem;font-style:italic;line-height:.7rem}.container .dynamic-link .journal,.container .dynamic-link .orig{font-size:.7rem;line-height:.7rem}.welcome{padding:2rem;-webkit-box-flex:1;-ms-flex:1 0 auto;flex:1 0 auto;max-width:35rem;margin:0 auto;text-align:center}.welcome h1{font-size:4rem;margin:0;margin-top:17vh;line-height:3.6rem;font-weight:900}.welcome p{margin:0;padding-bottom:0}.welcome .trailing{margin-top:3rem;line-height:1.4rem}.welcome .trailing div{margin-top:1rem}.welcome .email{padding:0 .25rem;width:12rem;text-decoration:none;-webkit-transition:color .2s ease;transition:color .2s ease}img+em{text-align:right;width:100%;display:inline-block}footer{max-width:35rem;margin:0 auto;text-align:center;font-family:"Open Sans",Helvetica,Arial,sans-serif;font-weight:300;font-size:.8rem;opacity:.8;position:relative;bottom:0;left:0;right:0;padding:5px 2rem;-webkit-transition:background .2s ease,color .2s ease;transition:background .2s ease,color .2s ease;height:1.8rem}footer .details{float:left}footer .separator{display:inline-block;width:1rem}footer .selector{display:inline-block;height:1.2rem;overflow-y:hidden;width:2.5rem;position:relative;text-align:center;-webkit-transition:height .2s ease;transition:height .2s ease}footer .selector a{display:block;position:absolute;top:1.2rem;text-align:center;text-decoration:none;cursor:pointer;-webkit-transition:top .2s ease;transition:top .2s ease}footer .selector a.active{top:0;opacity:.5}footer .selector:hover a{top:0}footer .selector:hover a.active{top:-1.2rem}.cookies{max-width:35rem;margin:0 auto;text-align:center;font-family:"Open Sans",Helvetica,Arial,sans-serif;font-weight:300;font-size:.7rem;opacity:.95;position:fixed;bottom:0;left:0;right:0;padding:5px 0;-webkit-transition:background .2s ease,color .2s ease;transition:background .2s ease,color .2s ease;background:inherit}.cookies .cookie-buttons{margin:.5rem 0 .2rem 0}.cookies .cookie-buttons button{margin-right:1rem;background:inherit;border:1px solid;color:inherit;font:inherit;line-height:normal;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;border-radius:3px;padding:.2rem 1rem;cursor:pointer}.cookies .cookie-buttons a{color:inherit}.error{max-width:800px;width:100%}.error h1{margin-bottom:0}.error h2{margin-top:.5rem}.error a{display:block;margin-top:2rem}.help{overflow-y:auto;display:block;z-index:1000;position:fixed;top:0;left:0;right:0;bottom:0}.help .help-box{padding:3rem;padding-bottom:4rem;margin:5%;position:relative;font-family:"Open Sans",Helvetica,Arial,sans-serif;font-weight:300}.help .help-box h1{text-align:center}.help .help-box dl{display:inline-block;width:50%;vertical-align:top;text-align:center}.help .help-box dl dt{font-weight:400;padding-top:.8rem;padding-bottom:.2rem}.help .help-box dl dd{margin-left:0}.help .help-box .close-help{cursor:pointer;position:absolute;bottom:3rem;right:3rem;border-bottom:1px solid transparent}.help .help-box .close-help:hover{border-bottom-width:1px;border-bottom-style:solid}
+        </style>
+        <style media="screen and (max-width: 600px)">
+            body,html{font-size:18px}.container.welcome{padding:.5rem 0 2rem 0}.container.welcome h1{margin-top:20vh;font-size:3.25rem;line-height:3rem}.container.welcome .email,.container.welcome .phone,.container.welcome nav a,.container.welcome p{margin:0 auto}.container.welcome .email span,.container.welcome .phone span,.container.welcome nav a span,.container.welcome p span{display:inline-block}.container.welcome .nav-holder{margin:0 -1rem}@media screen and (max-width:400px){.container.welcome .conditional-break{display:block}}.submenu{display:none}nav{height:100%;padding-top:3rem}nav a{margin:0!important;display:block;position:relative;padding-top:.5rem;text-align:right;padding-right:1rem;font-size:1rem}.nav-holder{position:fixed;margin:0;width:100%;height:3rem;top:0;left:0;-webkit-transition:height .5s ease;transition:height .5s ease;z-index:1000}.nav-holder.showing{height:100%}.nav-holder .menu-header{display:block;position:absolute;margin:.7rem 15%;font-weight:800;text-align:center;width:70%;text-decoration:none;font-size:1.2rem}.welcome .nav-holder .menu-header{display:none}.menu-hamburger{display:block;position:fixed;right:.5rem;top:.7rem;width:1.5rem;height:1.5rem;z-index:1001}.menu-hamburger .bar{stroke:#000;stroke-width:0;opacity:1}.menu-hamburger .bar-bottom,.menu-hamburger .bar-top{-webkit-transform:rotate(0) translateY(0);transform:rotate(0) translateY(0);-webkit-transition:all .2s ease-in-out;transition:all .2s ease-in-out}.menu-hamburger.showing .bar-top{-webkit-transform:translateY(20%) rotate(-135deg);transform:translateY(20%) rotate(-135deg)}.menu-hamburger.showing .bar-bottom{-webkit-transform:translateY(-20%) rotate(135deg);transform:translateY(-20%) rotate(135deg)}.container{padding:2.5rem 1rem 2rem 1rem}.container h1{font-size:2rem}.container blockquote{margin-left:0;margin-right:0}footer .selector.help-button{display:none}footer .separator{width:0}@media screen and (max-width:350px){.welcome h1{font-size:3rem;margin-top:15vh}.container h2.award-year{width:1em;-webkit-transform:rotate(-90deg) translateX(-1.4em);transform:rotate(-90deg) translateX(-1.4em)}.container .award{padding-left:2rem}}
+        </style>
+        <style media="print">
+            nav,ul.submenu{display:none}footer{display:none}a{text-decoration:none;color:#000}a[href^="http://"]:after,a[href^="https://"]:after{content:" [" attr(href) "]";color:#333}.container hr{margin:1rem auto}
+        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content=""/>
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+    </head>
+    <body>
+    <div class="container ">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-20 -20 420 420" class="menu-hamburger" id="menu-hamburger">
+        <rect x="0" y="80" rx="0" ry="0" width="400" height="80" transform-origin="200 120" class="bar-top bar"></rect>
+        <rect x="0" y="260" rx="0" ry="0" width="400" height="80" transform-origin="200 300" class="bar-bottom bar"></rect>
+    </svg>
+    <div class="nav-holder">
+    <a class="menu-header" href="/">Aaron Stockdill</a>
+    <nav>
+
+        <a href="/" class="">
+            <span>Home</span>
+        </a>
+
+        <a href="/cv/" class="">
+            <span>CV</span>
+        </a>
+
+        <a href="/research/" class="">
+            <span>Research</span>
+        </a>
+
+        <a href="/teaching/" class="">
+            <span>Teaching</span>
+        </a>
+
+        <a href="/contact/" class="">
+            <span>Contact</span>
+        </a>
+
+        <a href="/blog/" class="">
+            <span>Blog</span>
+        </a>
+    </nav>
+
+    </div>
+<div class='writing'>
+<a href='/blog/' class='back-to-works'>Back to Blog</a>
+<h1>Cambridge</h1>
+<p><img alt="Selwyn College" src="/work/dynamic.php?id=selwyn&amp;type=jpg" />
+<em>Selwyn College, Cambridge. Photo from <a href="https://www.flickr.com/photos/selalum/">Selwyn College Flickr</a></em></p>
+<p>As this site has recently been updated to reflect, I am going to be studying at
+the University of Cambridge come October 1. This is still something of a dream,
+not yet feeling like a thing that is truly happening. Flights are booked, accommodation
+is reserved, bus tickets from Heathrow are sorted&mdash;and it still doesn&rsquo;t feel
+real. To help it feel more real, I&rsquo;ve decided to write down the process. When I
+was going through this, from the outside, it was all a bit of a mystery. With any
+luck this will make it less mysterious.</p>
+<h2>Is this something I want to do?</h2>
+<p>Probably not.</p>
+<p>Perhaps a bit more explanation is in order. If you are, like me, studying computer
+science, then a PhD is a <em>terrible</em> investment. Don&rsquo;t do it just to become more
+qualified. The running joke is that PhD stands for &ldquo;Please hire,
+Desperate&rdquo;. Like all good jokes this has a kernel of truth. Most places won&rsquo;t
+want to touch you because you&rsquo;re too expensive, don&rsquo;t have a wide breadth of
+knowledge, and lack &ldquo;real-world skills&rdquo; (despite the fact you have
+probably developed excellent &ldquo;real-world skills&rdquo; during your PhD).</p>
+<p>If you want to work in research and development, or at a university, then perhaps
+this is the right option for you. Job options are slim, but in industry do tend
+to be well paid. If you pick university, be warned: you will be underpaid for the
+rest of your life. While not the &ldquo;path of poverty&rdquo; it is joked to be,
+you will never be as well paid as your industry peers.</p>
+<p>The above warning applies less strongly to Masters&rsquo; applicants, because you
+don&rsquo;t automatically become unhirable. But go in sceptical, particularly in
+computer science: will this actually help me get where I want to be?</p>
+<blockquote>
+<p><strong>Story time</strong><br>
+I love teaching. For me, it is a bit of a no-brainer to work at a university
+and continue teaching. It is a bit of a disappointment that I will never be
+rich, and it&rsquo;s a bit hard hearing all my friends talk about the salaries
+they are getting going into industry, knowing that my top salary will barely
+match their starting salary. But I am hoping the old saying is true:
+&ldquo;Do a job you love, and you&rsquo;ll never work another day in your
+life.&rdquo;</p>
+</blockquote>
+<p>Assuming you have decided this is the life for you, let us start with&hellip;</p>
+<h2>Choosing a supervisor</h2>
+<p>Before we go any further, let me make one point abundantly clear: <em>you cannot
+start this process too soon.</em> If you think 12 months ahead is possibly being too
+forward, you are wrong. I first contacted my supervisor Dr Mateja Jamnik 15 months
+before I was due to start studying. It was almost too late. <em>Contact potential
+supervisors now.</em></p>
+<p>When deciding whether or not to undertake postgraduate study, I was advised (by
+my excellent honours supervisor Dr Kourosh Neshatian) that I should not choose
+the university, I should choose the supervisor. This is, of course, easier said
+than done, because how to you find a supervisor? There are thousands of universities
+around the world, each with a dozen or more potential researchers. Yes, a small
+data-set by any standard, but still a bit much when there is no good algorithm to
+filter by!</p>
+<p>The hunt begins with (what else?) Google. Type in words that sound interesting.
+See which names start to come back. Pick a couple of universities that sound nice,
+and see who their researchers are. Then see who they collaborate with. Who were
+their supervisors? If they are over a certain age, see who they supervised&mdash;they
+are probably able to supervise you now! This sounds like it would lead to exponential
+explosion, but a strange pattern starts to emerge: when you find your corner of
+the academic world, it becomes apparent that there are no more than a hundred or
+active researchers, and that they all know each other.</p>
+<p>This limited pool is your set of potential supervisors. This is the step where
+gut instinct takes over. Go through their personal web pages (admittedly easier
+in computer science because the odds that they have a [still maintained] website
+is better-than-average) and see who they are, how they think, how they work.
+If there is anything that just doesn&rsquo;t seem to gel, strike them from the list.
+This is a person you will have to work closely with for 3+ years, so it&rsquo;s worth
+getting this right. If you have any doubts about whether you could get on well
+with this person, it mightn&rsquo;t be worth the risk! What if you&rsquo;re wrong? Well, it
+was better to err on the side of caution than to wind up 18 months into a project
+where every conversation is a fight.</p>
+<p>One tip I kept seeing was to get in touch with your potential supervisor&rsquo;s past
+students. This is probably excellent advice, but not something I did. It seemed
+too intrusive to reach out to people to grill them on what their supervisor was
+like. Plus, I wasn&rsquo;t sure how much this would help. Just because they got on great
+doesn&rsquo;t mean I would&mdash;they&rsquo;re not me, so why would their experience have any
+impact on mine? Still, if you have the nerve to do this, I can&rsquo;t see that it
+would hurt.</p>
+<p>Another piece of advice I received, which I partially listened to, is to consider
+the location. It&rsquo;s all very well finding the perfect adviser, but if they live in
+the middle of a nuclear wasteland you might still want to pass. This place will
+be your home for the foreseeable future, you have to like it. For example, I had
+considered a few Australian supervisors, but I cannot see myself living in Australia
+for three years, so decided it wasn&rsquo;t worth it.</p>
+<p>Some things to <em>not</em> do:
+<em> Choose the university based on its prestige. (I know, rich coming from
+someone who is going to Cambridge, but hear me out.) Just because a university
+is well-regarded doesn&rsquo;t mean your PhD/Masters/whatever will be worth more. It
+probably won&rsquo;t hurt, but if you&rsquo;re choosing somewhere for their name at the
+expense of the supervisor or project, you won&rsquo;t survive this.
+</em> Choose a supervisor because they&rsquo;re a &ldquo;rock-star&rdquo;. Frankly, this
+will probably hurt you more than help you, because if they really are a
+rock-star in your field, they are probably already over-worked, supervising more
+than a few students, and will probably remain that person who knocks on your door
+once a month who you have to remind of your name. This is not a productive
+relationship, don&rsquo;t settle for it.
+* Choose a supervisor because they have funding. Yes, it is super important to
+have funding for your research, but having a supervisor with funding is a bit of
+a double edged sword. That money probably comes from a grant for a specific
+project, which means your topic is preselected. If this isn&rsquo;t a deal-breaker,
+there is another concern: if anything goes wrong in the supervision relationship,
+you can&rsquo;t easily change supervisor, as your funding is tied to them.</p>
+<blockquote>
+<p><strong>Story time</strong><br>
+When I was looking for places to study, I initially didn't consider Cambridge.
+I looked at places that are admittedly still very ambitious, such as the
+University of Edinburgh, but did not find a supervisor that I felt like reaching
+out to. It was from here that I learned of Mateja, as she studied at Edinburgh.
+It was somewhat of a disappointment to discover that Mateja worked at Cambridge,
+because that meant that I now had to try and get in to Cambridge! Entry to
+Cambridge is a bit competitive, to say the least. Nevertheless, I managed it,
+and so can you!</p>
+</blockquote>
+<p>Found someone? Good. Hold on, because now you have to decide on a project.</p>
+<h2>Picking a project</h2>
+<p>Now that you have a supervisor, you need to settle on what, exactly, you want to
+devote the next three-to-seven years of your life towards studying. If you have
+an idea already, great, put it forward, but be prepared for your supervisor to
+shoot it down. They know how research works, you don&rsquo;t. Take the hint.</p>
+<p>Let&rsquo;s be honest, most of us have no idea what to study. With any luck, your
+supervisor (whom you have contacted, yes?) will have a list of projects either on
+their website or (more likely) that they can email to you if you request it. These
+make an excellent starting point. Don&rsquo;t feel bound by the list, but it will
+provide a jumping-off place for your search.</p>
+<p>Finding your niche is something truly difficult. You need something achievable,
+but also something no-one has done before. Sure, no-one has show whether
+\(P \stackrel{?}{=} N\!P\),
+but it also doesn&rsquo;t make for an ideal PhD topic. I have no good tips for
+this, as it is something that I find difficult. Finding the initial problem is
+hard, but once you&rsquo;re neck-deep in it, there seem to be problems everywhere.</p>
+<p>If you cannot find a project that both you and your supervisor agree on, now is
+the time to abandon ship and find a new supervisor. If you don&rsquo;t like the
+topic you choose, you will not be able to stay motivated. If they don&rsquo;t like
+the topic, they will not want (or possibly not be able) to help you when, inevitably,
+there are challenges.</p>
+<p>Picking a project is a research endeavour in its own right. <em>Do not think that it
+will be easy</em>, something that you can just come up with over-night. This will take
+potentially weeks of research to identify, narrow, and understand. Different universities
+have different requirements for what you have to understand by enrollment. Some
+will only ask you to know the general area; others will require you to have a six
+page proposal ready when you apply to enrol, just to be sure you understand what
+you&rsquo;re signing up for!</p>
+<blockquote>
+<p><strong>Story time</strong><br>
+I am terrible at finding research problems. It does get easier, I&rsquo;ve
+learned, because when you start to look at a problem you start to see holes.
+But from the outside, it is nowhere near as obvious. This is where a truly
+excellent supervisor steps in, offers some ideas, and lets you run with it.
+For example, when I was contacting Mateja for the first time, I had a (frankly
+terrible) half-idea that I put forward. I was trying to look like I knew what
+I was doing. I did not. But Mateja put forward a few ideas that she was interested
+in looking at, and then let me take any of them in a direction of my choosing.
+This is how I ended up with &ldquo;Automating representation change across domains
+for reasoning&rdquo;.</p>
+</blockquote>
+<h2>Enrollment</h2>
+<p>By this stage, you might be ready to enrol at your supervisor&rsquo;s institution.
+This is not where is becomes easy, I can assure you. Depending on the university,
+this process ranges from mildly annoying, through to hopelessly frustrating! I was
+fortunate that Cambridge&rsquo;s process is mostly online, with a simple tracking
+page for you to see (vaguely) what is happening. Could it be better? Of course.
+Is it the worst out there? Absolutely not.</p>
+<p>Cambridge was not the only university I applied to (eggs, baskets, etc.). I also
+applied to the University of Canterbury. This was a very different process. For
+starters, this is not an online application. Everything is done through good old
+fashioned dead trees and talking to people&mdash;ew. Feedback was limited (although
+substantially faster than at Cambridge) and the whole process was fairly poorly
+documented. That's not to say every part of it was worse: the actual application
+form was much simpler, mostly because it expected less. All it needed for a research
+topic, for example, was a tentative title. That&rsquo;s it. Cambridge demanded a
+multi-page proposal! Yikes!</p>
+<p>Assuming you manage to wrangle all the paperwork (why do I need another photo of
+myself?) and shepherd your referees into order (yes, that deadline is this week;
+yes, I sent that email three weeks ago), congratulations, you have taken <em>literally
+only the first step of dozens</em> to being enrolled. That was, however, the last step
+where you had any semblance of control. You fate is with the gods of academia now:
+the admissions department.</p>
+<p>If you know a soothsayer, now is the time to give them a call. They are possibly
+your best chance of understanding any decisions that are about to be made. If you
+have a passionate supervisor, this step is much easier, as they will hopefully
+charge in to battle to support your application. At Cambridge, the enrollment
+process involves a Skype interview with your nominated supervisor: this is a great
+chance to have a first chat with them face-to-face. Until this point most of your
+contact was via email. This step can make-or-break an application&mdash;after
+all, if they&rsquo;re not willing to say you are worthy of a place, there is no
+way in hell you are getting in. But if they do support you, there is not much
+that will stop the process: your grades are probably fine if you have got this
+far, it just becomes a numbers game. All you can do is hope you don&rsquo;t fall
+below the cut-off line. Do not expect your progress at this stage to be fast.
+Universities would be out-paced by a glacier, all you can do is wait. Well, wait
+and apply for funding.</p>
+<h2>Funding</h2>
+<p><em>Do not do a self-funded PhD.</em> It is not worth it. If the research is worth anything,
+someone will pay you to do it. The best kind of funding comes from trusts or
+universities, because these do not tie you to a specific supervisor or topic.
+However, this also makes these sources of funding the most competitive. When you
+start thinking about funding is also important, and may be worth researching up
+to several <em>years</em> in advance, in order to prepare the best possible version of
+yourself (note: I tried this, it didn&rsquo;t work).</p>
+<p>Funding is very much a make-or-break exercise, and the amount of funding you need
+depends on where you want to study, whether you are a resident of that country,
+and how much money you need to survive. Do not be stingy when applying for funding:
+yes, you might feel like you&rsquo;re being a pain constantly asking for references,
+but you are doing this to make sure you can survive. You cannot work full-time
+while you are studying, don&rsquo;t trick yourself into thinking that you can.
+If you are going overseas, remember that you will be stung twice: you will have
+to pay international fees, which demands a larger scholarship; and you will not
+have access to all your usual resources, or employment, for potentially some time.</p>
+<p>Most universities are very good about discussing the amount of money you will need
+to survive for the duration of your degree. For example, as an international student
+studying towards a PhD in Computer Science at the University of Cambridge, the
+University estimates that I will need about &pound;40,000 <em>per year</em>, covering both
+fees and living costs. Yikes. Be prepared for a big number. (The US is worse, where
+a comparable university would be $45,000 just for fees&mdash;living costs are extra!)
+One thing to be aware of is that their &ldquo;living costs&rdquo; estimate assumes
+you live like a pauper and <em>like it</em>. Even if your scholarship covers living costs,
+be prepared to do some work (e.g. as a supervisor/tutor/T.A. depending on country)
+to top up the funds. If you choose to study domestic, you will not need scholarships
+that are quite so huge, because often study is partially funded by the government
+for domestic students (at least, that is the case in Australasia).</p>
+<blockquote>
+<p><strong>Story time</strong><br>
+Finding funding was a huge problem for me. In fact, it reached the point where
+I though I was not going to be able to go to Cambridge because almost all the
+scholarship opportunities had gone. I had been going to interviews up and down
+the country (and internationally) for months, always making it to the final few,
+but never being able to secure the funding. Be prepared for <em>a lot</em> of disappointments
+when searching for funding. There was a lot of cheering and crying when I received
+the email saying I had received the Hamilton Cambridge International Scholarship,
+as it was the only thing that kept the dream alive.</p>
+</blockquote>
+<h2>The good news</h2>
+<p>Every story of &ldquo;how I got in to grad school&rdquo; always has an element
+of survivor bias: the people writing these pieces are the ones that made it.
+There are a significant number more who did not make it. This essay is no different,
+because I also managed to pass every hurdle on the way (somehow). But with any
+luck, this story has been interesting, and might give you some guidance on what
+form your own path will take.</p>
+<p>I do hope that you will also get good news on your application, but don&rsquo;t
+worry if this is not the case&mdash;just try again. If you definitely want to
+start studying at a certain time, apply to work with a different supervisor: there
+are still plenty out there who would be wonderful to work with. If you really do
+have your heart set on a certain project with a certain person, wait it out. Get
+a job for 12 months and earn a bit of pocket money. Sometimes this is unavoidable,
+due to terms: southern hemisphere applicants have to wait twelve months (November
+through October) between the end of their academic year and the start of that in
+the northern hemisphere.</p>
+<p>And if you did get good news, let me be the first to say congratulations! This is
+no small achievement, you have successfully been selected from <em>literally thousands</em>
+of applicants to be good enough to study at the most advanced level available.
+But for you, the fun has only just started. Get that visa, book those tickets,
+find that flat/room/cardboard box that you will call home for the next 3+ years.
+This is an exciting time, grab it with both hands and run with it. You will laugh,
+you will cry, and you will almost certainly think this was a bad decision. It is
+not. You are strong, you will survive this, and you too will go on to perpetuate
+the survivor bias that leads us all to postgraduate study.</p>
+<h2>I might be wrong</h2>
+<p>I am just at the beginning of this journey myself, so all of the above is just a
+reflection of how I went through the application process. I might find that it
+all was a load of bollocks, that I got through by the skin of my teeth, and that
+you should never, ever do things this way.</p>
+<p>With that in mind, I present to you a collection of resources I found immensely
+useful when perparing to study. There is a computer science and Cambridge slant
+to these resources, but they might be useful to other disciplines too.</p>
+<ul>
+<li>
+<p><a href="http://matt.might.net/">Professor Matthew Might</a> has several wonderful articles
+on how to get in to graduate school. I recommend starting with <a href="http://matt.might.net/articles/phd-school-in-pictures/">&ldquo;The illustrated
+guide to a Ph.D.&rdquo;</a>,
+and then looking at <a href="http://matt.might.net/articles/how-to-apply-and-get-in-to-graduate-school-in-science-mathematics-engineering-or-computer-science/">&ldquo;HOWTO: Get into grad school&rdquo;</a>.
+Fair warning: Prof. Might is a Computer Science professor in the United States,
+so his advice will skew computer science-y and US-centric.</p>
+</li>
+<li>
+<p>For a slightly more UK-oriented source of support, there was the ever-wonderful
+<a href="https://www.thestudentroom.co.uk/forumdisplay.php?f=100">Student Room</a>, which is
+a forum for UK students of every age group. If you are looking to go to a well-known
+university, there will almost certainly be a thread dedicated to the students who,
+like you, are anxiously awaiting confirmation by the university. Just knowing that
+you&rsquo;re not alone is one of the most comforting things you get feel.</p>
+</li>
+<li>
+<p>Just trying to get a feel for different universities (or more specifically, the
+university where your supervisor works)? Then YouTube really is a wonderful resource.
+There are many <em>vloggers</em> that document their process and, while mostly undergraduate,
+they can give you a hint as to what the lifestyle is like. My personal favourite
+is <a href="https://www.youtube.com/user/jaketvee">Jake Wright</a>, who is particularly great
+simply because his video editing is superb.</p>
+</li>
+<li>
+<p>If you ever need a reminder that yes, this stuff really is hard, the wonderful
+<a href="https://thesiswhisperer.com">Thesis Whisperer</a> will be able to set you straight.
+Dr Inger Mewburn works at The Australian National University and makes sure that
+all those PhD students really do know what they&rsquo;re meant to be doing. Her
+blog is a wonderful collection of accumulated knowledge, and well worth a look.</p>
+</li>
+</ul>
+</div>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['\\(','\\)'], ['\\(','\\)']]}
+});
+</script>
+<script async src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_SVG'></script>
+        </div>
+        <footer>
+            <span class='selector help-button'>
+                <a onclick="show_help()" class='active'>
+                    <span>&nbsp;&nbsp;&nbsp;?</span>
+                </a>
+                <a onclick="show_help()">
+                    <span>Help</span>
+                </a>
+            </span>
+            <span class='separator'></span>
+            <span class='selector'>
+                <a id="white-button" class='theme-button active' onclick='switch_theme("white")'>
+                    <span>light</span>
+                </a>
+                <a id="black-button" class='theme-button' onclick='switch_theme("black")'>
+                    <span>dark</span>
+                </a>
+            </span>
+          </footer>
+        <div id="cookies" class="cookies">
+            FYI, I use cookies to improve this site.
+            <div class="cookie-buttons">
+                <button onclick="clear_cookie_message()">I'm OK with that.</button>
+                <a href="http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm" target="_blank">Wait&mdash;what?</a>
+            </div>
+        </div>
+        <script>"use strict";!function(e,t,n){function r(e,t,n){if(e.addEventListener)return void e.addEventListener(t,n,!1);e.attachEvent("on"+t,n)}function o(e){if("keypress"==e.type){var t=String.fromCharCode(e.which);return e.shiftKey||(t=t.toLowerCase()),t}return g[e.which]?g[e.which]:v[e.which]?v[e.which]:String.fromCharCode(e.which).toLowerCase()}function i(e,t){return e.sort().join(",")===t.sort().join(",")}function c(e){var t=[];return e.shiftKey&&t.push("shift"),e.altKey&&t.push("alt"),e.ctrlKey&&t.push("ctrl"),e.metaKey&&t.push("meta"),t}function a(e){if(e.preventDefault)return void e.preventDefault();e.returnValue=!1}function l(e){if(e.stopPropagation)return void e.stopPropagation();e.cancelBubble=!0}function s(e){return"shift"==e||"ctrl"==e||"alt"==e||"meta"==e}function u(){if(!k){k={};for(var e in g)e>95&&e<112||g.hasOwnProperty(e)&&(k[g[e]]=e)}return k}function d(e,t,n){return n||(n=u()[e]?"keydown":"keypress"),"keypress"==n&&t.length&&(n="keydown"),n}function h(e){return"+"===e?["+"]:(e=e.replace(/\+{2}/g,"+plus"),e.split("+"))}function f(e,t){var n,r,o,i=[];for(n=h(e),o=0;o<n.length;++o)r=n[o],b[r]&&(r=b[r]),t&&"keypress"!=t&&y[r]&&(r=y[r],i.push("shift")),s(r)&&i.push(r);return t=d(r,i,t),{key:r,modifiers:i,action:t}}function m(e,n){return null!==e&&e!==t&&(e===n||m(e.parentNode,n))}function p(e){function n(e){e=e||{};var t=!1,n;for(n in b)e[n]?t=!0:b[n]=0;t||(E=!1)}function u(e,t,n,r,o,c){var a,l,u=[],d=n.type;if(!y._callbacks[e])return[];for("keyup"==d&&s(e)&&(t=[e]),a=0;a<y._callbacks[e].length;++a)if(l=y._callbacks[e][a],(r||!l.seq||b[l.seq]==l.level)&&d==l.action&&("keypress"==d&&!n.metaKey&&!n.ctrlKey||i(t,l.modifiers))){var h=!r&&l.combo==o,f=r&&l.seq==r&&l.level==c;(h||f)&&y._callbacks[e].splice(a,1),u.push(l)}return u}function d(e,t,n,r){y.stopCallback(t,t.target||t.srcElement,n,r)||!1===e(t,n)&&(a(t),l(t))}function h(e){"number"!=typeof e.which&&(e.which=e.keyCode);var t=o(e);if(t)return"keyup"==e.type&&w===t?void(w=!1):void y.handleKey(t,c(e),e)}function m(){clearTimeout(k),k=setTimeout(n,1e3)}function g(e,t,r,i){function c(t){return function(){E=t,++b[e],m()}}function a(t){d(r,t,e),"keyup"!==i&&(w=o(t)),setTimeout(n,10)}b[e]=0;for(var l=0;l<t.length;++l){var s=l+1===t.length,u=s?a:c(i||f(t[l+1]).action);v(t[l],u,i,e,l)}}function v(e,t,n,r,o){y._directMap[e+":"+n]=t,e=e.replace(/\s+/g," ");var i=e.split(" "),c;if(i.length>1)return void g(e,i,t,n);c=f(e,n),y._callbacks[c.key]=y._callbacks[c.key]||[],u(c.key,c.modifiers,{type:c.action},r,e,o),y._callbacks[c.key][r?"unshift":"push"]({callback:t,modifiers:c.modifiers,action:c.action,seq:r,level:o,combo:e})}var y=this;if(e=e||t,!(y instanceof p))return new p(e);y.target=e,y._callbacks={},y._directMap={};var b={},k,w=!1,_=!1,E=!1;y._handleKey=function(e,t,r){var o=u(e,t,r),i,c={},a=0,l=!1;for(i=0;i<o.length;++i)o[i].seq&&(a=Math.max(a,o[i].level));for(i=0;i<o.length;++i)if(o[i].seq){if(o[i].level!=a)continue;l=!0,c[o[i].seq]=1,d(o[i].callback,r,o[i].combo,o[i].seq)}else l||d(o[i].callback,r,o[i].combo);var h="keypress"==r.type&&_;r.type!=E||s(e)||h||n(c),_=l&&"keydown"==r.type},y._bindMultiple=function(e,t,n){for(var r=0;r<e.length;++r)v(e[r],t,n)},r(e,"keypress",h),r(e,"keydown",h),r(e,"keyup",h)}if(e){for(var g={8:"backspace",9:"tab",13:"enter",16:"shift",17:"ctrl",18:"alt",20:"capslock",27:"esc",32:"space",33:"pageup",34:"pagedown",35:"end",36:"home",37:"left",38:"up",39:"right",40:"down",45:"ins",46:"del",91:"meta",93:"meta",224:"meta"},v={106:"*",107:"+",109:"-",110:".",111:"/",186:";",187:"=",188:",",189:"-",190:".",191:"/",192:"`",219:"[",220:"\\",221:"]",222:"'"},y={"~":"`","!":"1","@":"2","#":"3",$:"4","%":"5","^":"6","&":"7","*":"8","(":"9",")":"0",_:"-","+":"=",":":";",'"':"'","<":",",">":".","?":"/","|":"\\"},b={option:"alt",command:"meta",return:"enter",escape:"esc",plus:"+",mod:/Mac|iPod|iPhone|iPad/.test(navigator.platform)?"meta":"ctrl"},k,w=1;w<20;++w)g[111+w]="f"+w;for(w=0;w<=9;++w)g[w+96]=w.toString();p.prototype.bind=function(e,t,n){var r=this;return e=e instanceof Array?e:[e],r._bindMultiple.call(r,e,t,n),r},p.prototype.unbind=function(e,t){var n=this;return n.bind.call(n,e,function(){},t)},p.prototype.trigger=function(e,t){var n=this;return n._directMap[e+":"+t]&&n._directMap[e+":"+t]({},e),n},p.prototype.reset=function(){var e=this;return e._callbacks={},e._directMap={},e},p.prototype.stopCallback=function(e,t){var n=this;return!((" "+t.className+" ").indexOf(" mousetrap ")>-1)&&(!m(t,n.target)&&("INPUT"==t.tagName||"SELECT"==t.tagName||"TEXTAREA"==t.tagName||t.isContentEditable))},p.prototype.handleKey=function(){var e=this;return e._handleKey.apply(e,arguments)},p.addKeycodes=function(e){for(var t in e)e.hasOwnProperty(t)&&(g[t]=e[t]);k=null},p.init=function(){var e=p(t);for(var n in e)"_"!==n.charAt(0)&&(p[n]=function(t){return function(){return e[t].apply(e,arguments)}}(n))},p.init(),e.Mousetrap=p,"undefined"!=typeof module&&module.exports&&(module.exports=p),"function"==typeof define&&define.amd&&define(function(){return p})}}("undefined"!=typeof window?window:null,"undefined"!=typeof window?document:null);var bind_nav,clear_cookie_message,deleteCookie,formatEmailLink,getCookie,getEmail,hamburger,navbox,setCookie,setupEmail,show_help,switchEmail,switch_language,switch_theme,indexOf=[].indexOf;setCookie=function e(t,n,r){var o,i;return r?(o=new Date,o.setTime(o.getTime()+24*r*60*60*1e3),i="; expires="+o.toGMTString()):i="",document.cookie=t+"="+n+i+"; path=/"},getCookie=function e(t){var n,r,o,i;for(i=t+"=",r=document.cookie.split(";"),o=0;o<r.length;){for(n=r[o];" "===n.charAt(0);)n=n.substring(1,n.length);if(0===n.indexOf(i))return n.substring(i.length,n.length);o++}return null},deleteCookie=function e(t){return setCookie(t,"",-1)},switch_theme=function e(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"white";return document.querySelector("#theme").setAttribute("href","/css/"+t+".css"),document.querySelectorAll(".theme-button").forEach(function(e){return e.classList.remove("active")}),document.querySelector("#"+t+"-button").classList.add("active"),deleteCookie("style"),setCookie("style",t,365),!1},switch_language=function e(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"EN",n,r,o,i,c;for(o=["EN","FR"],n=0,i=o.length;n<i;n++)r=o[n],c=document.querySelectorAll(":lang('"+r+"')"),r!==t?(c.forEach(function(e){return e.classList.add("hide")}),c.forEach(function(e){return e.classList.remove("show")})):(c.forEach(function(e){return e.classList.remove("hide")}),c.forEach(function(e){return e.classList.add("show")}));return document.querySelectorAll(".lang-button").forEach(function(e){return e.classList.remove("active")}),document.querySelector("#"+t+"-button").classList.add("active"),deleteCookie("language"),setCookie("language",t,365),!1},clear_cookie_message=function e(){return setCookie("cookiesOK","yes",365),document.querySelector("#cookies").style.display="none",document.querySelector("footer").style.paddingBottom="0px"},"yes"!==getCookie("cookiesOK")?(document.querySelector("#cookies").style.display="block",document.querySelector("footer").style.paddingBottom="120px"):document.querySelector("#cookies").style.display="none",String.prototype.rotate=function(e){var t,n,r,o,i,c;for(i="",this.toLowerCase(),o=this,n=0,r=o.length;n<r;n++)t=o[n],t.match(/[a-z]/)?(c=(t.charCodeAt(0)-97+e)%26+97,i+=String.fromCharCode(c)):i+=t;return i},String.prototype.reverse=function(){return this.split("").reverse().join("")},switchEmail=function e(t){return"mailto:"+t.replace("mailto:","").reverse()},getEmail=function e(t,n){return t.rotate(13)+"@"+n},formatEmailLink=function e(t){return'<a href="mailto:'+t+' " class="borked-email email">'+t+"</a>"},setupEmail=function e(){var t,n,r,o,i,c,a,l,s,u,d;for(i=document.querySelectorAll(".email-holder"),a=0,s=i.length;a<s;a++)o=i[a],c=o.dataset.beforeAt,t=o.dataset.afterAt,o.innerHTML=formatEmailLink(getEmail(c,t).reverse());for(r=document.querySelectorAll(".borked-email"),d=[],l=0,u=r.length;l<u;l++)n=r[l],n.addEventListener("mouseover",function(e){return e.target.href=switchEmail(e.target.href)}),d.push(n.addEventListener("mouseout",function(e){return e.target.href=switchEmail(e.target.href)}));return d},setupEmail(),show_help=function e(){var t;return document.querySelector(".help")?(t=document.querySelector(".help"),t.parentNode.removeChild(t)):document.body.innerHTML+="<div class='help'><div class='help-box'>\n    <h1>Keyboard Shortcuts</h1>\n    <dl>\n        <dt>Go to the Home page</dt>\n            <dd>ctrl-x ctrl-x <br /> ctrl-x ctrl-h</dd>\n        <dt>Go to the CV page</dt>\n            <dd>ctrl-x ctrl-a</dd>\n            <dd>ctrl-x ctrl-v</dd>\n        <dt>Go to the Research page</dt>\n            <dd>ctrl-x ctrl-r</dd>\n        <dt>Go to the Contact page</dt>\n            <dd>ctrl-x ctrl-c</dd>\n        <dt>Go to my Blog</dt>\n            <dd>ctrl-x ctrl-b</dd>\n        <dt>Send me an email</dt>\n            <dd>ctrl-x ctrl-e</dd>\n    </dl><dl>\n        <dt>Toggle the theme</dt>\n            <dd>ctrl-t ctrl-t</dd>\n        <dt>Switch to dark/black theme</dt>\n            <dd>ctrl-t ctrl-d <br /> ctrl-t ctrl-b</dd>\n        <dt>Switch to light/white theme</dt>\n            <dd>ctrl-t ctrl-l <br /> ctrl-t ctrl-w</dd>\n        <br />\n        <dt>Show/hide this help</dt>\n            <dd>?</dd>\n    </dl>\n    <a class='close-help' onClick='show_help();'>\n        Close\n    </a>\n</div></div>"},bind_nav=function e(t,n){return Mousetrap.bind(t,function(){return window.location.href=n})},bind_nav(["ctrl+x ctrl+h","ctrl+x ctrl+x"],"/"),bind_nav(["ctrl+x ctrl+a","ctrl+x ctrl+v"],"/cv/"),bind_nav("ctrl+x ctrl+w","/work/"),bind_nav("ctrl+x ctrl+c","/contact/"),bind_nav("ctrl+x ctrl+b","/blog/"),bind_nav("ctrl+x ctrl+e","mailto:"+getEmail("nneba.fgbpxqvyy",["cl","cam","ac","uk"])),Mousetrap.bind(["ctrl+t ctrl+d","ctrl+t ctrl+b"],function(){return switch_theme("black")}),Mousetrap.bind(["ctrl+t ctrl+l","ctrl+t ctrl+w"],function(){return switch_theme("white")}),Mousetrap.bind("ctrl+t ctrl+t",function(){return switch_theme("black"===getCookie("style")?"white":"black")}),Mousetrap.bind("?",show_help),hamburger=document.getElementById("menu-hamburger"),navbox=document.getElementsByClassName("nav-holder")[0],hamburger.addEventListener("click",function(e){return indexOf.call(hamburger.classList,"showing")>=0?(hamburger.classList.remove("showing"),navbox.classList.remove("showing")):(hamburger.classList.add("showing"),navbox.classList.add("showing"))});</script>
+        <!--<script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-79422930-1', 'auto');
+            ga('send', 'pageview');
+        </script>-->
+    </body>
+</html>
+

@@ -1,0 +1,233 @@
+#!/usr/bin/env python3
+
+"""
+Compile the Dynamic content to static content.
+"""
+
+import markdown
+import io
+import os
+import sys
+import shutil
+
+
+def maybe_make_dir(directory):
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+
+
+def parse_bibtex(bibfile):
+    """ This monster of a function is a small parser for BibTeX files.
+    """
+    bibname = ".".join(os.path.basename(bibfile).split(".")[:-1])
+    pdflink = "/static_assets/{}.pdf".format(bibname)
+    biblink = "/static_assets/{}.bib".format(bibname)
+    with open(bibfile) as f:
+        contents = f.read()
+    def consume_whitespace(string, idx):
+        whitespaces = '\t\n \r'
+        while string[idx] in whitespaces: idx += 1
+        return idx
+    def read_type(string, idx):
+        idx = consume_whitespace(string, idx)
+        chars = ""
+        while string[idx].lower() in "abcdefghikjlmnopqrstuvwxyz":
+            chars += string[idx]
+            idx += 1
+        idx = consume_whitespace(string, idx)
+        return chars, idx
+    def read_citekey(string, idx):
+        idx = consume_whitespace(string, idx)
+        chars = ""
+        while string[idx].lower() in "abcdefghikjlmnopqrstuvwxyz0123456789":
+            chars += string[idx]
+            idx += 1
+        assert(string[idx] == ",")
+        idx += 1
+        idx = consume_whitespace(string, idx)
+        return chars, idx
+    def read_key(string, idx):
+        idx = consume_whitespace(string, idx)
+        chars = ""
+        while string[idx].lower() in "abcdefghhijklmnopqrstuvwxyz-":
+            chars += string[idx]
+            idx += 1
+        idx = consume_whitespace(string, idx)
+        return chars, idx
+    def read_value(string, idx):
+        idx = consume_whitespace(string, idx)
+        assert(string[idx] == "{")
+        idx += 1
+        idx = consume_whitespace(string, idx)
+        chars = ""
+        while string[idx] != "}":
+            chars += string[idx]
+            idx += 1
+        assert(string[idx] == "}")
+        idx += 1
+        idx = consume_whitespace(string, idx)
+        return chars, idx
+    def read_attribute(string, idx):
+        idx = consume_whitespace(string, idx)
+        key, idx = read_key(string, idx)
+        idx = consume_whitespace(string, idx)
+        assert(string[idx] == '=')
+        idx += 1
+        idx = consume_whitespace(string, idx)
+        attribute, idx = read_value(string, idx)
+        idx = consume_whitespace(string, idx)
+        return key, attribute, idx
+    def parse(string, idx):
+        parse_obj = {}
+        idx = consume_whitespace(string, idx)
+        assert(string[idx] == '@')
+        idx += 1
+        entry_type, idx = read_type(string, idx)
+        parse_obj["type"] = entry_type
+        idx = consume_whitespace(string, idx)
+        assert(string[idx] == '{')
+        idx += 1
+        citekey, idx = read_citekey(string, idx)
+        parse_obj["citekey"] = citekey
+        idx = consume_whitespace(string, idx)
+        while string[idx] != '}':
+            label, value, idx = read_attribute(string, idx)
+            parse_obj[label.lower()] = value
+            idx = consume_whitespace(string, idx)
+            if string[idx] == ',':
+                idx += 1
+                idx = consume_whitespace(string, idx)
+        idx += 1
+        return parse_obj, idx
+    return {**parse(contents, 0)[0], **{"pdf_link": pdflink, "bib_link": biblink}}
+
+
+def create_markdown_page(infile, outfile, templatefile):
+    """ Given a source file, produce the outfile based on templatefile.
+    """
+    title_string = infile.split("/")[-1].split(".")[0]
+    html_string = io.BytesIO()
+    markdown.markdownFromFile(input=infile, output=html_string)
+    with open(templatefile) as f:
+        wrapper_html = f.read()
+    wrapper_html = wrapper_html.replace("{{-- TITLE --}}", title_string)
+    wrapper_html = wrapper_html.replace("{{-- CONTENT --}}", str(html_string.getvalue(), encoding="UTF-8"))
+    maybe_make_dir(os.path.dirname(outfile))
+    with open(outfile, 'w') as f:
+        f.write(wrapper_html)
+    html_string.close()
+
+
+def create_blog_listing(filenames_and_links, outfile, templatefile):
+    """ Given a list of blog posts, produce the main list.
+    """
+    sorter = lambda x: tuple(int(d) for d in x[0].split('.')[1].split("-"))
+    listed_html = ""
+    item_template = """<div class="dynamic-link"><a href="{link}">{title}</a><span class="date">{date}</span></div>"""
+    for filename, link in sorted(filenames_and_links, key=sorter, reverse=True):
+        parts = filename.split('/')[-1].split('.')
+        listed_html += item_template.format(link=link, title=parts[0], date=parts[1])
+    with open(templatefile) as f:
+        wrapper_html = f.read()
+    wrapper_html = wrapper_html.replace("{{-- CONTENT --}}", listed_html)
+    with open(outfile, 'w') as f:
+        f.write(wrapper_html)
+
+
+def create_research_listing(publications, talks_fn_links, outfile, templatefile):
+    """ Similar to blog, create a listing of research.
+    """
+    def val(m):
+        return {"Jan": 1, "Feb": 2, "Mar": 3, "Apr": 4, "May": 5, "Jun": 6,
+                "Jul": 7, "Aug": 8, "Sep": 9, "Oct": 10, "Nov": 11, "Dec": 12}[m[:3]]
+    talk_sorter = lambda x: tuple(int(d) for d in x[0].split(".")[1].split("-"))
+    bib_sorter = lambda x: (int(x["year"]), val(x["month"]))
+    listed_talks = ""
+    listed_bib = ""
+    talk_template = """<div class="dynamic-link"><a href="{link}">{title}</a><span class="date">{date}</span></div>"""
+    bib_template = """
+<div class="dynamic-link">
+    <a href="{pdflink}">
+        <h2>{title}.</h2>
+        <span class="authors">{author}</span>
+    </a><br/>
+    {journal}
+    <span class="date">{date}</span><br />
+    {copyright}
+    <a class="bibtex" href="{biblink}">Download BibTeX</a>
+</div>"""
+    for filename, link in sorted(talks_fn_links, key=talk_sorter, reverse=True):
+        parts = filename.split("/")[-1].split('.')
+        listed_talks += talk_template.format(link=link, title=parts[0], date=parts[1])
+    for bibobj in sorted(map(parse_bibtex, publications), key=bib_sorter, reverse=True):
+        listed_bib += bib_template.format(
+            pdflink = bibobj["pdf_link"],
+            title = bibobj["title"],
+            author = bibobj["author"],
+            journal = "<span class='jounrnal'>" + bibobj["journal"] + "</span>" if "journal" in bibobj
+                                        else "<span class='journal'>" + bibobj["booktitle"] + "</span>" if "booktitle" in bibobj
+                                                                 else "",
+            date = bibobj["month"] + " " + bibobj["year"],
+            copyright = "<span class='orig'>" + bibobj["copyright"] + "</span><br />" if "copyright" in bibobj else "",
+            biblink = bibobj["bib_link"]
+        )
+    with open(templatefile) as f:
+        wrapper_html = f.read()
+    wrapper_html = wrapper_html.replace("{{-- TALKS --}}", listed_talks)
+    wrapper_html = wrapper_html.replace("{{-- PUBLICATIONS --}}", listed_bib)
+    with open(outfile, 'w') as f:
+        f.write(wrapper_html)
+
+
+def format_url(filename, toplevel):
+    to_remove = "./~!?,-:;@#$%^&*()[]+=}{|\"'<>"
+    name = filename.lower().split('/')[-1].split(".")[0]
+    for bad in to_remove:
+        name = name.replace(bad, "")
+    return "/{}/{}/".format(toplevel, name.replace(" ", "-"))
+
+
+def copy_to_assets(filename, targetdir):
+    maybe_make_dir(targetdir)
+    if os.path.isdir(filename):
+        try:
+            shutil.copytree(filename, os.path.join(targetdir, filename.rstrip("/").split("/")[-1]))
+        except FileExistsError:
+            pass
+    else:
+        shutil.copy(filename, targetdir)
+
+
+def main():
+    files = os.listdir("dynamic")
+    blog_posts, publications, talks = [], [], []
+    for filename in files:
+        if filename[0] == '.':
+            # Skip dotfiles
+            print("skipping", filename)
+            continue
+        print(filename)
+        extension = "." + filename.split(".")[-1]
+        filename = "dynamic/" + filename
+        if extension == ".md":
+            # Blog post
+            link = format_url(filename, "blog")
+            blog_posts.append((filename, link))
+            create_markdown_page(filename, "source" + link + "index.kit", "source/blog_post.template")
+        elif extension == ".bib":
+            # Publication
+            publications.append(filename)
+            copy_to_assets(filename, "source/static_assets/")
+        elif extension == ".talk":
+            # Talk (in markdown)
+            link = format_url(filename, "talk")
+            talks.append((filename, link))
+            create_markdown_page(filename, "source" + link + "index.kit", "source/talk.template")
+        else:
+            copy_to_assets(filename, "source/static_assets/")
+
+    create_blog_listing(blog_posts, "source/blog.kit", "source/blog_index.template")
+    create_research_listing(publications, talks, "source/research.kit", "source/research.template")
+
+
+main()

@@ -1,0 +1,13 @@
+<!-- $subtitle: Blog by -->
+<!-- $description:
+    A infrequently-updated blog of my life, or lack thereof.
+-->
+<!-- $blog_active = active -->
+<!-- @import "header.kit" -->
+</div>
+
+<h1>Blog</h1>
+{{-- CONTENT --}}
+
+
+<!-- @import "footer.kit" -->

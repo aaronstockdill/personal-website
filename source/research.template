@@ -1,0 +1,34 @@
+<!-- $subtitle: Research by -->
+<!-- $description:
+    A summary of my research.
+-->
+<!-- $research_active = active -->
+<!-- @import "header.kit" -->
+
+<ul class="submenu">
+   <li><a href="#Publications">Publications</a></li>
+   <li><a href="#Talks">Talks</a></li>
+   <li><a href="https://github.com/aaronstockdill">GitHub</a></li>
+</ul>
+</div>
+
+<span class="anchor" id="Publications"></span>
+<h1 id="Publications">Publications</h1>
+
+{{-- PUBLICATIONS --}}
+
+
+    <hr />
+
+
+ <h1 id="Talks">Talks</h1>
+
+{{-- TALKS --}}
+
+    <hr />
+
+
+    <h1 id="GitHub">GitHub</h1>
+    <p>I infrequently put projects on GitHub, but you are welcome to view what is available there: <a href="https://github.com/aaronstockdill"> Aaron Stockdill on GitHub</a>.</p>
+
+<!-- @import "footer.kit" -->

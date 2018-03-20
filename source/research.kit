@@ -5,54 +5,6 @@
 <!-- $research_active = active -->
 <!-- @import "header.kit" -->
 
-<?php
-date_default_timezone_set('Pacific/Auckland');
-$rootdir = realpath(dirname(__FILE__));
-$filedir = $rootdir."/../../dynamic/";
-define('FILE_DIR', $filedir);
-
-function list_files($type, $display, $sort) {
-    $files = scandir(FILE_DIR);
-    $count = 0;
-    $filtered_files = array();
-    foreach ($files as $f) {
-        if ($f[0] == ".") {
-            // pass
-        } else {
-            $parts = explode(".", $f);
-            $title = $parts[0];
-            $date = $parts[1];
-            $extension = pathinfo($f, PATHINFO_EXTENSION);
-            if ($extension == $type) {
-                $count += 1;
-                array_push($filtered_files, $f);
-            }
-        }
-    }
-    uasort($filtered_files, $sort);
-    foreach ($filtered_files as $f) {
-        echo $display($f);
-    }
-    if ($count == 0) {
-        echo "<p>There is no content yet.</p>";
-    }
-}
-
-function parsebib($filename) {
-    $bibtex = file_get_contents(FILE_DIR."/".$filename);
-    $bibjson = preg_replace("/^%(.*)$/m", "", $bibtex);
-    $bibjson = preg_replace("/((\w|-)+)\s*=\s*\{/", "\"$1\": \"", $bibjson);
-    $bibjson = preg_replace("/\}(?=\s*[,\}])/", "\"", $bibjson);
-    $bibjson = preg_replace("/@(\w+)\s*\{([^,]*)/", "{\"$1\": \"$2\"", $bibjson, 1);
-    $bibjson = preg_replace("/,\}/", "}", $bibjson, 1);
-    $bibobj = json_decode($bibjson);
-    $found = preg_match("/^%copyright (.*)$/m", $bibtex, $matches);
-    if ($found === 1) {
-        $bibobj->{"Copyright"} = $matches[1];
-    }
-    return $bibobj;
-}
-?>
 <ul class="submenu">
    <li><a href="#Publications">Publications</a></li>
    <li><a href="#Talks">Talks</a></li>
@@ -61,78 +13,37 @@ function parsebib($filename) {
 </div>
 
 <span class="anchor" id="Publications"></span>
-<h1>Publications</h1>
-<?php
-list_files("bib", function ($f) {
-    $fname = basename($f, ".bib");
-    $details = parsebib($fname.".bib");
-    $result = "<div class='dynamic-link'>";
-    $result .= "<a href='/work/dynamic.php?id=$fname&amp;type=pdf'>";
-    $result .= "<h2 class='title'>".$details->{"Title"}.".</h2>";
-    $result .= "<span class='authors'>".$details->{"Author"}."</span>";
-    $result .= "</a><br />";
-    if ($details->{"Journal"}) {
-        $result .= "<span class='journal'>".$details->{"Journal"}.".</span> ";
-    } else if ($details->{"Booktitle"}) {
-        $result .= "<span class='journal'>".$details->{"Booktitle"}.".</span> ";
-    }
-    $result .= "<span class='date'>".$details->{"Month"}." ".$details->{"Year"}.".</span><br />";
-    if ($details->{"Copyright"}) {
-        $result .= "<span class='orig'>".$details->{"Copyright"}."</span><br />";
-    }
-    $result .= "<a class='bibtex' href='/work/dynamic.php?id=$fname&amp;type=bib'>Download BibTeX</a>";
-    $result .="</div>";
-    return $result;
-}, function ($f, $g) {
-    $fname = basename($f, ".bib");
-    $gname = basename($g, ".bib");
-    $details1 = parsebib($fname.".bib");
-    $details2 = parsebib($gname.".bib");
-    $month_num = array(
-        "January" => "01",
-        "February" => "02",
-        "March" => "03",
-        "April" => "04",
-        "May" => "05",
-        "June" => "06",
-        "July" => "07",
-        "August" => "08",
-        "September" => "09",
-        "October" => "10",
-        "November" => "11",
-        "December" => "12",
-    );
-    $d1 = $details1->{"Year"}."-".$month_num[$details1->{"Month"}];
-    $d2 = $details2->{"Year"}."-".$month_num[$details2->{"Month"}];
-    if ($d1 == $d2) {
-        return 0;
-    }
-    return ($d1 < $d2) ? 1 : -1;
-});
-?>
+<h1 id="Publications">Publications</h1>
+
+
+<div class="dynamic-link">
+    <a href="/static_assets/Restricted Echo State Networks.pdf">
+        <h2>Restricted Echo State Networks.</h2>
+        <span class="authors">Stockdill, Aaron and Neshatian, Kourosh</span>
+    </a><br/>
+    <span class='journal'>AI 2016: Advances in Artificial Intelligence: 29th Australasian Joint Conference, Hobart, TAS, Australia, December 5-8, 2016, Proceedings</span>
+    <span class="date">December 2016</span><br />
+    <span class='orig'>The final publication is available at Springer via <a target='_blank' href='http://dx.doi.org/10.1007/978-3-319-50127-7_49'>http://dx.doi.org/10.1007/978-3-319-50127-7_49</a></span><br />
+    <a class="bibtex" href="/static_assets/Restricted Echo State Networks.bib">Download BibTeX</a>
+</div>
+<div class="dynamic-link">
+    <a href="/static_assets/Neuromorphic Computing.pdf">
+        <h2>Neuromorphic Computing with Reservoir Neural Networks on Memristive Hardware.</h2>
+        <span class="authors">Stockdill, Aaron</span>
+    </a><br/>
+    
+    <span class="date">October 2016</span><br />
+    
+    <a class="bibtex" href="/static_assets/Neuromorphic Computing.bib">Download BibTeX</a>
+</div>
 
 
     <hr />
 
 
-    <h1 id="Talks">Talks</h1>
-<?php
-list_files("talk", function ($f) {
-    $parts = explode(".", $f);
-    $result = "<div class='dynamic-link'>";
-    $result .= "<a href='/work/talk/".str_replace('-', '/', $parts[1])."/$parts[0]/'>".$parts[0]."</a>";
-    $result .= "<span class='date'>".$parts[1]."</span></div>";
-    return $result;
-}, function ($f, $g) {
-    $parts1 = explode(".", $f);
-    $parts2 = explode(".", $g);
-    if ($parts1[1] == $parts2[1]) {
-        return 0;
-    }
-    return ($parts1[1] < $parts2[1]) ? 1 : -1;
-});
-?>
+ <h1 id="Talks">Talks</h1>
 
+<div class="dynamic-link"><a href="/talk/csx/">CS+X</a><span class="date">2017-08-18</span></div><div class="dynamic-link"><a href="/talk/life-after-the-robot-apocalypse/">Life After the Robot Apocalypse</a><span class="date">2016-09-08</span></div><div class="dynamic-link"><a href="/talk/neuromorphic-computing-with-reservoir-neural-networks-on-memristive-hardware/">Neuromorphic Computing with Reservoir Neural Networks on Memristive Hardware</a><span class="date">2016-09-01</span></div>
 
     <hr />
 

@@ -10,10 +10,10 @@
             </span>
             <span class='separator'></span>
             <span class='selector'>
-                <a id="white-button" class='theme-button<?php if ($theme == "white") { echo " active";} ?>' onclick='switch_theme("white")'>
+                <a id="white-button" class='theme-button active' onclick='switch_theme("white")'>
                     <span>light</span>
                 </a>
-                <a id="black-button" class='theme-button<?php if ($theme == "black") { echo " active";} ?>' onclick='switch_theme("black")'>
+                <a id="black-button" class='theme-button' onclick='switch_theme("black")'>
                     <span>dark</span>
                 </a>
             </span>
@@ -25,13 +25,8 @@
                 <a href="http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm" target="_blank">Wait&mdash;what?</a>
             </div>
         </div>
-        <!-- <script src="/js/script.js" charset="utf-8" defer></script> -->
         <script><!-- @import "../html/js/script.js" --></script>
-        <?php
-            if (strpos($_SERVER['SERVER_NAME'],
-                       'aaron.stockdill.nz') !== false) {
-        ?>
-        <script>
+        <!--<script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -39,9 +34,6 @@
 
             ga('create', 'UA-79422930-1', 'auto');
             ga('send', 'pageview');
-        </script>
-        <?php
-        }
-        ?>
+        </script>-->
     </body>
 </html>

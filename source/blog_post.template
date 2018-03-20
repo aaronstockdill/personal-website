@@ -1,0 +1,15 @@
+<!-- $subtitle: {{-- TITLE --}} - Blog for -->
+<!-- $description: nil -->
+<!-- @import "/source/header.kit" -->
+    </div>
+<div class='writing'>
+<a href='/blog/' class='back-to-works'>Back to Blog</a>
+{{-- CONTENT --}}
+</div>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['\\(','\\)'], ['\\(','\\)']]}
+});
+</script>
+<script async src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_SVG'></script>
+<!-- @import "/source/footer.kit" -->
