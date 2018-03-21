@@ -502,6 +502,13 @@
 		"oAP": "\/html\/blog_post.template",
 		"oF": 1
 		},
+	"\/source\/CNAME": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/html\/CNAME",
+		"oF": 0
+		},
 	"\/source\/coffeescript\/email.coffee": {
 		"ft": 32,
 		"ma": 0,
