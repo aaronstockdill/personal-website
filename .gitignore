@@ -1,4 +1,3 @@
-.config.codekit*
 dynamic/*
 serve.log
 *.DS_Store
