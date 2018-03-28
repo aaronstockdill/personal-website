@@ -216,6 +216,24 @@
 		"oAP": "\/html\/dynamic\/Life After the Robot Apocalypse.2016-09-08.talk",
 		"oF": 1
 		},
+	"\/dynamic\/Missing what is not.2018-03-28.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 0,
+		"eL": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 1,
+		"oAP": "\/html\/dynamic\/Missing what is not.2018-03-28.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 1,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
 	"\/dynamic\/Neuromorphic Computing with Reservoir Neural Networks on Memristive Hardware.2016-09-01.talk": {
 		"cB": 0,
 		"ft": 8192,
@@ -419,12 +437,6 @@
 		"opt": 1,
 		"q": 100
 		},
-	"\/html": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "\/html\/html",
-		"oF": 0
-		},
 	"\/source\/404.kit": {
 		"cB": 0,
 		"ft": 2048,
@@ -472,6 +484,13 @@
 		"ft": 2048,
 		"oA": 0,
 		"oAP": "\/html\/blog\/good-news-everyone\/index.html",
+		"oF": 0
+		},
+	"\/source\/blog\/missing-what-is-not\/index.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 0,
+		"oAP": "\/html\/blog\/missing-what-is-not\/index.html",
 		"oF": 0
 		},
 	"\/source\/blog\/scholarship-calculus\/index.kit": {
@@ -1324,7 +1343,7 @@
 	"displayValue": "Personal ",
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-owl",
-	"lastBuiltDate": 543340057
+	"lastBuiltDate": 543934544
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
