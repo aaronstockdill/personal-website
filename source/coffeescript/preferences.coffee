@@ -31,31 +31,18 @@ switch_theme = (target="white") ->
     setCookie "style", target, 365
     false
 
-# Allow the ability to switch languages.
-switch_language = (target="EN") ->
-    languages = ["EN", "FR"]
-    for lang in languages
-        nodes = document.querySelectorAll(":lang('#{lang}')")
-        if lang != target
-            nodes.forEach (node) => node.classList.add 'hide'
-            nodes.forEach (node) => node.classList.remove 'show'
-        else
-            nodes.forEach (node) => node.classList.remove 'hide'
-            nodes.forEach (node) => node.classList.add 'show'
-    document.querySelectorAll(".lang-button").forEach (button) => button.classList.remove 'active'
-    document.querySelector("##{target}-button").classList.add 'active'
-    deleteCookie "language"
-    setCookie "language", target, 365
-    false
-
 # Cookie warning stuff...
 clear_cookie_message = () ->
     setCookie "cookiesOK", "yes", 365
     document.querySelector("#cookies").style.display = "none"
     document.querySelector("footer").style.paddingBottom = "0px"
 
-if getCookie("cookiesOK") != "yes"
+cookies_ok = () ->
+    getCookie("cookiesOK") != "yes"
+
+if cookies_ok
+    document.querySelector("#cookies").style.display = "none"
+    switch_theme(getCookie("style"))
+else
     document.querySelector("#cookies").style.display = "block"
     document.querySelector("footer").style.paddingBottom = "120px"
-else
-    document.querySelector("#cookies").style.display = "none"

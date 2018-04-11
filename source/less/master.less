@@ -1,13 +1,9 @@
-@body: "Open Sans", Helvetica, Arial, sans-serif;
-@header: "Nunito Sans", Futura, Arial, sans-serif;
+@body: sans-serif; // "Open Sans", Helvetica, Arial, sans-serif;
+@header: sans-serif; // "Nunito Sans", Futura, Arial, sans-serif;
 @tertiary: @body;
 
 * {
     box-sizing: border-box;
-}
-
-.hide {
-    display: none !important;
 }
 
 html, body, :root {
@@ -45,19 +41,35 @@ h1, h2, h3, h4, h5, h6 {
     font-family: @header;
 }
 
-nav {
-    height: 1.3rem;
-    overflow: hidden;
-    font-size: 0.85rem;
-    font-family: @tertiary;
-    font-weight: 300;
-    line-height: 1.5rem;
-    text-align: center;
+.nav-holder {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: ~"calc(50vw - 12rem)";
 
-   a {
-        text-decoration: none;
-        padding: 0 0.5rem;
-        transition: color 0.2s ease;
+    nav {
+        font-size: 0.85rem;
+        font-family: @tertiary;
+        font-weight: 300;
+        width: 5rem;
+        position: absolute;
+        top: 4rem;
+        right: 0;
+
+        a {
+            text-decoration: none;
+            padding: 0 0.5rem 0.5rem 0.5rem;
+            transition: color 0.2s ease;
+            display: block;
+            text-align: right;
+
+            &.home {
+                font-weight: bold;
+                line-height: 1;
+            }
+        }
     }
 }
 
@@ -65,7 +77,7 @@ nav {
     max-width: 35rem;
     width: 100%;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1rem 2rem 2rem 7rem;
     line-height: 1.5;
     flex: 1 0 auto;
 
@@ -146,12 +158,15 @@ nav {
 
     .precontent {
         display: block;
-        text-align: center;
-        padding: 0.1rem 0;
+        padding: 0.1rem 0 0.1rem 1rem;
         font-size: 0.8rem;
 
         &.first {
-            margin-top: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        &.last {
+            margin-bottom: 1.5rem;
         }
     }
 
@@ -180,11 +195,12 @@ nav {
         .label, .value {
             display: inline-block;
             padding: 0.2rem;
-            max-width: 50%;
+            max-width: 60%;
             vertical-align: top;
+            overflow-x: auto
         }
         .label {
-            width: 8rem;
+            width: 6rem;
             text-align: right;
             padding-right: 1rem;
             font-weight: 300;
@@ -194,37 +210,6 @@ nav {
     pre {
         width: 100%;
         overflow-x: auto;
-    }
-
-    .back-to-works {
-        display: block;
-        padding-top: 1rem;
-        text-decoration: none;
-        text-align: center;
-        font-size: 0.85rem;
-        font-family: @tertiary;
-        font-weight: 300;
-    }
-
-    .submenu {
-        height: 1.6rem;
-        list-style: none;
-        margin: 0.1rem 0;
-        padding: 0;
-        font-family: @tertiary;
-        font-weight: 300;
-        text-align: center;
-
-        li {
-            display: inline-block;
-        }
-
-        a {
-            text-decoration: none;
-            padding: 0 0.5rem;
-            transition: color 0.2s ease;
-            font-size: 0.75rem;
-        }
     }
 
     .dynamic-link {
@@ -263,11 +248,10 @@ nav {
 }
 
 .welcome {
-    padding: 2rem;
-    flex: 1 0 auto;
-    max-width: 35rem;
-    margin: 0 auto;
-    text-align: center;
+
+    .nav-holder {
+        display: none;
+    }
 
     h1 {
         font-size: 4rem;
@@ -288,14 +272,24 @@ nav {
 
         div {
             margin-top: 1rem;
+            padding: 0 0.25rem;
         }
     }
 
     .email {
-        padding: 0 0.25rem;
         width: 12rem;
         text-decoration: none;
         transition: color 0.2s ease;
+    }
+
+    nav.home {
+        margin-top: 1rem;
+
+        a {
+            text-decoration: none;
+            display: block;
+            padding: 0.1rem 0.25rem;
+        }
     }
 
 }
@@ -307,18 +301,16 @@ img + em {
 }
 
 footer {
-    max-width: 35rem;
-    margin: 0 auto;
-    text-align: center;
+    width: ~"calc(50vw - 12rem)";
     font-family: @tertiary;
     font-weight: 300;
     font-size: 0.8rem;
+    text-align: right;
     opacity: 0.8;
-    position: relative;
+    position: fixed;
     bottom: 0;
     left: 0;
-    right: 0;
-    padding: 5px 2rem;
+    padding: 5px 0;
     transition: background 0.2s ease, color 0.2s ease;
     height: 1.8rem;
 

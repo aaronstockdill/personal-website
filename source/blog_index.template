@@ -4,7 +4,6 @@
 -->
 <!-- $blog_active = active -->
 <!-- @import "header.kit" -->
-</div>
 
 <h1>Blog</h1>
 {{-- CONTENT --}}

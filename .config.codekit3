@@ -28,7 +28,7 @@
 		"uuidString": "CF21AFA0-D9E9-4C5A-8F82-0C07239DE6B6"
 		}
 	],
-"creatorBuild": "26330",
+"creatorBuild": "26680",
 "files": {
 	"\/.gitignore": {
 		"cB": 0,
@@ -129,6 +129,7 @@
 	"\/dynamic\/Eureka.jpg": {
 		"ft": 16384,
 		"iS": 41371,
+		"jF": 0,
 		"oA": 1,
 		"oAP": "\/html\/dynamic\/Eureka.jpg",
 		"oF": 1,
@@ -164,6 +165,7 @@
 	"\/dynamic\/goodnews.jpg": {
 		"ft": 16384,
 		"iS": 85196,
+		"jF": 0,
 		"oA": 1,
 		"oAP": "\/html\/dynamic\/goodnews.jpg",
 		"oF": 1,
@@ -174,6 +176,7 @@
 	"\/dynamic\/Honours Presentation.jpg": {
 		"ft": 16384,
 		"iS": 56155,
+		"jF": 0,
 		"oA": 1,
 		"oAP": "\/html\/dynamic\/Honours Presentation.jpg",
 		"oF": 1,
@@ -191,6 +194,7 @@
 	"\/dynamic\/kings.jpg": {
 		"ft": 16384,
 		"iS": 624461,
+		"jF": 0,
 		"oA": 1,
 		"oAP": "\/html\/dynamic\/kings.jpg",
 		"oF": 1,
@@ -402,6 +406,7 @@
 	"\/dynamic\/selwyn.jpg": {
 		"ft": 16384,
 		"iS": 588793,
+		"jF": 0,
 		"oA": 1,
 		"oAP": "\/html\/dynamic\/selwyn.jpg",
 		"oF": 1,
@@ -430,12 +435,19 @@
 	"\/dynamic\/wireless_header.jpg": {
 		"ft": 16384,
 		"iS": 227306,
+		"jF": 0,
 		"oA": 1,
 		"oAP": "\/html\/dynamic\/wireless_header.jpg",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"q": 100
+		},
+	"\/html": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "\/html\/html",
+		"oF": 0
 		},
 	"\/source\/404.kit": {
 		"cB": 0,
@@ -1076,6 +1088,7 @@
 	"\/source\/static_assets\/Eureka.jpg": {
 		"ft": 16384,
 		"iS": 41371,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/html\/static_assets\/Eureka.jpg",
 		"oF": 0,
@@ -1093,6 +1106,7 @@
 	"\/source\/static_assets\/goodnews.jpg": {
 		"ft": 16384,
 		"iS": 85196,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/html\/static_assets\/goodnews.jpg",
 		"oF": 0,
@@ -1103,6 +1117,7 @@
 	"\/source\/static_assets\/Honours Presentation.jpg": {
 		"ft": 16384,
 		"iS": 56155,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/html\/static_assets\/Honours Presentation.jpg",
 		"oF": 0,
@@ -1120,6 +1135,7 @@
 	"\/source\/static_assets\/kings.jpg": {
 		"ft": 16384,
 		"iS": 624461,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/html\/static_assets\/kings.jpg",
 		"oF": 0,
@@ -1281,6 +1297,7 @@
 	"\/source\/static_assets\/selwyn.jpg": {
 		"ft": 16384,
 		"iS": 588793,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/html\/static_assets\/selwyn.jpg",
 		"oF": 0,
@@ -1291,6 +1308,7 @@
 	"\/source\/static_assets\/wireless_header.jpg": {
 		"ft": 16384,
 		"iS": 227306,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/html\/static_assets\/wireless_header.jpg",
 		"oF": 0,
@@ -1343,7 +1361,8 @@
 	"displayValue": "Personal ",
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-owl",
-	"lastBuiltDate": 543934544
+	"iconImageWasSetByUser": 0,
+	"lastBuiltDate": 545178148
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -3146,6 +3165,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
+		"outputFormat": 0,
 		"quality": 100
 		},
 	"languageDefaultsJS": {
