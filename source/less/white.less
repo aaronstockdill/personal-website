@@ -1,6 +1,6 @@
 @offblack: #555;
 @font: #222;
-@background: #fefefe;
+@background: #fff;
 
 ::selection {
     background: #ccc;
@@ -26,7 +26,8 @@ html, body {
 }
 
 nav a.active {
-    color: @font;
+    color: darken(@font, 20%);
+    border-color: @offblack;
 }
 
 .nav-holder {

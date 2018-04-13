@@ -24,11 +24,12 @@ html, body {
         }
     }
 
-    nav.home {
+    .trailing nav.home {
         a {
             text-align: center;
             font-size: 0.85rem;
             padding: 0;
+            margin: 0 auto;
         }
     }
 }
@@ -49,13 +50,16 @@ nav {
     top: 3rem;
 
     a {
-        margin: 0 !important;
         display: block;
         position: relative;
         padding-top: 0.5rem;
         text-align: right;
         padding-right: 1rem;
         font-size: 1rem;
+
+        .container.welcome & {
+            margin: .25rem .25rem .5rem 0;
+        }
 
         &.home {
             padding-bottom: 0.5rem;
@@ -135,6 +139,9 @@ nav {
 }
 
 footer {
+    position: relative;
+    width: 100%;
+
     .selector.help-button {
         display: none;
     }

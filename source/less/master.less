@@ -53,21 +53,29 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 0.85rem;
         font-family: @tertiary;
         font-weight: 300;
-        width: 5rem;
+        width: 6rem;
         position: absolute;
         top: 4rem;
         right: 0;
 
         a {
             text-decoration: none;
-            padding: 0 0.5rem 0.5rem 0.5rem;
+            padding: 0rem 0.25rem 0rem 0.5rem;
+            margin: 0.25rem 0.25rem 0.5rem 0;
             transition: color 0.2s ease;
             display: block;
             text-align: right;
 
+            &.active {
+                border-right-width: 1px;
+                border-right-style: solid;
+                margin-right: ~"calc(0.25rem - 1px)";
+            }
+
             &.home {
                 font-weight: bold;
                 line-height: 1;
+                margin-top: 0;
             }
         }
     }
@@ -425,10 +433,11 @@ footer {
     .help-box {
         padding: 3rem;
         padding-bottom: 4rem;
-        margin: 5%;
+        margin: 3% auto;
         position: relative;
         font-family: @body;
         font-weight: 300;
+        max-width: 800px;
 
         h1 {
             text-align: center;

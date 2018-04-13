@@ -603,7 +603,7 @@
 		"oAP": "\/html\/js\/script.js",
 		"oF": 0,
 		"oS": 1,
-		"sC": 1,
+		"sC": 0,
 		"tS": 1
 		},
 	"\/source\/contact.kit": {
@@ -1362,7 +1362,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-owl",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 545178148
+	"lastBuiltDate": 545349995
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

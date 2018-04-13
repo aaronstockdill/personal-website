@@ -107,7 +107,7 @@ def create_markdown_page(infile, outfile, templatefile):
     """
     title_string = infile.split("/")[-1].split(".")[0]
     html_string = io.BytesIO()
-    markdown.markdownFromFile(input=infile, output=html_string)
+    markdown.markdownFromFile(input=infile, output=html_string, extensions=['del_ins'])
     with open(templatefile) as f:
         wrapper_html = f.read()
     wrapper_html = wrapper_html.replace("{{-- TITLE --}}", title_string)
