@@ -28,7 +28,8 @@ switch_theme = (target="white") ->
     document.querySelectorAll(".theme-button").forEach (button) => button.classList.remove 'active'
     document.querySelector("##{target}-button").classList.add 'active'
     deleteCookie "style"
-    setCookie "style", target, 365
+    if cookies_ok()
+         setCookie "style", target, 365
     false
 
 # Cookie warning stuff...
@@ -38,11 +39,11 @@ clear_cookie_message = () ->
     document.querySelector("footer").style.paddingBottom = "0px"
 
 cookies_ok = () ->
-    getCookie("cookiesOK") != "yes"
+    getCookie("cookiesOK") == "yes"
 
-if cookies_ok
+if cookies_ok()
     document.querySelector("#cookies").style.display = "none"
-    switch_theme(getCookie("style"))
+    switch_theme(getCookie("style") || "white")
 else
     document.querySelector("#cookies").style.display = "block"
     document.querySelector("footer").style.paddingBottom = "120px"
