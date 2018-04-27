@@ -112,6 +112,7 @@ def create_markdown_page(infile, outfile, templatefile):
         wrapper_html = f.read()
     wrapper_html = wrapper_html.replace("{{-- TITLE --}}", title_string)
     wrapper_html = wrapper_html.replace("{{-- CONTENT --}}", str(html_string.getvalue(), encoding="UTF-8"))
+    wrapper_html = wrapper_html.replace("{{-- SLUG --}}", outfile.split("/")[-1].split(".")[0])
     maybe_make_dir(os.path.dirname(outfile))
     with open(outfile, 'w') as f:
         f.write(wrapper_html)
