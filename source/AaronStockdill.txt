@@ -10,7 +10,7 @@ Education
 
 Employment
 
-  Tutor, "Foundations of Computer Science", "Prolog", University of Cambridge, 2017.
+  Supervisor, "Foundations of Computer Science", "Prolog", "Logic and Proof", "Artificial Intelligence", "Interaction Design", University of Cambridge, 2017/18.
 
   Lecturer, "Introduction to Computer Science", University of Canterbury, 2017.
 
