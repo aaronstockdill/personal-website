@@ -259,6 +259,20 @@
 		"oAP": "\/html\/dynamic\/Neuromorphic Computing.pdf",
 		"oF": 1
 		},
+	"\/dynamic\/NeuromorphicReservoirs.bib": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/html\/dynamic\/NeuromorphicReservoirs.bib",
+		"oF": 0
+		},
+	"\/dynamic\/NeuromorphicReservoirs.pdf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/html\/dynamic\/NeuromorphicReservoirs.pdf",
+		"oF": 0
+		},
 	"\/dynamic\/Restricted Echo State Networks.bib": {
 		"cB": 0,
 		"ft": 8192,
@@ -442,12 +456,6 @@
 		"oIPL": 0,
 		"opt": 1,
 		"q": 100
-		},
-	"\/html": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "\/html\/html",
-		"oF": 0
 		},
 	"\/source\/404.kit": {
 		"cB": 0,
@@ -1168,6 +1176,20 @@
 		"oAP": "\/html\/static_assets\/Neuromorphic Computing.pdf",
 		"oF": 0
 		},
+	"\/source\/static_assets\/NeuromorphicReservoirs.bib": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/html\/static_assets\/NeuromorphicReservoirs.bib",
+		"oF": 0
+		},
+	"\/source\/static_assets\/NeuromorphicReservoirs.pdf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/html\/static_assets\/NeuromorphicReservoirs.pdf",
+		"oF": 0
+		},
 	"\/source\/static_assets\/Restricted Echo State Networks.bib": {
 		"cB": 0,
 		"ft": 8192,
@@ -1362,7 +1384,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-owl",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 546533948
+	"lastBuiltDate": 552828621
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
