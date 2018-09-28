@@ -5,6 +5,7 @@ Compile the Dynamic content to static content.
 """
 
 import markdown
+from mdx_smartypants import SmartypantsExt
 import io
 import os
 import sys
@@ -107,7 +108,7 @@ def create_markdown_page(infile, outfile, templatefile):
     """
     title_string = infile.split("/")[-1].split(".")[0]
     html_string = io.BytesIO()
-    markdown.markdownFromFile(input=infile, output=html_string, extensions=['del_ins'])
+    markdown.markdownFromFile(input=infile, output=html_string, extensions=['del_ins', SmartypantsExt(configs={})])
     with open(templatefile) as f:
         wrapper_html = f.read()
     wrapper_html = wrapper_html.replace("{{-- TITLE --}}", title_string)
