@@ -1,24 +1,32 @@
 {
-"AAInfo": "This is a CodeKit 3 project config file. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. Doing so will cause CodeKit to crash and\/or corrupt your project. I know it looks like JSON, but it is *not*. Many numbers in this file are 64-bit long long bitFlags, which JSON does not support. These numbers *cannot* be treated as discrete values and if you attempt to parse this file as standard JSON with any public JSON parser, these values will be corrupted. This file is not backwards-compatible with CodeKit 1 or 2. For more information, see https:\/\/codekitapp.com\/",
+"AAInfo": "This is a CodeKit 3 project config file. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. Doing so will cause CodeKit to crash and/or corrupt your project. I know it looks like JSON, but it is *not*. Many numbers in this file are 64-bit long long bitFlags, which JSON does not support. These numbers *cannot* be treated as discrete values and if you attempt to parse this file as standard JSON with any public JSON parser, these values will be corrupted. This file is not backwards-compatible with CodeKit 1 or 2. For more information, see https://codekitapp.com/",
 "buildSteps": [
 	{
+		"name": "Compile site from markdown",
+		"scriptSourceString": "# Paste your script here.\n./build-static",
+		"scriptType": 1,
+		"scriptUUIDString": "AD4D282F-96A8-4840-ADAD-A82EDFC75EEE",
+		"stepType": 2,
+		"uuidString": "98B7B777-88EC-4BAE-9433-D2467F422B8C"
+		},
+	{
 		"itemsToProcess": [
-			"\/source\/less\/600.less",
-			"\/source\/less\/black.less",
-			"\/source\/less\/fonts.less",
-			"\/source\/less\/master.less",
-			"\/source\/less\/print.less",
-			"\/source\/less\/white.less"
+			"/source/less/600.less",
+			"/source/less/black.less",
+			"/source/less/fonts.less",
+			"/source/less/master.less",
+			"/source/less/print.less",
+			"/source/less/white.less"
 			],
-		"name": "New \"Process Certain Files\" Step",
+		"name": "Compile LESS to CSS",
 		"stepType": 0,
 		"uuidString": "BB1FD1F8-358C-4E14-8197-A763A3214311"
 		},
 	{
 		"itemsToProcess": [
-			"\/source\/coffeescript\/script.coffee"
+			"/source/coffeescript/script.coffee"
 			],
-		"name": "New \"Process Certain Files\" Step",
+		"name": "Compile CoffeeScript to JavaScript",
 		"stepType": 0,
 		"uuidString": "CA187AD3-A791-4FC2-A226-204714100A0B"
 		},
@@ -28,30 +36,30 @@
 		"uuidString": "CF21AFA0-D9E9-4C5A-8F82-0C07239DE6B6"
 		}
 	],
-"creatorBuild": "26680",
+"creatorBuild": "28901",
 "files": {
-	"\/.gitignore": {
+	"/.gitignore": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/html\/.gitignore",
+		"oAP": "/html/.gitignore",
 		"oF": 1
 		},
-	"\/build-static": {
+	"/build-static": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/html\/build-static",
+		"oAP": "/html/build-static",
 		"oF": 1
 		},
-	"\/deploy-static": {
+	"/deploy-static": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/html\/deploy-static",
+		"oAP": "/html/deploy-static",
 		"oF": 1
 		},
-	"\/dynamic\/.Algorithms for Intelligence: Search.2018-03-01.md": {
+	"/dynamic/.Algorithms for Intelligence: Search.2018-03-01.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -60,7 +68,7 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"oA": 1,
-		"oAP": "\/html\/dynamic\/Algorithms for Intelligence: Search.2018-03-01.html",
+		"oAP": "/html/dynamic/Algorithms for Intelligence: Search.2018-03-01.html",
 		"oF": 1,
 		"oFM": 0,
 		"oS": 0,
@@ -69,7 +77,7 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/dynamic\/A catalogue of crazy.2017-10-12.md": {
+	"/dynamic/.Year One Done.2018-07-31.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 0,
@@ -78,7 +86,7 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"oA": 1,
-		"oAP": "\/html\/dynamic\/A catalogue of crazy.2017-10-12.html",
+		"oAP": "/html/dynamic/.Year One Done.2018-07-31.html",
 		"oF": 1,
 		"oFM": 0,
 		"oS": 0,
@@ -87,7 +95,7 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/dynamic\/Cambridge.2017-08-30.md": {
+	"/dynamic/A catalogue of crazy.2017-10-12.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 0,
@@ -96,7 +104,7 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"oA": 1,
-		"oAP": "\/html\/dynamic\/Cambridge.2017-08-30.html",
+		"oAP": "/html/dynamic/A catalogue of crazy.2017-10-12.html",
 		"oF": 1,
 		"oFM": 0,
 		"oS": 0,
@@ -105,46 +113,75 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/dynamic\/CS+X.2017-08-18.talk": {
+	"/dynamic/Cambridge.2017-08-30.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 0,
+		"eL": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 1,
+		"oAP": "/html/dynamic/Cambridge.2017-08-30.html",
+		"oF": 1,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 1,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"/dynamic/CS+X.2017-08-18.talk": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/html\/dynamic\/CS+X.2017-08-18.talk",
+		"oAP": "/html/dynamic/CS+X.2017-08-18.talk",
 		"oF": 1
 		},
-	"\/dynamic\/csx-code.zip": {
+	"/dynamic/csx-code.zip": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/html\/dynamic\/csx-code.zip",
+		"oAP": "/html/dynamic/csx-code.zip",
 		"oF": 1
 		},
-	"\/dynamic\/csx-slides.pdf": {
+	"/dynamic/csx-slides.pdf": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/html\/dynamic\/csx-slides.pdf",
+		"oAP": "/html/dynamic/csx-slides.pdf",
 		"oF": 1
 		},
-	"\/dynamic\/Eureka.jpg": {
+	"/dynamic/Eureka.jpg": {
 		"ft": 16384,
 		"iS": 41371,
 		"jF": 0,
 		"oA": 1,
-		"oAP": "\/html\/dynamic\/Eureka.jpg",
+		"oAP": "/html/dynamic/Eureka.jpg",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"q": 100
 		},
-	"\/dynamic\/Eureka.pdf": {
+	"/dynamic/Eureka.pdf": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/html\/dynamic\/Eureka.pdf",
+		"oAP": "/html/dynamic/Eureka.pdf",
 		"oF": 1
 		},
-	"\/dynamic\/Good News, Everyone.2017-02-08.md": {
+	"/dynamic/fyr.jpg": {
+		"ft": 16384,
+		"iS": 4120451,
+		"jF": 0,
+		"oA": 1,
+		"oAP": "/html/dynamic/fyr.jpg",
+		"oF": 1,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"/dynamic/Good News, Everyone.2017-02-08.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 0,
@@ -153,7 +190,7 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"oA": 1,
-		"oAP": "\/html\/dynamic\/Good News, Everyone.2017-02-08.html",
+		"oAP": "/html/dynamic/Good News, Everyone.2017-02-08.html",
 		"oF": 1,
 		"oFM": 0,
 		"oS": 0,
@@ -162,65 +199,65 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/dynamic\/goodnews.jpg": {
+	"/dynamic/goodnews.jpg": {
 		"ft": 16384,
 		"iS": 85196,
 		"jF": 0,
 		"oA": 1,
-		"oAP": "\/html\/dynamic\/goodnews.jpg",
+		"oAP": "/html/dynamic/goodnews.jpg",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"q": 100
 		},
-	"\/dynamic\/Honours Presentation.jpg": {
+	"/dynamic/Honours Presentation.jpg": {
 		"ft": 16384,
 		"iS": 56155,
 		"jF": 0,
 		"oA": 1,
-		"oAP": "\/html\/dynamic\/Honours Presentation.jpg",
+		"oAP": "/html/dynamic/Honours Presentation.jpg",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"q": 100
 		},
-	"\/dynamic\/Honours Presentation.pdf": {
+	"/dynamic/Honours Presentation.pdf": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/html\/dynamic\/Honours Presentation.pdf",
+		"oAP": "/html/dynamic/Honours Presentation.pdf",
 		"oF": 1
 		},
-	"\/dynamic\/kings.jpg": {
+	"/dynamic/kings.jpg": {
 		"ft": 16384,
 		"iS": 624461,
 		"jF": 0,
 		"oA": 1,
-		"oAP": "\/html\/dynamic\/kings.jpg",
+		"oAP": "/html/dynamic/kings.jpg",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"q": 100
 		},
-	"\/dynamic\/Languages.png": {
+	"/dynamic/Languages.png": {
 		"ft": 32768,
 		"iS": 86835,
 		"oA": 1,
-		"oAP": "\/html\/dynamic\/Languages.png",
+		"oAP": "/html/dynamic/Languages.png",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/dynamic\/Life After the Robot Apocalypse.2016-09-08.talk": {
+	"/dynamic/Life After the Robot Apocalypse.2016-09-08.talk": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/html\/dynamic\/Life After the Robot Apocalypse.2016-09-08.talk",
+		"oAP": "/html/dynamic/Life After the Robot Apocalypse.2016-09-08.talk",
 		"oF": 1
 		},
-	"\/dynamic\/Missing what is not.2018-03-28.md": {
+	"/dynamic/Missing what is not.2018-03-28.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 0,
@@ -229,74 +266,7 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"oA": 1,
-		"oAP": "\/html\/dynamic\/Missing what is not.2018-03-28.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 1,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"\/dynamic\/Neuromorphic Computing with Reservoir Neural Networks on Memristive Hardware.2016-09-01.talk": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 1,
-		"oAP": "\/html\/dynamic\/Neuromorphic Computing with Reservoir Neural Networks on Memristive Hardware.2016-09-01.talk",
-		"oF": 1
-		},
-	"\/dynamic\/Neuromorphic Computing.bib": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 1,
-		"oAP": "\/html\/dynamic\/Neuromorphic Computing.bib",
-		"oF": 1
-		},
-	"\/dynamic\/Neuromorphic Computing.pdf": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 1,
-		"oAP": "\/html\/dynamic\/Neuromorphic Computing.pdf",
-		"oF": 1
-		},
-	"\/dynamic\/NeuromorphicReservoirs.bib": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/html\/dynamic\/NeuromorphicReservoirs.bib",
-		"oF": 0
-		},
-	"\/dynamic\/NeuromorphicReservoirs.pdf": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/html\/dynamic\/NeuromorphicReservoirs.pdf",
-		"oF": 0
-		},
-	"\/dynamic\/Restricted Echo State Networks.bib": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 1,
-		"oAP": "\/html\/dynamic\/Restricted Echo State Networks.bib",
-		"oF": 1
-		},
-	"\/dynamic\/Restricted Echo State Networks.pdf": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 1,
-		"oAP": "\/html\/dynamic\/Restricted Echo State Networks.pdf",
-		"oF": 1
-		},
-	"\/dynamic\/Scholarship Calculus.2016-09-24.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 0,
-		"eL": 0,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 1,
-		"oAP": "\/html\/dynamic\/Scholarship Calculus.2016-09-24.html",
+		"oAP": "/html/dynamic/Missing what is not.2018-03-28.html",
 		"oF": 1,
 		"oFM": 0,
 		"oS": 0,
@@ -305,130 +275,197 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/dynamic\/ScholarshipPPTs\/01 Introduction.pptx": {
+	"/dynamic/Neuromorphic Computing with Reservoir Neural Networks on Memristive Hardware.2016-09-01.talk": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/html\/dynamic\/ScholarshipPPTs\/01 Introduction.pptx",
+		"oAP": "/html/dynamic/Neuromorphic Computing with Reservoir Neural Networks on Memristive Hardware.2016-09-01.talk",
 		"oF": 1
 		},
-	"\/dynamic\/ScholarshipPPTs\/02 Preliminaries.pptx": {
+	"/dynamic/Neuromorphic Computing.bib": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/html\/dynamic\/ScholarshipPPTs\/02 Preliminaries.pptx",
+		"oAP": "/html/dynamic/Neuromorphic Computing.bib",
 		"oF": 1
 		},
-	"\/dynamic\/ScholarshipPPTs\/03 Differentiation 1.pptx": {
+	"/dynamic/Neuromorphic Computing.pdf": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/html\/dynamic\/ScholarshipPPTs\/03 Differentiation 1.pptx",
+		"oAP": "/html/dynamic/Neuromorphic Computing.pdf",
 		"oF": 1
 		},
-	"\/dynamic\/ScholarshipPPTs\/04 Differentiation 2.pptx": {
+	"/dynamic/NeuromorphicReservoirs.bib": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/html\/dynamic\/ScholarshipPPTs\/04 Differentiation 2.pptx",
+		"oAP": "/html/dynamic/NeuromorphicReservoirs.bib",
 		"oF": 1
 		},
-	"\/dynamic\/ScholarshipPPTs\/05 Conics.pptx": {
+	"/dynamic/NeuromorphicReservoirs.pdf": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/html\/dynamic\/ScholarshipPPTs\/05 Conics.pptx",
+		"oAP": "/html/dynamic/NeuromorphicReservoirs.pdf",
 		"oF": 1
 		},
-	"\/dynamic\/ScholarshipPPTs\/06 Trigonometry 1.pptx": {
+	"/dynamic/Restricted Echo State Networks.bib": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/html\/dynamic\/ScholarshipPPTs\/06 Trigonometry 1.pptx",
+		"oAP": "/html/dynamic/Restricted Echo State Networks.bib",
 		"oF": 1
 		},
-	"\/dynamic\/ScholarshipPPTs\/07 Differentiation 3.pptx": {
+	"/dynamic/Restricted Echo State Networks.pdf": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/html\/dynamic\/ScholarshipPPTs\/07 Differentiation 3.pptx",
+		"oAP": "/html/dynamic/Restricted Echo State Networks.pdf",
 		"oF": 1
 		},
-	"\/dynamic\/ScholarshipPPTs\/08 Trigonometry 2.pptx": {
+	"/dynamic/Scholarship Calculus.2016-09-24.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 0,
+		"eL": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 1,
+		"oAP": "/html/dynamic/Scholarship Calculus.2016-09-24.html",
+		"oF": 1,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 1,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"/dynamic/ScholarshipPPTs/01 Introduction.pptx": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/html\/dynamic\/ScholarshipPPTs\/08 Trigonometry 2.pptx",
+		"oAP": "/html/dynamic/ScholarshipPPTs/01 Introduction.pptx",
 		"oF": 1
 		},
-	"\/dynamic\/ScholarshipPPTs\/09 Integration 1.pptx": {
+	"/dynamic/ScholarshipPPTs/02 Preliminaries.pptx": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/html\/dynamic\/ScholarshipPPTs\/09 Integration 1.pptx",
+		"oAP": "/html/dynamic/ScholarshipPPTs/02 Preliminaries.pptx",
 		"oF": 1
 		},
-	"\/dynamic\/ScholarshipPPTs\/10 Integration 2.pptx": {
+	"/dynamic/ScholarshipPPTs/03 Differentiation 1.pptx": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/html\/dynamic\/ScholarshipPPTs\/10 Integration 2.pptx",
+		"oAP": "/html/dynamic/ScholarshipPPTs/03 Differentiation 1.pptx",
 		"oF": 1
 		},
-	"\/dynamic\/ScholarshipPPTs\/11 Integration 3.pptx": {
+	"/dynamic/ScholarshipPPTs/04 Differentiation 2.pptx": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/html\/dynamic\/ScholarshipPPTs\/11 Integration 3.pptx",
+		"oAP": "/html/dynamic/ScholarshipPPTs/04 Differentiation 2.pptx",
 		"oF": 1
 		},
-	"\/dynamic\/ScholarshipPPTs\/12 Differential Equations 1.pptx": {
+	"/dynamic/ScholarshipPPTs/05 Conics.pptx": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/html\/dynamic\/ScholarshipPPTs\/12 Differential Equations 1.pptx",
+		"oAP": "/html/dynamic/ScholarshipPPTs/05 Conics.pptx",
 		"oF": 1
 		},
-	"\/dynamic\/ScholarshipPPTs\/13 Differential Equations 2.pptx": {
+	"/dynamic/ScholarshipPPTs/06 Trigonometry 1.pptx": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/html\/dynamic\/ScholarshipPPTs\/13 Differential Equations 2.pptx",
+		"oAP": "/html/dynamic/ScholarshipPPTs/06 Trigonometry 1.pptx",
 		"oF": 1
 		},
-	"\/dynamic\/ScholarshipPPTs\/14 Complex Geometry 1.pptx": {
+	"/dynamic/ScholarshipPPTs/07 Differentiation 3.pptx": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/html\/dynamic\/ScholarshipPPTs\/14 Complex Geometry 1.pptx",
+		"oAP": "/html/dynamic/ScholarshipPPTs/07 Differentiation 3.pptx",
 		"oF": 1
 		},
-	"\/dynamic\/ScholarshipPPTs\/15 Complex Geometry 2.pptx": {
+	"/dynamic/ScholarshipPPTs/08 Trigonometry 2.pptx": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/html\/dynamic\/ScholarshipPPTs\/15 Complex Geometry 2.pptx",
+		"oAP": "/html/dynamic/ScholarshipPPTs/08 Trigonometry 2.pptx",
 		"oF": 1
 		},
-	"\/dynamic\/ScholarshipPPTs\/16 Revision.pptx": {
+	"/dynamic/ScholarshipPPTs/09 Integration 1.pptx": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/html\/dynamic\/ScholarshipPPTs\/16 Revision.pptx",
+		"oAP": "/html/dynamic/ScholarshipPPTs/09 Integration 1.pptx",
 		"oF": 1
 		},
-	"\/dynamic\/selwyn.jpg": {
+	"/dynamic/ScholarshipPPTs/10 Integration 2.pptx": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "/html/dynamic/ScholarshipPPTs/10 Integration 2.pptx",
+		"oF": 1
+		},
+	"/dynamic/ScholarshipPPTs/11 Integration 3.pptx": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "/html/dynamic/ScholarshipPPTs/11 Integration 3.pptx",
+		"oF": 1
+		},
+	"/dynamic/ScholarshipPPTs/12 Differential Equations 1.pptx": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "/html/dynamic/ScholarshipPPTs/12 Differential Equations 1.pptx",
+		"oF": 1
+		},
+	"/dynamic/ScholarshipPPTs/13 Differential Equations 2.pptx": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "/html/dynamic/ScholarshipPPTs/13 Differential Equations 2.pptx",
+		"oF": 1
+		},
+	"/dynamic/ScholarshipPPTs/14 Complex Geometry 1.pptx": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "/html/dynamic/ScholarshipPPTs/14 Complex Geometry 1.pptx",
+		"oF": 1
+		},
+	"/dynamic/ScholarshipPPTs/15 Complex Geometry 2.pptx": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "/html/dynamic/ScholarshipPPTs/15 Complex Geometry 2.pptx",
+		"oF": 1
+		},
+	"/dynamic/ScholarshipPPTs/16 Revision.pptx": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "/html/dynamic/ScholarshipPPTs/16 Revision.pptx",
+		"oF": 1
+		},
+	"/dynamic/selwyn.jpg": {
 		"ft": 16384,
 		"iS": 588793,
 		"jF": 0,
 		"oA": 1,
-		"oAP": "\/html\/dynamic\/selwyn.jpg",
+		"oAP": "/html/dynamic/selwyn.jpg",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"q": 100
 		},
-	"\/dynamic\/The Wireless: Are robots going to kill us all.2017-09-28.md": {
+	"/dynamic/The Wireless: Are robots going to kill us all.2017-09-28.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 0,
@@ -437,7 +474,7 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"oA": 1,
-		"oAP": "\/html\/dynamic\/The Wireless: Are robots going to kill us all.2017-09-28.html",
+		"oAP": "/html/dynamic/The Wireless: Are robots going to kill us all.2017-09-28.html",
 		"oF": 1,
 		"oFM": 0,
 		"oS": 0,
@@ -446,937 +483,933 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/dynamic\/wireless_header.jpg": {
+	"/dynamic/wireless_header.jpg": {
 		"ft": 16384,
 		"iS": 227306,
 		"jF": 0,
 		"oA": 1,
-		"oAP": "\/html\/dynamic\/wireless_header.jpg",
+		"oAP": "/html/dynamic/wireless_header.jpg",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"q": 100
 		},
-	"\/html": {
+	"/html": {
 		"ft": 65536,
 		"oA": 1,
-		"oAP": "\/html\/html",
+		"oAP": "/html/html",
 		"oF": 0
 		},
-	"\/source\/404.kit": {
+	"/source/404.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"oA": 0,
-		"oAP": "\/html\/404.html",
+		"oAP": "/html/404.html",
 		"oF": 0
 		},
-	"\/source\/AaronStockdill.pdf": {
+	"/source/AaronStockdill.pdf": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/html\/cv\/AaronStockdill.pdf",
-		"oF": 2
+		"oAP": "/html/cv/AaronStockdill.pdf",
+		"oF": 3
 		},
-	"\/source\/AaronStockdill.txt": {
+	"/source/AaronStockdill.txt": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/html\/cv\/AaronStockdill.txt",
+		"oAP": "/html/cv/AaronStockdill.txt",
 		"oF": 2
 		},
-	"\/source\/blog.kit": {
+	"/source/blog.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"oA": 0,
-		"oAP": "\/html\/blog\/index.html",
+		"oAP": "/html/blog/index.html",
 		"oF": 2
 		},
-	"\/source\/blog\/a-catalogue-of-crazy\/index.kit": {
+	"/source/blog/a-catalogue-of-crazy/index.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"oA": 0,
-		"oAP": "\/html\/blog\/a-catalogue-of-crazy\/index.html",
+		"oAP": "/html/blog/a-catalogue-of-crazy/index.html",
 		"oF": 0
 		},
-	"\/source\/blog\/cambridge\/index.kit": {
+	"/source/blog/cambridge/index.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"oA": 0,
-		"oAP": "\/html\/blog\/cambridge\/index.html",
+		"oAP": "/html/blog/cambridge/index.html",
 		"oF": 0
 		},
-	"\/source\/blog\/good-news-everyone\/index.kit": {
+	"/source/blog/good-news-everyone/index.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"oA": 0,
-		"oAP": "\/html\/blog\/good-news-everyone\/index.html",
+		"oAP": "/html/blog/good-news-everyone/index.html",
 		"oF": 0
 		},
-	"\/source\/blog\/missing-what-is-not\/index.kit": {
+	"/source/blog/missing-what-is-not/index.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"oA": 0,
-		"oAP": "\/html\/blog\/missing-what-is-not\/index.html",
+		"oAP": "/html/blog/missing-what-is-not/index.html",
 		"oF": 0
 		},
-	"\/source\/blog\/scholarship-calculus\/index.kit": {
+	"/source/blog/scholarship-calculus/index.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"oA": 0,
-		"oAP": "\/html\/blog\/scholarship-calculus\/index.html",
+		"oAP": "/html/blog/scholarship-calculus/index.html",
 		"oF": 0
 		},
-	"\/source\/blog\/the-wireless-are-robots-going-to-kill-us-all\/index.kit": {
+	"/source/blog/the-wireless-are-robots-going-to-kill-us-all/index.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"oA": 0,
-		"oAP": "\/html\/blog\/the-wireless-are-robots-going-to-kill-us-all\/index.html",
+		"oAP": "/html/blog/the-wireless-are-robots-going-to-kill-us-all/index.html",
 		"oF": 0
 		},
-	"\/source\/blog_index.template": {
+	"/source/blog/year-one-done/index.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 0,
+		"oAP": "/html/blog/year-one-done/index.html",
+		"oF": 0
+		},
+	"/source/blog_index.template": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/html\/blog_index.template",
+		"oAP": "/html/blog_index.template",
 		"oF": 1
 		},
-	"\/source\/blog_post.template": {
+	"/source/blog_post.template": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/html\/blog_post.template",
+		"oAP": "/html/blog_post.template",
 		"oF": 1
 		},
-	"\/source\/CNAME": {
+	"/source/CNAME": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/html\/CNAME",
+		"oAP": "/html/CNAME",
 		"oF": 0
 		},
-	"\/source\/coffeescript\/email.coffee": {
+	"/source/coffeescript/email.coffee": {
 		"ft": 32,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "\/html\/js\/email.js",
+		"oAP": "/html/js/email.js",
 		"oF": 0,
 		"oS": 0,
 		"sC": 1,
 		"tS": 1
 		},
-	"\/source\/coffeescript\/keybindings.coffee": {
+	"/source/coffeescript/mobilemenu.coffee": {
 		"ft": 32,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "\/html\/js\/keybindings.js",
+		"oAP": "/html/js/mobilemenu.js",
 		"oF": 0,
 		"oS": 0,
 		"sC": 1,
 		"tS": 1
 		},
-	"\/source\/coffeescript\/mobilemenu.coffee": {
+	"/source/coffeescript/preferences.coffee": {
 		"ft": 32,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "\/html\/js\/mobilemenu.js",
+		"oAP": "/html/js/preferences.js",
 		"oF": 0,
 		"oS": 0,
 		"sC": 1,
 		"tS": 1
 		},
-	"\/source\/coffeescript\/mousetrap.coffee": {
-		"ft": 32,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "\/html\/js\/mousetrap.js",
-		"oF": 0,
-		"oS": 0,
-		"sC": 1,
-		"tS": 1
-		},
-	"\/source\/coffeescript\/preferences.coffee": {
-		"ft": 32,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "\/html\/js\/preferences.js",
-		"oF": 0,
-		"oS": 0,
-		"sC": 1,
-		"tS": 1
-		},
-	"\/source\/coffeescript\/script.coffee": {
+	"/source/coffeescript/script.coffee": {
 		"ft": 32,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/html\/js\/script.js",
+		"oAP": "/html/js/script.js",
 		"oF": 0,
 		"oS": 1,
 		"sC": 0,
 		"tS": 1
 		},
-	"\/source\/contact.kit": {
+	"/source/contact.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"oA": 0,
-		"oAP": "\/html\/contact\/index.html",
+		"oAP": "/html/contact/index.html",
 		"oF": 2
 		},
-	"\/source\/cv.kit": {
+	"/source/cv.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"oA": 0,
-		"oAP": "\/html\/cv\/index.html",
+		"oAP": "/html/cv/index.html",
 		"oF": 2
 		},
-	"\/source\/favicons\/android-icon-144x144.png": {
+	"/source/favicons/android-icon-144x144.png": {
 		"ft": 32768,
 		"iS": 8550,
 		"oA": 0,
-		"oAP": "\/html\/android-icon-144x144.png",
+		"oAP": "/html/android-icon-144x144.png",
 		"oF": 2,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/source\/favicons\/android-icon-192x192.png": {
+	"/source/favicons/android-icon-192x192.png": {
 		"ft": 32768,
 		"iS": 11318,
 		"oA": 0,
-		"oAP": "\/html\/android-icon-192x192.png",
+		"oAP": "/html/android-icon-192x192.png",
 		"oF": 2,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/source\/favicons\/android-icon-36x36.png": {
+	"/source/favicons/android-icon-36x36.png": {
 		"ft": 32768,
 		"iS": 2375,
 		"oA": 0,
-		"oAP": "\/html\/android-icon-36x36.png",
+		"oAP": "/html/android-icon-36x36.png",
 		"oF": 2,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/source\/favicons\/android-icon-48x48.png": {
+	"/source/favicons/android-icon-48x48.png": {
 		"ft": 32768,
 		"iS": 3024,
 		"oA": 0,
-		"oAP": "\/html\/android-icon-48x48.png",
+		"oAP": "/html/android-icon-48x48.png",
 		"oF": 2,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/source\/favicons\/android-icon-72x72.png": {
+	"/source/favicons/android-icon-72x72.png": {
 		"ft": 32768,
 		"iS": 4329,
 		"oA": 0,
-		"oAP": "\/html\/android-icon-72x72.png",
+		"oAP": "/html/android-icon-72x72.png",
 		"oF": 2,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/source\/favicons\/android-icon-96x96.png": {
+	"/source/favicons/android-icon-96x96.png": {
 		"ft": 32768,
 		"iS": 5857,
 		"oA": 0,
-		"oAP": "\/html\/android-icon-96x96.png",
+		"oAP": "/html/android-icon-96x96.png",
 		"oF": 2,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/source\/favicons\/apple-icon-114x114.png": {
+	"/source/favicons/apple-icon-114x114.png": {
 		"ft": 32768,
 		"iS": 6690,
 		"oA": 0,
-		"oAP": "\/html\/apple-icon-114x114.png",
+		"oAP": "/html/apple-icon-114x114.png",
 		"oF": 2,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/source\/favicons\/apple-icon-120x120.png": {
+	"/source/favicons/apple-icon-120x120.png": {
 		"ft": 32768,
 		"iS": 7068,
 		"oA": 0,
-		"oAP": "\/html\/apple-icon-120x120.png",
+		"oAP": "/html/apple-icon-120x120.png",
 		"oF": 2,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/source\/favicons\/apple-icon-144x144.png": {
+	"/source/favicons/apple-icon-144x144.png": {
 		"ft": 32768,
 		"iS": 8550,
 		"oA": 0,
-		"oAP": "\/html\/apple-icon-144x144.png",
+		"oAP": "/html/apple-icon-144x144.png",
 		"oF": 2,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/source\/favicons\/apple-icon-152x152.png": {
+	"/source/favicons/apple-icon-152x152.png": {
 		"ft": 32768,
 		"iS": 9164,
 		"oA": 0,
-		"oAP": "\/html\/apple-icon-152x152.png",
+		"oAP": "/html/apple-icon-152x152.png",
 		"oF": 2,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/source\/favicons\/apple-icon-180x180.png": {
+	"/source/favicons/apple-icon-180x180.png": {
 		"ft": 32768,
 		"iS": 11219,
 		"oA": 0,
-		"oAP": "\/html\/apple-icon-180x180.png",
+		"oAP": "/html/apple-icon-180x180.png",
 		"oF": 2,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/source\/favicons\/apple-icon-57x57.png": {
+	"/source/favicons/apple-icon-57x57.png": {
 		"ft": 32768,
 		"iS": 3420,
 		"oA": 0,
-		"oAP": "\/html\/apple-icon-57x57.png",
+		"oAP": "/html/apple-icon-57x57.png",
 		"oF": 2,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/source\/favicons\/apple-icon-60x60.png": {
+	"/source/favicons/apple-icon-60x60.png": {
 		"ft": 32768,
 		"iS": 3606,
 		"oA": 0,
-		"oAP": "\/html\/apple-icon-60x60.png",
+		"oAP": "/html/apple-icon-60x60.png",
 		"oF": 2,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/source\/favicons\/apple-icon-72x72.png": {
+	"/source/favicons/apple-icon-72x72.png": {
 		"ft": 32768,
 		"iS": 4329,
 		"oA": 0,
-		"oAP": "\/html\/apple-icon-72x72.png",
+		"oAP": "/html/apple-icon-72x72.png",
 		"oF": 2,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/source\/favicons\/apple-icon-76x76.png": {
+	"/source/favicons/apple-icon-76x76.png": {
 		"ft": 32768,
 		"iS": 4563,
 		"oA": 0,
-		"oAP": "\/html\/apple-icon-76x76.png",
+		"oAP": "/html/apple-icon-76x76.png",
 		"oF": 2,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/source\/favicons\/apple-icon-precomposed.png": {
+	"/source/favicons/apple-icon-precomposed.png": {
 		"ft": 32768,
 		"iS": 11894,
 		"oA": 0,
-		"oAP": "\/html\/apple-icon-precomposed.png",
+		"oAP": "/html/apple-icon-precomposed.png",
 		"oF": 2,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/source\/favicons\/apple-icon.png": {
+	"/source/favicons/apple-icon.png": {
 		"ft": 32768,
 		"iS": 11894,
 		"oA": 0,
-		"oAP": "\/html\/apple-icon.png",
+		"oAP": "/html/apple-icon.png",
 		"oF": 2,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/source\/favicons\/browserconfig.xml": {
+	"/source/favicons/browserconfig.xml": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/html\/browserconfig.xml",
+		"oAP": "/html/browserconfig.xml",
 		"oF": 2
 		},
-	"\/source\/favicons\/favicon-16x16.png": {
+	"/source/favicons/favicon-16x16.png": {
 		"ft": 32768,
 		"iS": 1468,
 		"oA": 0,
-		"oAP": "\/html\/favicon-16x16.png",
+		"oAP": "/html/favicon-16x16.png",
 		"oF": 2,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/source\/favicons\/favicon-32x32.png": {
+	"/source/favicons/favicon-32x32.png": {
 		"ft": 32768,
 		"iS": 2099,
 		"oA": 0,
-		"oAP": "\/html\/favicon-32x32.png",
+		"oAP": "/html/favicon-32x32.png",
 		"oF": 2,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/source\/favicons\/favicon-96x96.png": {
+	"/source/favicons/favicon-96x96.png": {
 		"ft": 32768,
 		"iS": 5857,
 		"oA": 0,
-		"oAP": "\/html\/favicon-96x96.png",
+		"oAP": "/html/favicon-96x96.png",
 		"oF": 2,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/source\/favicons\/favicon.ico": {
+	"/source/favicons/favicon.ico": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/html\/favicon.ico",
+		"oAP": "/html/favicon.ico",
 		"oF": 2
 		},
-	"\/source\/favicons\/manifest.json": {
+	"/source/favicons/manifest.json": {
 		"ft": 524288,
 		"oA": 2,
-		"oAP": "\/html\/manifest.json",
+		"oAP": "/html/manifest.json",
 		"oF": 3,
 		"oO": 0,
 		"oS": 1
 		},
-	"\/source\/favicons\/ms-icon-144x144.png": {
+	"/source/favicons/ms-icon-144x144.png": {
 		"ft": 32768,
 		"iS": 8550,
 		"oA": 0,
-		"oAP": "\/html\/ms-icon-144x144.png",
+		"oAP": "/html/ms-icon-144x144.png",
 		"oF": 2,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/source\/favicons\/ms-icon-150x150.png": {
+	"/source/favicons/ms-icon-150x150.png": {
 		"ft": 32768,
 		"iS": 9070,
 		"oA": 0,
-		"oAP": "\/html\/ms-icon-150x150.png",
+		"oAP": "/html/ms-icon-150x150.png",
 		"oF": 2,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/source\/favicons\/ms-icon-310x310.png": {
+	"/source/favicons/ms-icon-310x310.png": {
 		"ft": 32768,
 		"iS": 24015,
 		"oA": 0,
-		"oAP": "\/html\/ms-icon-310x310.png",
+		"oAP": "/html/ms-icon-310x310.png",
 		"oF": 2,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/source\/favicons\/ms-icon-70x70.png": {
+	"/source/favicons/ms-icon-70x70.png": {
 		"ft": 32768,
 		"iS": 4254,
 		"oA": 0,
-		"oAP": "\/html\/ms-icon-70x70.png",
+		"oAP": "/html/ms-icon-70x70.png",
 		"oF": 2,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/source\/footer.kit": {
+	"/source/footer.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"oA": 1,
-		"oAP": "\/html\/footer.html",
+		"oAP": "/html/footer.html",
 		"oF": 0
 		},
-	"\/source\/header.kit": {
+	"/source/header.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"oA": 1,
-		"oAP": "\/html\/header.html",
+		"oAP": "/html/header.html",
 		"oF": 0
 		},
-	"\/source\/htaccess": {
+	"/source/htaccess": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/html\/.htaccess",
+		"oAP": "/html/.htaccess",
 		"oF": 2
 		},
-	"\/source\/index.kit": {
+	"/source/index.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"oA": 0,
-		"oAP": "\/html\/index.html",
+		"oAP": "/html/index.html",
 		"oF": 0
 		},
-	"\/source\/keybase.txt": {
+	"/source/keybase.txt": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/html\/keybase.txt",
+		"oAP": "/html/keybase.txt",
 		"oF": 0
 		},
-	"\/source\/less\/600.less": {
+	"/source/less/600.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 0,
-		"oAP": "\/html\/css\/600.css",
+		"oAP": "/html/css/600.css",
 		"oF": 0,
 		"oS": 1,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/source\/less\/black.less": {
+	"/source/less/black.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 0,
-		"oAP": "\/html\/css\/black.css",
+		"oAP": "/html/css/black.css",
 		"oF": 0,
 		"oS": 1,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/source\/less\/fonts.less": {
+	"/source/less/fonts.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 0,
-		"oAP": "\/html\/css\/fonts.css",
+		"oAP": "/html/css/fonts.css",
 		"oF": 0,
 		"oS": 1,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/source\/less\/master.less": {
+	"/source/less/master.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 0,
-		"oAP": "\/html\/css\/master.css",
+		"oAP": "/html/css/master.css",
 		"oF": 0,
 		"oS": 1,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/source\/less\/print.less": {
+	"/source/less/print.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 0,
-		"oAP": "\/html\/css\/print.css",
+		"oAP": "/html/css/print.css",
 		"oF": 0,
 		"oS": 1,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/source\/less\/white.less": {
+	"/source/less/white.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 0,
-		"oAP": "\/html\/css\/white.css",
+		"oAP": "/html/css/white.css",
 		"oF": 0,
 		"oS": 1,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/source\/research.kit": {
+	"/source/research.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"oA": 0,
-		"oAP": "\/html\/research\/index.html",
+		"oAP": "/html/research/index.html",
 		"oF": 2
 		},
-	"\/source\/research.template": {
+	"/source/research.template": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/html\/research.template",
+		"oAP": "/html/research.template",
 		"oF": 1
 		},
-	"\/source\/sitemap.xml": {
+	"/source/sitemap.xml": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/html\/sitemap.xml",
+		"oAP": "/html/sitemap.xml",
 		"oF": 0
 		},
-	"\/source\/static_assets\/auto\/Restricted Echo State Networks.el": {
+	"/source/static_assets/auto/Restricted Echo State Networks.el": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/html\/static_assets\/auto\/Restricted Echo State Networks.el",
+		"oAP": "/html/static_assets/auto/Restricted Echo State Networks.el",
 		"oF": 0
 		},
-	"\/source\/static_assets\/csx-code.zip": {
+	"/source/static_assets/csx-code.zip": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/html\/static_assets\/csx-code.zip",
+		"oAP": "/html/static_assets/csx-code.zip",
 		"oF": 0
 		},
-	"\/source\/static_assets\/csx-slides.pdf": {
+	"/source/static_assets/csx-slides.pdf": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/html\/static_assets\/csx-slides.pdf",
+		"oAP": "/html/static_assets/csx-slides.pdf",
 		"oF": 0
 		},
-	"\/source\/static_assets\/Eureka.jpg": {
+	"/source/static_assets/Eureka.jpg": {
 		"ft": 16384,
 		"iS": 41371,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/html\/static_assets\/Eureka.jpg",
+		"oAP": "/html/static_assets/Eureka.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
 		"q": 100
 		},
-	"\/source\/static_assets\/Eureka.pdf": {
+	"/source/static_assets/Eureka.pdf": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/html\/static_assets\/Eureka.pdf",
+		"oAP": "/html/static_assets/Eureka.pdf",
 		"oF": 0
 		},
-	"\/source\/static_assets\/goodnews.jpg": {
+	"/source/static_assets/fyr.jpg": {
+		"ft": 16384,
+		"iS": 4120451,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/html/static_assets/fyr.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"/source/static_assets/goodnews.jpg": {
 		"ft": 16384,
 		"iS": 85196,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/html\/static_assets\/goodnews.jpg",
+		"oAP": "/html/static_assets/goodnews.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
 		"q": 100
 		},
-	"\/source\/static_assets\/Honours Presentation.jpg": {
+	"/source/static_assets/Honours Presentation.jpg": {
 		"ft": 16384,
 		"iS": 56155,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/html\/static_assets\/Honours Presentation.jpg",
+		"oAP": "/html/static_assets/Honours Presentation.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
 		"q": 100
 		},
-	"\/source\/static_assets\/Honours Presentation.pdf": {
+	"/source/static_assets/Honours Presentation.pdf": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/html\/static_assets\/Honours Presentation.pdf",
+		"oAP": "/html/static_assets/Honours Presentation.pdf",
 		"oF": 0
 		},
-	"\/source\/static_assets\/kings.jpg": {
+	"/source/static_assets/kings.jpg": {
 		"ft": 16384,
 		"iS": 624461,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/html\/static_assets\/kings.jpg",
+		"oAP": "/html/static_assets/kings.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
 		"q": 100
 		},
-	"\/source\/static_assets\/Languages.png": {
+	"/source/static_assets/Languages.png": {
 		"ft": 32768,
 		"iS": 86835,
 		"oA": 0,
-		"oAP": "\/html\/static_assets\/Languages.png",
+		"oAP": "/html/static_assets/Languages.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/source\/static_assets\/Neuromorphic Computing.bib": {
+	"/source/static_assets/Neuromorphic Computing.bib": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/html\/static_assets\/Neuromorphic Computing.bib",
+		"oAP": "/html/static_assets/Neuromorphic Computing.bib",
 		"oF": 0
 		},
-	"\/source\/static_assets\/Neuromorphic Computing.pdf": {
+	"/source/static_assets/Neuromorphic Computing.pdf": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/html\/static_assets\/Neuromorphic Computing.pdf",
+		"oAP": "/html/static_assets/Neuromorphic Computing.pdf",
 		"oF": 0
 		},
-	"\/source\/static_assets\/NeuromorphicReservoirs.bib": {
+	"/source/static_assets/NeuromorphicReservoirs.bib": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/html\/static_assets\/NeuromorphicReservoirs.bib",
+		"oAP": "/html/static_assets/NeuromorphicReservoirs.bib",
 		"oF": 0
 		},
-	"\/source\/static_assets\/NeuromorphicReservoirs.pdf": {
+	"/source/static_assets/NeuromorphicReservoirs.pdf": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/html\/static_assets\/NeuromorphicReservoirs.pdf",
+		"oAP": "/html/static_assets/NeuromorphicReservoirs.pdf",
 		"oF": 0
 		},
-	"\/source\/static_assets\/Restricted Echo State Networks.bib": {
+	"/source/static_assets/Restricted Echo State Networks.bib": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/html\/static_assets\/Restricted Echo State Networks.bib",
+		"oAP": "/html/static_assets/Restricted Echo State Networks.bib",
 		"oF": 0
 		},
-	"\/source\/static_assets\/Restricted Echo State Networks.pdf": {
+	"/source/static_assets/Restricted Echo State Networks.pdf": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/html\/static_assets\/Restricted Echo State Networks.pdf",
+		"oAP": "/html/static_assets/Restricted Echo State Networks.pdf",
 		"oF": 0
 		},
-	"\/source\/static_assets\/ScholarshipPPTs\/01 Introduction.pptx": {
+	"/source/static_assets/ScholarshipPPTs/01 Introduction.pptx": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/html\/static_assets\/ScholarshipPPTs\/01 Introduction.pptx",
+		"oAP": "/html/static_assets/ScholarshipPPTs/01 Introduction.pptx",
 		"oF": 0
 		},
-	"\/source\/static_assets\/ScholarshipPPTs\/02 Preliminaries.pptx": {
+	"/source/static_assets/ScholarshipPPTs/02 Preliminaries.pptx": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/html\/static_assets\/ScholarshipPPTs\/02 Preliminaries.pptx",
+		"oAP": "/html/static_assets/ScholarshipPPTs/02 Preliminaries.pptx",
 		"oF": 0
 		},
-	"\/source\/static_assets\/ScholarshipPPTs\/03 Differentiation 1.pptx": {
+	"/source/static_assets/ScholarshipPPTs/03 Differentiation 1.pptx": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/html\/static_assets\/ScholarshipPPTs\/03 Differentiation 1.pptx",
+		"oAP": "/html/static_assets/ScholarshipPPTs/03 Differentiation 1.pptx",
 		"oF": 0
 		},
-	"\/source\/static_assets\/ScholarshipPPTs\/04 Differentiation 2.pptx": {
+	"/source/static_assets/ScholarshipPPTs/04 Differentiation 2.pptx": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/html\/static_assets\/ScholarshipPPTs\/04 Differentiation 2.pptx",
+		"oAP": "/html/static_assets/ScholarshipPPTs/04 Differentiation 2.pptx",
 		"oF": 0
 		},
-	"\/source\/static_assets\/ScholarshipPPTs\/05 Conics.pptx": {
+	"/source/static_assets/ScholarshipPPTs/05 Conics.pptx": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/html\/static_assets\/ScholarshipPPTs\/05 Conics.pptx",
+		"oAP": "/html/static_assets/ScholarshipPPTs/05 Conics.pptx",
 		"oF": 0
 		},
-	"\/source\/static_assets\/ScholarshipPPTs\/06 Trigonometry 1.pptx": {
+	"/source/static_assets/ScholarshipPPTs/06 Trigonometry 1.pptx": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/html\/static_assets\/ScholarshipPPTs\/06 Trigonometry 1.pptx",
+		"oAP": "/html/static_assets/ScholarshipPPTs/06 Trigonometry 1.pptx",
 		"oF": 0
 		},
-	"\/source\/static_assets\/ScholarshipPPTs\/07 Differentiation 3.pptx": {
+	"/source/static_assets/ScholarshipPPTs/07 Differentiation 3.pptx": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/html\/static_assets\/ScholarshipPPTs\/07 Differentiation 3.pptx",
+		"oAP": "/html/static_assets/ScholarshipPPTs/07 Differentiation 3.pptx",
 		"oF": 0
 		},
-	"\/source\/static_assets\/ScholarshipPPTs\/08 Trigonometry 2.pptx": {
+	"/source/static_assets/ScholarshipPPTs/08 Trigonometry 2.pptx": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/html\/static_assets\/ScholarshipPPTs\/08 Trigonometry 2.pptx",
+		"oAP": "/html/static_assets/ScholarshipPPTs/08 Trigonometry 2.pptx",
 		"oF": 0
 		},
-	"\/source\/static_assets\/ScholarshipPPTs\/09 Integration 1.pptx": {
+	"/source/static_assets/ScholarshipPPTs/09 Integration 1.pptx": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/html\/static_assets\/ScholarshipPPTs\/09 Integration 1.pptx",
+		"oAP": "/html/static_assets/ScholarshipPPTs/09 Integration 1.pptx",
 		"oF": 0
 		},
-	"\/source\/static_assets\/ScholarshipPPTs\/10 Integration 2.pptx": {
+	"/source/static_assets/ScholarshipPPTs/10 Integration 2.pptx": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/html\/static_assets\/ScholarshipPPTs\/10 Integration 2.pptx",
+		"oAP": "/html/static_assets/ScholarshipPPTs/10 Integration 2.pptx",
 		"oF": 0
 		},
-	"\/source\/static_assets\/ScholarshipPPTs\/11 Integration 3.pptx": {
+	"/source/static_assets/ScholarshipPPTs/11 Integration 3.pptx": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/html\/static_assets\/ScholarshipPPTs\/11 Integration 3.pptx",
+		"oAP": "/html/static_assets/ScholarshipPPTs/11 Integration 3.pptx",
 		"oF": 0
 		},
-	"\/source\/static_assets\/ScholarshipPPTs\/12 Differential Equations 1.pptx": {
+	"/source/static_assets/ScholarshipPPTs/12 Differential Equations 1.pptx": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/html\/static_assets\/ScholarshipPPTs\/12 Differential Equations 1.pptx",
+		"oAP": "/html/static_assets/ScholarshipPPTs/12 Differential Equations 1.pptx",
 		"oF": 0
 		},
-	"\/source\/static_assets\/ScholarshipPPTs\/13 Differential Equations 2.pptx": {
+	"/source/static_assets/ScholarshipPPTs/13 Differential Equations 2.pptx": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/html\/static_assets\/ScholarshipPPTs\/13 Differential Equations 2.pptx",
+		"oAP": "/html/static_assets/ScholarshipPPTs/13 Differential Equations 2.pptx",
 		"oF": 0
 		},
-	"\/source\/static_assets\/ScholarshipPPTs\/14 Complex Geometry 1.pptx": {
+	"/source/static_assets/ScholarshipPPTs/14 Complex Geometry 1.pptx": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/html\/static_assets\/ScholarshipPPTs\/14 Complex Geometry 1.pptx",
+		"oAP": "/html/static_assets/ScholarshipPPTs/14 Complex Geometry 1.pptx",
 		"oF": 0
 		},
-	"\/source\/static_assets\/ScholarshipPPTs\/15 Complex Geometry 2.pptx": {
+	"/source/static_assets/ScholarshipPPTs/15 Complex Geometry 2.pptx": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/html\/static_assets\/ScholarshipPPTs\/15 Complex Geometry 2.pptx",
+		"oAP": "/html/static_assets/ScholarshipPPTs/15 Complex Geometry 2.pptx",
 		"oF": 0
 		},
-	"\/source\/static_assets\/ScholarshipPPTs\/16 Revision.pptx": {
+	"/source/static_assets/ScholarshipPPTs/16 Revision.pptx": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/html\/static_assets\/ScholarshipPPTs\/16 Revision.pptx",
+		"oAP": "/html/static_assets/ScholarshipPPTs/16 Revision.pptx",
 		"oF": 0
 		},
-	"\/source\/static_assets\/selwyn.jpg": {
+	"/source/static_assets/selwyn.jpg": {
 		"ft": 16384,
 		"iS": 588793,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/html\/static_assets\/selwyn.jpg",
+		"oAP": "/html/static_assets/selwyn.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
 		"q": 100
 		},
-	"\/source\/static_assets\/wireless_header.jpg": {
+	"/source/static_assets/wireless_header.jpg": {
 		"ft": 16384,
 		"iS": 227306,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/html\/static_assets\/wireless_header.jpg",
+		"oAP": "/html/static_assets/wireless_header.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
 		"q": 100
 		},
-	"\/source\/talk.template": {
+	"/source/talk.template": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/html\/talk.template",
+		"oAP": "/html/talk.template",
 		"oF": 1
 		},
-	"\/source\/talk\/csx\/index.kit": {
+	"/source/talk/csx/index.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"oA": 0,
-		"oAP": "\/html\/talk\/csx\/index.html",
+		"oAP": "/html/talk/csx/index.html",
 		"oF": 0
 		},
-	"\/source\/talk\/life-after-the-robot-apocalypse\/index.kit": {
+	"/source/talk/life-after-the-robot-apocalypse/index.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"oA": 0,
-		"oAP": "\/html\/talk\/life-after-the-robot-apocalypse\/index.html",
+		"oAP": "/html/talk/life-after-the-robot-apocalypse/index.html",
 		"oF": 0
 		},
-	"\/source\/talk\/neuromorphic-computing-with-reservoir-neural-networks-on-memristive-hardware\/index.kit": {
+	"/source/talk/neuromorphic-computing-with-reservoir-neural-networks-on-memristive-hardware/index.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"oA": 0,
-		"oAP": "\/html\/talk\/neuromorphic-computing-with-reservoir-neural-networks-on-memristive-hardware\/index.html",
+		"oAP": "/html/talk/neuromorphic-computing-with-reservoir-neural-networks-on-memristive-hardware/index.html",
 		"oF": 0
 		},
-	"\/source\/teaching\/index.kit": {
+	"/source/teaching/index.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"oA": 0,
-		"oAP": "\/html\/teaching\/index.html",
+		"oAP": "/html/teaching/index.html",
 		"oF": 0
 		}
 	},
@@ -1390,148 +1423,101 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-owl",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 553043088
+	"lastBuiltDate": 559865807.07836604
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
 	"alwaysUseExternalServer": 1,
 	"animateCSSInjections": 1,
 	"autoBuildNewItems": 1,
-	"autoprefixerBrowserString": "> 1%, last 2 versions, Firefox ESR, Opera 12.1",
 	"autoprefixerEnableIEGrid": 0,
+	"babel7PresetType": 1,
+	"babelAllowRCFiles": 0,
 	"babelAuxiliaryCommentAfter": "",
 	"babelAuxiliaryCommentBefore": "",
-	"babelConfigFileHandlingType": 0,
+	"babelConfigType": 0,
 	"babelCustomPluginsList": "",
 	"babelCustomPresetsList": "",
 	"babelInsertModuleIDs": 0,
 	"babelModuleID": "",
 	"babelNoComments": 0,
 	"babelPlugins": {
+		"arrow-functions": {
+			"active": 0
+			},
 		"async-generator-functions": {
 			"active": 0
 			},
 		"async-to-generator": {
 			"active": 0
 			},
-		"async-to-module-method": {
+		"block-scoped-functions": {
+			"active": 0
+			},
+		"block-scoping": {
 			"active": 0
 			},
 		"class-properties": {
 			"active": 0
 			},
+		"classes": {
+			"active": 0
+			},
+		"computed-properties": {
+			"active": 0
+			},
 		"decorators": {
 			"active": 0
 			},
-		"decorators-legacy": {
+		"destructuring": {
 			"active": 0
 			},
 		"do-expressions": {
 			"active": 0
 			},
-		"es2015-arrow-functions": {
+		"dotall-regex": {
 			"active": 0
 			},
-		"es2015-block-scoped-functions": {
-			"active": 0
-			},
-		"es2015-block-scoping": {
-			"active": 0
-			},
-		"es2015-classes": {
-			"active": 0
-			},
-		"es2015-computed-properties": {
-			"active": 0
-			},
-		"es2015-constants": {
-			"active": 0
-			},
-		"es2015-destructuring": {
-			"active": 0
-			},
-		"es2015-duplicate-keys": {
-			"active": 0
-			},
-		"es2015-for-of": {
-			"active": 0
-			},
-		"es2015-function-name": {
-			"active": 0
-			},
-		"es2015-literals": {
-			"active": 0
-			},
-		"es2015-modules-amd": {
-			"active": 0
-			},
-		"es2015-modules-commonjs": {
-			"active": 0
-			},
-		"es2015-modules-systemjs": {
-			"active": 0
-			},
-		"es2015-modules-umd": {
-			"active": 0
-			},
-		"es2015-object-super": {
-			"active": 0
-			},
-		"es2015-parameters": {
-			"active": 0
-			},
-		"es2015-shorthand-properties": {
-			"active": 0
-			},
-		"es2015-spread": {
-			"active": 0
-			},
-		"es2015-sticky-regex": {
-			"active": 0
-			},
-		"es2015-template-literals": {
-			"active": 0
-			},
-		"es2015-typeof-symbol": {
-			"active": 0
-			},
-		"es2015-unicode-regex": {
-			"active": 0
-			},
-		"es3-member-expression-literals": {
-			"active": 0
-			},
-		"es3-property-literals": {
-			"active": 0
-			},
-		"es5-property-mutators": {
-			"active": 0
-			},
-		"eval": {
+		"duplicate-keys": {
 			"active": 0
 			},
 		"exponentiation-operator": {
 			"active": 0
 			},
-		"export-extensions": {
+		"export-default-from": {
+			"active": 0
+			},
+		"export-namespace-from": {
 			"active": 0
 			},
 		"external-helpers": {
 			"active": 0
 			},
-		"flow-comments": {
+		"flow-strip-types": {
 			"active": 0
 			},
-		"flow-strip-types": {
+		"for-of": {
 			"active": 0
 			},
 		"function-bind": {
 			"active": 0
 			},
-		"inline-environment-variables": {
+		"function-name": {
+			"active": 0
+			},
+		"function-sent": {
+			"active": 0
+			},
+		"instanceof": {
 			"active": 0
 			},
 		"jscript": {
+			"active": 0
+			},
+		"literals": {
+			"active": 0
+			},
+		"logical-assignment-operators": {
 			"active": 0
 			},
 		"member-expression-literals": {
@@ -1543,7 +1529,28 @@
 		"minify-booleans": {
 			"active": 0
 			},
+		"modules-amd": {
+			"active": 0
+			},
+		"modules-commonjs": {
+			"active": 0
+			},
+		"modules-systemjs": {
+			"active": 0
+			},
+		"modules-umd": {
+			"active": 0
+			},
+		"new-target": {
+			"active": 0
+			},
 		"node-env-inline": {
+			"active": 0
+			},
+		"nullish-coalescing-operator": {
+			"active": 0
+			},
+		"numeric-separator": {
 			"active": 0
 			},
 		"object-assign": {
@@ -1555,7 +1562,25 @@
 		"object-set-prototype-of-to-assign": {
 			"active": 0
 			},
+		"object-super": {
+			"active": 0
+			},
+		"optional-catch-binding": {
+			"active": 0
+			},
+		"optional-chaining": {
+			"active": 0
+			},
+		"parameters": {
+			"active": 0
+			},
+		"pipeline-operator": {
+			"active": 0
+			},
 		"property-literals": {
+			"active": 0
+			},
+		"property-mutators": {
 			"active": 0
 			},
 		"proto-to-assign": {
@@ -1591,53 +1616,46 @@
 		"remove-debugger": {
 			"active": 0
 			},
+		"reserved-words": {
+			"active": 0
+			},
 		"runtime": {
+			"active": 0
+			},
+		"shorthand-properties": {
 			"active": 0
 			},
 		"simplify-comparison-operators": {
 			"active": 0
 			},
+		"spread": {
+			"active": 0
+			},
+		"sticky-regex": {
+			"active": 0
+			},
 		"strict-mode": {
 			"active": 0
 			},
-		"syntax-async-generators": {
+		"template-literals": {
 			"active": 0
 			},
-		"syntax-class-properties": {
+		"throw-expressions": {
 			"active": 0
 			},
-		"syntax-decorators": {
-			"active": 0
-			},
-		"syntax-do-expressions": {
-			"active": 0
-			},
-		"syntax-export-extensions": {
-			"active": 0
-			},
-		"syntax-flow": {
-			"active": 0
-			},
-		"syntax-function-bind": {
-			"active": 0
-			},
-		"syntax-function-sent": {
-			"active": 0
-			},
-		"syntax-jsx": {
-			"active": 0
-			},
-		"syntax-object-rest-spread": {
-			"active": 0
-			},
-		"undeclared-variables-check": {
+		"typeof-symbol": {
 			"active": 0
 			},
 		"undefined-to-void": {
 			"active": 0
+			},
+		"unicode-property-regex": {
+			"active": 0
+			},
+		"unicode-regex": {
+			"active": 0
 			}
 		},
-	"babelPresetType": 193,
 	"babelRetainLines": 0,
 	"bowerAbbreviatedPath": "bower_components",
 	"bowerAutoCreateInfoFile": 1,
@@ -1646,6 +1664,7 @@
 	"bowerSaveDevDependencies": 0,
 	"bowerUseExactVersion": 0,
 	"browserRefreshDelay": 0,
+	"browserslistString": ">0.2%, last 2 versions, Firefox ESR, not dead",
 	"buildFolderActive": 1,
 	"buildFolderName": "html",
 	"cleanBuild": 1,
@@ -2003,6 +2022,10 @@
 			"active": 0,
 			"optionString": "'always', {exceptAfterSingleLine: false}"
 			},
+		"max-classes-per-file": {
+			"active": 0,
+			"optionString": "1"
+			},
 		"max-depth": {
 			"active": 0,
 			"optionString": "{'max': 4}"
@@ -2014,6 +2037,10 @@
 		"max-lines": {
 			"active": 0,
 			"optionString": "{'max': 300, 'skipBlankLines': true, 'skipComments': true}"
+			},
+		"max-lines-per-function": {
+			"active": 0,
+			"optionString": "{'max': 50, 'skipBlankLines': true, 'skipComments': true, 'IIFEs': false}"
 			},
 		"max-nested-callbacks": {
 			"active": 0,
@@ -2059,6 +2086,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-async-promise-executor": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-await-in-loop": {
 			"active": 0,
 			"optionString": ""
@@ -2077,10 +2108,6 @@
 			},
 		"no-case-declarations": {
 			"active": 1,
-			"optionString": ""
-			},
-		"no-catch-shadow": {
-			"active": 0,
 			"optionString": ""
 			},
 		"no-class-assign": {
@@ -2279,9 +2306,13 @@
 			"active": 0,
 			"optionString": "{'ignore': [], 'ignoreArrayIndexes': true, 'enforceConst': false, 'detectObjects': false}"
 			},
+		"no-misleading-character-class": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-mixed-operators": {
 			"active": 0,
-			"optionString": "{'groups': [['+', '-', '*', '\/', '%', '**'], ['&', '|', '^', '~', '<<', '>>', '>>>'], ['==', '!=', '===', '!==', '>', '>=', '<', '<='], ['&&', '||'], ['in', 'instanceof']], 'allowSamePrecedence': true}"
+			"optionString": "{'groups': [['+', '-', '*', '/', '%', '**'], ['&', '|', '^', '~', '<<', '>>', '>>>'], ['==', '!=', '===', '!==', '>', '>=', '<', '<='], ['&&', '||'], ['in', 'instanceof']], 'allowSamePrecedence': true}"
 			},
 		"no-mixed-requires": {
 			"active": 0,
@@ -2635,6 +2666,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"prefer-object-spread": {
+			"active": 0,
+			"optionString": ""
+			},
 		"prefer-promise-reject-errors": {
 			"active": 0,
 			"optionString": "{'allowEmptyReject': false}"
@@ -2663,6 +2698,10 @@
 			"active": 0,
 			"optionString": "'always'"
 			},
+		"require-atomic-updates": {
+			"active": 0,
+			"optionString": ""
+			},
 		"require-await": {
 			"active": 0,
 			"optionString": ""
@@ -2670,6 +2709,10 @@
 		"require-jsdoc": {
 			"active": 0,
 			"optionString": "{'require': {'FunctionDeclaration': true, 'MethodDefinition': false, 'ClassDeclaration': false}}"
+			},
+		"require-unicode-regexp": {
+			"active": 0,
+			"optionString": ""
 			},
 		"require-yield": {
 			"active": 0,
@@ -2725,7 +2768,7 @@
 			},
 		"spaced-comment": {
 			"active": 0,
-			"optionString": "'always', {'line': {'markers': ['\/'], 'exceptions': ['-', '+']}, 'block': {'markers': ['!'], 'exceptions': ['*'], 'balanced': false}}"
+			"optionString": "'always', {'line': {'markers': ['/'], 'exceptions': ['-', '+']}, 'block': {'markers': ['!'], 'exceptions': ['*'], 'balanced': false}}"
 			},
 		"strict": {
 			"active": 0,
@@ -2785,7 +2828,7 @@
 			}
 		},
 	"esLintSourceType": 0,
-	"externalServerAddress": "http:\/\/localhost:8000",
+	"externalServerAddress": "http://localhost:8000",
 	"gitIgnoreBuildFolder": 0,
 	"hideConfigFile": 1,
 	"jsCheckerReservedNamesString": "console",
@@ -3180,7 +3223,6 @@
 		"escapeHTMLCharacters": 0,
 		"noEscapeInAttributes": 0,
 		"outputFormat": 2,
-		"outputStyle": 0,
 		"shouldRunCacheBuster": 0,
 		"useCDATA": 0,
 		"useDoubleQuotes": 0,
@@ -3199,7 +3241,7 @@
 	"languageDefaultsJS": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*-min.js",
-		"autoOutputPathRelativePath": "\/min",
+		"autoOutputPathRelativePath": "/min",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 2,
@@ -3221,7 +3263,7 @@
 	"languageDefaultsKIT": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.html",
-		"autoOutputPathRelativePath": "html\/",
+		"autoOutputPathRelativePath": "html/",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
@@ -3231,19 +3273,19 @@
 		"allowInsecureImports": 0,
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.css",
-		"autoOutputPathRelativePath": "html\/css\/",
+		"autoOutputPathRelativePath": "html/css/",
 		"autoOutputPathReplace1": "less",
 		"autoOutputPathReplace2": "css",
 		"autoOutputPathStyle": 3,
 		"createSourceMap": 0,
-		"disableJavascript": 0,
+		"enableJavascript": 0,
 		"ieCompatibility": 1,
+		"mathStyle": 0,
 		"outputStyle": 1,
-		"relativeURLS": 0,
+		"rewriteURLStyle": 0,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
 		"strictImports": 0,
-		"strictMath": 0,
 		"strictUnits": 0
 		},
 	"languageDefaultsMARKDOWN": {
@@ -3299,7 +3341,7 @@
 	"languageDefaultsSASS": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.css",
-		"autoOutputPathRelativePath": "..\/css",
+		"autoOutputPathRelativePath": "../css",
 		"autoOutputPathReplace1": "sass",
 		"autoOutputPathReplace2": "css",
 		"autoOutputPathStyle": 2,
@@ -3328,7 +3370,7 @@
 	"languageDefaultsSTYLUS": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.css",
-		"autoOutputPathRelativePath": "..\/css",
+		"autoOutputPathRelativePath": "../css",
 		"autoOutputPathReplace1": "stylus",
 		"autoOutputPathReplace2": "css",
 		"autoOutputPathStyle": 2,
@@ -3352,36 +3394,70 @@
 	"languageDefaultsTS": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.js",
-		"autoOutputPathRelativePath": "\/js",
+		"autoOutputPathRelativePath": "/js",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 2,
 		"createDeclarationFile": 0,
 		"createSourceMap": 0,
-		"jsxMode": 0,
 		"minifyOutput": 0,
 		"moduleResolutionType": 0,
 		"moduleType": 0,
-		"noImplicitAny": 0,
-		"preserveConstEnums": 0,
 		"removeComments": 0,
-		"suppressImplicitAnyIndexErrors": 0,
 		"targetECMAVersion": 0
 		},
 	"languageDefaultsUserDefined": [
 		],
 	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
-	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules, \/dynamic\/",
+	"skippedFoldersString": "log, _logs, logs, _cache, cache, /storage/framework/sessions, node_modules, /dynamic/",
 	"sourceFolderName": "source",
 	"susyVersion": 3,
+	"tsAllowSyntheticDefaultImports": 0,
+	"tsAllowUnreachableCode": 0,
+	"tsAllowUnusedLabels": 0,
+	"tsAlwaysStrict": 0,
+	"tsDownlevelIteration": 0,
+	"tsEmitBOM": 0,
+	"tsEmitDecoratorMetadata": 0,
+	"tsESModuleInterop": 0,
+	"tsForceConsistentCasingInFileNames": 0,
+	"tsImportHelpers": 0,
+	"tsIsolatedModules": 0,
+	"tsJSXFactory": "React.createElement",
+	"tsKeyofStringsOnly": 0,
+	"tsNoEmitHelpers": 0,
+	"tsNoFallthroughCasesInSwitch": 0,
+	"tsNoImplicitAny": 0,
+	"tsNoImplicitReturns": 0,
+	"tsNoImplicitThis": 0,
+	"tsNoImplicitUseStrict": 0,
+	"tsNoLib": 0,
+	"tsNoResolve": 0,
+	"tsNoStrictGenericChecks": 0,
+	"tsNoUnusedLocals": 0,
+	"tsNoUnusedParameters": 0,
+	"tsPreserveConstEnums": 0,
+	"tsPreserveSymlinks": 0,
+	"tsResolveJsonModule": 0,
+	"tsSkipLibCheck": 0,
+	"tsStrictFunctionTypes": 0,
+	"tsStrictNullChecks": 0,
+	"tsStrictPropertyInitialization": 0,
+	"tsStripInternal": 0,
+	"tsSuppressExcessPropertyErrors": 0,
+	"tsSuppressImplicitAnyIndexErrors": 0,
 	"uglifyDefinesString": "",
 	"uglifyFlags2": {
-		"ascii-only": {
+		"arguments": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"ascii_only": {
 			"active": 0,
 			"flagValue": -1
 			},
-		"bare-returns": {
+		"bare_returns": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -3389,11 +3465,11 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"bracketize": {
+		"braces": {
 			"active": 0,
 			"flagValue": -1
 			},
-		"cascade": {
+		"collapse_vars": {
 			"active": 1,
 			"flagValue": -1
 			},
@@ -3417,6 +3493,10 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"directives": {
+			"active": 1,
+			"flagValue": -1
+			},
 		"drop_console": {
 			"active": 0,
 			"flagValue": -1
@@ -3433,7 +3513,15 @@
 			"active": 1,
 			"flagValue": -1
 			},
+		"expression": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"hoist_funs": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"hoist_props": {
 			"active": 1,
 			"flagValue": -1
 			},
@@ -3441,20 +3529,32 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"if_return": {
+		"html5_comments": {
 			"active": 1,
 			"flagValue": -1
 			},
-		"indent-level": {
+		"ie8": {
 			"active": 0,
-			"flagValue": 4
+			"flagValue": -1
+			},
+		"if_return": {
+			"active": 1,
+			"flagValue": -1
 			},
 		"indent-start": {
 			"active": 0,
 			"flagValue": 0
 			},
-		"inline-script": {
+		"indent_level": {
 			"active": 0,
+			"flagValue": 4
+			},
+		"inline": {
+			"active": 1,
+			"flagValue": 3
+			},
+		"inline_script": {
+			"active": 1,
 			"flagValue": -1
 			},
 		"join_vars": {
@@ -3469,6 +3569,14 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"keep_infinity": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"keep_quoted_props": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"loops": {
 			"active": 1,
 			"flagValue": -1
@@ -3477,12 +3585,20 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"max-line-len": {
+		"max_line_len": {
 			"active": 1,
 			"flagValue": 32000
 			},
 		"negate_iife": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"passes": {
+			"active": 1,
+			"flagValue": 1
+			},
+		"preserve_line": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"properties": {
@@ -3493,11 +3609,19 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"quote-keys": {
+		"quote_keys": {
 			"active": 0,
 			"flagValue": -1
 			},
-		"screw-ie8": {
+		"quote_style": {
+			"active": 1,
+			"flagValue": 0
+			},
+		"reduce_funcs": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"reduce_vars": {
 			"active": 1,
 			"flagValue": -1
 			},
@@ -3509,23 +3633,51 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"sort": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"space-colon": {
+		"shebang": {
 			"active": 1,
 			"flagValue": -1
 			},
-		"support-ie8": {
-			"active": 0,
+		"side_effects": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"switches": {
+			"active": 1,
 			"flagValue": -1
 			},
 		"toplevel": {
 			"active": 0,
 			"flagValue": -1
 			},
+		"typeofs": {
+			"active": 1,
+			"flagValue": -1
+			},
 		"unsafe": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_comps": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_Function": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_math": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_proto": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_regexp": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_undefined": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -3537,13 +3689,21 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"webkit": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"width": {
 			"active": 1,
 			"flagValue": 80
+			},
+		"wrap_iife": {
+			"active": 0,
+			"flagValue": -1
 			}
 		},
 	"uglifyReservedNamesString": "$",
-	"websiteRelativeRoot": "\/html"
+	"websiteRelativeRoot": "/html"
 	},
 "settingsFileVersion": "3"
 }

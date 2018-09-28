@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <title><!-- $subtitle --> Aaron Stockdill</title>
-        <link rel="stylesheet" href="/css/white.css" media="screen" id="theme">
+        <script>
+          var style_cookie = document.cookie.match(/style=((black)|(white))/);
+          document.write(
+              "<link rel='stylesheet' href='/css/"
+            + (style_cookie || [null, "white"])[1] + ".css' media='screen' id='theme'>");
+        </script>
         <style>
             <!-- @import "../html/css/master.css" -->
         </style>

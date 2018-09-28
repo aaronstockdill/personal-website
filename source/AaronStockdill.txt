@@ -5,12 +5,13 @@ PhD Student at the University of Cambridge
 Education
 
   Doctor of Philosophy in Computer Science, University of Cambridge. (In progress)
-  Bachelor of Science (Honours), University of Canterbury.
+  Bachelor of Science (Honours) in Computer Science, University of Canterbury.
+  Bachelor of Science in Computer Science and Mathematics, University of Canterbury.
 
 
 Employment
 
-  Supervisor, "Foundations of Computer Science", "Prolog", "Logic and Proof", "Artificial Intelligence", "Interaction Design", University of Cambridge, 2017/18.
+  Supervisor, "Foundations of Computer Science", "Prolog", "Logic and Proof", "Artificial Intelligence", University of Cambridge, 2017-2019.
 
   Lecturer, "Introduction to Computer Science", University of Canterbury, 2017.
 
@@ -25,4 +26,6 @@ Employment
 
 Publications
 
-  Restricted Echo State Networks. Aaron Stockdill and Kourosh Neshatian, AI 2016: Advances in Artificial Intelligence. Volume 9992 of Lecture Notes in Artificial Intelligence. Springer International Publishing.
+  Simulating neuromorphic reservoir computing: Abstract feed-forward hardware models. Aaron Stockdill and Kourosh Neshatian. 2017 International Conference on Image and Vision Computing New Zealand (IVCNZ). https://dx.doi.org/10.1109/IVCNZ.2017.8402482
+
+  Restricted Echo State Networks. Aaron Stockdill and Kourosh Neshatian, AI 2016: Advances in Artificial Intelligence. Volume 9992 of Lecture Notes in Artificial Intelligence. https://dx.doi.org/10.1007/978-3-319-50127-7_49
