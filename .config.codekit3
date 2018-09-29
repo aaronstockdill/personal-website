@@ -510,9 +510,9 @@
 	"/source/AaronStockdill.pdf": {
 		"cB": 0,
 		"ft": 8192,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "/html/cv/AaronStockdill.pdf",
-		"oF": 3
+		"oF": 2
 		},
 	"/source/AaronStockdill.txt": {
 		"cB": 0,
@@ -1423,7 +1423,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-owl",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 559865807.07836604
+	"lastBuiltDate": 559917983.68020105
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

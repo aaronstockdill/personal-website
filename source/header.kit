@@ -12,8 +12,11 @@
         <style>
             <!-- @import "../html/css/master.css" -->
         </style>
-        <style media="screen and (max-width: 600px)">
+        <style media="screen and (max-width: 750px)">
             <!-- @import "../html/css/600.css" -->
+        </style>
+        <style media="screen and (min-width: 1700px)">
+          body{font-size:26px;}
         </style>
         <style media="print">
             <!-- @import "../html/css/print.css" -->
@@ -72,4 +75,14 @@
             <span>Blog</span>
         </a>
     </nav>
+    <footer>
+      <span class='selector'>
+        <a id="white-button" class='theme-button active' onclick='switch_theme("white")'>
+          <span>light</span>
+        </a>
+        <a id="black-button" class='theme-button' onclick='switch_theme("black")'>
+          <span>dark</span>
+        </a>
+      </span>
+    </footer>
     </div>
