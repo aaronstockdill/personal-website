@@ -30,8 +30,26 @@ setupEmail = () ->
     borked_list = document.querySelectorAll(".borked-email")
     for borked in borked_list
         borked.addEventListener('mouseover', (event) ->
-            event.target.href = switchEmail event.target.href)
+            if (event.target.borked != "false" && event.target.held != "true")
+                event.target.href = switchEmail event.target.href
+                event.target.borked = "false"
+            )
         borked.addEventListener('mouseout', (event) ->
-            event.target.href = switchEmail event.target.href)
+            if (event.target.borked == "false" && event.target.held != "true")
+                setTimeout(() => event.target.href = switchEmail event.target.href, 500)
+                event.target.borked = "true"
+            )
+        for action in ["mousedown", "touchstart"]
+            borked.addEventListener(action, (event) ->
+                if (event.target.borked != "false")
+                    event.target.href = switchEmail event.target.href
+                    event.target.borked = "false"
+                event.target.held = "true")
+        for action in ["mouseup", "click", "dragend", "touchend"]
+            borked.addEventListener(action, (event) ->
+                if (event.target.borked == "false")
+                    setTimeout(() => event.target.href = switchEmail event.target.href, 500)
+                    event.target.borked = "true"
+                event.target.held = "false")
 
 setupEmail()

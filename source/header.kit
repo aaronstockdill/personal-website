@@ -9,6 +9,8 @@
               "<link rel='stylesheet' href='/css/"
             + (style_cookie || [null, "white"])[1] + ".css' media='screen' id='theme'>");
         </script>
+        <link href="https://fonts.googleapis.com/css?family=Marcellus" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Marcellus+SC" rel="stylesheet">
         <style>
             <!-- @import "../html/css/master.css" -->
         </style>
@@ -43,7 +45,6 @@
         <meta name="theme-color" content="#ffffff">
     </head>
     <body>
-    <div class="container <!-- $welcome? -->">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-20 -20 420 420" class="menu-hamburger" id="menu-hamburger">
         <rect x="0" y="80" rx="0" ry="0" width="400" height="80" transform-origin="200 120" class="bar-top bar"></rect>
         <rect x="0" y="260" rx="0" ry="0" width="400" height="80" transform-origin="200 300" class="bar-bottom bar"></rect>
@@ -51,8 +52,8 @@
     <div class="nav-holder">
     <nav>
 
-        <a href="/" class="home <!-- $home_active? -->">
-            <span>Aaron Stockdill</span>
+        <a href="/" class="<!-- $home_active? -->">
+            <span>Home</span>
         </a>
 
         <a href="/cv/" class="<!-- $cv_active? -->">
@@ -75,14 +76,5 @@
             <span>Blog</span>
         </a>
     </nav>
-    <footer>
-      <span class='selector'>
-        <a id="white-button" class='theme-button active' onclick='switch_theme("white")'>
-          <span>light</span>
-        </a>
-        <a id="black-button" class='theme-button' onclick='switch_theme("black")'>
-          <span>dark</span>
-        </a>
-      </span>
-    </footer>
     </div>
+    <div class="container <!-- $welcome? -->">

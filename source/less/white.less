@@ -25,9 +25,21 @@ html, body {
     }
 }
 
-nav a.active {
-    color: darken(@font, 20%);
-    border-color: @offblack;
+nav {
+    background: @background;
+
+    a {
+        color: @offblack;
+
+        &:hover {
+            color: @font;
+        }
+
+        &.active {
+            color: darken(@font, 20%);
+            border-color: @offblack;
+        }
+    }
 }
 
 .nav-holder {
