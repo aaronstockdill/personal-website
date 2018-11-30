@@ -4,32 +4,28 @@ html, body {
 
 .container.welcome {
     text-align: center;
-    padding: 0.5rem 0 2rem 0;
+    padding: 0.5rem 1rem 2rem 1rem;
 
-    .nav-holder {
-        display: block;
+    .canvas-holder {
+        display: none;
     }
 
-    h1 {
-        margin-top: 20vh;
-        font-size: 3.25rem;
-        line-height: 3rem;
-    }
+    .welcome-content {
+        top: 4rem;
+        right: 0;
+        left: 0;
 
-    p, .email, .phone, nav a {
-        margin: 0 auto;
-
-        span {
-            display: inline-block;
+        h1 {
+            font-size: 3.25rem;
+            line-height: 3rem;
         }
-    }
 
-    .trailing nav.home {
-        a {
-            text-align: center;
-            font-size: 0.85rem;
-            padding: 0;
+        p, .email, .phone, nav a {
             margin: 0 auto;
+
+            span {
+                display: inline-block;
+            }
         }
     }
 }
@@ -40,14 +36,10 @@ html, body {
     }
 }
 
-.submenu {
-    display: none;
-}
-
 nav {
     height: 100%;
     width: 100%;
-    top: 3rem;
+    margin-top: 3rem;
 
     a {
         display: block;
@@ -56,10 +48,6 @@ nav {
         text-align: right;
         padding-right: 1rem;
         font-size: 1rem;
-
-        .container.welcome & {
-            margin: .25rem .25rem .5rem 0;
-        }
 
         &.home {
             padding-bottom: 0.5rem;
@@ -73,17 +61,26 @@ nav {
     overflow: hidden;
     padding: 0;
     margin: 0;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 0rem;
+    height: 0rem;
     top: 0;
     right: 0;
     left: revert;
-    transition: height 0.5s ease, width 0.5s ease;
+    transition: height 0.5s ease, width 0.5s ease, background 0.2s linear 0.3s;
     z-index: 1000;
+
+    footer {
+        display: none;
+    }
 
     &.showing {
         height: 100%;
         width: 100%;
+        transition: height 0.5s ease, width 0.5s ease, background 0.2s linear 0s;
+
+        footer {
+            display: block;
+        }
     }
 }
 

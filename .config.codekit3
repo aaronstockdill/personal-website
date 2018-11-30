@@ -36,7 +36,7 @@
 		"uuidString": "CF21AFA0-D9E9-4C5A-8F82-0C07239DE6B6"
 		}
 	],
-"creatorBuild": "28901",
+"creatorBuild": "28905",
 "files": {
 	"/.gitignore": {
 		"cB": 0,
@@ -510,9 +510,9 @@
 	"/source/AaronStockdill.pdf": {
 		"cB": 0,
 		"ft": 8192,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "/html/cv/AaronStockdill.pdf",
-		"oF": 3
+		"oF": 2
 		},
 	"/source/AaronStockdill.txt": {
 		"cB": 0,
@@ -606,6 +606,17 @@
 		"oAP": "/html/js/email.js",
 		"oF": 0,
 		"oS": 0,
+		"sC": 1,
+		"tS": 1
+		},
+	"/source/coffeescript/infiniscroll.coffee": {
+		"ft": 32,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/html/js/infiniscroll.js",
+		"oF": 0,
+		"oS": 1,
 		"sC": 1,
 		"tS": 1
 		},
@@ -1423,7 +1434,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-owl",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 559865807.07836604
+	"lastBuiltDate": 565310742.40648401
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

@@ -25,9 +25,21 @@ html, body {
     }
 }
 
-nav a.active {
-    color: lighten(@font, 20%);
-    border-color: @offwhite;
+nav {
+    background: @background;
+
+    a {
+        color: @offwhite;
+
+        &:hover {
+            color: @font;
+        }
+
+        &.active {
+            color: lighten(@font, 20%);
+            border-color: @offwhite;
+        }
+    }
 }
 
 .nav-holder {
