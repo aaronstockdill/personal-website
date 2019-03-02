@@ -103,7 +103,7 @@ def parse_bibtex(bibfile):
     return {**parse(contents, 0)[0], **{"pdf_link": pdflink, "bib_link": biblink}}
 
 
-def create_markdown_page(infile, outfile, templatefile):
+def create_markdown_page(infile, outfile, templatefile, prevpage=None, nextpage=None):
     """ Given a source file, produce the outfile based on templatefile.
     """
     title_string = infile.split("/")[-1].split(".")[0]
@@ -114,6 +114,26 @@ def create_markdown_page(infile, outfile, templatefile):
     wrapper_html = wrapper_html.replace("{{-- TITLE --}}", title_string)
     wrapper_html = wrapper_html.replace("{{-- CONTENT --}}", str(html_string.getvalue(), encoding="UTF-8"))
     wrapper_html = wrapper_html.replace("{{-- SLUG --}}", outfile.split("/")[-2])
+    if prevpage:
+        (prevtitle, prevslug) = prevpage
+        prevtitle = prevtitle.split("/")[-1].split(".")[0]
+        wrapper_html = wrapper_html.replace("{{-- PREV-LINK --}}", prevslug)
+        wrapper_html = wrapper_html.replace("{{-- PREV-TITLE --}}", prevtitle)
+        wrapper_html = wrapper_html.replace("{{-- IF PREV-EXISTS --}}", "")
+        wrapper_html = wrapper_html.replace("{{-- ENDIF PREV-EXISTS --}}", "")
+    else:
+        wrapper_html = wrapper_html.replace("{{-- IF PREV-EXISTS --}}", "<!--")
+        wrapper_html = wrapper_html.replace("{{-- ENDIF PREV-EXISTS --}}", "-->")
+    if nextpage:
+        (nexttitle, nextslug) = nextpage
+        nexttitle = nexttitle.split("/")[-1].split(".")[0]
+        wrapper_html = wrapper_html.replace("{{-- NEXT-LINK --}}", nextslug)
+        wrapper_html = wrapper_html.replace("{{-- NEXT-TITLE --}}", nexttitle)
+        wrapper_html = wrapper_html.replace("{{-- IF NEXT-EXISTS --}}", "")
+        wrapper_html = wrapper_html.replace("{{-- ENDIF NEXT-EXISTS --}}", "")
+    else:
+        wrapper_html = wrapper_html.replace("{{-- IF NEXT-EXISTS --}}", "<!--")
+        wrapper_html = wrapper_html.replace("{{-- ENDIF NEXT-EXISTS --}}", "-->")
     maybe_make_dir(os.path.dirname(outfile))
     with open(outfile, 'w') as f:
         f.write(wrapper_html)
@@ -125,7 +145,7 @@ def create_blog_listing(filenames_and_links, outfile, templatefile):
     """
     sorter = lambda x: tuple(int(d) for d in x[0].split('.')[1].split("-"))
     listed_html = ""
-    item_template = """<div class="dynamic-link"><a href="{link}">{title}</a><span class="date">{date}</span></div>"""
+    item_template = """<div class="dynamic-link"><span class="date">{date}</span><a href="{link}">{title}</a></div>"""
     for filename, link in sorted(filenames_and_links, key=sorter, reverse=True):
         parts = filename.split('/')[-1].split('.')
         listed_html += item_template.format(link=link, title=parts[0], date=parts[1])
@@ -215,7 +235,7 @@ def main():
             # Blog post
             link = format_url(filename, "blog")
             blog_posts.append((filename, link))
-            create_markdown_page(filename, "source" + link + "index.kit", "source/blog_post.template")
+            # create_markdown_page(filename, "source" + link + "index.kit", "source/blog_post.template")
         elif extension == ".bib":
             # Publication
             publications.append(filename)
@@ -224,10 +244,17 @@ def main():
             # Talk (in markdown)
             link = format_url(filename, "talk")
             talks.append((filename, link))
-            create_markdown_page(filename, "source" + link + "index.kit", "source/talk.template")
+            # create_markdown_page(filename, "source" + link + "index.kit", "source/talk.template")
         else:
             copy_to_assets(filename, "source/static_assets/")
 
+    sorter = lambda x: tuple(int(d) for d in x[0].split('.')[1].split("-"))
+    blog_posts = list(sorted(blog_posts, key=sorter, reverse=True))
+    for (prevp, currp, nextp) in zip(blog_posts[1:] + [None], blog_posts, [None] + blog_posts[:-1]):
+        create_markdown_page(currp[0], "source" + currp[1] + "index.kit", "source/blog_post.template", prevp, nextp)
+    talks = list(sorted(talks, key=sorter, reverse=True))
+    for (prevp, currp, nextp) in zip(talks[1:] + [None], talks, [None] + talks[:-1]):
+        create_markdown_page(currp[0], "source" + currp[1] + "index.kit", "source/talk.template", prevp, nextp)
     create_blog_listing(blog_posts, "source/blog.kit", "source/blog_index.template")
     create_research_listing(publications, talks, "source/research.kit", "source/research.template")
 

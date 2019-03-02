@@ -36,11 +36,12 @@
 		"uuidString": "CF21AFA0-D9E9-4C5A-8F82-0C07239DE6B6"
 		}
 	],
-"creatorBuild": "28905",
+"creatorBuild": "29156",
 "files": {
 	"/.gitignore": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/.gitignore",
 		"oF": 1
@@ -48,6 +49,7 @@
 	"/build-static": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/build-static",
 		"oF": 1
@@ -55,6 +57,7 @@
 	"/deploy-static": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/deploy-static",
 		"oF": 1
@@ -67,6 +70,7 @@
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/dynamic/Algorithms for Intelligence: Search.2018-03-01.html",
 		"oF": 1,
@@ -85,6 +89,7 @@
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/dynamic/.Year One Done.2018-07-31.html",
 		"oF": 1,
@@ -103,6 +108,7 @@
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/dynamic/A catalogue of crazy.2017-10-12.html",
 		"oF": 1,
@@ -121,6 +127,7 @@
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/dynamic/Cambridge.2017-08-30.html",
 		"oF": 1,
@@ -134,6 +141,7 @@
 	"/dynamic/CS+X.2017-08-18.talk": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/dynamic/CS+X.2017-08-18.talk",
 		"oF": 1
@@ -141,6 +149,7 @@
 	"/dynamic/csx-code.zip": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/dynamic/csx-code.zip",
 		"oF": 1
@@ -148,6 +157,7 @@
 	"/dynamic/csx-slides.pdf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/dynamic/csx-slides.pdf",
 		"oF": 1
@@ -166,6 +176,7 @@
 	"/dynamic/Eureka.pdf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/dynamic/Eureka.pdf",
 		"oF": 1
@@ -189,6 +200,7 @@
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/dynamic/Good News, Everyone.2017-02-08.html",
 		"oF": 1,
@@ -224,6 +236,7 @@
 	"/dynamic/Honours Presentation.pdf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/dynamic/Honours Presentation.pdf",
 		"oF": 1
@@ -253,6 +266,7 @@
 	"/dynamic/Life After the Robot Apocalypse.2016-09-08.talk": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/dynamic/Life After the Robot Apocalypse.2016-09-08.talk",
 		"oF": 1
@@ -265,6 +279,7 @@
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/dynamic/Missing what is not.2018-03-28.html",
 		"oF": 1,
@@ -278,6 +293,7 @@
 	"/dynamic/Neuromorphic Computing with Reservoir Neural Networks on Memristive Hardware.2016-09-01.talk": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/dynamic/Neuromorphic Computing with Reservoir Neural Networks on Memristive Hardware.2016-09-01.talk",
 		"oF": 1
@@ -285,6 +301,7 @@
 	"/dynamic/Neuromorphic Computing.bib": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/dynamic/Neuromorphic Computing.bib",
 		"oF": 1
@@ -292,6 +309,7 @@
 	"/dynamic/Neuromorphic Computing.pdf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/dynamic/Neuromorphic Computing.pdf",
 		"oF": 1
@@ -299,6 +317,7 @@
 	"/dynamic/NeuromorphicReservoirs.bib": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/dynamic/NeuromorphicReservoirs.bib",
 		"oF": 1
@@ -306,6 +325,7 @@
 	"/dynamic/NeuromorphicReservoirs.pdf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/dynamic/NeuromorphicReservoirs.pdf",
 		"oF": 1
@@ -313,6 +333,7 @@
 	"/dynamic/Restricted Echo State Networks.bib": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/dynamic/Restricted Echo State Networks.bib",
 		"oF": 1
@@ -320,6 +341,7 @@
 	"/dynamic/Restricted Echo State Networks.pdf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/dynamic/Restricted Echo State Networks.pdf",
 		"oF": 1
@@ -332,6 +354,7 @@
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/dynamic/Scholarship Calculus.2016-09-24.html",
 		"oF": 1,
@@ -345,6 +368,7 @@
 	"/dynamic/ScholarshipPPTs/01 Introduction.pptx": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/dynamic/ScholarshipPPTs/01 Introduction.pptx",
 		"oF": 1
@@ -352,6 +376,7 @@
 	"/dynamic/ScholarshipPPTs/02 Preliminaries.pptx": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/dynamic/ScholarshipPPTs/02 Preliminaries.pptx",
 		"oF": 1
@@ -359,6 +384,7 @@
 	"/dynamic/ScholarshipPPTs/03 Differentiation 1.pptx": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/dynamic/ScholarshipPPTs/03 Differentiation 1.pptx",
 		"oF": 1
@@ -366,6 +392,7 @@
 	"/dynamic/ScholarshipPPTs/04 Differentiation 2.pptx": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/dynamic/ScholarshipPPTs/04 Differentiation 2.pptx",
 		"oF": 1
@@ -373,6 +400,7 @@
 	"/dynamic/ScholarshipPPTs/05 Conics.pptx": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/dynamic/ScholarshipPPTs/05 Conics.pptx",
 		"oF": 1
@@ -380,6 +408,7 @@
 	"/dynamic/ScholarshipPPTs/06 Trigonometry 1.pptx": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/dynamic/ScholarshipPPTs/06 Trigonometry 1.pptx",
 		"oF": 1
@@ -387,6 +416,7 @@
 	"/dynamic/ScholarshipPPTs/07 Differentiation 3.pptx": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/dynamic/ScholarshipPPTs/07 Differentiation 3.pptx",
 		"oF": 1
@@ -394,6 +424,7 @@
 	"/dynamic/ScholarshipPPTs/08 Trigonometry 2.pptx": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/dynamic/ScholarshipPPTs/08 Trigonometry 2.pptx",
 		"oF": 1
@@ -401,6 +432,7 @@
 	"/dynamic/ScholarshipPPTs/09 Integration 1.pptx": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/dynamic/ScholarshipPPTs/09 Integration 1.pptx",
 		"oF": 1
@@ -408,6 +440,7 @@
 	"/dynamic/ScholarshipPPTs/10 Integration 2.pptx": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/dynamic/ScholarshipPPTs/10 Integration 2.pptx",
 		"oF": 1
@@ -415,6 +448,7 @@
 	"/dynamic/ScholarshipPPTs/11 Integration 3.pptx": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/dynamic/ScholarshipPPTs/11 Integration 3.pptx",
 		"oF": 1
@@ -422,6 +456,7 @@
 	"/dynamic/ScholarshipPPTs/12 Differential Equations 1.pptx": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/dynamic/ScholarshipPPTs/12 Differential Equations 1.pptx",
 		"oF": 1
@@ -429,6 +464,7 @@
 	"/dynamic/ScholarshipPPTs/13 Differential Equations 2.pptx": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/dynamic/ScholarshipPPTs/13 Differential Equations 2.pptx",
 		"oF": 1
@@ -436,6 +472,7 @@
 	"/dynamic/ScholarshipPPTs/14 Complex Geometry 1.pptx": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/dynamic/ScholarshipPPTs/14 Complex Geometry 1.pptx",
 		"oF": 1
@@ -443,6 +480,7 @@
 	"/dynamic/ScholarshipPPTs/15 Complex Geometry 2.pptx": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/dynamic/ScholarshipPPTs/15 Complex Geometry 2.pptx",
 		"oF": 1
@@ -450,6 +488,7 @@
 	"/dynamic/ScholarshipPPTs/16 Revision.pptx": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/dynamic/ScholarshipPPTs/16 Revision.pptx",
 		"oF": 1
@@ -473,6 +512,7 @@
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/dynamic/The Wireless: Are robots going to kill us all.2017-09-28.html",
 		"oF": 1,
@@ -503,6 +543,7 @@
 	"/source/404.kit": {
 		"cB": 0,
 		"ft": 2048,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/404.html",
 		"oF": 0
@@ -510,6 +551,7 @@
 	"/source/AaronStockdill.pdf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/html/cv/AaronStockdill.pdf",
 		"oF": 2
@@ -517,6 +559,7 @@
 	"/source/AaronStockdill.txt": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/cv/AaronStockdill.txt",
 		"oF": 2
@@ -524,6 +567,7 @@
 	"/source/blog.kit": {
 		"cB": 0,
 		"ft": 2048,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/blog/index.html",
 		"oF": 2
@@ -531,6 +575,7 @@
 	"/source/blog/a-catalogue-of-crazy/index.kit": {
 		"cB": 0,
 		"ft": 2048,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/blog/a-catalogue-of-crazy/index.html",
 		"oF": 0
@@ -538,6 +583,7 @@
 	"/source/blog/cambridge/index.kit": {
 		"cB": 0,
 		"ft": 2048,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/blog/cambridge/index.html",
 		"oF": 0
@@ -545,6 +591,7 @@
 	"/source/blog/good-news-everyone/index.kit": {
 		"cB": 0,
 		"ft": 2048,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/blog/good-news-everyone/index.html",
 		"oF": 0
@@ -552,6 +599,7 @@
 	"/source/blog/missing-what-is-not/index.kit": {
 		"cB": 0,
 		"ft": 2048,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/blog/missing-what-is-not/index.html",
 		"oF": 0
@@ -559,6 +607,7 @@
 	"/source/blog/scholarship-calculus/index.kit": {
 		"cB": 0,
 		"ft": 2048,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/blog/scholarship-calculus/index.html",
 		"oF": 0
@@ -566,6 +615,7 @@
 	"/source/blog/the-wireless-are-robots-going-to-kill-us-all/index.kit": {
 		"cB": 0,
 		"ft": 2048,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/blog/the-wireless-are-robots-going-to-kill-us-all/index.html",
 		"oF": 0
@@ -573,6 +623,7 @@
 	"/source/blog/year-one-done/index.kit": {
 		"cB": 0,
 		"ft": 2048,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/blog/year-one-done/index.html",
 		"oF": 0
@@ -580,6 +631,7 @@
 	"/source/blog_index.template": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/blog_index.template",
 		"oF": 1
@@ -587,6 +639,7 @@
 	"/source/blog_post.template": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/blog_post.template",
 		"oF": 1
@@ -594,6 +647,7 @@
 	"/source/CNAME": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/html/CNAME",
 		"oF": 0
@@ -656,6 +710,7 @@
 	"/source/contact.kit": {
 		"cB": 0,
 		"ft": 2048,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/contact/index.html",
 		"oF": 2
@@ -663,6 +718,7 @@
 	"/source/cv.kit": {
 		"cB": 0,
 		"ft": 2048,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/cv/index.html",
 		"oF": 2
@@ -857,6 +913,7 @@
 	"/source/favicons/browserconfig.xml": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/browserconfig.xml",
 		"oF": 2
@@ -897,6 +954,7 @@
 	"/source/favicons/favicon.ico": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/favicon.ico",
 		"oF": 2
@@ -956,6 +1014,7 @@
 	"/source/footer.kit": {
 		"cB": 0,
 		"ft": 2048,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/footer.html",
 		"oF": 0
@@ -963,6 +1022,7 @@
 	"/source/header.kit": {
 		"cB": 0,
 		"ft": 2048,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/header.html",
 		"oF": 0
@@ -970,6 +1030,7 @@
 	"/source/htaccess": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/.htaccess",
 		"oF": 2
@@ -977,6 +1038,7 @@
 	"/source/index.kit": {
 		"cB": 0,
 		"ft": 2048,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/index.html",
 		"oF": 0
@@ -984,6 +1046,7 @@
 	"/source/keybase.txt": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/keybase.txt",
 		"oF": 0
@@ -1093,6 +1156,7 @@
 	"/source/research.kit": {
 		"cB": 0,
 		"ft": 2048,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/research/index.html",
 		"oF": 2
@@ -1100,6 +1164,7 @@
 	"/source/research.template": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/research.template",
 		"oF": 1
@@ -1107,6 +1172,7 @@
 	"/source/sitemap.xml": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/sitemap.xml",
 		"oF": 0
@@ -1114,6 +1180,7 @@
 	"/source/static_assets/auto/Restricted Echo State Networks.el": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/static_assets/auto/Restricted Echo State Networks.el",
 		"oF": 0
@@ -1121,6 +1188,7 @@
 	"/source/static_assets/csx-code.zip": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/static_assets/csx-code.zip",
 		"oF": 0
@@ -1128,6 +1196,7 @@
 	"/source/static_assets/csx-slides.pdf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/static_assets/csx-slides.pdf",
 		"oF": 0
@@ -1146,6 +1215,7 @@
 	"/source/static_assets/Eureka.pdf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/static_assets/Eureka.pdf",
 		"oF": 0
@@ -1186,6 +1256,7 @@
 	"/source/static_assets/Honours Presentation.pdf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/static_assets/Honours Presentation.pdf",
 		"oF": 0
@@ -1215,6 +1286,7 @@
 	"/source/static_assets/Neuromorphic Computing.bib": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/static_assets/Neuromorphic Computing.bib",
 		"oF": 0
@@ -1222,6 +1294,7 @@
 	"/source/static_assets/Neuromorphic Computing.pdf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/static_assets/Neuromorphic Computing.pdf",
 		"oF": 0
@@ -1229,6 +1302,7 @@
 	"/source/static_assets/NeuromorphicReservoirs.bib": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/html/static_assets/NeuromorphicReservoirs.bib",
 		"oF": 0
@@ -1236,6 +1310,7 @@
 	"/source/static_assets/NeuromorphicReservoirs.pdf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/html/static_assets/NeuromorphicReservoirs.pdf",
 		"oF": 0
@@ -1243,6 +1318,7 @@
 	"/source/static_assets/Restricted Echo State Networks.bib": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/static_assets/Restricted Echo State Networks.bib",
 		"oF": 0
@@ -1250,6 +1326,7 @@
 	"/source/static_assets/Restricted Echo State Networks.pdf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/static_assets/Restricted Echo State Networks.pdf",
 		"oF": 0
@@ -1257,6 +1334,7 @@
 	"/source/static_assets/ScholarshipPPTs/01 Introduction.pptx": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/static_assets/ScholarshipPPTs/01 Introduction.pptx",
 		"oF": 0
@@ -1264,6 +1342,7 @@
 	"/source/static_assets/ScholarshipPPTs/02 Preliminaries.pptx": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/static_assets/ScholarshipPPTs/02 Preliminaries.pptx",
 		"oF": 0
@@ -1271,6 +1350,7 @@
 	"/source/static_assets/ScholarshipPPTs/03 Differentiation 1.pptx": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/static_assets/ScholarshipPPTs/03 Differentiation 1.pptx",
 		"oF": 0
@@ -1278,6 +1358,7 @@
 	"/source/static_assets/ScholarshipPPTs/04 Differentiation 2.pptx": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/static_assets/ScholarshipPPTs/04 Differentiation 2.pptx",
 		"oF": 0
@@ -1285,6 +1366,7 @@
 	"/source/static_assets/ScholarshipPPTs/05 Conics.pptx": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/static_assets/ScholarshipPPTs/05 Conics.pptx",
 		"oF": 0
@@ -1292,6 +1374,7 @@
 	"/source/static_assets/ScholarshipPPTs/06 Trigonometry 1.pptx": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/static_assets/ScholarshipPPTs/06 Trigonometry 1.pptx",
 		"oF": 0
@@ -1299,6 +1382,7 @@
 	"/source/static_assets/ScholarshipPPTs/07 Differentiation 3.pptx": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/static_assets/ScholarshipPPTs/07 Differentiation 3.pptx",
 		"oF": 0
@@ -1306,6 +1390,7 @@
 	"/source/static_assets/ScholarshipPPTs/08 Trigonometry 2.pptx": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/static_assets/ScholarshipPPTs/08 Trigonometry 2.pptx",
 		"oF": 0
@@ -1313,6 +1398,7 @@
 	"/source/static_assets/ScholarshipPPTs/09 Integration 1.pptx": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/static_assets/ScholarshipPPTs/09 Integration 1.pptx",
 		"oF": 0
@@ -1320,6 +1406,7 @@
 	"/source/static_assets/ScholarshipPPTs/10 Integration 2.pptx": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/static_assets/ScholarshipPPTs/10 Integration 2.pptx",
 		"oF": 0
@@ -1327,6 +1414,7 @@
 	"/source/static_assets/ScholarshipPPTs/11 Integration 3.pptx": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/static_assets/ScholarshipPPTs/11 Integration 3.pptx",
 		"oF": 0
@@ -1334,6 +1422,7 @@
 	"/source/static_assets/ScholarshipPPTs/12 Differential Equations 1.pptx": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/static_assets/ScholarshipPPTs/12 Differential Equations 1.pptx",
 		"oF": 0
@@ -1341,6 +1430,7 @@
 	"/source/static_assets/ScholarshipPPTs/13 Differential Equations 2.pptx": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/static_assets/ScholarshipPPTs/13 Differential Equations 2.pptx",
 		"oF": 0
@@ -1348,6 +1438,7 @@
 	"/source/static_assets/ScholarshipPPTs/14 Complex Geometry 1.pptx": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/static_assets/ScholarshipPPTs/14 Complex Geometry 1.pptx",
 		"oF": 0
@@ -1355,6 +1446,7 @@
 	"/source/static_assets/ScholarshipPPTs/15 Complex Geometry 2.pptx": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/static_assets/ScholarshipPPTs/15 Complex Geometry 2.pptx",
 		"oF": 0
@@ -1362,6 +1454,7 @@
 	"/source/static_assets/ScholarshipPPTs/16 Revision.pptx": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/static_assets/ScholarshipPPTs/16 Revision.pptx",
 		"oF": 0
@@ -1391,6 +1484,7 @@
 	"/source/talk.template": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/talk.template",
 		"oF": 1
@@ -1398,6 +1492,7 @@
 	"/source/talk/csx/index.kit": {
 		"cB": 0,
 		"ft": 2048,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/talk/csx/index.html",
 		"oF": 0
@@ -1405,6 +1500,7 @@
 	"/source/talk/life-after-the-robot-apocalypse/index.kit": {
 		"cB": 0,
 		"ft": 2048,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/talk/life-after-the-robot-apocalypse/index.html",
 		"oF": 0
@@ -1412,6 +1508,7 @@
 	"/source/talk/neuromorphic-computing-with-reservoir-neural-networks-on-memristive-hardware/index.kit": {
 		"cB": 0,
 		"ft": 2048,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/talk/neuromorphic-computing-with-reservoir-neural-networks-on-memristive-hardware/index.html",
 		"oF": 0
@@ -1419,6 +1516,7 @@
 	"/source/teaching/index.kit": {
 		"cB": 0,
 		"ft": 2048,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/teaching/index.html",
 		"oF": 0
@@ -1434,7 +1532,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-owl",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 565310742.40648401
+	"lastBuiltDate": 573215818.01460397
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -1519,6 +1617,12 @@
 		"function-sent": {
 			"active": 0
 			},
+		"inline-consecutive-adds": {
+			"active": 0
+			},
+		"inline-environment-variables": {
+			"active": 0
+			},
 		"instanceof": {
 			"active": 0
 			},
@@ -1538,6 +1642,36 @@
 			"active": 0
 			},
 		"minify-booleans": {
+			"active": 0
+			},
+		"minify-builtins": {
+			"active": 0
+			},
+		"minify-constant-folding": {
+			"active": 0
+			},
+		"minify-dead-code-elimination": {
+			"active": 0
+			},
+		"minify-flip-comparisons": {
+			"active": 0
+			},
+		"minify-guarded-expressions": {
+			"active": 0
+			},
+		"minify-infinity": {
+			"active": 0
+			},
+		"minify-mangle-names": {
+			"active": 0
+			},
+		"minify-numeric-literals": {
+			"active": 0
+			},
+		"minify-simplify": {
+			"active": 0
+			},
+		"minify-type-constructors": {
 			"active": 0
 			},
 		"modules-amd": {
@@ -1588,6 +1722,9 @@
 		"pipeline-operator": {
 			"active": 0
 			},
+		"private-methods": {
+			"active": 0
+			},
 		"property-literals": {
 			"active": 0
 			},
@@ -1621,10 +1758,16 @@
 		"regenerator": {
 			"active": 0
 			},
+		"regexp-constructors": {
+			"active": 0
+			},
 		"remove-console": {
 			"active": 0
 			},
 		"remove-debugger": {
+			"active": 0
+			},
+		"remove-undefined": {
 			"active": 0
 			},
 		"reserved-words": {
@@ -2573,6 +2716,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-useless-catch": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-useless-computed-key": {
 			"active": 1,
 			"optionString": ""
@@ -3235,6 +3382,7 @@
 		"noEscapeInAttributes": 0,
 		"outputFormat": 2,
 		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0,
 		"useCDATA": 0,
 		"useDoubleQuotes": 0,
 		"useUnixNewlines": 0
@@ -3256,6 +3404,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 2,
+		"bundleFormat": 0,
 		"createSourceMap": 0,
 		"minifyOutput": 1,
 		"syntaxCheckerStyle": 1,
@@ -3278,7 +3427,8 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
-		"shouldRunCacheBuster": 0
+		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0
 		},
 	"languageDefaultsLESS": {
 		"allowInsecureImports": 0,
@@ -3317,6 +3467,7 @@
 		"processHTML": 1,
 		"randomFootnoteNumbers": 0,
 		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0,
 		"useCompatibilityMode": 0
 		},
 	"languageDefaultsOTHER": {
@@ -3326,7 +3477,8 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
-		"shouldRunCacheBuster": 0
+		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0
 		},
 	"languageDefaultsPNG": {
 		"autoOutputAction": 0,
@@ -3347,7 +3499,8 @@
 		"autoOutputPathStyle": 0,
 		"compileDebug": 1,
 		"outputStyle": 0,
-		"shouldRunCacheBuster": 0
+		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0
 		},
 	"languageDefaultsSASS": {
 		"autoOutputAction": 0,
@@ -3376,7 +3529,8 @@
 		"outputFormat": 0,
 		"outputStyle": 1,
 		"railsCompatible": 0,
-		"shouldRunCacheBuster": 0
+		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0
 		},
 	"languageDefaultsSTYLUS": {
 		"autoOutputAction": 0,
@@ -3464,16 +3618,20 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"ascii_only": {
-			"active": 0,
+		"arrows": {
+			"active": 1,
 			"flagValue": -1
 			},
-		"bare_returns": {
+		"ascii_only": {
 			"active": 0,
 			"flagValue": -1
 			},
 		"booleans": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"booleans_as_integers": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"braces": {
@@ -3485,14 +3643,14 @@
 			"flagValue": -1
 			},
 		"comments": {
-			"active": 1,
+			"active": 0,
 			"flagValue": -1
 			},
 		"comparisons": {
 			"active": 1,
 			"flagValue": -1
 			},
-		"compress": {
+		"computed_props": {
 			"active": 1,
 			"flagValue": -1
 			},
@@ -3515,6 +3673,10 @@
 		"drop_debugger": {
 			"active": 1,
 			"flagValue": -1
+			},
+		"ecma": {
+			"active": 1,
+			"flagValue": 5
 			},
 		"eval": {
 			"active": 0,
@@ -3540,10 +3702,6 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"html5_comments": {
-			"active": 1,
-			"flagValue": -1
-			},
 		"ie8": {
 			"active": 0,
 			"flagValue": -1
@@ -3552,13 +3710,13 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"indent-start": {
-			"active": 0,
-			"flagValue": 0
-			},
 		"indent_level": {
 			"active": 0,
 			"flagValue": 4
+			},
+		"indent_start": {
+			"active": 0,
+			"flagValue": 0
 			},
 		"inline": {
 			"active": 1,
@@ -3570,6 +3728,10 @@
 			},
 		"join_vars": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"keep_classnames": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"keep_fargs": {
@@ -3592,13 +3754,13 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"mangle": {
-			"active": 1,
-			"flagValue": -1
-			},
 		"max_line_len": {
 			"active": 1,
 			"flagValue": 32000
+			},
+		"module": {
+			"active": 0,
+			"flagValue": -1
 			},
 		"negate_iife": {
 			"active": 1,
@@ -3607,10 +3769,6 @@
 		"passes": {
 			"active": 1,
 			"flagValue": 1
-			},
-		"preserve_line": {
-			"active": 0,
-			"flagValue": -1
 			},
 		"properties": {
 			"active": 1,
@@ -3634,6 +3792,10 @@
 			},
 		"reduce_vars": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"safari10": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"semicolons": {
@@ -3668,6 +3830,10 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"unsafe_arrows": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"unsafe_comps": {
 			"active": 0,
 			"flagValue": -1
@@ -3677,6 +3843,10 @@
 			"flagValue": -1
 			},
 		"unsafe_math": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_methods": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -3704,15 +3874,12 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"width": {
-			"active": 1,
-			"flagValue": 80
-			},
 		"wrap_iife": {
 			"active": 0,
 			"flagValue": -1
 			}
 		},
+	"uglifyMangleNames": 1,
 	"uglifyReservedNamesString": "$",
 	"websiteRelativeRoot": "/html"
 	},

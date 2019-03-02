@@ -6,6 +6,11 @@
 <div class='writing'>
 {{-- CONTENT --}}
 </div>
+<div class='post-links'>
+{{-- IF PREV-EXISTS --}}<a class='prev' href='{{-- PREV-LINK --}}'>{{-- PREV-TITLE --}}</a>{{-- ENDIF PREV-EXISTS --}}
+<a class='up' href='/blog/'>Up</a>
+{{-- IF NEXT-EXISTS --}}<a class='next' href='{{-- NEXT-LINK --}}'>{{-- NEXT-TITLE --}}</a>{{-- ENDIF NEXT-EXISTS --}}
+</div>
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
   tex2jax: {inlineMath: [['\\(','\\)'], ['\\(','\\)']]}
