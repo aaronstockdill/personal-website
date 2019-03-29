@@ -620,14 +620,6 @@
 		"oAP": "/html/blog/the-wireless-are-robots-going-to-kill-us-all/index.html",
 		"oF": 0
 		},
-	"/source/blog/year-one-done/index.kit": {
-		"cB": 0,
-		"ft": 2048,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/html/blog/year-one-done/index.html",
-		"oF": 0
-		},
 	"/source/blog_index.template": {
 		"cB": 0,
 		"ft": 8192,
@@ -660,17 +652,6 @@
 		"oAP": "/html/js/email.js",
 		"oF": 0,
 		"oS": 0,
-		"sC": 1,
-		"tS": 1
-		},
-	"/source/coffeescript/infiniscroll.coffee": {
-		"ft": 32,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/html/js/infiniscroll.js",
-		"oF": 0,
-		"oS": 1,
 		"sC": 1,
 		"tS": 1
 		},
@@ -1222,7 +1203,7 @@
 		},
 	"/source/static_assets/fyr.jpg": {
 		"ft": 16384,
-		"iS": 4120451,
+		"iS": 1144593,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/html/static_assets/fyr.jpg",
@@ -1532,7 +1513,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-owl",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 573215818.01460397
+	"lastBuiltDate": 575573195.82195795
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

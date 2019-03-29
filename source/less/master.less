@@ -1,6 +1,7 @@
-@body: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-@header: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+@body: "Helvetica Neue", Helvetica, Arial, sans-serif;
+@header: "Helvetica Neue", Helvetica, Arial, sans-serif;
 @tertiary: "Helvetica Neue", Helvetica, Arial, sans-serif;
+@mono: Monaco, "Lucida Console", monospace;
 
 * {
     box-sizing: border-box;
@@ -45,24 +46,28 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-holder {
     display: block;
+    width: 100%;
     position: fixed;
     padding: 1rem;
-    width: 100%;
     z-index: 1000;
     transition: background 0.2s ease, color 0.2s ease;
 
     nav {
-        font-size: 0.7rem;
+        display: block;
+        max-width: 35rem;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 2rem;
+        font-size: 0.6rem;
         font-family: @tertiary;
         font-weight: 300;
-        text-align: center;
+        text-align: left;
         text-transform: uppercase;
         letter-spacing: 0.1em;
 
         a {
             text-decoration: none;
-            padding: 0.5rem;
-            margin: 0.25rem 0.5rem ;
+            margin: 0.25rem 1rem 0.25rem 0;
             transition: color 0.2s ease;
 
             &.active {
@@ -98,13 +103,10 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     h1 {
-        font-size: 1.4rem;
+        font-size: 3rem;
         line-height: 1.1;
-        text-transform: uppercase;
         margin-bottom: 1rem;
         hyphens: manual;
-        letter-spacing: 0.08em;
-        // text-align: center;
     }
 
     hr {
@@ -118,7 +120,7 @@ h1, h2, h3, h4, h5, h6 {
         margin-top: 1.5rem;
         margin-bottom: 0.75rem;
         line-height: 1.1;
-        font-size: 1.15rem;
+        font-size: 1.5rem;
 
         &.award-year {
             margin-bottom: -1.1em;
@@ -145,12 +147,30 @@ h1, h2, h3, h4, h5, h6 {
         hyphens: auto;
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
+
+        a {
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            &::after {
+                content: "°";
+                margin-left: 0.1em;
+            }
+        }
     }
 
     li {
         padding-top: 0.25rem;
         padding-bottom: 0.25rem;
         list-style-type: circle;
+    }
+
+    .all-caps {
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
     }
 
     img {
@@ -164,6 +184,19 @@ h1, h2, h3, h4, h5, h6 {
         padding: 0.5rem 1rem;
     }
 
+    .email {
+        text-decoration: none;
+        transition: color 0.2s ease;
+        font-family: @mono;
+        font-size: 0.8em;
+        letter-spacing: 0.04em;
+
+        &::after {
+            content: "";
+            margin-left: 0;
+        }
+    }
+
     .pad-after {
         padding-right: 1rem;
     }
@@ -174,7 +207,6 @@ h1, h2, h3, h4, h5, h6 {
 
     .precontent {
         display: block;
-        // text-align: center;
         padding: 0.1rem 1rem;
         font-size: 0.8rem;
 
@@ -263,6 +295,11 @@ h1, h2, h3, h4, h5, h6 {
             line-height: 0.7rem;
         }
 
+        .orig a {
+            font-family: @mono;
+            font-size: 0.8em;
+        }
+
         .authors {
             display: block;
             margin-bottom: 0.5rem;
@@ -277,7 +314,9 @@ h1, h2, h3, h4, h5, h6 {
         position: relative;
 
         a {
-            font-size: 0.8rem;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
             text-decoration: none;
             display: inline-block;
             position: absolute;
@@ -322,11 +361,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .welcome {
-    height: ~"calc(100vh - 4rem)";
+    height: ~"calc(100vh - 6rem)";
+    min-height: ~"calc(15vh + 18rem)";
     position: relative;
 
     .welcome-content {
-        text-align: center;
         position: relative;
         top: 15vh;
 
@@ -334,8 +373,8 @@ h1, h2, h3, h4, h5, h6 {
             font-size: 4rem;
             text-transform: capitalize;
             margin: 0;
-            margin-top: 2rem; // 17vh;
-            line-height: 1.05;
+            margin-top: 2rem;
+            line-height: 0.95;
             letter-spacing: 0em;
         }
 
@@ -358,6 +397,9 @@ h1, h2, h3, h4, h5, h6 {
             width: 12rem;
             text-decoration: none;
             transition: color 0.2s ease;
+            font-family: @mono;
+            font-size: 0.8em;
+            letter-spacing: 0.04em;
         }
     }
 }
@@ -367,19 +409,21 @@ img + em {
     display: block;
     font-family: @tertiary;
     font-style: normal;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     margin: 0.5rem 0 1rem 0;
 }
 
 footer {
-    text-align: center;
+    width: 100%;
+    max-width: 35rem;
+    margin: 0 auto;
     font-family: @tertiary;
     font-weight: 300;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     opacity: 0.8;
-    padding: 5px 0;
+    padding: 5px 2rem;
     transition: background 0.2s ease, color 0.2s ease;
     height: 1.8rem;
 
@@ -411,20 +455,11 @@ footer {
             cursor: pointer;
             transition: top 0.2s ease;
             width: 100%;
-
-            &.active {
-                top: 0rem;
-                opacity: 0.5;
-            }
         }
 
         &:hover {
             a {
                 top: 0;
-            }
-
-            a.active {
-                top: -1.2rem;
             }
         }
     }

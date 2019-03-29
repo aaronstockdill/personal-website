@@ -5,9 +5,16 @@
         <title><!-- $subtitle --> Aaron Stockdill</title>
         <script>
           var style_cookie = document.cookie.match(/style=((black)|(white))/);
+          var theme = "white";
+          if (style_cookie === null) {
+              var match = window.matchMedia('(prefers-color-scheme: dark)');
+              theme = (match && match.matches) ? "black" : "white";
+          } else {
+              theme = style_cookie[1]
+          }
           document.write(
               "<link rel='stylesheet' href='/css/"
-            + (style_cookie || [null, "white"])[1] + ".css' media='screen' id='theme'>");
+                  + theme + ".css' media='screen' id='theme'>");
         </script>
         <style>
             <!-- @import "../html/css/master.css" -->
@@ -49,30 +56,12 @@
     </svg>
     <div class="nav-holder">
     <nav>
-
-        <a href="/" class="<!-- $home_active? -->">
-            <span>Home</span>
-        </a>
-
-        <a href="/cv/" class="<!-- $cv_active? -->">
-            <span>CV</span>
-        </a>
-
-        <a href="/research/" class="<!-- $research_active? -->">
-            <span>Research</span>
-        </a>
-
-        <a href="/teaching/" class="<!-- $teaching_active? -->">
-            <span>Teaching</span>
-        </a>
-
-        <a href="/contact/" class="<!-- $contact_active? -->">
-            <span>Contact</span>
-        </a>
-
-        <a href="/blog/" class="<!-- $blog_active? -->">
-            <span>Blog</span>
-        </a>
+        <a href="/" class="<!-- $home_active? -->">Home</a>
+        <a href="/cv/" class="<!-- $cv_active? -->">CV</a>
+        <a href="/research/" class="<!-- $research_active? -->">Research</a>
+        <a href="/teaching/" class="<!-- $teaching_active? -->">Teaching</a>
+        <a href="/contact/" class="<!-- $contact_active? -->">Contact</a>
+        <a href="/blog/" class="<!-- $blog_active? -->">Blog</a>
     </nav>
     </div>
     <div class="container <!-- $welcome? -->">
