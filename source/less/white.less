@@ -1,6 +1,6 @@
 @offblack: #555;
 @font: #222;
-@background: #fff;
+@background: #eee;
 
 ::selection {
     background: #ccc;
@@ -26,8 +26,6 @@ html, body {
 }
 
 nav {
-    background: @background;
-
     a {
         color: @offblack;
 
@@ -76,6 +74,15 @@ nav {
 footer {
     a {
         color: @offblack;
+    }
+
+    .selector a#white-button {
+        top: 0rem;
+        opacity: 0.5;
+    }
+
+    .selector:hover a#white-button {
+        top: -1.2rem;
     }
 }
 

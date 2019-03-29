@@ -22,11 +22,14 @@ getCookie = (name) ->
 deleteCookie = (name) ->
     setCookie name, "", -1
 
+# Detect theme preferences
+preferred_theme = () ->
+    match = window.matchMedia('(prefers-color-scheme: dark)')
+    if (match && match.matches) then "black" else "white"
+
 # Allow the ability to switch themes.
 switch_theme = (target="white") ->
     document.querySelector("#theme").setAttribute "href", "/css/#{target}.css"
-    document.querySelectorAll(".theme-button").forEach (button) => button.classList.remove 'active'
-    document.querySelector("##{target}-button").classList.add 'active'
     deleteCookie "style"
     if cookies_ok()
          setCookie "style", target, 365
@@ -43,7 +46,7 @@ cookies_ok = () ->
 
 if cookies_ok()
     document.querySelector("#cookies").style.display = "none"
-    switch_theme(getCookie("style") || "white")
+    switch_theme(getCookie("style") || preferred_theme())
 else
     document.querySelector("#cookies").style.display = "block"
     document.querySelector("footer").style.paddingBottom = "120px"
