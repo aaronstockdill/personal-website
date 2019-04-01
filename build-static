@@ -17,6 +17,15 @@ def maybe_make_dir(directory):
         os.makedirs(directory)
 
 
+def oxford_join(items):
+    items = list(items)
+    if len(items) == 1:
+        return items[0]
+    if len(items) == 2:
+        return " and ".join(items)
+    return ", ".join(items[:-1]) + ", and " + items[-1]
+
+
 def parse_bibtex(bibfile):
     """ This monster of a function is a small parser for BibTeX files.
     """
@@ -145,10 +154,17 @@ def create_blog_listing(filenames_and_links, outfile, templatefile):
     """
     sorter = lambda x: tuple(int(d) for d in x[0].split('.')[1].split("-"))
     listed_html = ""
-    item_template = """<div class="dynamic-link"><span class="date">{date}</span><a href="{link}">{title}</a></div>"""
+    item_template = """<div class="dynamic-link"><a href="{link}">{title}</a><span class="date blog-date">{date}</span></div>"""
+    curr_year = None
+    month_names = [None] + "January,February,March,April,May,June,July,August,September,October,November,December".split(",")
     for filename, link in sorted(filenames_and_links, key=sorter, reverse=True):
-        parts = filename.split('/')[-1].split('.')
-        listed_html += item_template.format(link=link, title=parts[0], date=parts[1])
+        title, date, _ = filename.split('/')[-1].split('.')
+        year, month, day = date.split("-")
+        if year != curr_year:
+            curr_year = year
+            listed_html += "<div class='date blog-year'>" + year + "</div>"
+        formatted_date = day + " " + month_names[int(month)]
+        listed_html += item_template.format(link=link, title=title, date=formatted_date)
     with open(templatefile) as f:
         wrapper_html = f.read()
     wrapper_html = wrapper_html.replace("{{-- CONTENT --}}", listed_html)
@@ -166,17 +182,20 @@ def create_research_listing(publications, talks_fn_links, outfile, templatefile)
     bib_sorter = lambda x: (int(x["year"]), val(x["month"]))
     listed_talks = ""
     listed_bib = ""
-    talk_template = """<div class="dynamic-link"><a href="{link}">{title}</a><span class="date">{date}</span></div>"""
+    talk_template = """<div class="dynamic-link"><a href="{link}">{title}</a><span class="date talk-date">{date}</span></div>"""
     bib_template = """
 <div class="dynamic-link">
-    <a href="{pdflink}">
-        <h2>{title}.</h2>
-        <span class="authors">{author}</span>
-    </a><br/>
-    {journal}
-    <span class="date">{date}</span><br />
-    {copyright}
-    <a class="bibtex" href="{biblink}">Download BibTeX</a>
+    <h2>{title}</h2>
+    <span class="authors">{author}</span>
+    <div class='pub-info'>
+        {journal}
+        <span class="date pub-date">{date}</span>
+        {copyright}
+        <a class="pdflink" href="{pdflink}">Download PDF</a>
+        <a class="bibtex" href="{biblink}">Download BibTeX</a>
+    </div>
+    <h3>Abstract</h3>
+    <p class="abstract">{abstract}</p>
 </div>"""
     for filename, link in sorted(talks_fn_links, key=talk_sorter, reverse=True):
         parts = filename.split("/")[-1].split('.')
@@ -185,13 +204,14 @@ def create_research_listing(publications, talks_fn_links, outfile, templatefile)
         listed_bib += bib_template.format(
             pdflink = bibobj["pdf_link"],
             title = bibobj["title"],
-            author = bibobj["author"],
+            author = oxford_join(name.split(", ")[1] + " " + name.split(", ")[0] for name in bibobj["author"].split(" and ")),
             journal = "<span class='jounrnal'>" + bibobj["journal"] + "</span>" if "journal" in bibobj
-                                        else "<span class='journal'>" + bibobj["booktitle"] + "</span>" if "booktitle" in bibobj
-                                                                 else "",
+            else "<span class='journal'>" + bibobj["booktitle"] + "</span>" if "booktitle" in bibobj
+            else "",
             date = bibobj["month"] + " " + bibobj["year"],
-            copyright = "<span class='orig'>" + bibobj["copyright"] + "</span><br />" if "copyright" in bibobj else "",
-            biblink = bibobj["bib_link"]
+            copyright = "<span class='orig'>" + bibobj["copyright"] + "</span>" if "copyright" in bibobj else "",
+            biblink = bibobj["bib_link"],
+            abstract = bibobj["abstract"]
         )
     with open(templatefile) as f:
         wrapper_html = f.read()

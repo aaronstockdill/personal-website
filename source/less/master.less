@@ -12,18 +12,12 @@ html, body, :root {
     min-height: 100%;
     height: 100%;
     font-weight: 300;
-    font-size: 22px;
+    font-size: 20px;
     margin: 0;
     padding: 0;
     transition: background 0.2s ease, color 0.2s ease;
     display: flex;
     flex-direction: column;
-}
-
-@media (min-width: 1920px) {
-    html, body, :root {
-        font-size: 25px;
-    }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -48,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     width: 100%;
     position: fixed;
-    padding: 1rem;
+    padding: 1rem 0;
     z-index: 1000;
     transition: background 0.2s ease, color 0.2s ease;
 
@@ -67,7 +61,8 @@ h1, h2, h3, h4, h5, h6 {
 
         a {
             text-decoration: none;
-            margin: 0.25rem 1rem 0.25rem 0;
+            margin-right: 1rem;
+            padding: 0.125rem;
             transition: color 0.2s ease;
 
             &.active {
@@ -103,10 +98,11 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     h1 {
-        font-size: 3rem;
+        font-size: ~"min(3rem, 14vw)";
         line-height: 1.1;
         margin-bottom: 1rem;
         hyphens: manual;
+        margin-left: -0.05em;
     }
 
     hr {
@@ -123,7 +119,7 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 1.5rem;
 
         &.award-year {
-            margin-bottom: -1.1em;
+            margin-top: 2rem;
         }
     }
 
@@ -173,6 +169,14 @@ h1, h2, h3, h4, h5, h6 {
         text-transform: uppercase;
     }
 
+    .date {
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+        font-weight: 300;
+        display: block;
+    }
+
     img {
         display: block;
         margin: auto;
@@ -209,6 +213,7 @@ h1, h2, h3, h4, h5, h6 {
         display: block;
         padding: 0.1rem 1rem;
         font-size: 0.8rem;
+        line-height: 1.2;
 
         &.first {
             margin-top: 1.5rem;
@@ -225,34 +230,27 @@ h1, h2, h3, h4, h5, h6 {
         line-height: 1.4rem;
     }
 
-    .award {
-        padding-left: 5rem;
-        h3 {
-            margin-top: 0;
-            margin-bottom: 0.3rem;
-            font-weight: 300;
-        }
-        p {
-            margin-top: 0;
-            margin-bottom: 1.5rem;
-        }
-    }
-
     .contact-table {
         margin-bottom: 2rem;
 
-        .label, .value {
-            display: inline-block;
-            padding: 0.2rem;
-            max-width: 60%;
-            vertical-align: top;
-            overflow-x: auto
-        }
         .label {
-            width: 6rem;
-            text-align: right;
+            display: block;
             padding-right: 1rem;
-            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 0.8rem;
+            margin-top: 0.75rem;
+        }
+        .value {
+            overflow-x: auto;
+            display: block;
+        }
+        a {
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 
@@ -262,15 +260,10 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .dynamic-link {
-        margin: 0.3rem auto 1rem auto;
-        line-height: 1.2em;
+        margin: 0.3rem auto 0.7rem auto;
 
         &:first-of-type {
             margin-top: 1rem;
-        }
-
-        h2 {
-            margin-top: 0.5rem;
         }
 
         a {
@@ -283,16 +276,18 @@ h1, h2, h3, h4, h5, h6 {
             }
         }
 
-        .date, .bibtex {
-            font-size: 0.7rem;
-            font-style: italic;
-            line-height: 0.7rem;
-            margin-right: 1em;
+        .pub-info {
+            line-height: 1.2;
+            font-size: 0.8rem;
+
+            & > * {
+                display: block;
+                margin-bottom: 0.5rem;
+            }
         }
 
-        .journal, .orig {
-            font-size: 0.7rem;
-            line-height: 0.7rem;
+        .bibtex, .pdflink {
+            font-style: italic;
         }
 
         .orig a {
@@ -306,6 +301,26 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
 
+    .ed-year {
+        margin-top: -0.5rem;
+    }
+
+    h2 + .work-year {
+        margin-top: -0.5rem;
+    }
+    h3 + .work-year {
+        margin-top: -0.2rem;
+    }
+
+    .blog-year {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .blog-date, .talk-date, .pub-date {
+        font-size: 0.7rem;
+    }
+
     .post-links {
         margin-top: 3rem;
         display: block;
@@ -314,7 +329,7 @@ h1, h2, h3, h4, h5, h6 {
         position: relative;
 
         a {
-            font-size: 0.7rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 0.08em;
             text-decoration: none;
@@ -367,10 +382,11 @@ h1, h2, h3, h4, h5, h6 {
 
     .welcome-content {
         position: relative;
-        top: 15vh;
+        top: 40%;
+        transform: translateY(-50%);
 
         h1 {
-            font-size: 4rem;
+            font-size: ~"min(4rem, 20vw)";
             text-transform: capitalize;
             margin: 0;
             margin-top: 2rem;
@@ -391,15 +407,6 @@ h1, h2, h3, h4, h5, h6 {
                 margin-top: 1rem;
                 padding: 0 0.25rem;
             }
-        }
-
-        .email {
-            width: 12rem;
-            text-decoration: none;
-            transition: color 0.2s ease;
-            font-family: @mono;
-            font-size: 0.8em;
-            letter-spacing: 0.04em;
         }
     }
 }
@@ -500,23 +507,5 @@ footer {
         a {
             color: inherit;
         }
-    }
-}
-
-.error {
-    max-width: 800px;
-    width: 100%;
-
-    h1 {
-        margin-bottom: 0;
-    }
-
-    h2 {
-        margin-top: 0.5rem;
-    }
-
-    a {
-        display: block;
-        margin-top: 2rem;
     }
 }

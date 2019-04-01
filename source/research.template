@@ -5,23 +5,30 @@
 <!-- $research_active = active -->
 <!-- @import "header.kit" -->
 
+<span class="anchor" id="Interests"></span>
+<h1>Research interests</h1>
+<p>I am interested in human-like reasoning and the &ldquo;third wave&rdquo; of artificial intelligence. Humans are capable of finding patterns in remarkably small datasets, learning from just a handful of examples. We use a wide variety of strategies to solve a wide variety of problems. Truly intelligent systems should be able to do likewise. Third-wave AI focuses on systems that can not just make predictions, but form explanations. This goes far beyond the first-wave (<span class='all-caps'>GOFAI</span>, or good old fashioned AI) and second-wave (deep learning) AI. Furthermore, some speculate that third-wave AI might focus on teaching the AIs how to learn, or <em>meta-learning</em>.</p>
+
+
+<hr />
+
 <span class="anchor" id="Publications"></span>
 <h1 id="Publications">Publications</h1>
 
 {{-- PUBLICATIONS --}}
 
 
-    <hr />
+<hr />
 
 
- <h1 id="Talks">Talks</h1>
+<h1 id="Talks">Talks</h1>
 
 {{-- TALKS --}}
 
-    <hr />
+<hr />
 
 
-    <h1 id="GitHub">GitHub</h1>
-    <p>I infrequently put projects on GitHub, but you are welcome to view what is available there: <a href="https://github.com/aaronstockdill"> Aaron Stockdill on GitHub</a>.</p>
+<h1 id="GitHub">GitHub</h1>
+<p>I infrequently put projects on GitHub, but you are welcome to view what is available there: <a href="https://github.com/aaronstockdill"> Aaron Stockdill on GitHub</a>.</p>
 
 <!-- @import "footer.kit" -->

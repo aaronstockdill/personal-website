@@ -1,63 +1,14 @@
-html, body {
-    font-size: 18px;
+.container.welcome .conditional-break {
+    display: inline-block;
 }
 
-.container.welcome {
-    text-align: center;
-    padding: 0.5rem 1rem 2rem 1rem;
-
-    .canvas-holder {
-        display: none;
-    }
-
-    .welcome-content {
-        top: 4rem;
-        right: 0;
-        left: 0;
-
-        h1 {
-            font-size: 3rem;
-            line-height: 0.98;
-        }
-
-        p, .email, .phone, nav a {
-            margin: 0 auto;
-
-            span {
-                display: inline-block;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
     .container.welcome .conditional-break {
-        display: block;
-    }
-}
-
-nav {
-    height: 100%;
-    width: 100%;
-    margin-top: 3rem;
-
-    a {
-        display: block;
-        position: relative;
-        padding-top: 0.5rem;
-        text-align: right;
-        padding-right: 1rem;
-        font-size: 1rem;
-
-        &.home {
-            padding-bottom: 0.5rem;
-        }
+        display: block !important;
     }
 }
 
 .nav-holder {
-    display: block;
-    position: fixed;
     overflow: hidden;
     padding: 0;
     margin: 0;
@@ -65,10 +16,31 @@ nav {
     height: 0rem;
     top: 0;
     right: 0;
-    left: revert;
     transition: height 0.5s ease, width 0.5s ease, background 0.2s linear 0.3s;
-    z-index: 1000;
 
+    nav {
+        height: 100%;
+        margin-top: 3rem;
+
+        a {
+            display: block;
+            position: relative;
+            padding-top: 0.4rem;
+            padding-bottom: 0.4rem;
+            text-align: right;
+            padding-right: 1rem;
+            font-size: 1rem;
+
+            &.active {
+                border-bottom-width: 0;
+                border-bottom-style: none;
+                border-right-width: 6px;
+                border-right-style: solid;
+                margin-bottom: 0.25rem;
+                margin-right: calc(1rem - 6px);
+            }
+        }
+    }
     footer {
         display: none;
     }
@@ -87,10 +59,10 @@ nav {
 .menu-hamburger {
     display: block;
     position: fixed;
-    right: .5rem;
-    top: .7rem;
-    width: 1.5rem;
-    height: 1.5rem;
+    right: .2rem;
+    top: .4rem;
+    width: 1.8rem;
+    height: 1.8rem;
     z-index: 1001;
 }
 
@@ -101,16 +73,23 @@ nav {
 }
 
 .menu-hamburger .bar-top, .menu-hamburger .bar-bottom {
-    transform: rotate(0) translateY(0);
-    transition: all .2s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.menu-hamburger .bar-top {
+    transform: translate(0%, -15%) rotate(0);
+}
+
+.menu-hamburger .bar-bottom {
+    transform: translate(0%, 15%) rotate(0);
 }
 
 .menu-hamburger.showing .bar-top {
-    transform: translateY(20%) rotate(-135deg);
+    transform: translate(0%, 0%) rotate(225deg);
 }
 
 .menu-hamburger.showing .bar-bottom {
-    transform: translateY(-20%) rotate(135deg);
+    transform: translate(0%, 0%) rotate(135deg);
 }
 
 .container {
@@ -120,20 +99,12 @@ nav {
         margin-left: 0px;
         margin-right: 0px;
     }
-
-    h2.award-year {
-        width: 1em;
-        transform: rotate(-90deg) translateX(-1.4em);
-    }
-
-    .award {
-        padding-left: 2rem;
-    }
 }
 
 footer {
     position: relative;
     width: 100%;
+    padding: 5px 1rem;
 
     .selector.help-button {
         display: none;
@@ -141,14 +112,5 @@ footer {
 
     .separator {
         width: 0;
-    }
-}
-
-
-// For the REALLY small screens, my surname is too long
-@media screen and (max-width: 350px) {
-    .welcome h1 {
-        font-size: 3rem;
-        margin-top: 15vh;
     }
 }
