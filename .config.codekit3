@@ -119,6 +119,30 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"/dynamic/auto/Neuromorphic Computing.el": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/html/dynamic/auto/Neuromorphic Computing.el",
+		"oF": 0
+		},
+	"/dynamic/auto/NeuromorphicReservoirs.el": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/html/dynamic/auto/NeuromorphicReservoirs.el",
+		"oF": 0
+		},
+	"/dynamic/auto/Restricted Echo State Networks.el": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/html/dynamic/auto/Restricted Echo State Networks.el",
+		"oF": 0
+		},
 	"/dynamic/Cambridge.2017-08-30.md": {
 		"cB": 0,
 		"cS": 0,
@@ -1513,7 +1537,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-owl",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 575573195.82195795
+	"lastBuiltDate": 575746063.37029397
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
