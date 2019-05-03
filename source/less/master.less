@@ -1,18 +1,42 @@
-@body: "Helvetica Neue", Helvetica, Arial, sans-serif;
-@header: "Helvetica Neue", Helvetica, Arial, sans-serif;
-@tertiary: "Helvetica Neue", Helvetica, Arial, sans-serif;
-@mono: Monaco, "Lucida Console", monospace;
+@body-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+@header-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+@tertiary-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+@mono-font: Monaco, "Lucida Console", monospace;
+
+@hero-size: 2.666666rem;
+@h1-size: 2rem;
+@h2-size: 1rem;
+@h3-size: 0.666666rem;
+@h4-size: 0.666666rem;
+@body-size: 0.66666rem;
+@small-size: 0.5rem;
+@tiny-size: 0.4rem;
+
+@hero-leading: 2.66666rem; // Exception to the integral rule
+@h1-leading: 2rem;
+@h2-leading: 1rem;
+@h3-leading: 1rem;
+@h4-leading: 1rem;
+@body-leading: 1rem;
+@small-leading: 1rem;
+@tiny-leading: 0.5rem;
+
+@wide-tracking: 0.1em;
 
 * {
     box-sizing: border-box;
 }
 
-html, body, :root {
-    font-family: @body;
+:root {
+    font-size: 30px;
+}
+
+html, body {
+    font-family: @body-font;
     min-height: 100%;
     height: 100%;
     font-weight: 300;
-    font-size: 20px;
+    font-size: @body-size;
     margin: 0;
     padding: 0;
     transition: background 0.2s ease, color 0.2s ease;
@@ -21,7 +45,7 @@ html, body, :root {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: @header;
+    font-family: @header-font;
     font-weight: 800;
     hyphens: manual;
 }
@@ -35,29 +59,29 @@ h1, h2, h3, h4, h5, h6 {
 
 .menu-hamburger, .menu-header {
     display: none;
-    font-family: @header;
 }
 
 .nav-holder {
     display: block;
     width: 100%;
     position: fixed;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     z-index: 1000;
     transition: background 0.2s ease, color 0.2s ease;
 
     nav {
         display: block;
-        max-width: 35rem;
+        max-width: 25rem;
         width: 100%;
         margin: 0 auto;
-        padding: 0 2rem;
-        font-size: 0.6rem;
-        font-family: @tertiary;
+        padding: 0 1.875rem; // Remove 0.125rem because of 'a' padding
+        font-size: @tiny-size;
+        line-height: @tiny-leading;
+        font-family: @tertiary-font;
         font-weight: 300;
         text-align: left;
         text-transform: uppercase;
-        letter-spacing: 0.1em;
+        letter-spacing: @wide-tracking;
 
         a {
             text-decoration: none;
@@ -70,23 +94,17 @@ h1, h2, h3, h4, h5, h6 {
                 border-bottom-style: solid;
                 margin-bottom: ~"calc(0.25rem - 1px)";
             }
-
-            &.home {
-                font-weight: bold;
-                line-height: 1;
-                margin-top: 0;
-            }
         }
     }
 }
 
 .container {
     position: relative;
-    max-width: 35rem;
+    max-width: 25rem;
     width: 100%;
-    margin: 2rem auto;
+    margin: 1rem auto;
     padding: 1rem 2rem;
-    line-height: 1.5;
+    line-height: @body-leading;
     flex: 1 0 auto;
 
     .anchor {
@@ -98,8 +116,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     h1 {
-        font-size: ~"min(3rem, 14vw)";
-        line-height: 1.1;
+        font-size: @h1-size;
+        line-height: @h1-leading;
         margin-bottom: 1rem;
         hyphens: manual;
         margin-left: -0.05em;
@@ -114,18 +132,21 @@ h1, h2, h3, h4, h5, h6 {
 
     h2 {
         margin-top: 1.5rem;
-        margin-bottom: 0.75rem;
-        line-height: 1.1;
-        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        margin-left: -0.05em;
+        line-height: @h2-leading;
+        font-size: @h2-size;
+    }
 
-        &.award-year {
-            margin-top: 2rem;
-        }
+    .award-year {
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        margin-left: 0;
     }
 
     h3 {
-        font-size: 1rem;
-        line-height: 1.1;
+        font-size: @h3-size;
+        line-height: @h3-leading;
         font-style: italic;
         font-weight: 400;
         margin-top: 1rem;
@@ -133,8 +154,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     h4 {
-        font-size: 1rem;
-        line-height: 1rem;
+        font-size: @h4-size;
+        line-height: @h4-leading;
         margin-top: 1rem;
         margin-bottom: 0.5rem;
     }
@@ -153,26 +174,26 @@ h1, h2, h3, h4, h5, h6 {
 
             &::after {
                 content: "°";
-                margin-left: 0.1em;
+                margin-left: @wide-tracking;
             }
         }
     }
 
     li {
-        padding-top: 0.25rem;
-        padding-bottom: 0.25rem;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
         list-style-type: circle;
     }
 
     .all-caps {
-        letter-spacing: 0.08em;
+        letter-spacing: @wide-tracking;
         text-transform: uppercase;
     }
 
     .date {
         text-transform: uppercase;
-        font-size: 0.8rem;
-        letter-spacing: 0.08em;
+        font-size: @small-size;
+        letter-spacing: @wide-tracking;
         font-weight: 300;
         display: block;
     }
@@ -191,9 +212,9 @@ h1, h2, h3, h4, h5, h6 {
     .email {
         text-decoration: none;
         transition: color 0.2s ease;
-        font-family: @mono;
-        font-size: 0.8em;
-        letter-spacing: 0.04em;
+        font-family: @mono-font;
+        font-size: @small-size;
+        letter-spacing: @wide-tracking / 2;
 
         &::after {
             content: "";
@@ -211,23 +232,23 @@ h1, h2, h3, h4, h5, h6 {
 
     .precontent {
         display: block;
-        padding: 0.1rem 1rem;
-        font-size: 0.8rem;
-        line-height: 1.2;
+        padding: 0 1rem;
+        font-size: @small-size;
+        line-height: @small-leading;
 
         &.first {
-            margin-top: 1.5rem;
+            margin-top: 1rem;
         }
 
         &.last {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
     }
 
     .tutoring-list {
         margin: 0;
-        font-size: 0.9rem;
-        line-height: 1.4rem;
+        font-size: @small-size;
+        line-height: @small-leading;
     }
 
     .contact-table {
@@ -237,8 +258,8 @@ h1, h2, h3, h4, h5, h6 {
             display: block;
             padding-right: 1rem;
             text-transform: uppercase;
-            letter-spacing: 0.08em;
-            font-size: 0.8rem;
+            letter-spacing: @wide-tracking;
+            font-size: @small-size;
             margin-top: 0.75rem;
         }
         .value {
@@ -260,10 +281,14 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .dynamic-link {
-        margin: 0.3rem auto 0.7rem auto;
+        margin: 0.5rem auto 1.0rem auto;
 
         &:first-of-type {
             margin-top: 1rem;
+        }
+
+        h2 {
+            margin-bottom: 0.5rem;
         }
 
         a {
@@ -277,12 +302,11 @@ h1, h2, h3, h4, h5, h6 {
         }
 
         .pub-info {
-            line-height: 1.2;
-            font-size: 0.8rem;
+            line-height: @small-leading;
+            font-size: @small-size;
 
             & > * {
                 display: block;
-                margin-bottom: 0.5rem;
             }
         }
 
@@ -291,8 +315,8 @@ h1, h2, h3, h4, h5, h6 {
         }
 
         .orig a {
-            font-family: @mono;
-            font-size: 0.8em;
+            font-family: @mono-font;
+            font-size: @small-size;
         }
 
         .authors {
@@ -317,8 +341,14 @@ h1, h2, h3, h4, h5, h6 {
         margin-bottom: 1rem;
     }
 
-    .blog-date, .talk-date, .pub-date {
-        font-size: 0.7rem;
+    .talk-date, .pub-date {
+        font-size: @small-size;
+        line-height: @small-leading;
+    }
+
+    .blog-date {
+        font-size: @tiny-size;
+        line-height: @tiny-leading;
     }
 
     .post-links {
@@ -329,9 +359,10 @@ h1, h2, h3, h4, h5, h6 {
         position: relative;
 
         a {
-            font-size: 0.8rem;
+            font-size: @small-size;
+            line-height: @small-leading;
             text-transform: uppercase;
-            letter-spacing: 0.08em;
+            letter-spacing: @wide-tracking;
             text-decoration: none;
             display: inline-block;
             position: absolute;
@@ -345,11 +376,14 @@ h1, h2, h3, h4, h5, h6 {
                 text-align: left;
                 left: 0;
                 top: 0;
+                padding-left: 1rem;
 
                 &::before {
                     content: "◀︎";
                     display: inline-block;
-                    padding-right: 1rem;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
                 }
             }
             &.next {
@@ -357,11 +391,14 @@ h1, h2, h3, h4, h5, h6 {
                 text-align: right;
                 right: 0;
                 top: 0;
+                padding-right: 1rem;
 
                 &::after {
                     content: "▶︎";
                     display: inline-block;
-                    padding-left: 1rem;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
                 }
             }
             &.up {
@@ -386,12 +423,11 @@ h1, h2, h3, h4, h5, h6 {
         transform: translateY(-50%);
 
         h1 {
-            font-size: ~"min(4rem, 20vw)";
+            font-size: @hero-size;
             text-transform: capitalize;
             margin: 0;
             margin-top: 2rem;
-            line-height: 0.95;
-            letter-spacing: 0em;
+            line-height: @hero-leading;
         }
 
         p {
@@ -401,7 +437,6 @@ h1, h2, h3, h4, h5, h6 {
 
         .trailing {
             margin-top: 2rem;
-            line-height: 1.4rem;
 
             div {
                 margin-top: 1rem;
@@ -414,50 +449,39 @@ h1, h2, h3, h4, h5, h6 {
 img + em {
     width: 100%;
     display: block;
-    font-family: @tertiary;
+    font-family: @tertiary-font;
     font-style: normal;
-    font-size: 0.8rem;
+    font-size: @small-size;
     margin: 0.5rem 0 1rem 0;
 }
 
 footer {
     width: 100%;
-    max-width: 35rem;
+    max-width: 25rem;
     margin: 0 auto;
-    font-family: @tertiary;
+    font-family: @tertiary-font;
     font-weight: 300;
-    font-size: 0.6rem;
-    letter-spacing: 0.1em;
+    font-size: @tiny-size;
+    line-height: @tiny-leading;
+    letter-spacing: @wide-tracking;
     text-transform: uppercase;
     opacity: 0.8;
     padding: 5px 2rem;
     transition: background 0.2s ease, color 0.2s ease;
-    height: 1.8rem;
-
-
-    .details {
-        float: left;
-    }
-
-    .separator {
-        display: inline-block;
-        width: 1rem;
-    }
+    height: 1.5rem;
 
     .selector {
         display: inline-block;
-        height: 1.2rem;
+        height: 1rem;
         overflow-y: hidden;
         width: 2.5rem;
         position: relative;
-        text-align: center;
         transition: height 0.2s ease;
 
         a {
             display: block;
             position: absolute;
-            top: 1.2rem;
-            text-align: center;
+            top: 1.2rem;  // Needs 1.2rem for nice masking.
             text-decoration: none;
             cursor: pointer;
             transition: top 0.2s ease;
@@ -473,12 +497,12 @@ footer {
 }
 
 .cookies {
-    max-width: 35rem;
+    max-width: 25rem;
     margin: 0 auto;
     text-align: center;
-    font-family: @tertiary;
+    font-family: @tertiary-font;
     font-weight: 300;
-    font-size: 0.7rem;
+    font-size: @small-size;
     opacity: 0.95;
     position: fixed;
     bottom: 0;

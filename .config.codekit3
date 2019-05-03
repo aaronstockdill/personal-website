@@ -123,25 +123,25 @@
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "/html/dynamic/auto/Neuromorphic Computing.el",
-		"oF": 0
+		"oF": 1
 		},
 	"/dynamic/auto/NeuromorphicReservoirs.el": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "/html/dynamic/auto/NeuromorphicReservoirs.el",
-		"oF": 0
+		"oF": 1
 		},
 	"/dynamic/auto/Restricted Echo State Networks.el": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "/html/dynamic/auto/Restricted Echo State Networks.el",
-		"oF": 0
+		"oF": 1
 		},
 	"/dynamic/Cambridge.2017-08-30.md": {
 		"cB": 0,
@@ -517,6 +517,14 @@
 		"oAP": "/html/dynamic/ScholarshipPPTs/16 Revision.pptx",
 		"oF": 1
 		},
+	"/dynamic/Selwyn Postgraduate Seminar.2018-05-01.talk": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/html/dynamic/Selwyn Postgraduate Seminar.2018-05-01.talk",
+		"oF": 1
+		},
 	"/dynamic/selwyn.jpg": {
 		"ft": 16384,
 		"iS": 588793,
@@ -527,6 +535,14 @@
 		"oIPL": 0,
 		"opt": 1,
 		"q": 100
+		},
+	"/dynamic/SPSS.pdf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/html/dynamic/SPSS.pdf",
+		"oF": 1
 		},
 	"/dynamic/The Wireless: Are robots going to kill us all.2017-09-28.md": {
 		"cB": 0,
@@ -1475,6 +1491,14 @@
 		"opt": 1,
 		"q": 100
 		},
+	"/source/static_assets/SPSS.pdf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/html/static_assets/SPSS.pdf",
+		"oF": 0
+		},
 	"/source/static_assets/wireless_header.jpg": {
 		"ft": 16384,
 		"iS": 227306,
@@ -1518,6 +1542,14 @@
 		"oAP": "/html/talk/neuromorphic-computing-with-reservoir-neural-networks-on-memristive-hardware/index.html",
 		"oF": 0
 		},
+	"/source/talk/selwyn-postgraduate-seminar/index.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/html/talk/selwyn-postgraduate-seminar/index.html",
+		"oF": 0
+		},
 	"/source/teaching/index.kit": {
 		"cB": 0,
 		"ft": 2048,
@@ -1537,7 +1569,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-owl",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 575746063.37029397
+	"lastBuiltDate": 578589764.24140406
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

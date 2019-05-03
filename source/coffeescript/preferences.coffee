@@ -1,11 +1,12 @@
 setCookie = (name, value, days) ->
     if days
         date = new Date()
-        date.setTime date.getTime() + (days * 24 * 60 * 60 * 1000)
-        expires = "; expires=" + date.toGMTString()
+        change = days * 24 * 60 * 60 * 1000
+        date.setTime (date.getTime() + change)
+        expires = ";expires=" + date.toUTCString()
     else
         expires = ""
-    document.cookie = name + "=" + value + expires + "; path=/"
+    document.cookie = name + "=" + value + expires + ";path=/"
 
 getCookie = (name) ->
     nameEQ = name + "="
