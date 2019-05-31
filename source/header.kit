@@ -3,6 +3,15 @@
     <head>
         <meta charset="utf-8">
         <title><!-- $subtitle --> Aaron Stockdill</title>
+        <style>
+            <!-- @import "../html/css/master.css" -->
+        </style>
+        <style media="print">
+            <!-- @import "../html/css/print.css" -->
+        </style>
+        <style>
+          <!-- @import "../html/css/hero.css" -->
+        </style>
         <script>
           var style_cookie = document.cookie.match(/style=((black)|(white))/);
           var theme = "white";
@@ -16,18 +25,6 @@
               "<link rel='stylesheet' href='/css/"
                   + theme + ".css' media='screen' id='theme'>");
         </script>
-        <style>
-            <!-- @import "../html/css/master.css" -->
-        </style>
-        <style media="screen and (max-width: 599px)">
-            <!-- @import "../html/css/600.css" -->
-        </style>
-        <style media="screen and (min-width: 1700px)">
-          body{font-size:26px;}
-        </style>
-        <style media="print">
-            <!-- @import "../html/css/print.css" -->
-        </style>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="<!-- $description -->"/>
 
