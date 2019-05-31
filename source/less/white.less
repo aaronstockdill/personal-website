@@ -2,6 +2,9 @@
 @font: #222;
 @background: #eee;
 
+@blockquote_background: #ddd;
+@blockquote_border: silver;
+
 ::selection {
     background: #ccc;
 }
@@ -66,8 +69,8 @@ nav {
     }
 
     blockquote {
-        background: #eee;
-        border-color-left: silver;
+        background: @blockquote_background;
+        border-color-left: @blockquote_border;
     }
 }
 
