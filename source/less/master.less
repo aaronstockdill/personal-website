@@ -10,20 +10,14 @@
 
 html, body {
     font-family: @body-font;
-    min-height: 100%;
-    height: 100%;
     font-weight: 300;
     font-size: @body-size;
     margin: 0;
     padding: 0;
-    transition: background 0.2s ease, color 0.2s ease;
-    display: flex;
-    flex-direction: column;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: @header-font;
-    font-weight: 800;
+    font-weight: 700;
     hyphens: manual;
 }
 
@@ -38,92 +32,69 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
 }
 
-.nav-holder {
-    display: block;
-    width: 100%;
+nav {
     position: fixed;
-    padding: 0.5rem 0;
     z-index: 1000;
-    transition: background 0.2s ease, color 0.2s ease;
+    max-width: 22rem;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0 auto;
+    padding: 0.5rem 0.375rem; // Remove 0.125rem because of 'a' padding
+    font-size: @tiny-size;
+    line-height: @tiny-leading;
+    text-transform: uppercase;
+    letter-spacing: @very-wide-tracking;
 
-    nav {
-        display: block;
-        max-width: 25rem;
-        width: 100%;
-        margin: 0 auto;
-        padding: 0 1.875rem; // Remove 0.125rem because of 'a' padding
-        font-size: @tiny-size;
-        line-height: @tiny-leading;
-        font-family: @tertiary-font;
-        font-weight: 300;
-        text-align: left;
-        text-transform: uppercase;
-        letter-spacing: @wide-tracking;
+    a {
+        text-decoration: none;
+        margin-right: 0.75rem;
+        padding: 0.125rem;
 
-        a {
-            text-decoration: none;
-            margin-right: 1rem;
-            padding: 0.125rem;
-            transition: color 0.2s ease;
-
-            &.active {
-                border-bottom-width: 1px;
-                border-bottom-style: solid;
-                margin-bottom: ~"calc(0.25rem - 1px)";
-            }
+        &.active {
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            margin-bottom: ~"calc(0.25rem - 1px)";
         }
     }
 }
 
-.container {
-    position: relative;
-    max-width: 25rem;
+main {
+    max-width: 22rem;
     width: 100%;
     margin: 1rem auto;
-    padding: 1rem 2rem;
+    padding: 0.5rem;
     line-height: @body-leading;
-    flex: 1 0 auto;
 
     .anchor {
         width: 0;
         height: 0;
         display: block;
         position: relative;
-        top: -1.25rem;
-    }
-
-    h1 {
-        font-size: @h1-size;
-        line-height: @h1-leading;
-        margin-bottom: 1rem;
-        hyphens: manual;
-        margin-left: -0.05em;
+        top: -2rem;
     }
 
     hr {
         border: none;
         height: 1px;
         margin: 1rem auto 2rem auto;
-        width: 20%;
+    }
+
+    h1 {
+        font-size: @h1-size;
+        line-height: @h1-leading;
+        margin-bottom: 1rem;
+        margin-left: -0.05em;
     }
 
     h2 {
         margin-top: 1.5rem;
-        margin-bottom: 1rem;
         margin-left: -0.05em;
-        line-height: @h2-leading;
-        font-size: @h2-size;
-    }
-
-    .award-year {
-        margin-top: 1.5rem;
-        margin-bottom: 1rem;
-        margin-left: 0;
     }
 
     h3 {
         font-size: @h3-size;
-        line-height: @h3-leading;
         font-style: italic;
         font-weight: 400;
         margin-top: 1rem;
@@ -141,18 +112,18 @@ h1, h2, h3, h4, h5, h6 {
         hyphens: auto;
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
+    }
 
-        a {
-            text-decoration: none;
+    a {
+        text-decoration: none;
 
-            &:hover {
-                text-decoration: underline;
-            }
+        &:hover {
+            text-decoration: underline;
+        }
 
-            &::after {
-                content: "°";
-                margin-left: @wide-tracking;
-            }
+        &::after {
+            content: "°";
+            margin-left: @wide-tracking;
         }
     }
 
@@ -169,20 +140,29 @@ h1, h2, h3, h4, h5, h6 {
 
     .date {
         text-transform: uppercase;
+        font-weight: 300;
         font-size: @small-size;
         letter-spacing: @wide-tracking;
-        font-weight: 300;
-        display: block;
     }
 
     img {
         display: block;
         margin: auto;
         max-width: 100%;
+
+        & + em {
+            width: 100%;
+            display: block;
+            font-family: @tertiary-font;
+            font-style: normal;
+            font-size: @small-size;
+            line-height: @tight-small-leading;
+            margin: 0.5rem 0 1rem 0;
+        }
     }
 
     blockquote {
-        border-left: 5px solid silver;
+        border-left: 5px solid;
         padding: 0.5rem 1rem;
     }
 
@@ -199,40 +179,22 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
 
-    .pad-after {
-        padding-right: 1rem;
-    }
-
-    p.tight {
-        margin-bottom: 0.25rem;
-    }
-
     .precontent {
         display: block;
         padding: 0 1rem;
         font-size: @small-size;
-        line-height: @small-leading;
-
-        &.first {
-            margin-top: 1rem;
-        }
-
-        &.last {
-            margin-bottom: 1rem;
-        }
     }
 
-    .tutoring-list {
-        margin: 0;
-        font-size: @small-size;
-        line-height: @small-leading;
+    .award {
+
+        h3 {
+            margin-bottom: -.25rem;
+        }
     }
 
     .contact-table {
-        margin-bottom: 2rem;
 
         .label {
-            display: block;
             padding-right: 1rem;
             text-transform: uppercase;
             letter-spacing: @wide-tracking;
@@ -258,7 +220,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .dynamic-link {
-        margin: 0.5rem auto 1.0rem auto;
+        margin: 0.5rem auto;
 
         &:first-of-type {
             margin-top: 1rem;
@@ -314,8 +276,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .blog-year {
-        margin-top: 2rem;
-        margin-bottom: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 0.75rem;
     }
 
     .talk-date, .pub-date {
@@ -326,6 +288,7 @@ h1, h2, h3, h4, h5, h6 {
     .blog-date {
         font-size: @tiny-size;
         line-height: @tiny-leading;
+        letter-spacing: @very-wide-tracking;
     }
 
     .post-links {
@@ -337,7 +300,7 @@ h1, h2, h3, h4, h5, h6 {
 
         a {
             font-size: @small-size;
-            line-height: @small-leading;
+            line-height: @tight-small-leading;
             text-transform: uppercase;
             letter-spacing: @wide-tracking;
             text-decoration: none;
@@ -350,16 +313,12 @@ h1, h2, h3, h4, h5, h6 {
 
             &.prev {
                 width: ~"calc(50% - 3rem)";
-                text-align: left;
-                left: 0;
-                top: 0;
                 padding-left: 1rem;
 
                 &::before {
                     content: "◀︎";
                     display: inline-block;
                     position: absolute;
-                    top: 0;
                     left: 0;
                 }
             }
@@ -367,14 +326,12 @@ h1, h2, h3, h4, h5, h6 {
                 width: ~"calc(50% - 3rem)";
                 text-align: right;
                 right: 0;
-                top: 0;
                 padding-right: 1rem;
 
                 &::after {
                     content: "▶︎";
                     display: inline-block;
                     position: absolute;
-                    top: 0;
                     right: 0;
                 }
             }
@@ -382,37 +339,22 @@ h1, h2, h3, h4, h5, h6 {
                 width: 5rem;
                 text-align: center;
                 left: 50%;
-                top: 0;
                 margin-left: -2.5rem;
             }
         }
     }
 }
 
-
-img + em {
-    width: 100%;
-    display: block;
-    font-family: @tertiary-font;
-    font-style: normal;
-    font-size: @small-size;
-    margin: 0.5rem 0 1rem 0;
-}
-
 footer {
     width: 100%;
-    max-width: 25rem;
+    max-width: 22rem;
     margin: 0 auto;
-    font-family: @tertiary-font;
-    font-weight: 300;
     font-size: @tiny-size;
     line-height: @tiny-leading;
-    letter-spacing: @wide-tracking;
+    letter-spacing: @very-wide-tracking;
     text-transform: uppercase;
     opacity: 0.8;
-    padding: 5px 2rem;
-    transition: background 0.2s ease, color 0.2s ease;
-    height: 1.5rem;
+    padding: 5px 0.5rem;
 
     .selector {
         display: inline-block;
@@ -423,13 +365,10 @@ footer {
         transition: height 0.2s ease;
 
         a {
-            display: block;
             position: absolute;
             top: 1.2rem;  // Needs 1.2rem for nice masking.
-            text-decoration: none;
             cursor: pointer;
             transition: top 0.2s ease;
-            width: 100%;
         }
 
         &:hover {
@@ -441,7 +380,7 @@ footer {
 }
 
 .cookies {
-    max-width: 25rem;
+    max-width: 22rem;
     margin: 0 auto;
     text-align: center;
     font-family: @tertiary-font;
