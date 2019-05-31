@@ -45,9 +45,10 @@ clear_cookie_message = () ->
 cookies_ok = () ->
     getCookie("cookiesOK") == "yes"
 
-if cookies_ok()
-    document.querySelector("#cookies").style.display = "none"
-    switch_theme(getCookie("style") || preferred_theme())
-else
-    document.querySelector("#cookies").style.display = "block"
-    document.querySelector("footer").style.paddingBottom = "120px"
+setupCookies = () ->
+    if cookies_ok()
+        document.querySelector("#cookies").style.display = "none"
+        switch_theme(getCookie("style") || preferred_theme())
+    else
+        document.querySelector("#cookies").style.display = "block"
+        document.querySelector("footer").style.paddingBottom = "120px"

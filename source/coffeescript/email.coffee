@@ -51,5 +51,3 @@ setupEmail = () ->
                     setTimeout(() => event.target.href = switchEmail event.target.href, 500)
                     event.target.borked = "true"
                 event.target.held = "false")
-
-setupEmail()
