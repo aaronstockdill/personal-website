@@ -580,6 +580,12 @@
 		"oAP": "/html/html",
 		"oF": 0
 		},
+	"/html_new": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "/html/html_new",
+		"oF": 0
+		},
 	"/source/404.kit": {
 		"cB": 0,
 		"ft": 2048,
@@ -1345,12 +1351,12 @@
 		"opt": 1,
 		"q": 100
 		},
-	"/source/static_assets/SPSS.pdf": {
+	"/source/static_assets/spss.pdf": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 2,
-		"oAP": "/html/static_assets/SPSS.pdf",
+		"oAP": "/html/static_assets/spss.pdf",
 		"oF": 0
 		},
 	"/source/static_assets/wireless_header.jpg": {
@@ -1411,6 +1417,34 @@
 		"oA": 0,
 		"oAP": "/html/teaching/index.html",
 		"oF": 0
+		},
+	"/source_new": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "/html/source_new",
+		"oF": 0
+		},
+	"/test.htl": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/html/test.htl",
+		"oF": 1
+		},
+	"/test2.htl": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/html/test2.htl",
+		"oF": 1
+		},
+	"/tools": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "/html/tools",
+		"oF": 0
 		}
 	},
 "hooks": [
@@ -1423,7 +1457,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "/source/favicons/apple-touch-icon.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 581033782.37465405
+	"lastBuiltDate": 581509133.10628498
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -3466,7 +3500,7 @@
 		],
 	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
-	"skippedFoldersString": "log, _logs, logs, _cache, cache, /storage/framework/sessions, node_modules, /dynamic/",
+	"skippedFoldersString": "log, _logs, logs, _cache, cache, /storage/framework/sessions, node_modules, /dynamic/, /tools, /html_new, /source_new",
 	"sourceFolderName": "source",
 	"susyVersion": 3,
 	"tsAllowSyntheticDefaultImports": 0,
