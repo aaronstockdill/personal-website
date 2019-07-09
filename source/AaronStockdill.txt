@@ -9,9 +9,18 @@ Education
   Bachelor of Science in Computer Science and Mathematics, University of Canterbury.
 
 
+Publications
+
+  Inspection and selection of representations. Daniel Raggi, Aaron Stockdill, Mateja Jamnik, Grecia Garcia Garcia, Holly E. A. Sutherland, and Peter C.-H. Cheng. 2019 Conference on Intelligent Computer Mathematics (CICM). https://dx.doi.org/10.1007/978-3-030-23250-4_16
+
+  Simulating neuromorphic reservoir computing: Abstract feed-forward hardware models. Aaron Stockdill and Kourosh Neshatian. 2017 International Conference on Image and Vision Computing New Zealand (IVCNZ). https://dx.doi.org/10.1109/IVCNZ.2017.8402482
+
+  Restricted Echo State Networks. Aaron Stockdill and Kourosh Neshatian, AI 2016: Advances in Artificial Intelligence. Volume 9992 of Lecture Notes in Artificial Intelligence. https://dx.doi.org/10.1007/978-3-319-50127-7_49
+
+
 Employment
 
-  Supervisor, "Foundations of Computer Science", "Prolog", "Logic and Proof", "Artificial Intelligence", University of Cambridge, 2017-2019.
+  Supervisor, "Foundations of Computer Science", "Prolog", "Logic and Proof", "Artificial Intelligence", "Interaction Design", University of Cambridge, 2017-2019.
 
   Lecturer, "Introduction to Computer Science", University of Canterbury, 2017.
 
@@ -22,10 +31,3 @@ Employment
   Founder/Web Designer/Programmer, Potato Softworks, 2014-2017.
 
   Tutor, NumberWorks'nWords, 2014-2016.
-
-
-Publications
-
-  Simulating neuromorphic reservoir computing: Abstract feed-forward hardware models. Aaron Stockdill and Kourosh Neshatian. 2017 International Conference on Image and Vision Computing New Zealand (IVCNZ). https://dx.doi.org/10.1109/IVCNZ.2017.8402482
-
-  Restricted Echo State Networks. Aaron Stockdill and Kourosh Neshatian, AI 2016: Advances in Artificial Intelligence. Volume 9992 of Lecture Notes in Artificial Intelligence. https://dx.doi.org/10.1007/978-3-319-50127-7_49

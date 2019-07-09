@@ -119,6 +119,14 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"/dynamic/auto/Inspection and Selection of Representations.el": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/html/dynamic/auto/Inspection and Selection of Representations.el",
+		"oF": 1
+		},
 	"/dynamic/auto/Neuromorphic Computing.el": {
 		"cB": 0,
 		"ft": 8192,
@@ -263,6 +271,22 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/html/dynamic/Honours Presentation.pdf",
+		"oF": 1
+		},
+	"/dynamic/Inspection and Selection of Representations.bib": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/html/dynamic/Inspection and Selection of Representations.bib",
+		"oF": 1
+		},
+	"/dynamic/Inspection and Selection of Representations.pdf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/html/dynamic/Inspection and Selection of Representations.pdf",
 		"oF": 1
 		},
 	"/dynamic/kings.jpg": {
@@ -592,6 +616,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/404.html",
+		"oF": 0
+		},
+	"/source/AaronStockdill-full.pdf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/html/AaronStockdill-full.pdf",
 		"oF": 0
 		},
 	"/source/AaronStockdill.pdf": {
@@ -1142,6 +1174,22 @@
 		"oAP": "/html/static_assets/Honours Presentation.pdf",
 		"oF": 0
 		},
+	"/source/static_assets/Inspection and Selection of Representations.bib": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/html/static_assets/Inspection and Selection of Representations.bib",
+		"oF": 0
+		},
+	"/source/static_assets/Inspection and Selection of Representations.pdf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/html/static_assets/Inspection and Selection of Representations.pdf",
+		"oF": 0
+		},
 	"/source/static_assets/kings.jpg": {
 		"ft": 16384,
 		"iS": 624461,
@@ -1457,7 +1505,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "/source/favicons/apple-touch-icon.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 581518554.08419299
+	"lastBuiltDate": 584357954.50582898
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
