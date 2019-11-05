@@ -20,7 +20,7 @@ Publications
 
 Employment
 
-  Supervisor, "Foundations of Computer Science", "Prolog", "Logic and Proof", "Artificial Intelligence", "Interaction Design", University of Cambridge, 2017-2019.
+  Supervisor, "Foundations of Computer Science", "Prolog", "Logic and Proof", "Artificial Intelligence", "Algorithms", "Interaction Design", University of Cambridge, 2017-2020.
 
   Lecturer, "Introduction to Computer Science", University of Canterbury, 2017.
 
