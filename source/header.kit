@@ -16,13 +16,11 @@
           <!-- @import "../html/css/600.css" -->
         </style>
         <script>
-          var style_cookie = document.cookie.match(/style=((black)|(white))/);
-          var theme = "white";
-          if (style_cookie === null) {
+          var theme = localStorage.getItem("style");
+          if (theme === null) {
               var match = window.matchMedia('(prefers-color-scheme: dark)');
               theme = (match && match.matches) ? "black" : "white";
-          } else {
-              theme = style_cookie[1]
+              localStorage.setItem("style", theme);
           }
           document.write(
               "<link rel='stylesheet' href='/css/"
