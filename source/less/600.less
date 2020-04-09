@@ -11,17 +11,15 @@ main.welcome .conditional-break {
 }
 
 nav {
+    position: fixed;
     overflow: hidden;
-    padding: 0;
+    padding: 3rem 0 0 0;
     margin: 0;
     width: 0rem;
-    height: 0rem;
+    height: 100%;
     top: 0;
     right: 0;
     transition: height 0.5s ease, width 0.5s ease, background 0.2s linear 0.3s;
-
-    height: 100%;
-    padding-top: 3rem;
 
     a {
         display: block;
@@ -33,17 +31,13 @@ nav {
         font-size: 0.7rem;
 
         &.active {
-            border-bottom-width: 0;
-            border-bottom-style: none;
-            border-right-width: 6px;
-            border-right-style: solid;
-            margin-bottom: 0.25rem;
-            margin-right: calc(1rem - 6px);
+            border-bottom: 0 none;
+            border-right: 6px solid;
+            margin: 0 calc(1rem - 6px) 0.25rem 0;
         }
     }
 
     &.showing {
-        height: 100%;
         width: 100%;
         transition: height 0.5s ease, width 0.5s ease, background 0.2s linear 0s;
     }
@@ -52,15 +46,15 @@ nav {
 .menu-hamburger {
     display: block;
     position: fixed;
-    right: .2rem;
-    top: .4rem;
+    right: 0.2rem;
+    top: 0.4rem;
     width: 1.8rem;
     height: 1.8rem;
     z-index: 1001;
+    transform: scale(0.75);
 }
 
 .menu-hamburger .bar {
-    stroke: black;
     stroke-width: 0;
     opacity: 1
 }
@@ -83,15 +77,6 @@ nav {
 
 .menu-hamburger.showing .bar-bottom {
     transform: translate(0%, 0%) rotate(135deg);
-}
-
-.container {
-    padding: 0 1rem 2rem 1rem;
-
-    blockquote {
-        margin-left: 0px;
-        margin-right: 0px;
-    }
 }
 
 footer {
