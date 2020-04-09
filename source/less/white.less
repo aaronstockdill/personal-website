@@ -1,82 +1,14 @@
-@offblack: #555;
 @font: #222;
+@font_faded: #555;
+@font_strong: #000;
 @background: #eee;
-
+@selection_background: #ccc;
 @blockquote_background: #ddd;
 @blockquote_border: silver;
 
-::selection {
-    background: #ccc;
-}
-
-html, body {
-    background: @background;
-    color: @font;
-}
-
-.welcome {
-    p {
-        color: @offblack;
-    }
-
-    .email, .phone, nav a {
-        color: @offblack;
-
-        &:hover {
-            color: @font;
-        }
-    }
-}
-
-nav {
-    background: @background;
-
-    a {
-        color: @offblack;
-
-        &:hover {
-            color: @font;
-        }
-
-        &.active {
-            color: darken(@font, 20%);
-            border-color: @offblack;
-        }
-    }
-}
-
-.menu-hamburger .bar {
-    fill: @offblack;
-}
-
-.menu-header {
-    color: @font;
-}
-
-main {
-    a {
-        color: @offblack;
-
-        &:hover, &.active {
-            color: @font;
-        }
-    }
-
-    .contact-table a, .dynamic-link a {
-        color: @font;
-    }
-
-    blockquote {
-        background: @blockquote_background;
-        border-color-left: @blockquote_border;
-    }
-}
+@import "theme.less";
 
 footer {
-    a {
-        color: @offblack;
-    }
-
     .selector a#white-button {
         top: 0rem;
         opacity: 0.5;

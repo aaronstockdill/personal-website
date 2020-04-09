@@ -1,0 +1,40 @@
+::selection {
+    background: @selection_background;
+}
+
+html, body, nav {
+    background: @background;
+    color: @font;
+}
+
+a {
+    color: @font_faded;
+
+    &:hover, &.active {
+        color: @font;
+    }
+}
+
+nav a.active {
+    color: @font_strong;
+    border-color: @font_faded;
+}
+
+.menu-hamburger .bar {
+    fill: @font_faded;
+}
+
+.menu-header {
+    color: @font;
+}
+
+main {
+    .contact-table a, .dynamic-link a {
+        color: @font;
+    }
+
+    blockquote {
+        background: @blockquote_background;
+        border-color-left: @blockquote_border;
+    }
+}
