@@ -36,7 +36,7 @@
 		"uuidString": "CF21AFA0-D9E9-4C5A-8F82-0C07239DE6B6"
 		}
 	],
-"creatorBuild": "31934",
+"creatorBuild": "32001",
 "files": {
 	"/.gitignore": {
 		"cB": 0,
@@ -122,12 +122,36 @@
 		"oAP": "/html/blog/a-catalogue-of-crazy/index.html",
 		"oF": 0
 		},
+	"/source/blog/ai-seminar/index.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/html/blog/ai-seminar/index.html",
+		"oF": 0
+		},
 	"/source/blog/cambridge/index.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/blog/cambridge/index.html",
+		"oF": 0
+		},
+	"/source/blog/csx/index.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/html/blog/csx/index.html",
+		"oF": 0
+		},
+	"/source/blog/currying-partial-application-and-higher-order-functions/index.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/html/blog/currying-partial-application-and-higher-order-functions/index.html",
 		"oF": 0
 		},
 	"/source/blog/good-news-everyone/index.kit": {
@@ -138,6 +162,22 @@
 		"oAP": "/html/blog/good-news-everyone/index.html",
 		"oF": 0
 		},
+	"/source/blog/inspection-and-selection-of-representations/index.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/html/blog/inspection-and-selection-of-representations/index.html",
+		"oF": 0
+		},
+	"/source/blog/life-after-the-robot-apocalypse/index.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/html/blog/life-after-the-robot-apocalypse/index.html",
+		"oF": 0
+		},
 	"/source/blog/missing-what-is-not/index.kit": {
 		"cB": 0,
 		"ft": 2048,
@@ -146,12 +186,28 @@
 		"oAP": "/html/blog/missing-what-is-not/index.html",
 		"oF": 0
 		},
+	"/source/blog/neuromorphic-computing-with-reservoir-neural-networks-on-memristive-hardware/index.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/html/blog/neuromorphic-computing-with-reservoir-neural-networks-on-memristive-hardware/index.html",
+		"oF": 0
+		},
 	"/source/blog/scholarship-calculus/index.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/html/blog/scholarship-calculus/index.html",
+		"oF": 0
+		},
+	"/source/blog/selwyn-postgraduate-seminar/index.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/html/blog/selwyn-postgraduate-seminar/index.html",
 		"oF": 0
 		},
 	"/source/blog/the-wireless-are-robots-going-to-kill-us-all/index.kit": {
@@ -500,6 +556,22 @@
 		"mS": 0,
 		"oA": 0,
 		"oAP": "/html/css/print.css",
+		"oF": 0,
+		"oS": 1,
+		"rwU": 0,
+		"sI": 0,
+		"sU": 0
+		},
+	"/source/less/theme.less": {
+		"aP": 1,
+		"bl": 0,
+		"eJ": 0,
+		"ft": 1,
+		"iI": 0,
+		"ma": 0,
+		"mS": 0,
+		"oA": 1,
+		"oAP": "/html/css/theme.css",
 		"oF": 0,
 		"oS": 1,
 		"rwU": 0,
@@ -965,7 +1037,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "/source/favicons/apple-touch-icon.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 604510828.04912496
+	"lastBuiltDate": 609564279.64531302
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -1561,6 +1633,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"grouped-accessor-pairs": {
+			"active": 0,
+			"optionString": "'anyOrder'"
+			},
 		"guard-for-in": {
 			"active": 0,
 			"optionString": ""
@@ -1737,6 +1813,10 @@
 			"active": 1,
 			"optionString": "{'checkLoops': true}"
 			},
+		"no-constructor-return": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-continue": {
 			"active": 0,
 			"optionString": ""
@@ -1762,6 +1842,10 @@
 			"optionString": ""
 			},
 		"no-dupe-class-members": {
+			"active": 1,
+			"optionString": ""
+			},
+		"no-dupe-else-if": {
 			"active": 1,
 			"optionString": ""
 			},
@@ -2065,6 +2149,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-setter-return": {
+			"active": 1,
+			"optionString": ""
+			},
 		"no-shadow": {
 			"active": 0,
 			"optionString": "{'builtinGlobals': false, 'hoist': 'functions', 'allow': []}"
@@ -2268,6 +2356,10 @@
 		"prefer-destructuring": {
 			"active": 0,
 			"optionString": "{'array': true, 'object': true}, {'enforceForRenamedProperties': false}"
+			},
+		"prefer-exponentiation-operator": {
+			"active": 0,
+			"optionString": ""
 			},
 		"prefer-named-capture-group": {
 			"active": 0,
