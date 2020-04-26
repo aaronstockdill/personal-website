@@ -283,18 +283,23 @@ def main():
                        and f.split(".")[-1] != "md"
                        and f.split(".")[-1] != "index"])
 
+    def comment(f):
+        return f.strip()[0] == '#'
+
     with open("dynamic/blog/blog.index") as idx:
         blogs = []
         for f in idx.readlines():
-            f = "dynamic/blog/" + f.strip()
-            blogs.append((f, format_url(f, "blog")))
+            if not comment(f):
+                f = "dynamic/blog/" + f.strip()
+                blogs.append((f, format_url(f, "blog")))
 
     with open("dynamic/talks/talks.index") as idx:
         talks = []
         for f in idx.readlines():
-            f = "dynamic/talks/" + f.strip()
-            blogs.append((f, format_url(f, "blog")))
-            talks.append((f, format_url(f, "talk")))
+            if not comment(f):
+                f = "dynamic/talks/" + f.strip()
+                blogs.append((f, format_url(f, "blog")))
+                talks.append((f, format_url(f, "talk")))
 
     publications = [f for f in pub_files if f.split(".")[-1] == "bib"]
 
