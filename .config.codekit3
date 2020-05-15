@@ -1025,6 +1025,14 @@
 		"oA": 0,
 		"oAP": "/html/teaching/index.html",
 		"oF": 0
+		},
+	"/source/vlhcc20.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/html/research/vlhcc20/index.html",
+		"oF": 2
 		}
 	},
 "hooks": [
@@ -1037,7 +1045,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "/source/favicons/apple-touch-icon.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 609564279.64531302
+	"lastBuiltDate": 611196357.50334704
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
