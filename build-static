@@ -199,7 +199,7 @@ def create_research_listing(publications, talks_fn_links, outfile, templatefile)
     listed_bib = ""
     talk_template = """<div class="dynamic-link"><a href="{link}">{title}</a><span class="date talk-date">{date}</span></div>"""
     bib_template = """
-<div class="dynamic-link">
+<div class="dynamic-link" id="{citekey}">
     <h2>{title}</h2>
     <span class="authors">{author}</span>
     <div class='pub-info'>
@@ -217,6 +217,7 @@ def create_research_listing(publications, talks_fn_links, outfile, templatefile)
         listed_talks += talk_template.format(link=link, title=parts[0], date=parts[1])
     for bibobj in sorted(map(parse_bibtex, publications), key=bib_sorter, reverse=True):
         listed_bib += bib_template.format(
+            citekey = bibobj["citekey"],
             pdflink = bibobj["pdf_link"],
             title = bibobj["title"],
             author = oxford_join(name.split(", ")[1] + " " + name.split(", ")[0] for name in bibobj["author"].split(" and ")),
