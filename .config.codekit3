@@ -1033,6 +1033,14 @@
 		"oA": 0,
 		"oAP": "/html/research/vlhcc20/index.html",
 		"oF": 2
+		},
+	"/source/vlhcc20.pdf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/html/research/vlhcc20/vlhcc20.pdf",
+		"oF": 0
 		}
 	},
 "hooks": [
@@ -1045,7 +1053,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "/source/favicons/apple-touch-icon.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 611196357.50334704
+	"lastBuiltDate": 613534181.74129903
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
