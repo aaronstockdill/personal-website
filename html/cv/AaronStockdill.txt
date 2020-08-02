@@ -11,6 +11,10 @@ Education
 
 Publications
 
+  Correspondence-based analogies for representation selection. Aaron Stockdill, Daniel Raggi, Mateja Jamnik, Grecia Garcia Garcia, Holly E. A. Sutherland, Peter C.-H. Cheng, and Advait Sarkar. 2020 IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC). https://dx.doi.org/10.1109/VL/HCC50065.2020.9127258
+
+  Dissecting Representations. Daniel Raggi, Aaron Stockdill, Mateja Jamnik, Grecia Garcia Garcia, Holly E. A. Sutherland, and Peter C.-H. Cheng. 11th International Conference on the Theory and Application of Diagrams (Diagrams 2020). 
+
   Inspection and selection of representations. Daniel Raggi, Aaron Stockdill, Mateja Jamnik, Grecia Garcia Garcia, Holly E. A. Sutherland, and Peter C.-H. Cheng. 2019 Conference on Intelligent Computer Mathematics (CICM). https://dx.doi.org/10.1007/978-3-030-23250-4_16
 
   Simulating neuromorphic reservoir computing: Abstract feed-forward hardware models. Aaron Stockdill and Kourosh Neshatian. 2017 International Conference on Image and Vision Computing New Zealand (IVCNZ). https://dx.doi.org/10.1109/IVCNZ.2017.8402482
