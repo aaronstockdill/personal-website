@@ -406,7 +406,7 @@
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "/html/site.webmanifest",
 		"oF": 3
 		},
@@ -1069,7 +1069,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "/source/favicons/apple-touch-icon.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 618026406.44330001
+	"lastBuiltDate": 622492861.87730801
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
