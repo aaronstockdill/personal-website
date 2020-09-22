@@ -16,7 +16,7 @@
           <!-- @import "../html/css/600.css" -->
         </style>
         <script>
-          var t=localStorage.getItem("s");if(t===null){var m=window.matchMedia('(prefers-color-scheme: dark)');t=(match && match.matches)?"black":"white";localStorage.setItem("s",t)}document.write("<link rel='stylesheet' href='/css/"+t+".css' media='screen' id='theme'>")
+          var t=localStorage.getItem("s");if(t===null){var m=window.matchMedia('(prefers-color-scheme: dark)');t=(m&&m.matches)?"black":"white";localStorage.setItem("s",t)}document.write("<link rel='stylesheet' href='/css/"+t+".css' media='screen' id='theme'>")
         </script>
         <noscript><link rel='stylesheet' href='/css/white.css' media='screen' id='theme'></noscript>
         <meta name="viewport" content="width=device-width, initial-scale=1">

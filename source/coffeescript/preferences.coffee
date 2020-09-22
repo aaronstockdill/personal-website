@@ -6,5 +6,5 @@ preferred_theme = () ->
 # Allow the ability to switch themes.
 switch_theme = (target="white") ->
     document.querySelector("#theme").setAttribute "href", "/css/#{target}.css"
-    localStorage.setItem("style", target)
+    localStorage.setItem("s", target)
     false
