@@ -634,6 +634,46 @@
 		"oAP": "/html/static_assets/auto/Restricted Echo State Networks.el",
 		"oF": 0
 		},
+	"/source/static_assets/Cognitive Properites of Representations - A Framework.bib": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/html/static_assets/Cognitive Properites of Representations - A Framework.bib",
+		"oF": 0
+		},
+	"/source/static_assets/Cognitive Properties of Representations - A Framework.bib": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/html/static_assets/Cognitive Properties of Representations - A Framework.bib",
+		"oF": 0
+		},
+	"/source/static_assets/Cognitive Properties of Representations - A Framework.pdf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/html/static_assets/Cognitive Properties of Representations - A Framework.pdf",
+		"oF": 0
+		},
+	"/source/static_assets/Considerations in Representation Selection for Problem Solving - A Review.bib": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/html/static_assets/Considerations in Representation Selection for Problem Solving - A Review.bib",
+		"oF": 0
+		},
+	"/source/static_assets/Considerations in Representation Selection for Problem Solving - A Review.pdf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/html/static_assets/Considerations in Representation Selection for Problem Solving - A Review.pdf",
+		"oF": 0
+		},
 	"/source/static_assets/Correspondence-based analogies for choosing problem representations.bib": {
 		"cB": 0,
 		"ft": 8192,
@@ -1069,7 +1109,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "/source/favicons/apple-touch-icon.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 622493978.94841802
+	"lastBuiltDate": 654706449.75190997
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
