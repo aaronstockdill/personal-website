@@ -1,5 +1,5 @@
 Aaron Stockdill
-PhD Student at the University of Cambridge
+Research Fellow in Informatics at the University of Sussex
 
 
 Education
@@ -11,9 +11,16 @@ Education
 
 Publications
 
+  Considerations in Representation Selection for Problem Solving: a Review. Aaron Stockdill, Daniel Raggi, Mateja Jamnik, Grecia Garcia Garcia, and Peter C.-H. Cheng, 12th International Conference on the Theory and Application of Diagrams, 2021.
+https://dx.doi.org/10.1007/978-3-030-86062-2_4
+
+  Cognitive Properties of Representations: A Framework. Peter C.-H. Cheng, Grecia Garcia Garcia, Daniel Raggi, Aaron Stockdill, and Mateja Jamnik, 12th International Conference on the Theory and Application of Diagrams, 2021.
+https://dx.doi.org/10.1007/978-3-030-86062-2_43
+
   Correspondence-based analogies for representation selection. Aaron Stockdill, Daniel Raggi, Mateja Jamnik, Grecia Garcia Garcia, Holly E. A. Sutherland, Peter C.-H. Cheng, and Advait Sarkar. 2020 IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC). https://dx.doi.org/10.1109/VL/HCC50065.2020.9127258
 
-  Dissecting Representations. Daniel Raggi, Aaron Stockdill, Mateja Jamnik, Grecia Garcia Garcia, Holly E. A. Sutherland, and Peter C.-H. Cheng. 11th International Conference on the Theory and Application of Diagrams (Diagrams 2020). 
+  Dissecting Representations. Daniel Raggi, Aaron Stockdill, Mateja Jamnik, Grecia Garcia Garcia, Holly E. A. Sutherland, and Peter C.-H. Cheng. 11th International Conference on the Theory and Application of Diagrams (Diagrams 2020).
+https://dx.doi.org/10.1007/978-3-030-54249-8_11
 
   Inspection and selection of representations. Daniel Raggi, Aaron Stockdill, Mateja Jamnik, Grecia Garcia Garcia, Holly E. A. Sutherland, and Peter C.-H. Cheng. 2019 Conference on Intelligent Computer Mathematics (CICM). https://dx.doi.org/10.1007/978-3-030-23250-4_16
 
@@ -23,6 +30,10 @@ Publications
 
 
 Employment
+
+  Research Fellow in Informatics, University of Sussex, Sep 2021-present.
+
+  Software Engineer, Jane Street, Jan 2021 - July 2021
 
   Supervisor, "Foundations of Computer Science", "Prolog", "Logic and Proof", "Artificial Intelligence", "Algorithms", "Interaction Design", University of Cambridge, 2017-2020.
 
