@@ -10083,7 +10083,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             return target3 && target3.id || null;
           }), _defineProperty(_assertThisInitialized(_this), "_onDragEnd", function(e2) {
             _this.isDraggingNode = !1, _this.state.draggedNodes && (_this.state.draggedNodes.forEach(function(node) {
-              _this.props.onNodeDragEnd && _this.props.onNodeDragEnd(e2, node.id, node.x, node.y), _this.onNodePositionChange(node);
+              _this.onNodePositionChange(node);
             }), _this._tick({
               draggedNodes: null
             })), !_this.state.config.staticGraph && _this.state.config.automaticRearrangeAfterDropNode && _this.state.simulation.alphaTarget(_this.state.config.d3.alphaTarget).restart();
@@ -10097,7 +10097,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   x: newX,
                   y: newY
                 }, _this.state);
-                return shouldUpdateNode ? (draggedNode.x = newX, draggedNode.y = newY, draggedNode.fx = draggedNode.x, draggedNode.fy = draggedNode.y, _this.props.onNodeDragMove && _this.props.onNodeDragMove(e2, draggedNode.id, draggedNode.x, draggedNode.y), [draggedNode]) : [];
+                return shouldUpdateNode ? (draggedNode.x = newX, draggedNode.y = newY, draggedNode.fx = draggedNode.x, draggedNode.fy = draggedNode.y, [draggedNode]) : [];
               });
               _this._tick({
                 draggedNodes
@@ -10112,9 +10112,6 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 var oldSelection = _this.selection.freeze();
                 e2.sourceEvent.shiftKey || _this.selection.clear(), _this.selection.addNode(id7), _this.onSelectionChange(oldSelection, _this.selection.freeze());
               }
-              _this.props.onNodeDragStart && _this.selection.nodes.forEach(function(node) {
-                return _this.props.onNodeDragStart(e2, node.id, node.x, node.y);
-              });
             }
           }), _defineProperty(_assertThisInitialized(_this), "_setNodeHighlightedValue", function(id7) {
             var value = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : !1;
@@ -10209,6 +10206,25 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             }
           }), _defineProperty(_assertThisInitialized(_this), "onSelectionChange", function(oldSelection, newSelection) {
             !_this.props.onSelectionChange || oldSelection != newSelection && _this.props.onSelectionChange(oldSelection, newSelection);
+          }), _defineProperty(_assertThisInitialized(_this), "onKeyDown", function(ev) {
+            if (!_this.props.keybindings || !_this.state.activeKeybindings)
+              return;
+            function keyname(e2) {
+              var ctrl = e2.ctrlKey ? "Ctrl+" : "", alt = e2.altKey ? "Alt+" : "", shift = e2.shiftKey ? "Shift+" : "", letter = e2.key;
+              return ctrl + alt + shift + letter;
+            }
+            (_this.props.keybindings[keyname(ev)] || function(_) {
+            })(ev, _this.mousePosition[0], _this.mousePosition[1]);
+          }), _defineProperty(_assertThisInitialized(_this), "enableKeybindings", function() {
+            document.querySelector("#svg-container-".concat(_this.state.id)).focus(), _this.setState({
+              activeKeybindings: !0
+            });
+          }), _defineProperty(_assertThisInitialized(_this), "disableKeybindings", function() {
+            document.querySelector("#svg-container-".concat(_this.state.id)).blur(), _this.setState({
+              activeKeybindings: !1
+            });
+          }), _defineProperty(_assertThisInitialized(_this), "updateMousePosition", function(event) {
+            _this.mousePosition = (0, _d3Selection.pointer)(event);
           }), _defineProperty(_assertThisInitialized(_this), "pauseSimulation", function() {
             return _this.state.simulation.stop();
           }), _defineProperty(_assertThisInitialized(_this), "resetNodesPositions", function() {
@@ -10225,7 +10241,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             }
           }), _defineProperty(_assertThisInitialized(_this), "restartSimulation", function() {
             return !_this.state.config.staticGraph && _this.state.simulation.restart();
-          }), _this.props.id || (0, _utils.throwErr)(_this.constructor.name, _err.default.GRAPH_NO_ID_PROP), _this.focusAnimationTimeout = null, _this.nodeClickTimer = null, _this.isDraggingNode = !1, _this.selection = new _selection.Selection(), _this.state = (0, _graph3.initializeGraphState)(_this.props, _this.state), _this.debouncedOnZoomChange = _this.props.onZoomChange ? (0, _utils.debounce)(_this.props.onZoomChange, 100) : null, _this;
+          }), _this.props.id || (0, _utils.throwErr)(_this.constructor.name, _err.default.GRAPH_NO_ID_PROP), _this.focusAnimationTimeout = null, _this.nodeClickTimer = null, _this.mousePosition = [0, 0], _this.isDraggingNode = !1, _this.selection = new _selection.Selection(), _this.state = {
+            activeKeybindings: !1
+          }, _this.state = (0, _graph3.initializeGraphState)(_this.props, _this.state), _this.debouncedOnZoomChange = _this.props.onZoomChange ? (0, _utils.debounce)(_this.props.onZoomChange, 100) : null, _this;
         }
         return _createClass(Graph3, [{
           key: "_graphLinkForceConfig",
@@ -10264,6 +10282,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             }), this._graphLinkForceConfig()), this.state.config.freezeAllDragEvents || this._graphNodeDragConfig();
           }
         }, {
+          key: "_mouseConfig",
+          value: function() {
+            (0, _d3Selection.select)("#svg-container-".concat(this.state.id)).on("mousemove", this.updateMousePosition).on("mouseover", this.enableKeybindings).on("mouseout", this.disableKeybindings);
+          }
+        }, {
           key: "UNSAFE_componentWillReceiveProps",
           value: function(nextProps) {
             var _checkForGraphElement = (0, _graph3.checkForGraphElementsChanges)(nextProps, this.state), graphElementsUpdated = _checkForGraphElement.graphElementsUpdated, newGraphElements = _checkForGraphElement.newGraphElements, state = graphElementsUpdated ? (0, _graph3.initializeGraphState)(nextProps, this.state) : this.state, newConfig = nextProps.config || {}, _checkForGraphConfigC = (0, _graph3.checkForGraphConfigChanges)(nextProps, this.state), configUpdated = _checkForGraphConfigC.configUpdated, d3ConfigUpdated = _checkForGraphConfigC.d3ConfigUpdated, config2 = configUpdated ? (0, _utils.merge)(_graph2.default, newConfig) : this.state.config;
@@ -10300,7 +10323,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         }, {
           key: "componentDidMount",
           value: function() {
-            this.state.config.staticGraph || this._graphBindD3ToReactComponent(), this._zoomConfig();
+            this.state.config.staticGraph || this._graphBindD3ToReactComponent(), this._zoomConfig(), this._mouseConfig();
           }
         }, {
           key: "componentWillUnmount",
@@ -10322,6 +10345,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               onMouseOverLink: this.onMouseOverLink,
               onMouseOutLink: this.onMouseOutLink
             }, this.state.config, this.state.highlightedNode, this.state.highlightedLink, this.state.transform.k, this.selection), nodes3 = _renderGraph.nodes, links2 = _renderGraph.links, defs = _renderGraph.defs, svgStyle = {
+              outline: "none",
               height: this.state.config.height,
               width: this.state.config.width
             }, containerProps = this._generateFocusAnimationProps();
@@ -10330,8 +10354,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               style: this.props.style
             }, /* @__PURE__ */ _react.default.createElement("svg", {
               name: "svg-container-".concat(this.state.id),
+              id: "svg-container-".concat(this.state.id),
               style: svgStyle,
-              onClick: this.onClickGraph
+              tabIndex: "0",
+              onClick: this.onClickGraph,
+              onKeyDown: this.onKeyDown
             }, defs, /* @__PURE__ */ _react.default.createElement("g", _extends({
               id: "".concat(this.state.id, "-").concat(_graph.default.GRAPH_CONTAINER_ID)
             }, containerProps), links2, nodes3)));
@@ -22928,6 +22955,13 @@ You might need to use a local HTTP server (instead of file://): https://reactjs.
       dict[match[0]] = match[1], _param = param.tl;
     }
   }
+  function fromArray3(entries2) {
+    for (var dict = {}, l = entries2.length, i = 0; i < l; ++i) {
+      var match = entries2[i];
+      dict[match[0]] = match[1];
+    }
+    return dict;
+  }
 
   // node_modules/rescript/lib/es6/belt_internalAVLtree.js
   function treeHeight(n) {
@@ -23200,7 +23234,7 @@ You might need to use a local HTTP server (instead of file://): https://reactjs.
       t.r = updateMutate(r, x5, data4, cmp8);
     return balMutate(t);
   }
-  function fromArray3(xs, cmp8) {
+  function fromArray4(xs, cmp8) {
     var len = xs.length;
     if (len !== 0) {
       var next = strictlySortedLengthU(xs, function(param, param$1) {
@@ -23335,15 +23369,15 @@ You might need to use a local HTTP server (instead of file://): https://reactjs.
     return concatOrJoin(newLeft$1, v2, newD$1, newRight$1);
   }
   var isEmpty2 = isEmpty, has3 = has2;
-  var toList2 = toList, toArray3 = toArray2, fromArray4 = fromArray3;
+  var toList2 = toList, toArray3 = toArray2, fromArray5 = fromArray4;
   var get5 = get4;
 
   // node_modules/rescript/lib/es6/belt_Map.js
-  function fromArray5(data4, id7) {
+  function fromArray6(data4, id7) {
     var cmp8 = id7.cmp;
     return {
       cmp: cmp8,
-      data: fromArray4(data4, cmp8)
+      data: fromArray5(data4, cmp8)
     };
   }
   function remove2(m2, x5) {
@@ -23444,8 +23478,8 @@ You might need to use a local HTTP server (instead of file://): https://reactjs.
       return set3(t, param[0], param[1]);
     });
   }
-  function fromArray8(param) {
-    return fromArray5(param, Cmp);
+  function fromArray9(param) {
+    return fromArray6(param, Cmp);
   }
   function toJson$22(t, encode) {
     return fromList(map7(toList3(t), function(param) {
@@ -23482,7 +23516,7 @@ You might need to use a local HTTP server (instead of file://): https://reactjs.
     toList: toList3,
     toArray: toArray4,
     fromList: fromList$1,
-    fromArray: fromArray8
+    fromArray: fromArray9
   };
 
   // src/lib/Bool.bs.js
@@ -26897,82 +26931,33 @@ You might need to use a local HTTP server (instead of file://): https://reactjs.
           _1: name2
         }
       });
-    }, addRepNode = function(param) {
+    }, addNodeAt = function(kind, x5, y5) {
       var id7 = create4(void 0);
       return _1(dispatch5, {
         TAG: 0,
         _0: {
           TAG: 4,
-          _0: 0,
+          _0: kind,
           _1: id7
         }
       }), _1(dispatch5, {
         TAG: 1,
         _0: {
           TAG: 0,
-          _0: 0,
-          _1: 0,
-          _2: 0,
+          _0: x5,
+          _1: y5,
+          _2: kind,
           _3: id7
         }
       });
-    }, addSchNode = function(param) {
-      var id7 = create4(void 0);
-      return _1(dispatch5, {
-        TAG: 0,
-        _0: {
-          TAG: 4,
-          _0: 1,
-          _1: id7
-        }
-      }), _1(dispatch5, {
-        TAG: 1,
-        _0: {
-          TAG: 0,
-          _0: 0,
-          _1: 0,
-          _2: 1,
-          _3: id7
-        }
-      });
-    }, addDimNode = function(param) {
-      var id7 = create4(void 0);
-      return _1(dispatch5, {
-        TAG: 0,
-        _0: {
-          TAG: 4,
-          _0: 2,
-          _1: id7
-        }
-      }), _1(dispatch5, {
-        TAG: 1,
-        _0: {
-          TAG: 0,
-          _0: 0,
-          _1: 0,
-          _2: 2,
-          _3: id7
-        }
-      });
-    }, addTokNode = function(param) {
-      var id7 = create4(void 0);
-      return _1(dispatch5, {
-        TAG: 0,
-        _0: {
-          TAG: 4,
-          _0: 3,
-          _1: id7
-        }
-      }), _1(dispatch5, {
-        TAG: 1,
-        _0: {
-          TAG: 0,
-          _0: 0,
-          _1: 0,
-          _2: 3,
-          _3: id7
-        }
-      });
+    }, addRepNodeAt = function(param, x5, y5) {
+      return addNodeAt(0, x5, y5);
+    }, addSchNodeAt = function(param, x5, y5) {
+      return addNodeAt(1, x5, y5);
+    }, addDimNodeAt = function(param, x5, y5) {
+      return addNodeAt(2, x5, y5);
+    }, addTokNodeAt = function(param, x5, y5) {
+      return addNodeAt(3, x5, y5);
     }, selectionChange = function(param, newSelection) {
       return _1(dispatch5, {
         TAG: 1,
@@ -27070,7 +27055,48 @@ You might need to use a local HTTP server (instead of file://): https://reactjs.
     }, dump2 = function(param) {
       var content = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(dump(state)));
       return download("RepNotationOnline.json", content);
-    };
+    }, keybindings = fromArray3([
+      [
+        "r",
+        addRepNodeAt
+      ],
+      [
+        "s",
+        addSchNodeAt
+      ],
+      [
+        "d",
+        addDimNodeAt
+      ],
+      [
+        "t",
+        addTokNodeAt
+      ],
+      [
+        "c",
+        function(e2, param, param$1) {
+          return linkNodes(e2);
+        }
+      ],
+      [
+        "a",
+        function(e2, param, param$1) {
+          return anchorNodes(e2);
+        }
+      ],
+      [
+        "x",
+        function(e2, param, param$1) {
+          return deleteNodes(e2);
+        }
+      ],
+      [
+        "v",
+        function(e2, param, param$1) {
+          return unlinkNodes(e2);
+        }
+      ]
+    ]);
     return React5.createElement("main", {
       style: {
         display: "flex",
@@ -27106,16 +27132,24 @@ You might need to use a local HTTP server (instead of file://): https://reactjs.
         order: "1"
       }
     }, React5.createElement(make6, {
-      onClick: addRepNode,
+      onClick: function(__x) {
+        return addNodeAt(0, 0, 0);
+      },
       children: "Add Representation Node"
     }), React5.createElement(make6, {
-      onClick: addSchNode,
+      onClick: function(__x) {
+        return addNodeAt(1, 0, 0);
+      },
       children: "Add Scheme Node"
     }), React5.createElement(make6, {
-      onClick: addDimNode,
+      onClick: function(__x) {
+        return addNodeAt(2, 0, 0);
+      },
       children: "Add Dimension Node"
     }), React5.createElement(make6, {
-      onClick: addTokNode,
+      onClick: function(__x) {
+        return addNodeAt(3, 0, 0);
+      },
       children: "Add Token Node"
     }), React5.createElement(Separator.make, {}), React5.createElement(make6, {
       onClick: linkNodes,
@@ -27147,6 +27181,7 @@ You might need to use a local HTTP server (instead of file://): https://reactjs.
       style: {
         flexGrow: "1"
       },
+      keybindings,
       onNodePositionChange: movedNodes,
       onSelectionChange: selectionChange
     }), React5.createElement(make8, {
