@@ -26932,7 +26932,7 @@ You might need to use a local HTTP server (instead of file://): https://reactjs.
         }
       });
     }, addNodeAt = function(kind, x5, y5) {
-      var id7 = create4(void 0);
+      var ids = nodes2(selection2(modelState(state))), id7 = create4(void 0);
       return _1(dispatch5, {
         TAG: 0,
         _0: {
@@ -26949,6 +26949,15 @@ You might need to use a local HTTP server (instead of file://): https://reactjs.
           _2: kind,
           _3: id7
         }
+      }), forEach2(ids, function(source3) {
+        return _1(dispatch5, {
+          TAG: 1,
+          _0: {
+            TAG: 4,
+            _0: source3,
+            _1: id7
+          }
+        });
       });
     }, addRepNodeAt = function(param, x5, y5) {
       return addNodeAt(0, x5, y5);
