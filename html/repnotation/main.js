@@ -10213,8 +10213,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               var ctrl = e2.ctrlKey ? "Ctrl+" : "", alt = e2.altKey ? "Alt+" : "", shift = e2.shiftKey ? "Shift+" : "", letter = e2.key;
               return ctrl + alt + shift + letter;
             }
+            var x5 = (_this.mousePosition[0] - _this.state.transform.x) / _this.state.transform.k, y5 = (_this.mousePosition[1] - _this.state.transform.y) / _this.state.transform.k;
             (_this.props.keybindings[keyname(ev)] || function(_) {
-            })(ev, _this.mousePosition[0], _this.mousePosition[1]);
+            })(ev, x5, y5);
           }), _defineProperty(_assertThisInitialized(_this), "enableKeybindings", function() {
             document.querySelector("#svg-container-".concat(_this.state.id)).focus(), _this.setState({
               activeKeybindings: !0
@@ -10291,11 +10292,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           value: function(nextProps) {
             var _checkForGraphElement = (0, _graph3.checkForGraphElementsChanges)(nextProps, this.state), graphElementsUpdated = _checkForGraphElement.graphElementsUpdated, newGraphElements = _checkForGraphElement.newGraphElements, state = graphElementsUpdated ? (0, _graph3.initializeGraphState)(nextProps, this.state) : this.state, newConfig = nextProps.config || {}, _checkForGraphConfigC = (0, _graph3.checkForGraphConfigChanges)(nextProps, this.state), configUpdated = _checkForGraphConfigC.configUpdated, d3ConfigUpdated = _checkForGraphConfigC.d3ConfigUpdated, config2 = configUpdated ? (0, _utils.merge)(_graph2.default, newConfig) : this.state.config;
             newGraphElements && this.pauseSimulation();
-            var transform2 = newConfig.panAndZoom !== this.state.config.panAndZoom ? {
-              x: 0,
-              y: 0,
-              k: 1
-            } : this.state.transform, focusedNodeId = nextProps.data.focusedNodeId, d3FocusedNode = this.state.d3Nodes.find(function(node) {
+            var transform2 = this.state.transform, focusedNodeId = nextProps.data.focusedNodeId, d3FocusedNode = this.state.d3Nodes.find(function(node) {
               return "".concat(node.id) === "".concat(focusedNodeId);
             }), containerElId = "".concat(this.state.id, "-").concat(_graph.default.GRAPH_WRAPPER_ID), focusTransformation = (0, _graph3.getCenterAndZoomTransformation)(d3FocusedNode, this.state.config, containerElId) || this.state.focusTransformation, enableFocusAnimation = this.props.data.focusedNodeId !== nextProps.data.focusedNodeId;
             nextProps.onZoomChange && (this.debouncedOnZoomChange = (0, _utils.debounce)(nextProps.onZoomChange, 100)), this.setState(_objectSpread(_objectSpread({}, state), {}, {
