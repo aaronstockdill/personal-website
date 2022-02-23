@@ -13132,8 +13132,8 @@
       var _react = _interopRequireDefault(require_react2());
       var _d3Drag = (init_src3(), src_exports2);
       var _d3Force = (init_src6(), src_exports3);
-      var _d3Selection = (init_src2(), src_exports);
       var _d3Zoom = (init_src11(), src_exports4);
+      var _d3Selection = (init_src2(), src_exports);
       var _graph = _interopRequireDefault(require_graph_const());
       var _graph2 = _interopRequireDefault(require_graph_config());
       var _err = _interopRequireDefault(require_err());
@@ -13368,9 +13368,34 @@
             }
             return target3 && target3.id || null;
           });
+          _defineProperty(_assertThisInitialized(_this), "makeClick", function(e2) {
+            var _MouseEvent;
+            return new MouseEvent("click", (_MouseEvent = {
+              altKey: e2.altKey,
+              ctrlKey: e2.ctrlKey,
+              shiftKey: e2.shiftKey,
+              metaKey: e2.metaKey,
+              bubbles: e2.bubbles,
+              button: e2.button,
+              buttons: e2.buttons,
+              clientX: e2.clientX,
+              clientY: e2.clientY,
+              screenX: e2.screenX,
+              screenY: e2.screenY
+            }, _defineProperty(_MouseEvent, "bubbles", e2.bubbles), _defineProperty(_MouseEvent, "cancelable", e2.cancelable), _defineProperty(_MouseEvent, "composed", e2.composed), _defineProperty(_MouseEvent, "view", e2.view), _MouseEvent));
+          });
           _defineProperty(_assertThisInitialized(_this), "_onDragEnd", function(e2) {
+            if (_this.nodeMouseDown && !_this.isDraggingNode) {
+              var click = _this.makeClick(e2.sourceEvent);
+              _this.isDraggingNode = false;
+              _this.nodeMouseDown = null;
+              _this.allowNodeClick = true;
+              e2.sourceEvent.target.dispatchEvent(click);
+              _this.allowNodeClick = false;
+              return;
+            }
             _this.isDraggingNode = false;
-            _this.isReallyDraggingNode = false;
+            _this.nodeMouseDown = null;
             if (_this.state.draggedNodes) {
               _this.state.draggedNodes.forEach(function(node) {
                 _this.onNodePositionChange(node);
@@ -13382,12 +13407,12 @@
             !_this.state.config.staticGraph && _this.state.config.automaticRearrangeAfterDropNode && _this.state.simulation.alphaTarget(_this.state.config.d3.alphaTarget).restart();
           });
           _defineProperty(_assertThisInitialized(_this), "_onDragMove", function(e2) {
-            var triggerDrag = Math.pow(e2.x + _this.dragStartCoords[0], 2) + Math.pow(e2.y + _this.dragStartCoords[1], 2) > 30;
-            if (!_this.isReallyDraggingNode && triggerDrag) {
-              if (!_this.state.config.staticGraph && _this.isDraggingNode) {
+            if (_this.nodeMouseDown) {
+              var delta = Math.pow(e2.x - _this.nodeMouseDown.x, 2) + Math.pow(e2.y - _this.nodeMouseDown.y, 2);
+              if (!_this.isDraggingNode && delta > 30) {
                 var id6 = _this._nodeIdFromEvent(e2);
                 var draggedNode = _this.state.nodes[id6];
-                _this.isReallyDraggingNode = true;
+                _this.isDraggingNode = true;
                 if (!_this.selection.nodeIsSelected(id6)) {
                   var oldSelection = _this.selection.freeze();
                   if (!e2.sourceEvent.shiftKey) {
@@ -13398,8 +13423,8 @@
                 }
               }
             }
-            var ids = Array.from(_this.selection.nodes);
-            if (!_this.state.config.staticGraph && _this.isReallyDraggingNode) {
+            if (!_this.state.config.staticGraph && _this.isDraggingNode) {
+              var ids = Array.from(_this.selection.nodes);
               var draggedNodes = ids.flatMap(function(id7) {
                 var draggedNode2 = _this.state.nodes[id7];
                 draggedNode2.oldX = draggedNode2.x;
@@ -13426,9 +13451,8 @@
             }
           });
           _defineProperty(_assertThisInitialized(_this), "_onDragStart", function(e2) {
-            _this.isDraggingNode = true;
-            _this.isReallyDraggingNode = false;
-            _this.dragStartCoords = [e2.x, e2.y];
+            _this.nodeMouseDown = e2.sourceEvent;
+            _this.isDraggingNode = false;
             _this.pauseSimulation();
             if (_this.state.enableFocusAnimation) {
               _this.setState({
@@ -13447,16 +13471,22 @@
           });
           _defineProperty(_assertThisInitialized(_this), "_zoomConfig", function() {
             var selector = (0, _d3Selection.select)("#".concat(_this.state.id, "-").concat(_graph["default"].GRAPH_WRAPPER_ID));
-            var zoomObject = (0, _d3Zoom.zoom)().scaleExtent([_this.state.config.minZoom, _this.state.config.maxZoom]);
+            _this.zoomObject = (0, _d3Zoom.zoom)().scaleExtent([_this.state.config.minZoom, _this.state.config.maxZoom]);
             if (!_this.state.config.freezeAllDragEvents) {
-              zoomObject.on("zoom", _this._zoomed);
+              _this.zoomObject.on("zoom", function(e2) {
+                _this._zoomed(e2);
+                _this.onGraphMouseMove(e2);
+              }).on("start", _this.onGraphMouseDown).on("end", _this.onGraphMouseUp);
             }
             if (_this.state.config.initialZoom !== null) {
-              zoomObject.scaleTo(selector, _this.state.config.initialZoom);
+              _this.zoomObject.scaleTo(selector, _this.state.config.initialZoom);
             }
-            selector.call(zoomObject).on("dblclick.zoom", null);
+            selector.call(_this.zoomObject).on("dblclick.zoom", null);
           });
           _defineProperty(_assertThisInitialized(_this), "_zoomed", function(e2) {
+            if (!_this.allowPanAndZoom) {
+              return;
+            }
             var transform2 = e2.transform;
             (0, _d3Selection.selectAll)("#".concat(_this.state.id, "-").concat(_graph["default"].GRAPH_CONTAINER_ID)).attr("transform", transform2);
             _this.setState({
@@ -13469,17 +13499,121 @@
               });
             }
           });
-          _defineProperty(_assertThisInitialized(_this), "onClickGraph", function(e2) {
+          _defineProperty(_assertThisInitialized(_this), "isGraphMouseEvent", function(e2) {
             var _e$target, _e$target$attributes, _e$target$attributes$;
+            var tagName = e2.target && e2.target.tagName;
+            var name3 = e2 === null || e2 === void 0 ? void 0 : (_e$target = e2.target) === null || _e$target === void 0 ? void 0 : (_e$target$attributes = _e$target.attributes) === null || _e$target$attributes === void 0 ? void 0 : (_e$target$attributes$ = _e$target$attributes.name) === null || _e$target$attributes$ === void 0 ? void 0 : _e$target$attributes$.value;
+            var svgContainerName = "svg-container-".concat(_this.state.id);
+            return tagName.toUpperCase() === "SVG" && name3 === svgContainerName;
+          });
+          _defineProperty(_assertThisInitialized(_this), "updateSelectorRect", function(rect, start2, now2) {
+            var svg = document.getElementById("svg-container-".concat(_this.state.id));
+            var x5, y5, width, height;
+            if (start2[0] > now2[0]) {
+              x5 = now2[0];
+              width = start2[0] - x5;
+            } else {
+              x5 = start2[0];
+              width = now2[0] - x5;
+            }
+            if (start2[1] > now2[1]) {
+              y5 = now2[1];
+              height = start2[1] - y5;
+            } else {
+              y5 = start2[1];
+              height = now2[1] - y5;
+            }
+            x5 = (x5 - _this.state.transform.x - svg.parentElement.offsetLeft) / _this.state.transform.k;
+            y5 = (y5 - _this.state.transform.y - svg.parentElement.offsetTop) / _this.state.transform.k;
+            width = width / _this.state.transform.k;
+            height = height / _this.state.transform.k;
+            rect.setAttribute("x", x5);
+            rect.setAttribute("y", y5);
+            rect.setAttribute("width", width);
+            rect.setAttribute("height", height);
+            return [x5, y5, x5 + width, y5 + height];
+          });
+          _defineProperty(_assertThisInitialized(_this), "onGraphMouseUp", function(e2) {
+            if (!e2.sourceEvent || e2.sourceEvent.type !== "mouseup") {
+              return;
+            }
+            var selection3 = (0, _d3Selection.select)("#".concat(_this.state.id, "-").concat(_graph["default"].GRAPH_WRAPPER_ID));
+            if (_this.graphMouseDown && !_this.graphDragging) {
+              var click = _this.makeClick(e2.sourceEvent);
+              _this.allowGraphClick = true;
+              e2.sourceEvent.target.dispatchEvent(click);
+              _this.allowGraphClick = false;
+            } else if (_this.graphMouseDown && _this.graphDragging) {
+              if (_this.graphMouseDown.shiftKey) {
+                var transform2 = _d3Zoom.zoomIdentity.translate(_this.state.transform.x, _this.state.transform.y).scale(_this.state.transform.k);
+                selection3.call(_this.zoomObject.transform, transform2).call(_this.zoomObject);
+                document.getElementById("".concat(_this.state.id, "-").concat(_graph["default"].GRAPH_CONTAINER_ID)).removeChild(_this.graphDragging.selectorBox);
+              }
+            }
+            _this.allowPanAndZoom = true;
+            _this.graphDragging = null;
+            _this.graphMouseDown = null;
+          });
+          _defineProperty(_assertThisInitialized(_this), "onGraphMouseMove", function(e2) {
+            if (!e2.sourceEvent || e2.sourceEvent.type !== "mousemove") {
+              return;
+            }
+            if (_this.graphMouseDown && !_this.graphDragging) {
+              var delta = Math.pow(e2.sourceEvent.x - _this.graphMouseDown.x, 2) + Math.pow(e2.sourceEvent.y - _this.graphMouseDown.y, 2);
+              if (delta > 30) {
+                if (_this.graphMouseDown.shiftKey) {
+                  _this.allowPanAndZoom = false;
+                  var g = document.getElementById("".concat(_this.state.id, "-").concat(_graph["default"].GRAPH_CONTAINER_ID));
+                  var selectorBox = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+                  selectorBox.setAttribute("id", "".concat(_this.state.id, "-SELECTIONBOX"));
+                  selectorBox.setAttribute("style", "fill:rgba(0, 0, 0, 0.1);");
+                  _this.updateSelectorRect(selectorBox, (0, _d3Selection.pointer)(e2), (0, _d3Selection.pointer)(e2));
+                  g.prepend(selectorBox);
+                  _this.graphDragging = {
+                    start: e2,
+                    startSelection: _this.selection.freeze(),
+                    selectorBox
+                  };
+                } else {
+                  _this.graphDragging = {
+                    start: e2,
+                    startSelection: _this.selection.freeze()
+                  };
+                }
+              }
+            }
+            if (_this.graphDragging && _this.graphMouseDown.shiftKey) {
+              var bounds = _this.updateSelectorRect(_this.graphDragging.selectorBox, (0, _d3Selection.pointer)(_this.graphDragging.start), (0, _d3Selection.pointer)(e2));
+              var oldSelection = _this.selection.freeze();
+              _this.selection.clear();
+              _this.selection.addNodes(_this.graphDragging.startSelection.nodes);
+              var selected2 = Object.values(_this.state.nodes).flatMap(function(node) {
+                var inBounds = node.x >= bounds[0] && node.x <= bounds[2] && node.y >= bounds[1] && node.y <= bounds[3];
+                return inBounds ? [node.id] : [];
+              });
+              _this.selection.addNodes(selected2);
+              _this.onSelectionChange(oldSelection, _this.selection.freeze());
+            }
+          });
+          _defineProperty(_assertThisInitialized(_this), "onGraphMouseDown", function(e2) {
+            if (e2.sourceEvent && e2.sourceEvent.type === "mousedown" && _this.isGraphMouseEvent(e2.sourceEvent)) {
+              _this.graphMouseDown = e2.sourceEvent;
+              _this.graphDragging = null;
+              if (e2.sourceEvent.shiftKey) {
+                _this.allowPanAndZoom = false;
+              }
+            }
+          });
+          _defineProperty(_assertThisInitialized(_this), "onClickGraph", function(e2) {
+            if (!_this.allowGraphClick) {
+              return;
+            }
             if (_this.state.enableFocusAnimation) {
               _this.setState({
                 enableFocusAnimation: false
               });
             }
-            var tagName = e2.target && e2.target.tagName;
-            var name3 = e2 === null || e2 === void 0 ? void 0 : (_e$target = e2.target) === null || _e$target === void 0 ? void 0 : (_e$target$attributes = _e$target.attributes) === null || _e$target$attributes === void 0 ? void 0 : (_e$target$attributes$ = _e$target$attributes.name) === null || _e$target$attributes$ === void 0 ? void 0 : _e$target$attributes$.value;
-            var svgContainerName = "svg-container-".concat(_this.state.id);
-            if (tagName.toUpperCase() === "SVG" && name3 === svgContainerName) {
+            if (_this.isGraphMouseEvent(e2)) {
               _this.props.onClickGraph && _this.props.onClickGraph(e2);
               if (!e2.shiftKey) {
                 var oldSelection = _this.selection.freeze();
@@ -13489,6 +13623,9 @@
             }
           });
           _defineProperty(_assertThisInitialized(_this), "onClickNode", function(event, clickedNodeId) {
+            if (!_this.allowNodeClick) {
+              return;
+            }
             var clickedNode = _this.state.nodes[clickedNodeId];
             if (!_this.nodeClickTimer) {
               var ttl = _this.props.onDoubleClickNode ? _graph["default"].TTL_DOUBLE_CLICK_IN_MS : 0;
@@ -13661,9 +13798,15 @@
           }
           _this.focusAnimationTimeout = null;
           _this.nodeClickTimer = null;
-          _this.mousePosition = [0, 0];
+          _this.nodeMouseDown = null;
           _this.isDraggingNode = false;
-          _this.isReallyDraggingNode = false;
+          _this.allowNodeClick = false;
+          _this.graphMouseDown = null;
+          _this.graphDragging = null;
+          _this.allowGraphClick = false;
+          _this.zoomObject = null;
+          _this.allowPanAndZoom = true;
+          _this.mousePosition = [0, 0];
           _this.selection = new _selection.Selection();
           if (_this.props.selection) {
             _this.selection.update(_this.props.selection);
@@ -41427,14 +41570,14 @@ For more info, visit https://reactjs.org/link/mock-scheduler`);
     var dashed = dashedOpt !== void 0 ? dashedOpt : false;
     if (selected2 && dashed) {
       return {
-        fill: "rgb(240, 240, 240)",
+        fill: "rgb(220, 220, 220)",
         stroke: "black",
         strokeDasharray: "5 3",
         strokeWidth: "2"
       };
     } else if (selected2 && !dashed) {
       return {
-        fill: "rgb(240, 240, 240)",
+        fill: "rgb(220, 220, 220)",
         stroke: "black",
         strokeWidth: "2"
       };
@@ -44581,7 +44724,7 @@ For more info, visit https://reactjs.org/link/mock-scheduler`);
         margin: "-1.2rem 1.5rem 1rem 0",
         textAlign: "right"
       }
-    }, "V 2022.02.21"), React5.createElement("div", {
+    }, "V 2022.02.23"), React5.createElement("div", {
       style: {
         display: "flex",
         flexDirection: "column",
