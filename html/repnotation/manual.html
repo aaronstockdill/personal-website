@@ -59,7 +59,7 @@
   </head>
   <body>
     <h1>RepNotation Workbench User Guide</h1>
-    <div class="version">V 2022.03.07 </div>
+    <div class="version">V 2022.03.09 </div>
     <p>
       This document gives a brief overview of how to use the RepNotation Workbench.
       The Workbench is under heavy development right now, so the features as described in this manual
@@ -209,6 +209,10 @@
             A dangerous button. This deletes the nodes currently selected, along with all the links
             attached to them. <strong>There is currently no undo. Delete is <emph>permanent</emph>.</strong>
       </p></td></tr>
+      <tr><td><p>Grid&nbsp;<input type="checkbox" /></p></td><td>
+          <p>
+            Use this checkbox to toggle on or off the grid in the Model editor.
+      </p></td></tr>
     </table>
     <p>
       After the buttons is a link to this manual.
@@ -230,9 +234,17 @@
       Dragging any node in a selection will move every node in that selection.
     </p>
     <p>
+      Nodes can be dragged around using the mouse. They can also be 'nudged' using the arrow keys;
+      holding shift while nudging makes the movement smaller.
+    </p>
+    <p>
       When using the hotkeys, any 'node creation' hotkey will cause the node to be added under the cursor.
       This is different to the toolbar, in which clicking a 'node creation' button will add the node at
       the 'origin' of the Model.
+    </p>
+    <p>
+      Sometimes it can be useful to have a background grid, on which you can position the nodes. You can
+      hide or show this grid using the checkbox in the toolbar.
     </p>
 
     <h2 id="slots-inspector">The Slots Inspector</h2>
