@@ -2,8 +2,6 @@ import pathlib
 import io
 
 import markdown
-from mdx_del_ins import DelInsExtension
-from mdx_smartypants import SmartypantsExt
 
 from repyct import *
 import base
@@ -105,12 +103,11 @@ def parse_bibtex(contents):
 
 def talks_page(path, pred, succ):
     (name, date) = path.stem.rsplit(".", maxsplit=1)
-    content = io.BytesIO()
-    markdown.markdownFromFile(
-        input=path,
-        output=content,
-        extensions=["footnotes", DelInsExtension(), SmartypantsExt(configs={})],
-    )
+    with open(path) as mdfile:
+        content = markdown.markdown(
+            mdfile.read(),
+            extensions=["footnotes", "markdown_del_ins", "smarty"],
+        )
     return lambda menu_links: base.page(
         subtitle=name + " - Talks",
         description=base.description,
