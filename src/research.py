@@ -187,7 +187,7 @@ class publication_summary(CustomElement):
             span(class_="authors")[author_string],
             info,
             h3()["Abstract"],
-            p(class_="abstract")[abstract],
+            div(class_="abstract")[abstract],
         ]
 
 
@@ -224,7 +224,7 @@ def publications_listing():
                 a(class_="pdflink", href="/static/" + pdf)["Download PDF"],
                 a(class_="bibtex", href="/static/" + bib)["Download BibTeX"],
             ],
-            abstract=bibtex["abstract"],
+            abstract=[p()[par] for par in bibtex["abstract"].strip().split("\n")],
         )
         for (bibtex, bib, pdf) in sorted(
             publications, key=lambda x: (x[0]["year"], num(x[0]["month"])), reverse=True
