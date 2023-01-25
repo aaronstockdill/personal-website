@@ -1,2 +1,7 @@
 #!/bin/sh
-git subtree push --prefix html github gh-pages
+if [ -z "$1" ] ; then
+    echo "No folder specified to deploy."
+    exit 1
+else
+    git subtree push --prefix "$1" github gh-pages
+fi
