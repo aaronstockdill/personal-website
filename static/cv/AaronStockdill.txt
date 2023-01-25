@@ -21,6 +21,10 @@ Employment
 
 Publications
 
+  Examining Experts’ Recommendations of Representational Systems for Problem Solving. Aaron Stockdill, Gem Stapleton, Daniel Raggi, Mateja Jamnik, Grecia Garcia Garcia, and Peter C.-H. Cheng. IEEE Symposium on Visual Languages and Human-Centric Computing, 2022. https://dx.doi.org/10.1109/VL/HCC53370.2022.9833141
+
+  Representational Interpretive Structure: Theory and Notation. Peter C.-H. Cheng, Aaron Stockdill, Grecia Garcia Garcia, Daniel Raggi, and Mateja Jamnik. 13th International Conference on the Theory and Application of Diagrams, 2022. https://dx.doi.org/10.1007/978-3-031-15146-0_4
+
   Considerations in Representation Selection for Problem Solving: a Review. Aaron Stockdill, Daniel Raggi, Mateja Jamnik, Grecia Garcia Garcia, and Peter C.-H. Cheng. 12th International Conference on the Theory and Application of Diagrams, 2021.
 https://dx.doi.org/10.1007/978-3-030-86062-2_4
 
