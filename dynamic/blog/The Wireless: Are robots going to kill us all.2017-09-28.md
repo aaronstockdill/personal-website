@@ -1,7 +1,7 @@
 # The Wireless
 ## Are robots going to kill us all?
 
-![Robot standing over a city](/static_assets/wireless_header.jpg)
+![Robot standing over a city](/static/wireless_header.jpg)
 *Image: The Wireless/123rf*
 
 Earlier this week I had a chat with Max Towle from The Wireless about AI, robots, and all things technology.

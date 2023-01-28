@@ -43,6 +43,7 @@ def make_static_resources(output_folder: pathlib.Path) -> None:
     statics = itertools.chain(
         ((".", f) for f in pathlib.Path("static").iterdir()),
         (("static", f) for f in research.static_files),
+        (("static", f) for f in blog.static_files),
     )
     (output_folder / "static").mkdir(exist_ok=True)
     for (prefix, static_resource) in statics:

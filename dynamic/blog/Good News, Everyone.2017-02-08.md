@@ -1,6 +1,6 @@
 # Success by Proxy
 
-![Good news!](/static_assets/goodnews.jpg)
+![Good news!](/static/goodnews.jpg)
 *&copy; Twentieth Century Fox.*
 
 As you can read in a [previous post](/blog/scholarship-calculus/),

@@ -37,7 +37,9 @@ for path in itertools.chain(
     pathlib.Path("dynamic", "talks").iterdir(),
     pathlib.Path("dynamic", "blog").iterdir(),
 ):
-    if path.suffix == ".index":
+    if path.stem.startswith("_"):
+        pass  # We skip files with an underscore, they're drafts!
+    elif path.suffix == ".index":
         pass  # relic, ignore
     elif path.suffix == ".md":
         (name, date) = path.stem.rsplit(".", maxsplit=1)

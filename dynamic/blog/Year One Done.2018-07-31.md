@@ -1,6 +1,6 @@
 # Year One Done
 
-![First year report](/static_assets/fyr.jpg)
+![First year report](/static/fyr.jpg)
 *The drafts, and the final product.*
 
 We are quickly approaching the start of a new academic year

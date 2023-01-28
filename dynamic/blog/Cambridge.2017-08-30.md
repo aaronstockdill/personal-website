@@ -1,6 +1,6 @@
 # Cambridge
 
-![Selwyn College](/static_assets/selwyn.jpg)
+![Selwyn College](/static/selwyn.jpg)
 *Selwyn College, Cambridge. Photo from [Selwyn College Flickr](https://www.flickr.com/photos/selalum/)*
 
 As this site has recently been updated to reflect, I am going to be studying at

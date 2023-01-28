@@ -1,6 +1,6 @@
 # A catalogue of crazy: <br> Living in Cambridge
 
-![King's College, Cambridge](/static_assets/kings.jpg)
+![King's College, Cambridge](/static/kings.jpg)
 *King's College, Cambridge. I walk through there regularly.<br>Photo by [Stephan Rudolph](https://www.flickr.com/photos/stephanrudolph/15548261031/in/photolist-9EuV1S-Xhm1UE-br6R26-YB3VZm-W7aoN9-pFWUj4-9zq7cd-UdKCdo-HWReb5-SwxVVs-ufEHS3-oQFHva-k9Qsec-o52Eim-qVVLnT-XKB92f-WM8JZe-UjF3sL-VG8s45-XpzNaw-Roryvb-b5gecx-WM7ZCe-Y1D4h4-qEw6DA-Y1CiYR-pJWzpL-RrnKtU-dGDr5a-XWsynL-VTRweQ-4gDZDG-bFC2vg-UepGTr-SmaB3w-VpsKfE-WrZMMF-UbrX5s-Xpz98u-USTkFq-Y1BB6J-SAFfPC-Z2LyCw-YShdEW-TZkPVY-XNjMTT-Ux7DEv-XKAJzf-mmj5My-rouzDK)*
 
 I have now lived in Cambridge for two-and-a-half weeks. Time flies, it really
