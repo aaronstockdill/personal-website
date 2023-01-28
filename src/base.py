@@ -1,13 +1,18 @@
+from collections.abc import Callable
 from repyct import *
 
 
-description = "Quantitative Technologist at Qube Research &amp; Technologies, London."
+description: str = (
+    "Quantitative Technologist at Qube Research &amp; Technologies, London."
+)
 
-email = lambda cls: span(
-    class_=cls + "email-holder",
-    dataBeforeAt="nnebafgbpxqvyy",
-    dataAfterAt="me.com",
-)[noscript()["Email obfuscated. Please enable JavaScript."]]
+
+def email(cls: str) -> BaseElement:
+    return span(
+        class_=cls + "email-holder",
+        dataBeforeAt="nnebafgbpxqvyy",
+        dataAfterAt="me.com",
+    )[noscript()["Email obfuscated. Please enable JavaScript."]]
 
 
 class headers(CustomElement):
@@ -64,9 +69,7 @@ class pageHeader(CustomElement):
                 class_="menu-hamburger",
                 id_="menu-hamburger",
             )[r("top"), r("bottom")],
-            nav()[
-                *(navlink(name, url) for (name, url) in menu_links.items())
-             ],
+            nav()[*(navlink(name, url) for (name, url) in menu_links.items())],
         ]
 
 

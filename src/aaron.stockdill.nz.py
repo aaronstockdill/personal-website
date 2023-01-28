@@ -1,22 +1,30 @@
+from collections.abc import Callable
 import sys
 import pathlib
 import shutil
 import itertools
 
-import index, cv, research, contact
+import repyct
 
-menu_links = {"Home": "", "CV": "cv", "Research": "research", "Contact": "contact"}
-PAGES = {
+import index, cv, research, contact, blog
+
+menu_links: dict[str, str] = {
+    "Home": "",
+    "CV": "cv",
+    "Research": "research",
+    "Contact": "contact",
+}
+PAGES: dict[tuple[str, ...], Callable[[dict[str, str]], repyct.BaseElement]] = {
     tuple(): index.page,
     ("cv",): cv.page,
-    ("contact",): contact.page,
     ("research",): research.page,
+    ("contact",): contact.page,
     **{("research", n): p for (n, p) in research.subpages},
     **{("talk", n.lower().replace(" ", "-")): p for (n, _, p) in research.talks},
 }
 
 
-def make_pages(output_folder):
+def make_pages(output_folder: pathlib.Path) -> None:
     for (dest, page) in PAGES.items():
         path = output_folder / pathlib.Path(*dest)
         path.mkdir(parents=True, exist_ok=True)
@@ -24,7 +32,11 @@ def make_pages(output_folder):
             f.write(str(page(menu_links)))
 
 
-def make_static_resources(output_folder):
+def make_styles(output_folder: pathlib.Path) -> None:
+    pass
+
+
+def make_static_resources(output_folder: pathlib.Path) -> None:
     statics = itertools.chain(
         ((".", f) for f in pathlib.Path("static").iterdir()),
         (("static", f) for f in research.static_files),
@@ -41,13 +53,15 @@ def make_static_resources(output_folder):
             shutil.copy2(static_resource, output_folder / prefix / static_resource.name)
 
 
-def main(args):
+def main(args: list[str]) -> int:
     output_folder = pathlib.Path(args[1])
     shutil.rmtree(output_folder, ignore_errors=True)
     output_folder.mkdir()
     make_pages(output_folder)
+    make_styles(output_folder)
     make_static_resources(output_folder)
+    return 0
 
 
 if __name__ == "__main__":
-    main(sys.argv)
+    sys.exit(main(sys.argv))

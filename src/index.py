@@ -1,7 +1,8 @@
+from collections.abc import Callable
 from repyct import *
 import base
 
-page = lambda menu_links: base.page(
+page: Callable[[dict[str, str]], BaseElement] = lambda menu_links: base.page(
     description=base.description, active="home", menu_links=menu_links
 )[
     div(class_="welcome-content")[
