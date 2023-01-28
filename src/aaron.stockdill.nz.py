@@ -13,14 +13,17 @@ menu_links: dict[str, str] = {
     "CV": "cv",
     "Research": "research",
     "Contact": "contact",
+    "Blog": "blog",
 }
 PAGES: dict[tuple[str, ...], Callable[[dict[str, str]], repyct.BaseElement]] = {
     tuple(): index.page,
     ("cv",): cv.page,
     ("research",): research.page,
     ("contact",): contact.page,
+    ("blog",): blog.page,
     **{("research", n): p for (n, p) in research.subpages},
     **{("talk", n.lower().replace(" ", "-")): p for (n, _, p) in research.talks},
+    **{("blog", n.lower().replace(" ", "-")): p for (n, _, p) in blog.posts},
 }
 
 
