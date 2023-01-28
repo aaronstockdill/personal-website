@@ -1,9 +1,9 @@
 from collections.abc import Callable
 from repyct import *
-import base
+import template
 
-page: Callable[[dict[str, str]], BaseElement] = lambda menu_links: base.page(
-    description=base.description, active="home", menu_links=menu_links
+page: Callable[[dict[str, str]], BaseElement] = lambda menu_links: template.Page(
+    description=template.description, active="home", menu_links=menu_links
 )[
     div(class_="welcome-content")[
         h1()["Aaron", br(), "Stockdill"],
@@ -12,7 +12,7 @@ page: Callable[[dict[str, str]], BaseElement] = lambda menu_links: base.page(
             br(),
             "Qube Research &amp; Technologies",
         ],
-        base.email(""),
+        template.email(""),
     ],
     script(type_="application/ld+json")[
         f"""{{
@@ -20,7 +20,7 @@ page: Callable[[dict[str, str]], BaseElement] = lambda menu_links: base.page(
   "@type": "http://schema.org/Person",
   "givenName": "Aaron",
   "familyName": "Stockdill",
-  "description": "{base.description}",
+  "description": "{template.description}",
   "gender": "http://schema.org/Male"
 }}"""
     ],

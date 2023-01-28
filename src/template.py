@@ -1,4 +1,3 @@
-from collections.abc import Callable
 from repyct import *
 
 
@@ -15,7 +14,7 @@ def email(cls: str) -> BaseElement:
     )[noscript()["Email obfuscated. Please enable JavaScript."]]
 
 
-class headers(CustomElement):
+class Headers(CustomElement):
     def render(self, children, description, subtitle=None):
         _ = children
         if subtitle is None:
@@ -42,7 +41,7 @@ class headers(CustomElement):
         ]
 
 
-class pageHeader(CustomElement):
+class PageHeader(CustomElement):
     def render(self, children, menu_links, active):
         _ = children
         r = lambda pos: SVG.rect(
@@ -73,7 +72,7 @@ class pageHeader(CustomElement):
         ]
 
 
-class pageFooter(CustomElement):
+class PageFooter(CustomElement):
     def render(self, children):
         _ = children
         return [
@@ -95,20 +94,20 @@ class pageFooter(CustomElement):
         ]
 
 
-class page(CustomElement):
+class Page(CustomElement):
     def render(self, children, active, description, menu_links, subtitle=None):
         return document(html_version=5)[
             html(lang="en")[
                 head()[
-                    headers(
+                    Headers(
                         description=description,
                         subtitle=subtitle,
                     )
                 ],
                 body()[
-                    pageHeader(active=active, menu_links=menu_links),
+                    PageHeader(active=active, menu_links=menu_links),
                     main(class_="welcome" if active == "home" else "")[children],
-                    pageFooter(),
+                    PageFooter(),
                 ],
             ]
         ]

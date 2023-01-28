@@ -3,7 +3,7 @@ import pathlib
 import markdown
 
 from repyct import *
-import base
+import template
 
 publications = []
 talks = []
@@ -107,9 +107,9 @@ def talks_page(path, pred, succ):
             mdfile.read(),
             extensions=["footnotes", "markdown_del_ins", "smarty"],
         )
-    return lambda menu_links: base.page(
+    return lambda menu_links: template.Page(
         subtitle=name + " - Talks",
-        description=base.description,
+        description=template.description,
         active="research",
         menu_links=menu_links,
     )[
@@ -246,10 +246,10 @@ def talks_listing():
     ]
 
 
-page = lambda menu_links: base.page(
+page = lambda menu_links: template.Page(
     subtitle="Research",
     description="A brief summary of my research interests and output. "
-    + base.description,
+    + template.description,
     active="research",
     menu_links=menu_links,
 )[
@@ -274,10 +274,10 @@ page = lambda menu_links: base.page(
     ],
 ]
 
-vlhcc20 = lambda menu_links: base.page(
+vlhcc20 = lambda menu_links: template.Page(
     subtitle="VL/HCC 2020 Appendices Paper",
     description="A version of our accepted VL/HCC 2020 paper with appendices. "
-    + base.description,
+    + template.description,
     active="research",
     menu_links=menu_links,
 )[
@@ -293,10 +293,10 @@ vlhcc20 = lambda menu_links: base.page(
     ],
 ]
 
-vlhcc22 = lambda menu_links: base.page(
+vlhcc22 = lambda menu_links: template.Page(
     subtitle="VL/HCC 2022 Appendices Paper",
     description="A version of our accepted VL/HCC 2022 paper with appendices. "
-    + base.description,
+    + template.description,
     active="research",
     menu_links=menu_links,
 )[

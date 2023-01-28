@@ -1,16 +1,16 @@
 from repyct import *
-import base
+import template
 
-page = lambda menu_links: base.page(
+page = lambda menu_links: template.Page(
     subtitle="Contact",
-    description="The best ways to connect with me. " + base.description,
+    description="The best ways to connect with me. " + template.description,
     active="contact",
     menu_links=menu_links,
 )[
     h1()["Contact"],
     div(class_="contact-table")[
         div(class_="label")["Email"],
-        base.email("value "),
+        template.email("value "),
         div(class_="label")["Twitter"],
         a(class_="value", href="https://twitter.com/aaronstockdill", target="_blank")[
             "@aaronstockdill"

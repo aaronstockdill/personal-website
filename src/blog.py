@@ -4,7 +4,7 @@ import itertools
 import markdown
 
 from repyct import *
-import base
+import template
 
 posts = []
 
@@ -18,9 +18,9 @@ def blog_page(path, pred, succ):
             mdfile.read(),
             extensions=["footnotes", "markdown_del_ins", "smarty"],
         )
-    return lambda menu_links: base.page(
+    return lambda menu_links: template.Page(
         subtitle=name + " - Blog",
-        description=base.description,
+        description=template.description,
         active="blog",
         menu_links=menu_links,
     )[
@@ -94,13 +94,14 @@ class publication_summary(CustomElement):
 
 class blog_link(CustomElement):
     def render(self, children, name, date):
+        _ = children
         return div(class_="dynamic-link")[
             a(href="/blog/" + name.lower().replace(" ", "-") + "/")[name],
             span(class_="date talk-date")[date],
         ]
 
 
-def blog_listing():
+def blog_listing() -> list[BaseElement]:
     links = []
     years = set()
     for (name, date, _) in sorted(posts, key=lambda v: v[1], reverse=True):
@@ -112,9 +113,9 @@ def blog_listing():
     return links
 
 
-page = lambda menu_links: base.page(
+page = lambda menu_links: template.Page(
     subtitle="Blog",
-    description="My (very infrequently) updated blog. " + base.description,
+    description="My (very infrequently) updated blog. " + template.description,
     active="blog",
     menu_links=menu_links,
 )[

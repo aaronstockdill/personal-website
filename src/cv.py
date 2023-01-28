@@ -1,5 +1,5 @@
 from repyct import *
-import base
+import template
 
 
 class education(CustomElement):
@@ -38,10 +38,10 @@ class award(CustomElement):
         return [h3()[name], *children]
 
 
-page = lambda menu_links: base.page(
+page = lambda menu_links: template.Page(
     subtitle="Curriculum Vit&aelig;",
     description="Everything (plus a bit more) that you want to know about me. "
-    + base.description,
+    + template.description,
     active="cv",
     menu_links=menu_links,
 )[
