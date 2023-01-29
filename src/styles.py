@@ -445,7 +445,99 @@ master = css.StyleSheet()[
     *white,
 ]
 
-small = css.StyleSheet()
+small = css.StyleSheet()[
+    S(main.welcome, ".conditional-break")[
+        R("display", "inline-block"),
+    ],
+    S("@media screen and (max-width: 420px)")[
+        S(main.welcome, ".conditional-break")[
+            R("display", "block !important"),
+        ],
+    ],
+    S(nav)[
+        R("position", "fixed"),
+        R("overflow", "hidden"),
+        R("padding", (U.rem(3), 0, 0, 0)),
+        R("margin", 0),
+        R("width", 0),
+        R("height", U.percent(100)),
+        R("top", 0),
+        R("right", 0),
+        R(
+            "transition",
+            [
+                ("height", U.s(0.5), "ease"),
+                ("width", U.s(0.5), "ease"),
+                ("background", U.s(0.2), "linear", U.s(0.3)),
+            ],
+        ),
+        S(a)[
+            R("display", "block"),
+            R("position", "relative"),
+            R("padding-top", U.rem(0.4)),
+            R("padding-bottom", U.rem(0.4)),
+            R("text-align", "right"),
+            R("padding-right", U.rem(1)),
+            R("font-size", U.rem(0.7)),
+            S("&.active")[
+                R("border-bottom", (0, None)),
+                R("border-right", (U.px(6), "solid")),
+                R("margin", (0, U.rem(1) - U.px(6), U.rem(0.25), 0)),
+            ],
+        ],
+        S("&.showing")[
+            R("width", U.percent(100)),
+            R(
+                "transition",
+                [
+                    ("height", U.s(0.5), "ease"),
+                    ("width", U.s(0.5), "ease"),
+                    ("background", U.s(0.2), "linear", U.s(0)),
+                ],
+            ),
+        ],
+    ],
+    S(".menu-hamburger")[
+        R("display", "block"),
+        R("position", "fixed"),
+        R("right", U.rem(0.2)),
+        R("top", U.rem(0.4)),
+        R("width", U.rem(1.8)),
+        R("height", U.rem(1.8)),
+        R("z-index", 1001),
+        R("transform", "scale(0.75)"),
+        S(".bar")[
+            R("stroke-width", 0),
+            R("opacity", 1),
+        ],
+        (S(".bar-top") | S(".bar-bottom"))[
+            R("transition", ("all", U.s(0.5), "ease-in-out")),
+        ],
+        S(".bar-top")[
+            R("transform", ("translate(0%, -15%)", "rotate(0)")),
+        ],
+        S(".bar-bottom")[
+            R("transform", ("translate(0%, 15%)", "rotate(0)")),
+        ],
+        S("&.showing", ".bar-top")[
+            R("transform", ("translate(0%, 0%)", "rotate(225deg)")),
+        ],
+        S("&.showing", ".bar-bottom")[
+            R("transform", ("translate(0%, 0%)", "rotate(135deg)")),
+        ],
+    ],
+    S(footer)[
+        R("position", "relative"),
+        R("width", U.percent(100)),
+        R("padding", (U.px(5), U.rem(1))),
+        S(".selector.help-button")[
+            R("display", None),
+        ],
+        S(".separator")[
+            R("width", 0),
+        ],
+    ],
+]
 
 printer = css.StyleSheet()[
     (S(nav) | S(ul.submenu))[
