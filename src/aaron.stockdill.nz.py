@@ -35,10 +35,6 @@ def make_pages(output_folder: pathlib.Path) -> None:
             f.write(str(page(menu_links)))
 
 
-def make_styles(output_folder: pathlib.Path) -> None:
-    pass
-
-
 def make_static_resources(output_folder: pathlib.Path) -> None:
     statics = itertools.chain(
         ((".", f) for f in pathlib.Path("static").iterdir()),
@@ -62,7 +58,6 @@ def main(args: list[str]) -> int:
     shutil.rmtree(output_folder, ignore_errors=True)
     output_folder.mkdir()
     make_pages(output_folder)
-    make_styles(output_folder)
     make_static_resources(output_folder)
     return 0
 

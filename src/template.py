@@ -1,9 +1,18 @@
 from repyct import *
+import repyct.svg as svg
 
+import styles
 
 description: str = (
     "Quantitative Technologist at Qube Research &amp; Technologies, London."
 )
+
+stylesheets = {
+    "master": styles.master,
+    "600": styles.small,
+    "print": styles.printer,
+    "hero": styles.hero,
+}
 
 
 def email(cls: str) -> BaseElement:
@@ -24,9 +33,10 @@ class Headers(CustomElement):
         return [
             meta(charset="utf-8"),
             title()[t],
-            # style()["IMPORT"],
-            # style()["IMPORT"],
-            style(media="only screen and (max-width: 599px)")["IMPORT"],
+            style()[stylesheets["master"]],
+            *([style()[stylesheets["hero"]]] if subtitle is None else []),
+            style(media="only screen and (max-width: 599px)")[stylesheets["600"]],
+            style(media="print")[stylesheets["print"]],
             # script()["SOMETHING"],
             noscript()[
                 link(
@@ -44,7 +54,7 @@ class Headers(CustomElement):
 class PageHeader(CustomElement):
     def render(self, children, menu_links, active):
         _ = children
-        r = lambda pos: SVG.rect(
+        r = lambda pos: svg.rect(
             x="0",
             y="160",
             rx="0",
@@ -60,7 +70,7 @@ class PageHeader(CustomElement):
             class_=act(name.lower()),
         )[name]
         return [
-            SVG.svg(
+            svg.svg(
                 xmlns="http://www.w3.org/2000/svg",
                 viewbox="-50 -50 500 500",
                 width="43px",
