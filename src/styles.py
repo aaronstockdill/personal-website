@@ -442,7 +442,6 @@ master = css.StyleSheet()[
             S("&:hover", a)[R("top", 0)],
         ],
     ],
-    *white,
 ]
 
 small = css.StyleSheet()[

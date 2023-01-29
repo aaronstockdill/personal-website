@@ -7,6 +7,7 @@ import itertools
 import repyct
 
 import index, cv, research, teaching, contact, blog
+import styles
 
 menu_links: dict[str, str] = {
     "Home": "",
@@ -61,6 +62,11 @@ def main(args: list[str]) -> int:
     output_folder.mkdir()
     make_pages(output_folder)
     make_static_resources(output_folder)
+    (output_folder / "css").mkdir()
+    with open(output_folder / "css" / "white.css", "w") as white:
+        white.write(str(styles.white))
+    with open(output_folder / "css" / "black.css", "w") as black:
+        black.write(str(styles.black))
     return 0
 
 

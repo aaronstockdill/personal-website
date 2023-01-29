@@ -2,6 +2,7 @@ from repyct import *
 import repyct.svg as svg
 
 import styles
+import scripts
 
 description: str = (
     "Quantitative Technologist at Qube Research &amp; Technologies, London."
@@ -37,7 +38,12 @@ class Headers(CustomElement):
             *([style()[stylesheets["hero"]]] if subtitle is None else []),
             style(media="only screen and (max-width: 599px)")[stylesheets["600"]],
             style(media="print")[stylesheets["print"]],
-            # script()["SOMETHING"],
+            script()[
+                """var t=localStorage.getItem("s");
+                if(t===null){var m=window.matchMedia('(prefers-color-scheme: dark)');t=(m&&m.matches)?"black":"white";
+                localStorage.setItem("s",t)}
+                document.write("<link rel='stylesheet' href='/css/"+t+".css' media='screen' id='theme'>")"""
+            ],
             noscript()[
                 link(
                     rel="stylesheet",
@@ -100,7 +106,7 @@ class PageFooter(CustomElement):
                     )["dark"],
                 ],
             ],
-            # script()["IMPORT"],
+            script()[scripts.script],
         ]
 
 
