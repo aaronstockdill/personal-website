@@ -10,26 +10,28 @@ body_font = "sans-serif"
 header_font = body_font
 tertiary_font = body_font
 mono_font = "monospace"
+font_size = U.px(18)
 
-hero_size = U.rem(2.666666)
+hero_size = U.rem(4)
 h1_size = U.rem(2)
-h2_size = U.rem(1)
-h3_size = U.rem(0.666666)
-h4_size = U.rem(0.666666)
-body_size = U.rem(0.666666)
-small_size = U.rem(0.5)
-tiny_size = U.rem(0.4)
+h2_size = U.rem(1.3)
+h3_size = U.rem(1)
+h4_size = U.rem(1)
+body_size = U.rem(1)
+small_size = U.rem(0.75)
+tiny_size = U.rem(0.6)
 
-hero_leading = U.rem(2.6666666)
+hero_leading = U.rem(4)
 h1_leading = U.rem(2)
-h2_leading = U.rem(1)
-h3_leading = U.rem(1)
-h4_leading = U.rem(1)
-body_leading = U.rem(1)
-small_leading = U.rem(0.85)
-tight_small_leading = U.rem(0.7)
-tiny_leading = U.rem(0.5)
+h2_leading = U.rem(1.5)
+h3_leading = U.rem(1.5)
+h4_leading = U.rem(1.5)
+body_leading = U.rem(1.5)
+small_leading = U.rem(1.275)
+tight_small_leading = U.rem(1.05)
+tiny_leading = U.rem(0.75)
 
+standard_tracking = U.em(0.01)
 wide_tracking = U.em(0.07)
 very_wide_tracking = U.em(0.1)
 
@@ -134,17 +136,19 @@ master = css.StyleSheet()[
         A.box.sizing("border-box"),
     ],
     S(":root")[
-        A.font.size(U.px(24)),
+        A.font.size(font_size),
     ],
     (S(html) | S(body))[
         A.font.family(body_font),
         A.font.weight(300),
+        A.letter.spacing(standard_tracking),
         A.font.size(body_size),
         A.line.height(body_leading),
         A.margin(0),
         A.padding(0),
     ],
     (S(h1) | S(h2) | S(h3) | S(h4) | S(h5) | S(h6))[
+        A.font.family(header_font),
         A.font.weight(700),
         A.hyphens("manual"),
     ],
@@ -203,11 +207,14 @@ master = css.StyleSheet()[
             A.margin.left(U.rem(-0.05)),
         ],
         S(h2)[
+            A.font.size(h2_size),
+            A.line.height(h2_leading),
             A.margin.top(U.rem(1.5)),
             A.margin.left(U.rem(-0.05)),
         ],
         S(h3)[
             A.font.size(h3_size),
+            A.line.height(h3_leading),
             A.font.style("italic"),
             A.font.weight(400),
             A.margin.top(U.rem(1)),
@@ -369,7 +376,7 @@ master = css.StyleSheet()[
             A.margin.top(U.rem(-0.2)),
         ],
         S(".blog-year")[
-            A.margin.top(U.rem(1)),
+            A.margin.top(U.rem(1.2)),
             A.margin.bottom(U.rem(0.5)),
         ],
         (S(".talk-date") | S(".pub-date"))[
@@ -605,8 +612,8 @@ printer = css.StyleSheet()[
 
 hero = css.StyleSheet()[
     S(".welcome")[
-        A.height(U.vh(100) - U.rem(6)),
-        A.min.height(U.vh(15) + U.rem(18)),
+        A.height(U.vh(100) - U.rem(7)),
+        A.min.height(U.vh(15) + U.rem(15)),
         A.position("relative"),
         S(".welcome-content")[
             A.position("relative"),
