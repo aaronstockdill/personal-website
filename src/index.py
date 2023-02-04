@@ -6,7 +6,7 @@ page: Callable[[dict[str, str]], BaseElement] = lambda menu_links: template.Page
     description=template.description, active="home", menu_links=menu_links
 )[
     div(class_="welcome-content")[
-        h1()["Aaron", br(), "Stockdill"],
+        h1()["Aaron Stockdill"],
         p()[
             "Quantitative Technologist",
             br(),

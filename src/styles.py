@@ -12,24 +12,24 @@ tertiary_font = body_font
 mono_font = "monospace"
 font_size = U.px(18)
 
-hero_size = U.rem(4)
-h1_size = U.rem(2)
-h2_size = U.rem(1.3)
+hero_size = U.rem(3)
+h1_size = U.rem(1.5)
+h2_size = U.rem(1.1)
 h3_size = U.rem(1)
-h4_size = U.rem(1)
 body_size = U.rem(1)
 small_size = U.rem(0.75)
 tiny_size = U.rem(0.6)
+mono_size = U.rem(0.8)
 
-hero_leading = U.rem(4)
-h1_leading = U.rem(2)
-h2_leading = U.rem(1.5)
-h3_leading = U.rem(1.5)
-h4_leading = U.rem(1.5)
+hero_leading = U.rem(3)
+h1_leading = U.rem(1.6)
+h2_leading = U.rem(1.3)
+h3_leading = U.rem(1.1)
 body_leading = U.rem(1.5)
-small_leading = U.rem(1.275)
-tight_small_leading = U.rem(1.05)
-tiny_leading = U.rem(0.75)
+small_leading = U.rem(1)
+tight_small_leading = U.rem(0.8)
+tiny_leading = U.rem(0.7)
+mono_leading = U.rem(1.2)
 
 standard_tracking = U.em(0.01)
 wide_tracking = U.em(0.07)
@@ -37,9 +37,82 @@ very_wide_tracking = U.em(0.1)
 
 main_width = U.ch(67)
 
+font_body = [
+    A.font.family(body_font),
+    A.font.size(body_size),
+    A.font.weight(300),
+    A.line.height(body_leading),
+    A.letter.spacing(standard_tracking),
+]
+
+font_hero = [
+    A.font.family(header_font),
+    A.font.size(hero_size),
+    A.font.weight(700),
+    A.line.height(hero_leading),
+]
+
+font_title = [
+    A.font.family(header_font),
+    A.font.size(h1_size),
+    A.font.weight(700),
+    A.line.height(h1_leading),
+]
+
+font_heading = [
+    A.font.family(header_font),
+    A.font.size(h2_size),
+    A.font.weight(700),
+    A.line.height(h2_leading),
+]
+
+font_subheading = [
+    A.font.family(header_font),
+    A.font.size(h3_size),
+    A.font.weight(400),
+    A.line.height(h3_leading),
+    A.font.style("italic"),
+]
+
+font_date = [
+    A.font.family(header_font),
+    A.font.size(small_size),
+    A.font.weight(300),
+    A.line.height(small_leading),
+    A.text.transform("uppercase"),
+    A.letter.spacing(wide_tracking),
+]
+
+font_menu = [
+    A.font.family(tertiary_font),
+    A.font.size(tiny_size),
+    A.font.weight(200),
+    A.line.height(tiny_leading),
+    A.text.transform("uppercase"),
+    A.letter.spacing(very_wide_tracking),
+    A.text.decoration(None),
+]
+
+font_mono = [
+    A.font.family(mono_font),
+    A.font.size(mono_size),
+    A.font.weight(300),
+    A.line.height(mono_leading),
+    A.letter.spacing(wide_tracking),
+]
+
+font_note = [
+    A.font.family(body_font),
+    A.font.size(small_size),
+    A.font.weight(300),
+    A.line.height(small_leading),
+    A.letter.spacing(standard_tracking),
+]
+
 
 def themed(
     *,
+    theme,
     font,
     font_faded,
     font_strong,
@@ -48,7 +121,7 @@ def themed(
     blockquote_background,
     blockquote_border,
 ):
-    return css.StyleSheet()[
+    return css.Media(f"(prefers-color-scheme: {theme})")[
         S("::selection")[
             A.background(selection_background),
         ],
@@ -84,51 +157,27 @@ def themed(
     ]
 
 
-white = css.StyleSheet()[
-    *iter(
-        themed(
-            font="#222",
-            font_faded="#555",
-            font_strong="#000",
-            background="#eee",
-            selection_background="#ccc",
-            blockquote_background="#ddd",
-            blockquote_border="silver",
-        )
-    ),
-    S(footer)[
-        S(".selector", a @ "white-button")[
-            A.top(0),
-            A.opacity(0.5),
-        ],
-        S(".selector:hover", a @ "white-button")[
-            A.top(U.rem(-1.2)),
-        ],
-    ],
-]
+white = themed(
+    theme="light",
+    font="#222",
+    font_faded="#555",
+    font_strong="#000",
+    background="#eee",
+    selection_background="#ccc",
+    blockquote_background="#ddd",
+    blockquote_border="silver",
+)
 
-black = css.StyleSheet()[
-    *iter(
-        themed(
-            font="#ddd",
-            font_faded="#aaa",
-            font_strong="#fff",
-            background="#2d2d2d",
-            selection_background="#444",
-            blockquote_background="#silver",
-            blockquote_border="#aaa",
-        )
-    ),
-    S(footer)[
-        S(".selector", a @ "black-button")[
-            A.top(0),
-            A.opacity(0.5),
-        ],
-        S(".selector:hover", a @ "black-button")[
-            A.top(U.rem(-1.2)),
-        ],
-    ],
-]
+black = themed(
+    theme="dark",
+    font="#ddd",
+    font_faded="#aaa",
+    font_strong="#fff",
+    background="#2d2d2d",
+    selection_background="#aaa",
+    blockquote_background="#silver",
+    blockquote_border="#aaa",
+)
 
 
 master = css.StyleSheet()[
@@ -139,17 +188,11 @@ master = css.StyleSheet()[
         A.font.size(font_size),
     ],
     (S(html) | S(body))[
-        A.font.family(body_font),
-        A.font.weight(300),
-        A.letter.spacing(standard_tracking),
-        A.font.size(body_size),
-        A.line.height(body_leading),
+        *font_body,
         A.margin(0),
         A.padding(0),
     ],
     (S(h1) | S(h2) | S(h3) | S(h4) | S(h5) | S(h6))[
-        A.font.family(header_font),
-        A.font.weight(700),
         A.hyphens("manual"),
     ],
     S(".borked-email")[
@@ -169,13 +212,9 @@ master = css.StyleSheet()[
         A.padding(U.rem(0.5), U.rem(0.375)),
         A.z.index(1000),
         S(a)[
+            *font_menu,
             A.padding(U.rem(0.125)),
             A.margin.right(U.rem(0.75)),
-            A.font.size(tiny_size),
-            A.line.height(tiny_leading),
-            A.text.transform("uppercase"),
-            A.text.decoration(None),
-            A.letter.spacing(very_wide_tracking),
             S("&.active")[
                 A.border.bottom.width(U.px(1)),
                 A.border.bottom.style("solid"),
@@ -201,28 +240,17 @@ master = css.StyleSheet()[
             A.margin((U.rem(1), U.auto, U.rem(2), U.auto)),
         ],
         S(h1)[
-            A.font.size(h1_size),
-            A.line.height(h1_leading),
+            *font_title,
             A.margin.bottom(U.rem(1)),
             A.margin.left(U.rem(-0.05)),
         ],
         S(h2)[
-            A.font.size(h2_size),
-            A.line.height(h2_leading),
+            *font_heading,
             A.margin.top(U.rem(1.5)),
             A.margin.left(U.rem(-0.05)),
         ],
         S(h3)[
-            A.font.size(h3_size),
-            A.line.height(h3_leading),
-            A.font.style("italic"),
-            A.font.weight(400),
-            A.margin.top(U.rem(1)),
-            A.margin.bottom(U.rem(0.5)),
-        ],
-        S(h4)[
-            A.font.size(h4_size),
-            A.line.height(h4_leading),
+            *font_subheading,
             A.margin.top(U.rem(1)),
             A.margin.bottom(U.rem(0.5)),
         ],
@@ -282,20 +310,18 @@ master = css.StyleSheet()[
             A.padding(U.rem(0.5), U.rem(1)),
         ],
         S(".email")[
+            *font_mono,
             A.text.decoration(None),
             A.transition(A.color, U.s(0.2), "ease"),
-            A.font.family(mono_font),
-            A.font.size(small_size),
-            A.letter.spacing(wide_tracking / 2),
             S("&::after")[
                 A.content('""'),
                 A.margin.left(0),
             ],
         ],
         S(".precontent")[
+            *font_note,
             A.display("block"),
             A.padding(0, U.rem(1)),
-            A.font.size(small_size),
         ],
         S(".award")[
             S(h3)[
@@ -304,15 +330,17 @@ master = css.StyleSheet()[
         ],
         S(".contact-table")[
             S(".label")[
+                A.display("inline-block"),
                 A.padding.right(U.rem(1)),
                 A.text.transform("uppercase"),
                 A.letter.spacing(wide_tracking),
                 A.font.size(small_size),
-                A.margin.top(U.rem(0.75)),
+                # A.margin.top(U.rem(0.75)),
+                A.width(U.em(7)),
             ],
             S(".value")[
-                A.overflow.x("auto"),
-                A.display("block"),
+                # A.overflow.x("auto"),
+                A.display("inline-block"),
             ],
             S(a)[
                 A.text.decoration(None),
@@ -329,7 +357,6 @@ master = css.StyleSheet()[
             A.font.size(U.em(0.9)),
         ],
         S(".dynamic-link")[
-            A.margin(U.rem(0.3), U.auto),
             S("&:first-of-type")[
                 A.margin.top(U.rem(1)),
             ],
@@ -358,8 +385,7 @@ master = css.StyleSheet()[
                 A.font.style("italic"),
             ],
             S(".orig", a)[
-                A.font.family(mono_font),
-                A.font.size(small_size),
+                *font_mono,
             ],
             S(".authors")[
                 A.display("block"),
@@ -367,7 +393,7 @@ master = css.StyleSheet()[
             ],
         ],
         S(".ed-year")[
-            A.margin.top(U.rem(-0.5)),
+            A.margin.top(U.rem(-0.75)),
         ],
         S(h2 + ".work-year")[
             A.margin.top(U.rem(-0.5)),
@@ -376,8 +402,8 @@ master = css.StyleSheet()[
             A.margin.top(U.rem(-0.2)),
         ],
         S(".blog-year")[
-            A.margin.top(U.rem(1.2)),
-            A.margin.bottom(U.rem(0.5)),
+            A.margin.top(U.rem(0.8)),
+            A.margin.bottom(U.rem(0.2)),
         ],
         (S(".talk-date") | S(".pub-date"))[
             A.font.size(small_size),
@@ -495,6 +521,12 @@ master = css.StyleSheet()[
                 A.top(0),
             ],
         ],
+    ],
+    css.Media("(prefers-color-scheme: light)")[
+        *white,
+    ],
+    css.Media("(prefers-color-scheme: dark)")[
+        *black,
     ],
 ]
 
@@ -620,10 +652,9 @@ hero = css.StyleSheet()[
             A.top(U.percent(40)),
             A.transform("translateY(-50%)"),
             S(h1)[
-                A.font.size(hero_size),
+                *font_hero,
                 A.text.transform("capitalize"),
                 A.margin(U.rem(2), 0, 0, 0),
-                A.line.height(hero_leading),
             ],
             S(p)[
                 A.margin(U.rem(2), 0, U.rem(1), 0),

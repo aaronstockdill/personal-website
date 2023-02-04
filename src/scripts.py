@@ -1,23 +1,3 @@
-preferences = """
-// Detect theme preferences
-
-function preferred_theme() {
-  let match = window.matchMedia('(prefers-color-scheme: dark)');
-  if (match && match.matches) {
-    return "black";
-  } else {
-    return "white";
-  }
-}
-
-// Allow the ability to switch themes.
-function switch_theme(target = "white") {
-  document.querySelector("#theme").setAttribute("href", `/css/${target}.css`);
-  localStorage.setItem("s", target);
-}
-"""
-
-
 email = """
 // Obfuscate email
 
@@ -137,4 +117,4 @@ document.body.onload = function(){
 };
 """
 
-script = "\n\n".join(['"use strict;"', preferences, email, mobilemenu, setup])
+script = "\n\n".join(['"use strict;"', email, mobilemenu, setup])

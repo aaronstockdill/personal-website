@@ -38,20 +38,6 @@ class Headers(CustomElement):
             *([style()[stylesheets["hero"]]] if subtitle is None else []),
             style(media="only screen and (max-width: 599px)")[stylesheets["600"]],
             style(media="print")[stylesheets["print"]],
-            script()[
-                """var t=localStorage.getItem("s");
-                if(t===null){var m=window.matchMedia('(prefers-color-scheme: dark)');t=(m&&m.matches)?"black":"white";
-                localStorage.setItem("s",t)}
-                document.write("<link rel='stylesheet' href='/css/"+t+".css' media='screen' id='theme'>")"""
-            ],
-            noscript()[
-                link(
-                    rel="stylesheet",
-                    href="/css/white.css",
-                    media="screen",
-                    _id="theme",
-                )
-            ],
             meta(name="viewport", content="width=device-width, initial-scale=1"),
             meta(name="description", content=description),
         ]
@@ -92,20 +78,6 @@ class PageFooter(CustomElement):
     def render(self, children):
         _ = children
         return [
-            footer()[
-                span(class_="selector")[
-                    a(
-                        id_="white-button",
-                        class_="theme-button",
-                        onclick='switch_theme("white")',
-                    )["light"],
-                    a(
-                        id_="black-button",
-                        class_="theme-button",
-                        onclick='switch_theme("black")',
-                    )["dark"],
-                ],
-            ],
             script()[scripts.script],
         ]
 

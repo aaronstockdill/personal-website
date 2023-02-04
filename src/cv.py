@@ -23,7 +23,7 @@ class job(CustomElement):
     def render(self, children, title, date):
         return [
             h3()[title],
-            div(class_="date ed-year")[date],
+            div(class_="date work-year")[date],
             *children,
         ]
 
@@ -73,7 +73,7 @@ page = lambda menu_links: template.Page(
     span(class_="anchor", id_="Education"),
     h1()["Education"],
     education(title="Doctor of Philosophy", date="2017&ndash;2021")[
-        "I am currently studying towards my PhD at the University of Cambridge. I am under the supervision of ",
+        "I completed my PhD at the University of Cambridge. I was under the supervision of ",
         a(href="http://www.cl.cam.ac.uk/~mj201/")["Prof. Mateja Jamnik"],
         ", with the thesis title &ldquo;Automating representation change across domains for reasoning.&rdquo;",
     ],
