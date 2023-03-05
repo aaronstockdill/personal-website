@@ -6,36 +6,59 @@ import repyct.css_units as U
 S = css.Selector
 A = css.Attr
 
-body_font = "sans-serif"
+font = [
+    css.Font()[
+        A.font.family('"iosevka-comfy-wide-duo"'),
+        A.src(
+            "url(/fonts/iosevka-comfy-wide-duo-" + suffix + '.woff2) format("woff2")'
+        ),
+        A.font.weight(weight),
+        A.font.style(style),
+    ]
+    for (suffix, weight, style) in [
+        ("light", 200, "normal"),
+        ("lightitalic", 200, "italic"),
+        ("semilight", 300, "normal"),
+        ("semilightitalic", 300, "italic"),
+        ("regular", 400, "normal"),
+        ("italic", 400, "italic"),
+        ("bold", 700, "normal"),
+        ("bolditalic", 700, "italic"),
+        ("extrabold", 900, "normal"),
+        ("extrabolditalic", 900, "italic"),
+    ]
+]
+
+body_font = "iosevka-comfy-wide-duo, Helvetica, Arial, sans-serif"
 header_font = body_font
 tertiary_font = body_font
-mono_font = "monospace"
-font_size = U.px(18)
+mono_font = "iosevka-comfy-wide-duo, monospace"
+font_size = U.px(16)
 
-hero_size = U.rem(3)
-h1_size = U.rem(1.5)
+hero_size = U.rem(4)
+h1_size = U.rem(0.9)
 h2_size = U.rem(1.1)
 h3_size = U.rem(1)
-body_size = U.rem(1)
+body_size = U.rem(0.9)
 small_size = U.rem(0.75)
 tiny_size = U.rem(0.6)
 mono_size = U.rem(0.8)
 
-hero_leading = U.rem(3)
-h1_leading = U.rem(1.6)
+hero_leading = U.rem(4)
+h1_leading = U.rem(1.1)
 h2_leading = U.rem(1.3)
 h3_leading = U.rem(1.1)
-body_leading = U.rem(1.5)
-small_leading = U.rem(1)
+body_leading = U.rem(1.3)
+small_leading = U.rem(1.1)
 tight_small_leading = U.rem(0.8)
 tiny_leading = U.rem(0.7)
 mono_leading = U.rem(1.2)
 
 standard_tracking = U.em(0.01)
-wide_tracking = U.em(0.07)
-very_wide_tracking = U.em(0.1)
+wide_tracking = U.em(0.1)
+very_wide_tracking = U.em(0.15)
 
-main_width = U.ch(67)
+main_width = U.ch(80)
 
 font_body = [
     A.font.family(body_font),
@@ -48,7 +71,7 @@ font_body = [
 font_hero = [
     A.font.family(header_font),
     A.font.size(hero_size),
-    A.font.weight(700),
+    A.font.weight(400),
     A.line.height(hero_leading),
 ]
 
@@ -57,27 +80,43 @@ font_title = [
     A.font.size(h1_size),
     A.font.weight(700),
     A.line.height(h1_leading),
+    S("&::after")[
+        A.content('"/"'),
+        A.margin(0, U.rem(1)),
+    ],
 ]
 
-font_heading = [
-    A.font.family(header_font),
-    A.font.size(h2_size),
-    A.font.weight(700),
-    A.line.height(h2_leading),
-]
+# font_heading = [
+#     A.font.family(header_font),
+#     A.font.size(h2_size),
+#     A.font.weight(700),
+#     A.line.height(h2_leading),
+# ]
+font_heading = font_title
 
+# font_subheading = [
+#     A.font.family(header_font),
+#     A.font.size(h3_size),
+#     A.font.weight(700),
+#     A.line.height(h3_leading),
+#     A.font.style("italic"),
+# ]
 font_subheading = [
     A.font.family(header_font),
-    A.font.size(h3_size),
-    A.font.weight(400),
-    A.line.height(h3_leading),
-    A.font.style("italic"),
+    A.font.size(h1_size),
+    A.font.weight(300),
+    A.line.height(h1_leading),
+    S("&::after")[
+        A.content('"/"'),
+        A.margin(0, U.rem(1)),
+    ],
 ]
+
 
 font_date = [
     A.font.family(header_font),
     A.font.size(small_size),
-    A.font.weight(300),
+    A.font.weight(200),
     A.line.height(small_leading),
     A.text.transform("uppercase"),
     A.letter.spacing(wide_tracking),
@@ -104,7 +143,7 @@ font_mono = [
 font_note = [
     A.font.family(body_font),
     A.font.size(small_size),
-    A.font.weight(300),
+    A.font.weight(200),
     A.line.height(small_leading),
     A.letter.spacing(standard_tracking),
 ]
@@ -208,13 +247,13 @@ master = css.StyleSheet()[
         A.position("relative"),
         A.max.width(main_width),
         A.width(U.percent(100)),
-        A.margin(0, U.auto),
+        A.margin(0, U.auto, U.rem(2), U.auto),
         A.padding(U.rem(0.5), U.rem(0.375)),
         A.z.index(1000),
         S(a)[
             *font_menu,
             A.padding(U.rem(0.125)),
-            A.margin.right(U.rem(0.75)),
+            A.margin.right(U.rem(1.25)),
             S("&.active")[
                 A.border.bottom.width(U.px(1)),
                 A.border.bottom.style("solid"),
@@ -246,13 +285,15 @@ master = css.StyleSheet()[
         ],
         S(h2)[
             *font_heading,
-            A.margin.top(U.rem(1.5)),
-            A.margin.left(U.rem(-0.05)),
+            # A.margin.top(U.rem(1.5)),
+            # A.margin.left(U.rem(-0.05)),
+            A.margin.top(U.rem(0.35)),
+            A.margin.bottom(U.rem(0.35)),
         ],
         S(h3)[
             *font_subheading,
-            A.margin.top(U.rem(1)),
-            A.margin.bottom(U.rem(0.5)),
+            A.margin.top(U.rem(0)),
+            A.margin.bottom(U.rem(0)),
         ],
         S(p)[
             A.hyphens("auto"),
@@ -328,6 +369,9 @@ master = css.StyleSheet()[
                 A.margin.bottom(U.rem(-0.25)),
             ],
         ],
+        S(".award-year")[
+            *font_heading,
+        ],
         S(".contact-table")[
             S(".label")[
                 A.display("inline-block"),
@@ -357,16 +401,15 @@ master = css.StyleSheet()[
             A.font.size(U.em(0.9)),
         ],
         S(".dynamic-link")[
-            S("&:first-of-type")[
-                A.margin.top(U.rem(1)),
-            ],
+            # S("&:first-of-type")[
+            # A.margin.top(U.rem(1)),
+            # ],
             S(h2)[
                 A.margin.bottom(U.rem(0.5)),
             ],
             S(a)[
                 A.text.decoration(None),
                 A.display("inline-block"),
-                A.margin.right(U.rem(1)),
                 S("&:hover")[
                     A.text.decoration("underline"),
                 ],
@@ -374,16 +417,20 @@ master = css.StyleSheet()[
                     A.display(None),
                 ],
             ],
+            S(".date::before")[
+                A.content('"/"'),
+                A.margin(0, U.rem(1)),
+            ],
             S(".pub-info")[
                 A.line.height(small_leading),
                 A.font.size(small_size),
-                S("& > *")[
-                    A.display("block"),
-                ],
+                # S("& > *")[
+                # A.display("block"),
+                # ],
             ],
-            (S(".bibtex") | S(".pdflink"))[
-                A.font.style("italic"),
-            ],
+            # (S(".bibtex") | S(".pdflink"))[
+            #     A.font.style("italic"),
+            # ],
             S(".orig", a)[
                 *font_mono,
             ],
@@ -410,9 +457,10 @@ master = css.StyleSheet()[
             A.line.height(small_leading),
         ],
         S(".blog-date")[
-            A.font.size(tiny_size),
-            A.line.height(tiny_leading),
-            A.letter.spacing(very_wide_tracking),
+            # A.font.size(tiny_size),
+            # A.line.height(tiny_leading),
+            # A.letter.spacing(very_wide_tracking),
+            A.margin.top(U.rem(1)),
         ],
         S(".post-links")[
             A.margin.top(U.rem(3)),
@@ -655,6 +703,7 @@ hero = css.StyleSheet()[
                 *font_hero,
                 A.text.transform("capitalize"),
                 A.margin(U.rem(2), 0, 0, 0),
+                S("&::after")[A.display(None)],
             ],
             S(p)[
                 A.margin(U.rem(2), 0, U.rem(1), 0),

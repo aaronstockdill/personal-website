@@ -1,4 +1,5 @@
 from repyct import *
+import repyct
 import repyct.svg as svg
 
 import styles
@@ -9,11 +10,22 @@ description: str = (
 )
 
 stylesheets = {
+    "font": styles.font,
     "master": styles.master,
     "600": styles.small,
     "print": styles.printer,
     "hero": styles.hero,
 }
+
+
+class hsep(CustomElement):
+    def render(self):
+        return span(style="margin: 0 1rem;")["/"]
+
+
+class indent(CustomElement):
+    def render(self, **kwargs):
+        return div(**kwargs, style="margin-left:1.5rem;")[*self.children]
 
 
 def email(cls: str) -> BaseElement:
@@ -25,8 +37,7 @@ def email(cls: str) -> BaseElement:
 
 
 class Headers(CustomElement):
-    def render(self, children, description, subtitle=None):
-        _ = children
+    def render(self, description, subtitle=None):
         if subtitle is None:
             t = "Aaron Stockdill"
         else:
@@ -34,6 +45,7 @@ class Headers(CustomElement):
         return [
             meta(charset="utf-8"),
             title()[t],
+            style()[stylesheets["font"]],
             style()[stylesheets["master"]],
             *([style()[stylesheets["hero"]]] if subtitle is None else []),
             style(media="only screen and (max-width: 599px)")[stylesheets["600"]],
@@ -44,8 +56,7 @@ class Headers(CustomElement):
 
 
 class PageHeader(CustomElement):
-    def render(self, children, menu_links, active):
-        _ = children
+    def render(self, menu_links, active):
         r = lambda pos: svg.rect(
             x="0",
             y="160",
@@ -75,15 +86,14 @@ class PageHeader(CustomElement):
 
 
 class PageFooter(CustomElement):
-    def render(self, children):
-        _ = children
+    def render(self):
         return [
             script()[scripts.script],
         ]
 
 
 class Page(CustomElement):
-    def render(self, children, active, description, menu_links, subtitle=None):
+    def render(self, active, description, menu_links, subtitle=None):
         return document(html_version=5)[
             html(lang="en")[
                 head()[
@@ -94,7 +104,7 @@ class Page(CustomElement):
                 ],
                 body()[
                     PageHeader(active=active, menu_links=menu_links),
-                    main(class_="welcome" if active == "home" else "")[children],
+                    main(class_="welcome" if active == "home" else "")[self.children],
                     PageFooter(),
                 ],
             ]

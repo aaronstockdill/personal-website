@@ -5,6 +5,8 @@ import markdown
 from repyct import *
 import template
 
+indent = template.indent
+
 publications = []
 talks = []
 
@@ -166,9 +168,7 @@ for path in pathlib.Path("dynamic", "publications").iterdir():
 
 
 class publication_summary(CustomElement):
-    def render(self, children, key, title, authors, info, abstract):
-        _ = children
-
+    def render(self, key, title, authors, info, abstract):
         def rev(name):
             (last, first) = name.split(", ")
             return f"{first} {last}"
@@ -181,12 +181,14 @@ class publication_summary(CustomElement):
             author_string = (
                 ", ".join(rev(a) for a in authors[:-1]) + ", and " + rev(authors[-1])
             )
-        return div(class_="dynamic-link", id_=key)[
+        return div(class_="dynamic-link", id_=key, style="margin-bottom: 1rem;")[
             h2()[title],
-            span(class_="authors")[author_string],
-            info,
-            h3()["Abstract"],
-            div(class_="abstract")[abstract],
+            indent()[
+                span(class_="authors")[author_string],
+                info,
+            ],
+            # h3()["Abstract"],
+            # div(class_="abstract")[abstract],
         ]
 
 
@@ -218,10 +220,13 @@ def publications_listing():
                 else span(class_="journal")[bibtex["booktitle"]]
                 if "booktitle" in bibtex
                 else "",
-                span(class_="date pub-date")[bibtex["month"], " ", bibtex["year"]],
-                bibtex["copyright"] if "copyright" in bibtex else "",
-                a(class_="pdflink", href="/static/" + pdf)["Download PDF"],
-                a(class_="bibtex", href="/static/" + bib)["Download BibTeX"],
+                div()[
+                    a(class_="pdflink", href="/static/" + pdf)["Download PDF"],
+                    template.hsep(),
+                    a(class_="bibtex", href="/static/" + bib)["Download BibTeX"],
+                    span(class_="date pub-date")[bibtex["month"], " ", bibtex["year"]],
+                ],
+                div()[bibtex["copyright"]] if "copyright" in bibtex else "",
             ],
             abstract=[p()[par] for par in bibtex["abstract"].strip().split("\n")],
         )
@@ -232,7 +237,7 @@ def publications_listing():
 
 
 class talk_link(CustomElement):
-    def render(self, children, name, date):
+    def render(self, name, date):
         return div(class_="dynamic-link")[
             a(href="/talk/" + name.lower().replace(" ", "-") + "/")[name],
             span(class_="date talk-date")[date],
@@ -255,22 +260,30 @@ page = lambda menu_links: template.Page(
 )[
     span(class_="anchor", id_="Interests"),
     h1()["Research interests"],
-    p()[
-        f""" I am interested in human-like reasoning and the “third wave” of artificial intelligence. Humans are capable of finding patterns in remarkably small datasets, learning from just a handful of examples. We use a wide variety of strategies to solve a wide variety of problems. Truly intelligent systems should be able to do likewise. Third-wave AI focuses on systems that can not just make predictions, but form explanations. This goes far beyond the first-wave ({span(class_="all-caps")["GOFAI"]}, or good old fashioned AI) and second-wave (deep learning) AI. Furthermore, some speculate that third-wave AI might focus on teaching the AIs how to learn, or {em()["meta-learning"]}."""
+    indent()[
+        p()[
+            f""" I am interested in human-like reasoning and the “third wave” of artificial intelligence. Humans are capable of finding patterns in remarkably small datasets, learning from just a handful of examples. We use a wide variety of strategies to solve a wide variety of problems. Truly intelligent systems should be able to do likewise. Third-wave AI focuses on systems that can not just make predictions, but form explanations. This goes far beyond the first-wave ({span(class_="all-caps")["GOFAI"]}, or good old fashioned AI) and second-wave (deep learning) AI. Furthermore, some speculate that third-wave AI might focus on teaching the AIs how to learn, or {em()["meta-learning"]}."""
+        ],
     ],
     hr(),
     span(class_="anchor", id_="Publications"),
     h1()["Publications"],
-    *publications_listing(),
+    indent()[
+        *publications_listing(),
+    ],
     hr(),
     span(class_="anchor", id_="Talks"),
     h1()["Talks"],
-    *talks_listing(),
+    indent()[
+        *talks_listing(),
+    ],
     hr(),
     span(class_="anchor", id_="GitHub"),
     h1()["GitHub"],
-    p()[
-        f"""I infrequently put projects on GitHub, but you are welcome to view what is available there: {a(href="https://github.com/aaronstockdill")["Aaron Stockdill on GitHub"]}."""
+    indent()[
+        p()[
+            f"""I infrequently put projects on GitHub, but you are welcome to view what is available there: {a(href="https://github.com/aaronstockdill")["Aaron Stockdill on GitHub"]}."""
+        ],
     ],
 ]
 

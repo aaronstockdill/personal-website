@@ -70,9 +70,7 @@ for i in range(len(posts)):
 
 
 class publication_summary(CustomElement):
-    def render(self, children, key, title, authors, info, abstract):
-        _ = children
-
+    def render(self, key, title, authors, info, abstract):
         def rev(name):
             (last, first) = name.split(", ")
             return f"{first} {last}"
@@ -95,9 +93,8 @@ class publication_summary(CustomElement):
 
 
 class blog_link(CustomElement):
-    def render(self, children, name, date):
-        _ = children
-        return div(class_="dynamic-link")[
+    def render(self, name, date):
+        return template.indent(class_="dynamic-link")[
             a(href="/blog/" + name.lower().replace(" ", "-") + "/")[name],
             span(class_="date talk-date")[date],
         ]
@@ -109,7 +106,7 @@ def blog_listing() -> list[BaseElement]:
     for (name, date, _) in sorted(posts, key=lambda v: v[1], reverse=True):
         year = date.split("-")[0]
         if year not in years:
-            links.append(div(class_="date blog-year")[year])
+            links.append(h2(class_="blog-date")[year])
             years.add(year)
         links.append(blog_link(name=name, date=date))
     return links
@@ -123,5 +120,7 @@ page = lambda menu_links: template.Page(
 )[
     span(class_="anchor", id_="Blog"),
     h1()["Blog"],
-    *blog_listing(),
+    template.indent()[
+        *blog_listing(),
+    ],
 ]

@@ -9,7 +9,8 @@ page: Callable[[dict[str, str]], BaseElement] = lambda menu_links: template.Page
         h1()["Aaron Stockdill"],
         p()[
             "Quantitative Technologist",
-            br(),
+            # br(),
+            template.hsep(),
             "Qube Research &amp; Technologies",
         ],
         template.email(""),
