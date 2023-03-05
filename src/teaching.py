@@ -8,18 +8,18 @@ page = lambda menu_links: template.Page(
     menu_links=menu_links,
 )[
     h1()["University of Cambridge"],
-    p()[
-        "Supervision work will be advised via email shortly after organising the date and time of supervisions. You can submit your supervision work either by email (",
-        span(
-            class_="email-holder",
-            data_before_at="nneba.fgbpxqvyy",
-            data_after_at="cl.cam.ac.uk",
-        )["Email obfuscated. Please enable Javascript."],
-        ") or via the supervision submission box in the Computer Lab.",
-    ],
-    p()[
-        "Please submit all supervision work by at latest 4pm on the day before your supervision. This gives me time to review it and prepare feedback for you. It is not graded."
-    ],
+    # p()[
+    #     "Supervision work will be advised via email shortly after organising the date and time of supervisions. You can submit your supervision work either by email (",
+    #     span(
+    #         class_="email-holder",
+    #         dataBeforeAt="nneba.fgbpxqvyy",
+    #         dataAfterAt="cl.cam.ac.uk",
+    #     )[noscript()["Email obfuscated. Please enable Javascript."]],
+    #     ") or via the supervision submission box in the Computer Lab.",
+    # ],
+    # p()[
+    #     "Please submit all supervision work by at latest 4pm on the day before your supervision. This gives me time to review it and prepare feedback for you. It is not graded."
+    # ],
     h2(id_="y201920", class_="date")["2019/20"],
     ul(class_="tutoring-list")[
         li()["Foundations of Computer Science (Michaelmas)"],

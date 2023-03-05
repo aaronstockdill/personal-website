@@ -6,22 +6,21 @@ import itertools
 
 import repyct
 
-import index, cv, research, teaching, contact, blog
+import index, cv, research, contact, blog
 import styles
 
 menu_links: dict[str, str] = {
     "Home": "",
     "CV": "cv",
     "Research": "research",
-    "Teaching": "teaching",
     "Contact": "contact",
     "Blog": "blog",
 }
+
 PAGES: dict[tuple[str, ...], Callable[[dict[str, str]], repyct.BaseElement]] = {
     tuple(): index.page,
     ("cv",): cv.page,
     ("research",): research.page,
-    ("teaching",): teaching.page,
     ("contact",): contact.page,
     ("blog",): blog.page,
     **{("research", n): p for (n, p) in research.subpages},
