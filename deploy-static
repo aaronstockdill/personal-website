@@ -3,5 +3,17 @@ if [ -z "$1" ] ; then
     echo "No folder specified to deploy."
     exit 1
 else
-    git subtree push --prefix "$1" github gh-pages
+    STATUS="$(git status)"
+
+    if [[ $STATUS == *"nothing to commit, working tree clean"* ]]
+    then
+        sed -i "" "/$1/d" ./.gitignore
+        git add .
+        git commit -m "Edit .gitignore to publish"
+        git push github `git subtree split --prefix $1 master`:gh-pages --force
+        git reset HEAD~
+        git checkout .gitignore
+    else
+        echo "Need clean working directory to publish"
+    fi
 fi
