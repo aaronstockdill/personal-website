@@ -197,6 +197,13 @@ class publication_summary(CustomElement):
         ]
 
 
+class doi(CustomElement):
+    def render(self, doi: str):
+        return a(href=f"https://dx.doi.org/{doi}")[
+            "doi://", doi.replace("/", "/&#8203;")
+        ]
+
+
 def publications_listing():
     def num(month):
         return [
@@ -232,9 +239,7 @@ def publications_listing():
                     template.hsep(),
                     span(class_="date pub-date")[bibtex["month"], " ", bibtex["year"]],
                 ],
-                div()[bibtex["copyright"].replace("/", "/&#8203;")]
-                if "copyright" in bibtex
-                else "",
+                div()[doi(doi=bibtex["doi"])] if "doi" in bibtex else "",
             ],
             abstract=[p()[par] for par in bibtex["abstract"].strip().split("\n")],
         )
