@@ -1,0 +1,29 @@
+@media (prefers-color-scheme: light) {::selection{
+  background: #ccc
+}html, body, nav{
+  background: #eee;
+  color: #222
+}a{
+  color: #555
+}
+a:hover, a.active{
+  color: #222
+}nav a.active{
+  color: #000;
+  border-color: #555
+}.menu-hamburger .bar{
+  fill: #555
+}.menu-header{
+  color: #222
+}main{
+  
+}
+main .contact-table a, main .dynamic-link a{
+  color: #222
+}
+main blockquote{
+  border-left-color: silver
+}
+main .pub-date, main .talk-date, main .ed-year, main .work-year{
+  color: #555
+}}
