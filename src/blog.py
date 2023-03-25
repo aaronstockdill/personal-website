@@ -96,6 +96,7 @@ class blog_link(CustomElement):
     def render(self, name, date):
         return template.indent(class_="dynamic-link")[
             a(href="/blog/" + name.lower().replace(" ", "-") + "/")[name],
+            template.hsep(),
             span(class_="date talk-date")[date],
         ]
 

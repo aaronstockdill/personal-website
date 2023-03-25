@@ -12,9 +12,6 @@ class education(CustomElement):
                 *([location, template.hsep()] if location else []),
                 div(class_="date ed-year", style="display: inline-block;")[date],
             ],
-            # indent()[
-            # p()[self.children],
-            # ],
         ]
 
 
@@ -34,10 +31,7 @@ class job(CustomElement):
     def render(self, title, date):
         return [
             h3(style="display: inline-block;")[title],
-            # indent()[
             div(class_="date work-year", style="display: inline-block;")[date],
-            # *self.children,
-            # ],
         ]
 
 
@@ -57,7 +51,6 @@ class awards_year(CustomElement):
 class award(CustomElement):
     def render(self, name):
         return name
-        # return [h3()[name], indent()[*self.children]]
 
 
 page = lambda menu_links: template.Page(
@@ -67,30 +60,20 @@ page = lambda menu_links: template.Page(
     active="cv",
     menu_links=menu_links,
 )[
+    h1(style="display: inline-block")["Curriculum Vit&aelig;"],
+    a(href="/cv/AaronStockdill.pdf")["PDF"],
+    template.hsep(),
+    a(href="/cv/AaronStockdill.txt")["TXT"],
     span(class_="anchor", id_="About"),
     h1()["About"],
     indent()[
-        div(class_="precontent")[
-            "Curriculum Vit&aelig; as ",
-            a(href="/cv/AaronStockdill.pdf")["a PDF"],
-            ".",
-            br(),
-            "A ",
-            a(href="/cv/AaronStockdill.txt")["brief summary"],
-            ".",
-            br(),
-            "For publications, see ",
-            a(href="/research/#Publications")["Research"],
-            ".",
+        p()[
+            "I am a Quantitative Technologist at Qube Research and Technologies, where I develop Python tools for researchers. I am a Visiting Researcher at the University of Cambridge, and an Associate Research Fellow at the University of Sussex."
         ],
         p()[
-            "I am currently a Research Fellow in Informatics with the Representational Systems Lab, with Professor Peter Cheng. I am associated with the &lsquo;Rep2rep2&rsquo; project, joint between Sussex and Cambridge. The goal of this project is to intelligently recommend representations to support problem solving, considering both the problem to be solved, and the person doing the solving."
-        ],
-        p()[
-            "My interests lie with anything that can make the world better. This primarily manifests as education: I have taught mathematics to high school students, and computer science to university students. I also work with Potato Softworks to help businesses and organisations get an online presence with affordable websites. Personally, I am passionate about Artificial Intelligence, as is reflected in my research."
-        ],
-        p()[
-            "In 2016, I finished studying towards a Bachelor of Science with Honours in Computer Science at the University of Canterbury in Christchurch, New Zealand. The title of my dissertation was &ldquo;Neuromorphic Computing with Reservoir Neural Networks on Memristive Hardware.&rdquo; In 2015 I completed my final year of a BSc in Computer Science and Mathematics, and in 2017 commenced study towards a PhD in Computer Science at the University of Cambridge."
+            "My interests are widespread, from AI to algorithms and data structures to high performance computing. I am a strong proponent of functional programming and strong, static type systems. I believe software should be written to be ",
+            em()["economical"],
+            " &ndash; that is, not unduly wasteful of memory or CPU cycles.",
         ],
     ],
     hr(),
@@ -139,13 +122,13 @@ page = lambda menu_links: template.Page(
         company(name="Qube Research &amp; Technologies")[
             job(
                 title="Quantitative Technologist",
-                date=["Feb 2023&ndash;", em()["present"]],
+                date=["Feb 2023 &ndash; now"],
             )
         ],
         company(name="University of Sussex")[
             job(
                 title="Research Fellow in Informatics",
-                date=["Sep 2021&ndash;Jan 2023"],
+                date=["Sep 2021 &ndash; Jan 2023"],
             )[
                 p()[
                     "Worked as part of the Representational Systems Lab with ",
@@ -159,11 +142,11 @@ page = lambda menu_links: template.Page(
         company(name="Jane Street")[
             job(
                 title="Software Engineer",
-                date="Jan 2021&ndash;July 2021",
+                date="Jan 2021 &ndash; July 2021",
             ),
         ],
         company(name="University of Cambridge")[
-            job(title="Supervisor", date="2017&ndash;2019",)[
+            job(title="Supervisor", date="2017 &ndash; 2019",)[
                 p()[
                     "I have supervised ",
                     "&ldquo;Foundations of Computer Science&rdquo;, ",
@@ -185,7 +168,7 @@ page = lambda menu_links: template.Page(
                     "that builds the ground-work for many other courses.",
                 ],
             ],
-            job(title="Tutor", date="2015&ndash;2017")[
+            job(title="Tutor", date="2015 &ndash; 2017")[
                 p()[
                     "I used to work as a tutor ",
                     "at the University of Canterbury ",
@@ -219,42 +202,13 @@ page = lambda menu_links: template.Page(
                 ],
             ],
         ],
-        company(name="ARANZ Geo Leapfrog")[
-            job(title="Software Developer Intern", date="Summer 2014/15")[
-                p()[
-                    "In the Summer 2014/15 break, ",
-                    "I worked as a software developer intern ",
-                    "working on Geological Modelling Software for the mining industry. ",
-                    "This provided valuable experience working at ",
-                    "an established software company.",
-                ],
-            ],
-        ],
-        company(name="Potato Softworks")[
-            job(title="Founder, Web Designer, Programmer", date="2014&ndash;2017")[
-                p()[
-                    "I am co-founder of this web design company, ",
-                    "serving as lead web designer. ",
-                    "I also work as a software developer when required.",
-                ]
-            ],
-        ],
-        company(name="NumberWorks&rsquo;nWords")[
-            job(title="Mathematics Tutor", date="2014&ndash;2016")[
-                p()[
-                    "I was a Mathematics tutor for students of all ages, ",
-                    "specialising in High School material ",
-                    "with a strong focus on Algebra and Calculus.",
-                ],
-            ],
-        ],
     ],
     hr(),
     span(class_="anchor", id_="Awards"),
     h1()["Awards"],
     indent()[
         awards_year(year="2021")[
-            award(name="Best Student Paper, Diagrams")[
+            award(name="Best Student Paper, Diagrams Conference")[
                 p()[
                     "Awarded for ",
                     "&lsquo;Considerations in Representation Selection ",

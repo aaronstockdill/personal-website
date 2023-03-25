@@ -33,9 +33,9 @@ body_font = "iosevka-comfy-wide-duo, Helvetica, Arial, sans-serif"
 header_font = body_font
 tertiary_font = body_font
 mono_font = "iosevka-comfy-wide-duo, monospace"
-font_size = U.px(16)
+font_size = U.px(17)
 
-hero_size = U.rem(4)
+hero_size = U.rem(3.5)
 h1_size = U.rem(0.9)
 h2_size = U.rem(1.1)
 h3_size = U.rem(1)
@@ -44,7 +44,7 @@ small_size = U.rem(0.75)
 tiny_size = U.rem(0.6)
 mono_size = U.rem(0.8)
 
-hero_leading = U.rem(4)
+hero_leading = U.rem(3.5)
 h1_leading = U.rem(1.1)
 h2_leading = U.rem(1.3)
 h3_leading = U.rem(1.1)
@@ -63,7 +63,7 @@ main_width = U.ch(80)
 font_body = [
     A.font.family(body_font),
     A.font.size(body_size),
-    A.font.weight(300),
+    A.font.weight(200),
     A.line.height(body_leading),
     A.letter.spacing(standard_tracking),
 ]
@@ -78,7 +78,7 @@ font_hero = [
 font_title = [
     A.font.family(header_font),
     A.font.size(h1_size),
-    A.font.weight(700),
+    A.font.weight(400),
     A.line.height(h1_leading),
     S("&::after")[
         A.content('"/"'),
@@ -135,7 +135,7 @@ font_menu = [
 font_mono = [
     A.font.family(mono_font),
     A.font.size(mono_size),
-    A.font.weight(300),
+    A.font.weight(200),
     A.line.height(mono_leading),
     A.letter.spacing(wide_tracking),
 ]
@@ -189,8 +189,11 @@ def themed(
                 A.color(font),
             ],
             S(blockquote)[
-                A.background(blockquote_background),
-                A.border.color.left(blockquote_border),
+                # A.background(blockquote_background),
+                A.border.left.color(blockquote_border),
+            ],
+            (S(".pub-date") | S(".talk-date") | S(".ed-year") | S(".work-year"))[
+                A.color(font_faded),
             ],
         ],
     ]
@@ -287,8 +290,8 @@ master = css.StyleSheet()[
             *font_heading,
             # A.margin.top(U.rem(1.5)),
             # A.margin.left(U.rem(-0.05)),
-            A.margin.top(U.rem(0.35)),
-            A.margin.bottom(U.rem(0.35)),
+            A.margin.top(U.rem(0.2)),
+            A.margin.bottom(U.rem(0.2)),
         ],
         S(h3)[
             *font_subheading,
@@ -417,10 +420,6 @@ master = css.StyleSheet()[
                     A.display(None),
                 ],
             ],
-            S(".date::before")[
-                A.content('"/"'),
-                A.margin(0, U.rem(1)),
-            ],
             S(".pub-info")[
                 A.line.height(small_leading),
                 A.font.size(small_size),
@@ -457,9 +456,9 @@ master = css.StyleSheet()[
             A.line.height(small_leading),
         ],
         S(".blog-date")[
-            # A.font.size(tiny_size),
-            # A.line.height(tiny_leading),
-            # A.letter.spacing(very_wide_tracking),
+            # a.font.size(tiny_size),
+            # a.line.height(tiny_leading),
+            # a.letter.spacing(very_wide_tracking),
             A.margin.top(U.rem(1)),
         ],
         S(".post-links")[
@@ -570,12 +569,13 @@ master = css.StyleSheet()[
             ],
         ],
     ],
-    css.Media("(prefers-color-scheme: light)")[
-        *white,
-    ],
-    css.Media("(prefers-color-scheme: dark)")[
-        *black,
-    ],
+    *white,
+    #     css.Media("(prefers-color-scheme: light)")[
+    #         *white,
+    #     ],
+    #     css.Media("(prefers-color-scheme: dark)")[
+    #         *black,
+    #     ],
 ]
 
 small = css.StyleSheet()[
@@ -610,11 +610,12 @@ small = css.StyleSheet()[
             A.padding.bottom(U.rem(0.4)),
             A.text.align("right"),
             A.padding.right(U.rem(1)),
-            A.font.size(U.rem(0.7)),
+            A.font.size(U.rem(1)),
+            A.margin(0, U.rem(1), U.rem(1.5), 0),
             S("&.active")[
                 A.border.bottom(0, None),
-                A.border.right(U.px(6), "solid"),
-                A.margin(0, U.rem(1) - U.px(6), U.rem(0.25), 0),
+                A.border.right(U.px(3), "solid"),
+                A.margin(0, U.rem(1) - U.px(3), U.rem(1.5), 0),
             ],
         ],
         S("&.showing")[
@@ -656,6 +657,9 @@ small = css.StyleSheet()[
         S("&.showing", ".bar-bottom")[
             A.transform("translate(0%, 0%)", "rotate(135deg)"),
         ],
+    ],
+    S(main)[
+        A.padding(U.rem(1), U.rem(2.5), U.rem(2), U.rem(0.5)),
     ],
     S(footer)[
         A.position("relative"),

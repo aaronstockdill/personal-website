@@ -169,17 +169,24 @@ for path in pathlib.Path("dynamic", "publications").iterdir():
 
 class publication_summary(CustomElement):
     def render(self, key, title, authors, info, abstract):
-        def rev(name):
+        def nam(name):
             (last, first) = name.split(", ")
-            return f"{first} {last}"
+            fparts = first.split(" ")
+            if len(fparts) == 1:
+                initial = fparts[0][0] + "."
+            else:
+                initial = fparts[0][0] + ".&nbsp;" + fparts[1].replace("-", "&#8209;")
+            return f"{initial}&nbsp;{last}"
 
         if len(authors) == 1:
-            author_string = rev(authors[0])
+            author_string = nam(authors[0])
         elif len(authors) == 2:
-            author_string = f"{rev(authors[0])} and {rev(authors[1])}"
+            author_string = f"{nam(authors[0])} and {nam(authors[1])}"
         else:
             author_string = (
-                ", ".join(rev(a) for a in authors[:-1]) + ", and " + rev(authors[-1])
+                ", ".join(nam(a) for a in authors[:-1])
+                + ", and&nbsp;"
+                + nam(authors[-1])
             )
         return div(class_="dynamic-link", id_=key, style="margin-bottom: 1rem;")[
             h2()[title],
@@ -187,8 +194,6 @@ class publication_summary(CustomElement):
                 span(class_="authors")[author_string],
                 info,
             ],
-            # h3()["Abstract"],
-            # div(class_="abstract")[abstract],
         ]
 
 
@@ -224,9 +229,12 @@ def publications_listing():
                     a(class_="pdflink", href="/static/" + pdf)["Download PDF"],
                     template.hsep(),
                     a(class_="bibtex", href="/static/" + bib)["Download BibTeX"],
+                    template.hsep(),
                     span(class_="date pub-date")[bibtex["month"], " ", bibtex["year"]],
                 ],
-                div()[bibtex["copyright"]] if "copyright" in bibtex else "",
+                div()[bibtex["copyright"].replace("/", "/&#8203;")]
+                if "copyright" in bibtex
+                else "",
             ],
             abstract=[p()[par] for par in bibtex["abstract"].strip().split("\n")],
         )
@@ -240,6 +248,7 @@ class talk_link(CustomElement):
     def render(self, name, date):
         return div(class_="dynamic-link")[
             a(href="/talk/" + name.lower().replace(" ", "-") + "/")[name],
+            template.hsep(),
             span(class_="date talk-date")[date],
         ]
 

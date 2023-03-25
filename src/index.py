@@ -2,16 +2,21 @@ from collections.abc import Callable
 from repyct import *
 import template
 
+
+class Line(CustomElement):
+    def render(self):
+        return span(style="display: inline-block;")[*self.children]
+
+
 page: Callable[[dict[str, str]], BaseElement] = lambda menu_links: template.Page(
     description=template.description, active="home", menu_links=menu_links
 )[
     div(class_="welcome-content")[
         h1()["Aaron Stockdill"],
         p()[
-            "Quantitative Technologist",
-            # br(),
+            Line()["Quantitative Technologist"],
             template.hsep(),
-            "Qube Research &amp; Technologies",
+            Line()["Qube Research &amp; Technologies"],
         ],
         template.email(""),
     ],
