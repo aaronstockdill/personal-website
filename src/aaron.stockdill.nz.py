@@ -1,8 +1,11 @@
 from collections.abc import Callable
+import json
 import sys
 import pathlib
 import shutil
 import itertools
+
+import fontTools.subset as ftsubset
 
 import repyct
 
@@ -37,6 +40,30 @@ def make_pages(output_folder: pathlib.Path) -> None:
             f.write(str(page(menu_links)))
 
 
+def make_fonts(output_folder: pathlib.Path) -> None:
+    input_dir = pathlib.Path("./src/fonts/").resolve()
+    with open(input_dir / "config.json") as f:
+        config = json.load(f)
+    chars = ",".join(config["CHARACTERS"])
+    feats = ",".join(config["LAYOUT_FEATURES"])
+    font_files = input_dir.glob("*.ttf")
+    output_dir = (output_folder / "fonts").resolve()
+    output_dir.mkdir()
+    for font_file in font_files:
+        fname = font_file.name.replace(".ttf", ".woff2")
+        ftsubset.main(
+            [
+                f"{font_file}",
+                f"--output-file={output_dir / fname}",
+                "--flavor=woff2",
+                "--with-zopfli",
+                f"--layout-features={feats}",
+                "--obfuscate-names",
+                f"--unicodes={chars}",
+            ]
+        )
+
+
 def make_static_resources(output_folder: pathlib.Path) -> None:
     statics = itertools.chain(
         ((".", f) for f in pathlib.Path("static").iterdir()),
@@ -59,6 +86,7 @@ def main(args: list[str]) -> int:
     output_folder = pathlib.Path(args[1])
     shutil.rmtree(output_folder, ignore_errors=True)
     output_folder.mkdir()
+    make_fonts(output_folder)
     make_pages(output_folder)
     make_static_resources(output_folder)
     (output_folder / "css").mkdir()
