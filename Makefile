@@ -37,10 +37,11 @@ deploy:
 	sed -i "" "/dist/d" ./.gitignore
 	git add .
 	git commit -m 'Edit .gitignore to publish'
-	git subtree split --prefix dist -b gh-pages
+	git subtree split --prefix dist --branch gh-pages
 	git push github gh-pages --force
 	git reset HEAD~
 	git checkout .gitignore
+	git branch -D gh-pages
 
 dist/sitemap.txt:
 	find dist -name index.html | sed 's/^dist/https:\/\/aaron.stockdill.nz/' | sed 's/index.html$///' | sort > $@

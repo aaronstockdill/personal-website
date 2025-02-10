@@ -5,7 +5,7 @@ nav: yes
 
 ## Curriculum Vit&aelig;
 
-Download: [PDF](aaronstockdill.pdf), [txt](aaronstockdill.txt)
+Download: [PDF](AaronStockdill.pdf), [txt](AaronStockdill.txt)
 
 ### About
 
