@@ -3,3 +3,4 @@ serve.log
 __pycache__
 dist
 auto
+tmp

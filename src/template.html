@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>$title$ | Aaron Stockdill</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/main.css">
+  </head>
+  <body>
+    <header>
+      <h1>Aaron Stockdill</h1>
+      $if(nav)$
+      <nav>
+        <a href="/">Home</a>,
+        <a href="/cv/">CV</a>,
+        <a href="/research/">Research</a>,
+        <a href="/contact/">Contact</a>.
+      </nav>
+      $endif$
+    </header>
+    <main$if(id)$ class="$id$"$endif$>
+      $body$
+    </main>
+    <footer>Last updated $build_date$.</footer>
+  </body>
+</html>

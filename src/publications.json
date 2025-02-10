@@ -1,0 +1,82 @@
+{
+  "publications":[
+    {
+      "title": "Representational Interpretive Structure: Theory and Notation",
+      "authors": "P. C.‑H. Cheng, A. Stockdill, G. Garcia Garcia, D. Raggi, and M. Jamnik",
+      "date": "September 2022",
+      "pdf": "rist.pdf",
+      "bib": "rist.bib",
+      "doi": "10.1007/978-3-031-15146-0_4"
+    },
+    {
+      "title": "Examining Experts’ Recommendations of Representational Systems for Problem Solving",
+      "authors": "A. Stockdill, G. Stapleton, D. Raggi, M. Jamnik, G. Garcia Garcia, and P. C.‑H. Cheng",
+      "date": "September 2022",
+      "pdf": "experts.pdf",
+      "bib": "experts.bib",
+      "doi": "10.1109/VL/HCC53370.2022.9833141"
+    },
+    {
+      "title": "Considerations in Representation Selection for Problem Solving: a Review",
+      "authors": "A. Stockdill, D. Raggi, M. Jamnik, G. Garcia Garcia, and P. C.‑H. Cheng",
+      "date": "September 2021",
+      "pdf": "review.pdf",
+      "bib": "review.bib",
+      "doi": "10.1007/978-3-030-86062-2_4"
+    },
+    {
+      "title": "Cognitive Properties of Representations: A Framework",
+      "authors": "P. C.‑H. Cheng, G. Garcia Garcia, D. Raggi, A. Stockdill, and M. Jamnik",
+      "date": "September 2021",
+      "pdf": "properties.pdf",
+      "bib": "properties.bib",
+      "doi": "10.1007/978-3-030-86062-2_43"
+    },
+    {
+      "title": "Automating representation change across domains for reasoning",
+      "authors": "A. Stockdill",
+      "date": "September 2021",
+      "pdf": "thesis.pdf",
+      "bib": "thesis.bib"
+    },
+    {
+      "title": "Correspondence-based analogies for choosing problem representations",
+      "authors": "A. Stockdill, D. Raggi, M. Jamnik, G. Garcia Garcia, H. E. Sutherland, P. C.‑H. Cheng, and A. Sarkar",
+      "date": "August 2020",
+      "pdf": "correspondences.pdf",
+      "bib": "correspondences.bib",
+      "doi": "10.1109/VL/HCC50065.2020.9127258"
+    },
+    {
+      "title": "Inspection and Selection of Representations",
+      "authors": "D. Raggi, A. Stockdill, M. Jamnik, G. Garcia Garcia, H. E. Sutherland, and P. C.‑H. Cheng",
+      "date": "July 2019",
+      "pdf": "inspection.pdf",
+      "bib": "inspection.bib",
+      "doi": "10.1007/978-3-030-23250-4_16"
+    },
+    {
+      "title": "Simulating neuromorphic reservoir computing: Abstract feed-forward hardware models",
+      "authors": "A. Stockdill and K. Neshatian",
+      "date": "December 2017",
+      "pdf": "neuromorphic.pdf",
+      "bib": "neuromorphic.bib",
+      "doi": "10.1109/IVCNZ.2017.8402482"
+    },
+    {
+      "title": "Restricted Echo State Networks",
+      "authors": "A. Stockdill and K. Neshatian",
+      "date": "December 2016",
+      "pdf": "esn.pdf",
+      "bib": "esn.bib",
+      "doi": "10.1007/978-3-319-50127-7_49"
+    },
+    {
+      "title": "Neuromorphic Computing with Reservoir Neural Networks on Memristive Hardware",
+      "authors": "A. Stockdill",
+      "date": "October 2016",
+      "pdf": "honours.pdf",
+      "bib": "honours.bib"
+    }
+  ]
+}
