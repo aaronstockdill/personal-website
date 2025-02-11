@@ -5,7 +5,7 @@ body {
     position: relative;
     margin: 2rem;
     max-width: 80ch;
-    min-height: calc(100vh - 4rem);
+    min-height: calc(100dvh - 4rem);
 }
 nav {
     font-size: 0.8rem;
