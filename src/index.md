@@ -3,8 +3,7 @@ title: Home
 id: home
 ---
 
-Quantitative Technologist\
-Qube Research &amp; Technologies
+Algo Engineer @ Hudson River Trading
 
 [`aaronstockdill@me.com`](mailto:aaronstockdill@me.com)
 

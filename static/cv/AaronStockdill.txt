@@ -1,17 +1,11 @@
 Aaron Stockdill
-Quantitative Technologist at Qube Research and Technologies
-
-
-Education
-
-  Doctor of Philosophy in Computer Science, University of Cambridge. 
-  Bachelor of Science (Honours) in Computer Science, University of Canterbury.
-  Bachelor of Science in Computer Science and Mathematics, University of Canterbury.
+Algo Engineer at Hudson River Trading
 
 
 Employment
 
-  Quantitative Technologist, Qube Research and Technologies, Feb 2023 - present.
+  Algo Engineer, Hudson River Trading, May 2027 - present.
+  Quantitative Technologist, Qube Research and Technologies, Feb 2023 - Feb 2026.
   Research Fellow in Informatics, University of Sussex, Sep 2021 - Jan 2023.
   Software Engineer, Jane Street, Jan 2021 - July 2021
   Supervisor, University of Cambridge, 2017-2020.
@@ -19,9 +13,16 @@ Employment
   Tutor, University of Canterbury, 2015-2017.
 
 
+Education
+
+  Doctor of Philosophy in Computer Science, University of Cambridge.
+  Bachelor of Science (Honours) in Computer Science, University of Canterbury.
+  Bachelor of Science in Computer Science and Mathematics, University of Canterbury.
+
+
 Publications
 
-  Examining Experts’ Recommendations of Representational Systems for Problem Solving. Aaron Stockdill, Gem Stapleton, Daniel Raggi, Mateja Jamnik, Grecia Garcia Garcia, and Peter C.-H. Cheng. IEEE Symposium on Visual Languages and Human-Centric Computing, 2022. https://dx.doi.org/10.1109/VL/HCC53370.2022.9833141
+  Examining Experts' Recommendations of Representational Systems for Problem Solving. Aaron Stockdill, Gem Stapleton, Daniel Raggi, Mateja Jamnik, Grecia Garcia Garcia, and Peter C.-H. Cheng. IEEE Symposium on Visual Languages and Human-Centric Computing, 2022. https://dx.doi.org/10.1109/VL/HCC53370.2022.9833141
 
   Representational Interpretive Structure: Theory and Notation. Peter C.-H. Cheng, Aaron Stockdill, Grecia Garcia Garcia, Daniel Raggi, and Mateja Jamnik. 13th International Conference on the Theory and Application of Diagrams, 2022. https://dx.doi.org/10.1007/978-3-031-15146-0_4
 
