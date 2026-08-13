@@ -1,6 +1,7 @@
 * { box-sizing: border-box; }
 body {
     font: 300 16px/1.25 serif;
+    color: #1a1a1a;
     background: #f4f4f4;
     position: relative;
     margin: 2rem;
@@ -21,6 +22,11 @@ footer {
     font-size: 0.8rem;
 }
 h1, h2, h3 { margin: 1.5rem 0 0.5rem 0; }
+h3 {
+    font-family: sans-serif;
+    font-variant: all-small-caps;
+    letter-spacing: 2%;
+}
 p { margin: 0.5rem 0; }
 a {
     color: #00b;
@@ -39,5 +45,12 @@ td { vertical-align: top; }
 .links {
     font-weight: bold;
     margin-top: 2rem;
+}
+.secondary {
+    font-size: 1.1em;
+    font-variant: all-small-caps;
+    letter-spacing: 2%;
+    margin: 0 5px;
+    line-height: 1.0;
 }
 .research h4 { margin-bottom: -0.25rem; }

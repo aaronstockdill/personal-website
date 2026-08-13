@@ -16,19 +16,19 @@ My interests are widespread, from AI to algorithms and data structures to high p
 
 ### Employment
 
-Hudson River Trading, Algo Engineer, May 2027&ndash;now\
-Qube Research &amp; Technologies, Quantitative Technologist, Feb 2023&ndash;Feb 2026\
-University of Sussex, Research Fellow in Informatics, Sep 2021&ndash;Feb 2023\
-Jane Street Europe, Software Engineer, Jan 2021&ndash;July 2021\
-University of Cambridge, Supervisor, 2017&ndash;2019\
-University of Canterbury, Lecturer, 2017 Semester 2\
+Hudson River Trading, [Algo Engineer,]{.secondary} May 2027&ndash;now\
+Qube Research &amp; Technologies, [Quantitative Technologist,]{.secondary} Feb 2023&ndash;Nov 2026\
+University of Sussex, [Research Fellow in Informatics,]{.secondary} Sep 2021&ndash;Feb 2023\
+Jane Street Europe, [Software Engineer,]{.secondary} Jan 2021&ndash;July 2021\
+University of Cambridge, [Supervisor,]{.secondary} 2017&ndash;2019\
+University of Canterbury, [Lecturer,]{.secondary} 2017 Semester 2\
 
 
 ### Education
 
-Doctor of Philosophy, Cambridge UK, 2017&ndash;2021\
-Bachelor of Science with First Class Honours, Canterbury NZ, 2016\
-Bachelor of Science, Canterbury NZ, 2013&ndash;2015\
+Doctor of Philosophy, [Cambridge UK,]{.secondary} 2017&ndash;2021\
+Bachelor of Science with First Class Honours, [Canterbury NZ,]{.secondary} 2016\
+Bachelor of Science, [Canterbury NZ,]{.secondary} 2013&ndash;2015\
 
 
 ### Awards
